@@ -1,0 +1,67 @@
+a{
+    padding: 20px;
+    border: 0;
+    cursor: pointer;
+    width: 35%;
+    margin: 10px;
+    background-color: rgb(194, 1, 39);
+    font-family: "Roboto";
+}
+
+#flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(39, 36, 36);
+    font-family: 'Roboto';
+}
+
+#titulo{
+    color: white;
+    text-align: center;
+    margin: 40px 0px 30px;
+    font-size: 20pt;
+}
+
+button#voltar{
+    width:16%;
+    margin-top: 60px;
+}
+
+div.row{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+button{
+    background-color: rgb(194, 1, 39);
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+div.item, div.item > img{
+    cursor: pointer;
+}
+
+div.item > img, div.item-resultado{
+    border: 1.2px solid white;
+}
+
+span{
+    color: white;
+    font-size: 20pt;
+}
+
+button#voltar{
+    margin-bottom: 40px;
+}
+
+footer > a{
+    margin-left: 20px;
+}
