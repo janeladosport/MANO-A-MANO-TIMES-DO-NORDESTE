@@ -2,6 +2,16 @@ div.row{
     justify-content: space-around;
 }
 
+@media only screen and (min-width:1830px) {
+    div.mam{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: 1600px;
+    }
+}
+
+
 @media only screen and (max-width:910px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 160px;
