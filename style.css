@@ -5,7 +5,7 @@ a{
     width: 35%;
     margin: 10px;
     background-color: rgb(194, 1, 39);
-    font-family: "Roboto";
+    font-family: "Roboto", Arial, Helvetica, Sans-serif;
 }
 
 #flex{
@@ -17,7 +17,7 @@ a{
 
 body{
     background-color: rgb(39, 36, 36);
-    font-family: 'Roboto';
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 #titulo{
