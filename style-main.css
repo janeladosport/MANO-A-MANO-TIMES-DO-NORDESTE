@@ -1,7 +1,15 @@
-div.row, #lista{
+div.row{
     justify-content: space-around;
 }
 
+@media only screen and (min-width:1830px) {
+    div.mam{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: 1600px;
+    }
+}
 
 
 @media only screen and (max-width:910px) {
@@ -9,11 +17,10 @@ div.row, #lista{
         width: 160px;
         height: 160px;
     }
-   div.item  > img:hover{
+    div.item > img:hover{
         width: 165px;
         height: 165px;
     }
-    
 }
 @media only screen and (min-width: 911px) and (max-width:1180px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
@@ -38,73 +45,11 @@ div.row, #lista{
 }
 
 @media only screen and (min-width: 1181px){
-    div.row, #lista{
+    div.row{
         justify-content: center;
     }
     span, div.item, div.item-resultado{
         margin: 0px 20px;
     }
 }
-
-@media only screen and (min-width:1500px) {
-    /* div.mam{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        max-height: 1350px;
-    } */
-    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
-        width: 160px;
-        height: 160px;
-    }
-   div.item  > img:hover{
-        width: 165px;
-        height: 165px;
-    }
-    div.simulacao-lista{
-        width: 164.8px;
-        height: 52.8px;
-        margin: 0 20px;
-    }
-    .box-lista{
-        width: 164.8px;
-        display: flex;
-        justify-content: center;
-        margin: 0 20px;
-    }
-    #lista span{
-        width: 17.04px;
-    }
-
-    /* div.row{
-        justify-content: space-around;
-        margin: 20px 0;
-    } */
-}
-
-@media only screen and (min-width:1830px) {
-    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
-        width: 210px;
-        height: 210px;
-    }
-   div.item  > img:hover{
-        width: 215px;
-        height: 215px;
-    }
-    div.mam{
-        max-height: 1600px;
-    }
-}
-
-@media only screen and (max-width:660px){
-    div.row{
-        flex-wrap: wrap;
-        border: 2px solid white;
-        padding: 8px;
-    }
-    div.item, div.item-resultado{
-        margin: 20px;
-    }
-}
-
 
