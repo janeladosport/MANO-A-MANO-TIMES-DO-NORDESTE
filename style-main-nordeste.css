@@ -7,8 +7,11 @@
         width: 105px;
         height: 105px;
     }
+    .esc-div{
+        display: none;
+    }
 }
-@media only screen and (min-width: 911px) and (max-width:1180px) {
+@media only screen and (min-width: 910px) and (max-width:1180px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 120px;
         height: 120px;
@@ -17,9 +20,12 @@
         width: 125px;
         height: 125px;
     }
+    .esc-div{
+        width: 120px;
+    }
 }
 
-@media only screen and (min-width: 1181px) and (max-width:1340px) {
+@media only screen and (min-width: 1180px) and (max-width:1340px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 150px;
         height: 150px;
@@ -28,9 +34,12 @@
         width: 145px;
         height: 145px;
     }
+    .esc-div{
+        width: 150px;
+    }
 }
 
-@media only screen and (min-width: 1341px) and (max-width:1496px) {
+@media only screen and (min-width: 1340px) and (max-width:1496px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 180px;
         height: 180px;
@@ -39,9 +48,12 @@
         width: 185px;
         height: 185px;
     }
+    .esc-div{
+        width: 180px;
+    }
 }
 
-@media only screen and (min-width: 1497px) and (max-width: 1599px){
+@media only screen and (min-width: 1496px) and (max-width: 1600px){
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 200px;
         height: 200px;
@@ -49,6 +61,9 @@
     div.item > img:hover{
         width: 205px;
         height: 205px;
+    }
+    .esc-div{
+        width: 200px;
     }
 }
 
@@ -61,6 +76,9 @@
         width: 225px;
         height: 225px;
     }
+    .esc-div{
+        width: 220px;
+    }
 }
 
 @media only screen and (min-width: 1800px){
@@ -72,9 +90,12 @@
         width: 245px;
         height: 245px;
     }
+    .esc-div{
+        width: 240px;
+    }
 }
 
-div.row{
+div.row, .row-esc{
     justify-content: space-between;
 }
 

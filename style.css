@@ -62,7 +62,7 @@ button#voltar{
     color: white;
 }
 
-div.row{
+div.row, .row-esc{
     display: flex;
     align-items: center;
     margin: 20px;
@@ -99,3 +99,36 @@ button#voltar{
     margin-bottom: 40px;
 }
 
+@media only screen and (max-width:1000px) and (min-width: 701px){
+    #flex > a{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:700px){
+    #flex > a{
+        width: 65%;
+    }
+}
+
+#titulo > img, img.esc{
+    max-width: 40px;
+    max-height: 40px;
+    margin: 0 10px;
+}
+span.nada{
+    width: 40px;
+    height: 40px;
+    border: 0 !important;
+}
+
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esc-div{
+    display: flex;
+    justify-content: center;
+}
