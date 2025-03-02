@@ -47,12 +47,12 @@ div.row, #lista{
 }
 
 @media only screen and (min-width:1500px) {
-    div.mam{
+    /* div.mam{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         max-height: 1350px;
-    }
+    } */
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 160px;
         height: 160px;
@@ -61,10 +61,25 @@ div.row, #lista{
         width: 165px;
         height: 165px;
     }
-    div.row{
+    div.simulacao-lista{
+        width: 164.8px;
+        height: 52.8px;
+        margin: 0 20px;
+    }
+    .box-lista{
+        width: 164.8px;
+        display: flex;
+        justify-content: center;
+        margin: 0 20px;
+    }
+    #lista span{
+        width: 17.04px;
+    }
+
+    /* div.row{
         justify-content: space-around;
         margin: 20px 0;
-    }
+    } */
 }
 
 @media only screen and (min-width:1830px) {

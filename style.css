@@ -205,11 +205,11 @@ select{
     }
 }
 
-@media only screen and (min-width: 1500px){
+/* @media only screen and (min-width: 1500px){
     #mam-lista, #lista{
         display: flex;
         justify-content: space-around;
         margin: 0 40px;
     }
 
-}
+} */
