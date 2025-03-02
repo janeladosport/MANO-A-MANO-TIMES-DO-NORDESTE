@@ -133,3 +133,44 @@ span.nada{
     display: flex;
     justify-content: center;
 }
+
+#aviso{
+    color: red;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+#lista{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+select{
+    padding: 16px 9px;
+    border: 0;
+    border-radius: 10px;
+}
+
+select{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.242);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.153);
+    text-align: center;
+    outline: none;
+    border: 2.3px solid black;
+}
+
+.tricolor{
+    color: black;
+}
+
+.normal{
+    color: white;
+    text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.595);
+    border: 2.3px solid white;
+}
