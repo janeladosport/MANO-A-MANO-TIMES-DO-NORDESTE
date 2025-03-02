@@ -1,4 +1,4 @@
-div.row{
+div.row, #lista{
     justify-content: space-around;
 }
 
@@ -38,7 +38,7 @@ div.row{
 }
 
 @media only screen and (min-width: 1181px){
-    div.row{
+    div.row, #lista{
         justify-content: center;
     }
     span, div.item, div.item-resultado{

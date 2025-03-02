@@ -63,7 +63,7 @@ button#voltar{
     color: white;
 }
 
-div.row, .row-esc{
+div.row, .row-esc, #lista{
     display: flex;
     align-items: center;
     margin: 20px;
@@ -173,4 +173,43 @@ select{
     color: white;
     text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.595);
     border: 2.3px solid white;
+}
+
+@media only screen and (max-width: 1500px) and (min-width:660px){
+    div.simulacao-lista{
+        width: 214.8px;
+        height: 52.8px;
+        margin: 0 20px;
+    }
+    .box-lista{
+        width: 214.8px;
+        display: flex;
+        justify-content: center;
+        margin: 0 20px;
+    }
+    #lista span{
+        width: 17.04px;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    #mam-lista{
+        display: flex;
+        justify-content: center;
+    }
+    .box-lista{
+        margin: 0 50px;
+    }
+    #lista span{
+        width: 17.04px;
+    }
+}
+
+@media only screen and (min-width: 1500px){
+    #mam-lista, #lista{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 40px;
+    }
+
 }
