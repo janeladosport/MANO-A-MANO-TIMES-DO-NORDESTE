@@ -2,14 +2,6 @@ div.row{
     justify-content: space-around;
 }
 
-@media only screen and (min-width:1830px) {
-    div.mam{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        max-height: 1600px;
-    }
-}
 
 
 @media only screen and (max-width:910px) {
@@ -17,7 +9,7 @@ div.row{
         width: 160px;
         height: 160px;
     }
-    div.item > img:hover{
+   div.item  > img:hover{
         width: 165px;
         height: 165px;
     }
@@ -52,4 +44,51 @@ div.row{
         margin: 0px 20px;
     }
 }
+
+@media only screen and (min-width:1500px) {
+    div.mam{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-height: 1350px;
+    }
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 160px;
+        height: 160px;
+    }
+   div.item  > img:hover{
+        width: 165px;
+        height: 165px;
+    }
+    div.row{
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width:1830px) {
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 210px;
+        height: 210px;
+    }
+   div.item  > img:hover{
+        width: 215px;
+        height: 215px;
+    }
+    div.mam{
+        max-height: 1600px;
+    }
+}
+
+@media only screen and (max-width:620px){
+    div.row{
+        flex-wrap: wrap;
+        border: 2px solid white;
+        padding: 8px;
+    }
+    div.item, div.item-resultado{
+        margin: 20px;
+    }
+}
+
 

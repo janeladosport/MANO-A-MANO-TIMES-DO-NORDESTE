@@ -77,3 +77,11 @@
 div.row{
     justify-content: space-between;
 }
+
+@media only screen and (max-width:795px){
+    div.row{
+        flex-wrap: wrap;
+        border: 2px solid white;
+        padding: 8px;
+    }
+}
