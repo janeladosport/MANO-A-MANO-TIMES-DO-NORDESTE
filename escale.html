@@ -15,24 +15,26 @@
     </div>
     <div class="body">
         <div id="escolha">
-            <select name="Time 1" id="timeUm" onchange="selecionarEscale(this)">
-                <option disabled selected>Time</option>
-                <option value="Fortaleza">
-                    Fortaleza
-                </option>
-                <option value="Sport">
-                    Sport
-                </option>
-                <option value="Bahia">
-                    Bahia
-                </option>
-                <option value="Ceara" disabled>
-                    Ceará
-                </option>
-                <option value="Vitoria" disabled>
-                    Vitória
-                </option>
-            </select>
+            <div class="escolha-box">
+                <select name="Time 1" id="timeUm" onchange="selecionarEscale(this)">
+                    <option disabled selected>Time</option>
+                    <option value="Fortaleza">
+                        Fortaleza
+                    </option>
+                    <option value="Sport">
+                        Sport
+                    </option>
+                    <option value="Bahia">
+                        Bahia
+                    </option>
+                    <option value="Ceara" disabled>
+                        Ceará
+                    </option>
+                    <option value="Vitoria" disabled>
+                        Vitória
+                    </option>
+                </select>
+            </div>
         </div>
         <div class="campo">
             <img class="jogador" id="ca">
@@ -55,7 +57,6 @@
                 VOLTAR
 
         </a>
-        <br></br>
         <a onclick="limparCampoEscale()" id="voltar" class="limpar">
 
                 LIMPAR

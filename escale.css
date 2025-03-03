@@ -110,6 +110,53 @@ a#voltar{
     text-align: center;
 }
 
+@media only screen and (max-width:1365px) and (min-width: 1240px) {
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
+    }
+    .campo{
+        left: 55%;
+    }
+}
+
+@media only screen and (max-width:1210px) and (min-width: 510px) {
+    .body{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .campo{
+        position: relative;
+        display: block;
+        order: 1;
+        flex: 1;
+    }
+    #escolha{
+        position: static;
+        order: 2;
+        flex: 1;
+        margin-top: 30px;
+        margin-left: 30px;
+        align-self: center;
+    }
+    .escolha-box{
+        width: 500px;
+    }
+    footer{
+        position: static;
+        margin: 50px;
+        display: flex;
+    }
+    footer > a{
+        display: inline !important;
+    }
+}
+
 @media only screen and (max-height:640px) {
     .body{
         display: none;
@@ -131,33 +178,7 @@ a#voltar{
     }
 }
 
-@media only screen and (max-width:1365px) and (min-width: 1240px) {
-    footer > a{
-        width: 223px !important;
-    }
-    footer{
-        position: absolute;
-        left: 75%;
-    }
-    .campo{
-        left: 55%;
-    }
-}
-
-@media only screen and (max-width:1240px) and (min-width:1210px) {
-    .campo{
-        left: 56%;
-    }
-    footer > a{
-        width: 223px !important;
-    }
-    footer{
-        position: absolute;
-        left: 75%;
-    }
-}
-
-@media only screen and (max-width:1210px) {
+@media only screen and (max-width:510px) {
     .body{
         display: none;
     }
@@ -175,6 +196,21 @@ a#voltar{
         text-align: center;
         font-size: 20pt;
         margin: 100px;
+    }
+}
+
+
+
+@media only screen and (max-width:1240px) and (min-width:1210px) {
+    .campo{
+        left: 56%;
+    }
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
     }
 }
 
