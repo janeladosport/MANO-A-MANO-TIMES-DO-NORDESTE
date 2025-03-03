@@ -110,7 +110,7 @@ function verificar(){
         aviso.style.display="flex"
         console.log('É igual')
     } if (timeUm.value != timeDois.value){
-        mam.style.display = "flex"
+        mam.style.display = "block"
         mam.style.flexDirection = "column"
         aviso.style.display = "none"
     }

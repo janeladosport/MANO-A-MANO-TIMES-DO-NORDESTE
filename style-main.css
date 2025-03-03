@@ -42,6 +42,24 @@ div.row{
         width: 215px;
         height: 215px;
     }
+    .box-lista, #lista span, .simulacao-lista{
+        margin: 0 20px;
+    }
+    #lista span{
+        width: 17px;
+    }
+    
+    div.select-box, .simulacao-lista{
+        width: 214px;
+        display: flex;
+        justify-content: center;
+    }
+    div#lista{
+        justify-content: center;
+    }
+    .simulacao-lista{
+        height: 52px;
+    }
 }
 
 @media only screen and (min-width: 1181px){
