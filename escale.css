@@ -110,6 +110,12 @@ a#voltar{
     text-align: center;
 }
 
+@media only screen and (max-width: 1420px){
+    footer{
+        left: 68%;
+    }
+}
+
 @media only screen and (max-width:1365px) and (min-width: 1240px) {
     footer > a{
         width: 223px !important;
@@ -149,8 +155,10 @@ a#voltar{
     }
     footer{
         position: static;
-        margin: 50px;
+        margin: 10px 0;
+        margin-top: 20px;
         display: flex;
+        justify-content: space-around;
     }
     footer > a{
         display: inline !important;
@@ -219,3 +227,4 @@ a#voltar{
         margin-top: 10px;
     }
 }
+
