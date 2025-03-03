@@ -10,10 +10,34 @@ var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "im
 var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/gustavo-maia.png"]
 var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens/sport/pablo.png", "imagens/sport/artur-sousa.png" ,"imagens/sport/lenny-lobato.png"]
 
-var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png"]
+var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png", "imagens/bahia/danilo-fernandes.png", "imagens/bahia/denis-junior.png"]
+var ldBahia = ["Lateral Direito" , "ld-esc", "imagens/bahia/santi-arias.png", "imagens/bahia/gilberto.png"]
+var leBahia = ["Lateral Esquerdo", "le-esc", "imagens/bahia/luciano-juba.png", "imagens/bahia/iago-borduchi.png", "imagens/bahia/ramos-mingo.png", "imagens/bahia/rezende.png"]
+var zdBahia = ["Zagueiro Direito", "zd-esc", "imagens/bahia/kanu.png", "imagens/bahia/gabriel-xavier.png"]
+var zeBahia = ["Zagueiro Esquerdo", "ze-esc", "imagens/bahia/ramos-mingo.png", "imagens/bahia/kanu.png", "imagens/bahia/vitor-hugo.png", "imagens/bahia/rezende.png"]
+var volBahia = ["1º Volante", "vol-esc", "imagens/bahia/caio-alexandre.png", "imagens/bahia/acevedo.png", "imagens/bahia/rezende.png", "imagens/bahia/rodrigo-nestor.png"]
+var mcBahia = ["2º volante", "mc-esc", "imagens/bahia/jean-lucas.png", "imagens/bahia/erick.png", "imagens/bahia/rodrigo-nestor.png"]
+var meiBahia = ["Meia", "mei-esc", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/cauly.png", "imagens/bahia/rodrigo-nestor.png", "imagens/bahia/erick.png"]
+var pdBahia = ["Ponta direita", "pd-esc", "imagens/bahia/ademir.png", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/lucho-rodriguez.png"]
+var peBahia = ["Ponta esquerda", "pe-esc", "imagens/bahia/erick-pulga.png", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/luciano-juba.png"]
+var caBahia = ["Centroavante", "ca-esc", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/william-jose.png"]
+
+var golFortaleza = ["Goleiro", "gol-esc", "imagens/fortaleza/joao-ricardo.png", "imagens/fortaleza/brenno.png", "imagens/fortaleza/magrao.png"]
+var ldFortaleza = ["Lateral Direito", "ld-esc", "imagens/fortaleza/eros-mancuso.png", "imagens/fortaleza/tinga.png", "imagens/fortaleza/britez.png"]
+var leFortaleza = ["Lateral Esquerdo", "le-esc", "imagens/fortaleza/bruno-pacheco.png", "imagens/fortaleza/diogo-barbosa.png", "imagens/fortaleza/felipe-jonatan.png", "imagens/fortaleza/eros-mancuso.png", "imagens/fortaleza/gaston-avila.png"]
+var zdFortaleza = ["Zagueiro Direito", "zd-esc", "imagens/fortaleza/david-luiz.png", "imagens/fortaleza/britez.png", "imagens/fortaleza/kuscevic.png", "imagens/fortaleza/gustavo-mancha.png"]
+var zeFortaleza = ["Zagueiro Esquerdo", "ze-esc", "imagens/fortaleza/gaston-avila.png", "imagens/fortaleza/titi.png", "imagens/fortaleza/david-luiz.png"]
+var volFortaleza = ["1º Volante", "vol-esc", "imagens/fortaleza/pol-fernandez.png", "imagens/fortaleza/rosseto.png", "imagens/fortaleza/ze-welisson.png", "imagens/fortaleza/lucas-sasha.png", "imagens/fortaleza/pedro-augusto.png"]
+var mcFortaleza = ["2º Volante", "mc-esc", "imagens/fortaleza/ze-welisson.png", "imagens/fortaleza/lucas-sasha.png", "imagens/fortaleza/martinez.png"]
+var meiFortaleza = ["Meia", "mei-esc", "imagens/fortaleza/pochettino.png", "imagens/fortaleza/calebe.png", "imagens/fortaleza/martinez.png", "imagens/fortaleza/kervin-andrade.png"]
+var pdFortaleza = ["Ponta direita", "pd-esc", "imagens/fortaleza/pikachu.png", "imagens/fortaleza/marinho.png"]
+var peFortaleza = ["Ponta esquerda", "pe-esc", "imagens/fortaleza/moises.png", "imagens/fortaleza/breno-lopes.png"]
+var caFortaleza = ["Centroavante", "ca-esc", "imagens/fortaleza/lucero.png", "imagens/fortaleza/renato-kayzer.png", "imagens/fortaleza/dylan-borrero.png"]
+
 var dados = {
     Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
-    Bahia: [golBahia]
+    Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
+    Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza]
 };
 // , ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport
 
