@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALE SEU TIME</title>
+    <link rel="stylesheet" href="escale.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="escale.js"></script>
+</head>
+<body>
+    <div class="aviso" style="display: none;">
+        Resolução não suportada. Tente diminuir o zoom.
+    </div>
+    <div class="body">
+        <div id="escolha">
+            <select name="Time 1" id="timeUm" onchange="selecionarEscale(this)">
+                <option disabled selected>Time</option>
+                <option value="Fortaleza" disabled>
+                    Fortaleza
+                </option>
+                <option value="Sport">
+                    Sport
+                </option>
+                <option value="Bahia" disabled>
+                    Bahia
+                </option>
+                <option value="Ceara" disabled>
+                    Ceará
+                </option>
+                <option value="Vitoria" disabled>
+                    Vitória
+                </option>
+            </select>
+        </div>
+        <div class="campo">
+            <img class="jogador" id="ca">
+            <img class="jogador" id="pe">
+            <img class="jogador" id="pd">
+            <img class="jogador" id="mei">
+            <img class="jogador" id="mc">
+            <img class="jogador" id="vol">
+            <img class="jogador" id="ld">
+            <img class="jogador" id="le">
+            <img class="jogador" id="ze">
+            <img class="jogador" id="zd">
+            <img class="jogador" id="gol">
+            <img src="imagens/campo de futebol.avif" id="campo">
+        </div>
+    </div>
+    <footer>
+        <a href="index.html" id="voltar">
+
+                VOLTAR
+
+        </a>
+        <br></br>
+        <a onclick="limparCampoEscale()" id="voltar" class="limpar">
+
+                LIMPAR
+
+        </a>
+    </footer>
+</body>
+
+</html>

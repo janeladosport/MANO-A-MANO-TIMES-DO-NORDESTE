@@ -1,0 +1,185 @@
+.jogador, .jogador-selectable{
+    
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    background-image: white;
+}
+.jogador-selectable{
+    max-width: 120px;
+    max-height: 120px;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.3s;
+    transition-timing-function :cubic-bezier();
+}
+.jogador-selectable:hover{
+    max-width: 123px;
+    max-height: 123px;
+}
+.span-escolha{
+    margin: 5px;
+    flex-grow: 10;
+    width: 100%;
+}
+
+.jogador{
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    position: absolute; 
+}
+#ca{
+  transform: translate(180px, 35px);
+}
+#pd{
+    transform: translate(320px, 85px);
+}
+#pe{
+    transform: translate(46px, 85px);
+}
+#mei{
+    transform: translate(180px, 150px);
+}
+#mc{
+    transform: translate(100px, 250px);
+}
+#vol{
+    transform: translate(260px, 250px);
+}
+#ld{
+    transform: translate(320px, 350px);
+}
+#le{
+    transform: translate(46px, 350px);
+}
+#ze{
+    transform: translate(100px, 440px);
+}
+#zd{
+    transform: translate(260px, 440px);
+}
+#gol{
+    transform: translate(180px, 535px);
+}
+.campo{
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 626px;
+    max-width: 443px;
+    border: 2.3px solid white;
+}
+.nome-escolha{
+    color: white;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+#escolha{
+    max-width: 500px;
+    position: absolute;
+}
+
+.body{
+    margin-top: 50px;
+    margin-left: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+footer > a{
+    width: 323px !important;
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 30px !important; 
+}
+
+footer{
+    position: absolute;
+    left: 70%;
+    top: 30%;
+}
+
+a#voltar{
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (max-height:640px) {
+    .body{
+        display: none;
+    }
+    .limpar{
+        display: none !important;
+    }
+    footer{
+        position: static;
+        margin: 50px;
+    }
+    .aviso{
+        display: block !important;
+        font-weight: 600;
+        color: rgb(194, 14, 14);
+        text-align: center;
+        font-size: 20pt;
+        margin: 100px;
+    }
+}
+
+@media only screen and (max-width:1365px) and (min-width: 1240px) {
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
+    }
+    .campo{
+        left: 55%;
+    }
+}
+
+@media only screen and (max-width:1240px) and (min-width:1210px) {
+    .campo{
+        left: 56%;
+    }
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width:1210px) {
+    .body{
+        display: none;
+    }
+    .limpar{
+        display: none !important;
+    }
+    footer{
+        position: static;
+        margin: 50px;
+    }
+    .aviso{
+        display: block !important;
+        font-weight: 600;
+        color: rgb(194, 14, 14);
+        text-align: center;
+        font-size: 20pt;
+        margin: 100px;
+    }
+}
+
+@media only screen and (max-height: 688px){
+    .body{
+        margin-top: 10px;
+    }
+}

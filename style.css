@@ -13,10 +13,16 @@ a{
     border-radius: 3px;
 }
 
-button{
+button, a#voltar{
     color: white;
     text-transform: uppercase;
     font-weight: 600;
+    font-family: "Roboto", Arial, Helvetica, Sans-serif;
+    font-size: 13pt;
+    background-color: rgb(194, 1, 39);
+    border: 0;
+    cursor: pointer;
+    width: 100%;
 }
 
 div.item, div.item > img{
@@ -28,14 +34,10 @@ div.item{
     padding: 5px;
 }
 
-div#flex > a:hover, div#flex > a:hover > button, footer > a:hover > button, footer > a:hover{
+div#flex > a:hover, div#flex > a:hover > button, footer > a:hover > button, footer > a:hover, a#voltar:hover{
     background-color: rgb(165, 1, 34);
 }
 
-button{
-    font-family: "Roboto", Arial, Helvetica, Sans-serif;
-    font-size: 13pt;
-}
 
 #flex{
     display: flex;
@@ -57,23 +59,17 @@ body{
     font-weight: 700;
 }
 
-button#voltar{
+button#voltar, a#voltar{
     width:16%;
     margin-top: 60px;
     color: white;
+    margin-bottom: 40px;
 }
 
 div.row, .row-esc, #lista{
     display: flex;
     align-items: center;
     margin: 20px;
-}
-
-button{
-    background-color: rgb(194, 1, 39);
-    border: 0;
-    cursor: pointer;
-    width: 100%;
 }
 
 div.item, div.item > img{
@@ -94,10 +90,6 @@ span{
     color: white;
     font-size: 20pt;
     font-weight: 1000;
-}
-
-button#voltar{
-    margin-bottom: 40px;
 }
 
 @media only screen and (max-width:1000px) and (min-width: 701px){
