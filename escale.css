@@ -280,7 +280,7 @@ a#voltar{
     }
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 420px) and (min-width:400px){
     .campo, #campo{
         width: 380px;
         height: 537px;
@@ -321,7 +321,53 @@ a#voltar{
     
 }
 
-@media only screen and (max-width:400px){
+@media only screen and (max-width: 400px) and (min-width: 365px){
+    .campo, #campo{
+        width: 350px;
+        height: 495px;
+    }
+    .jogador{
+        max-width: 60px;
+        max-height: 60px;
+        left: -5%;
+        top: -8%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 350px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -18%;
+    }
+    #vol, #mc, #mei{
+        left: -10.5%;
+    }
+    #gol{
+        top: -22%;
+        left: -11%;
+    }
+    #zd, #ze{
+        top: -15%;
+        left: -11%;
+    }
+    #le,#ld{
+        top: -11%;
+    } 
+    #mei{
+        top: -3%;
+    }
+    #ca{
+        top: -1.8%;
+        left: -10%;
+    } 
+    
+}
+
+/* @media only screen and (max-width:400px){
     .body{
         display: none;
     }
@@ -340,4 +386,4 @@ a#voltar{
         font-size: 20pt;
         margin: 100px;
     }
-}
+} */
