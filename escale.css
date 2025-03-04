@@ -367,7 +367,139 @@ a#voltar{
     
 }
 
-/* @media only screen and (max-width:400px){
+@media only screen and (max-width: 365px) and (min-width:320px){
+    .campo, #campo{
+        width: 300px;
+        height: 424px;
+    }
+    .jogador{
+        max-width: 50px;
+        max-height: 50px;
+        left: -3%;
+        top: -15%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 300px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -34%;
+    }
+    #le, #pe{
+        left: -5.8%;
+    }
+    #vol{
+        left: -24.5%;
+    }
+    #mc{
+        left: -12.6%;
+    }
+    #mei{
+        left: -18.5%;
+        top: -6%;
+    }
+    #gol{
+        top: -40%;
+        left: -19%;
+    }
+    #zd, #ze{
+        top: -30%;
+    }
+    #zd{
+        left: -25%;
+    }
+    #ze{
+        left: -10%;
+    }
+    #le,#ld{
+        top: -23%;
+    } 
+    #ca{
+        top: -2.8%;
+        left: -18.7%;
+    } 
+    #pd, #pe{
+        top: -5%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .campo, #campo{
+        width: 250px;
+        height: 353px;
+    }
+    .jogador{
+        max-width: 46px;
+        max-height: 46px;
+        top: -32%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 275px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -56%;
+    }
+    #le, #pe{
+        left: -9%;
+    }
+    #vol{
+        left: -42%;
+    }
+    #mc{
+        left: -21.6%;
+    }
+    #mei{
+        left: -32%;
+        top: -18%;
+    }
+    #gol{
+        top: -65%;
+        left: -32%;
+    }
+    #zd, #ze{
+        top: -54%;
+    }
+    #zd{
+        left: -46%;
+    }
+    #ze{
+        left: -18%;
+    }
+    #le,#ld{
+        top: -44%;
+    } 
+    #ca{
+        top: -4.8%;
+        left: -32%;
+    } 
+    #pd, #pe{
+        top: -5%;
+    }
+}
+
+@media only screen and (max-width: 285px){
+    #escolha, .escolha-box{
+        width: 250px;
+    }
+    .jogador-selectable{
+        max-width: 110px;
+        max-height: 110px;
+    }
+    .jogador-selectable:hover{
+        max-width: 113px;
+        max-height: 113px;
+    }
+}
+
+@media only screen and (max-width:270px){
     .body{
         display: none;
     }
@@ -386,4 +518,4 @@ a#voltar{
         font-size: 20pt;
         margin: 100px;
     }
-} */
+}
