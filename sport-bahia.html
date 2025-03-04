@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <script src="person.js"></script>
+    <script src="person-time.js"></script>
+    <script src="escale.js"></script>
+    <link rel="stylesheet" href="escale.css">
+    <link rel="stylesheet" href="escale-naoperso.css">
+    <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
 </head>
 <body>
     <div id="titulo">
@@ -18,163 +24,158 @@
         SPORT X BAHIA
         <img src="imagens/escudos/bahia.png" alt="">
     </div>
-    <div class="mam">
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/caique-frança.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/marcos-felipe.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/hereda.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/santi-arias.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/joao-silva.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/kanu.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/chico.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/ramos-mingo.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/igor-carius.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/luciano-juba.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/christian-rivera.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/caio-alexandre.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/sergio-oliveira.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/jean-lucas.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/lucas-lima.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/everton-ribeiro.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/chino-atencio.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/ademir.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/lenny-lobato.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/erick-pulga.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/sport/paciencia.png" alt="">
-            </div>
-            <span>X</span>
-            <div class="item" onclick="clicar(this)">
-                <img src="imagens/bahia/lucho-rodriguez.png" alt="">
-            </div>
-            <span>=</span>
-            <div class="item-resultado">
-                <img>
-            </div>
-        </div>
-    </div>
     
+        <div class="mam">
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item time-um">
+                    <img>
+                </div>
+                <span>X</span>
+                <div class="item time-dois">
+                    <img>
+                </div>
+                <span>=</span>
+                <div class="item-resultado">
+                    <img>
+                </div>
+            </div>
+    </div>
+    <!-- <div id="escolha"></div> -->
 </body>
+<script>
+    botarUm("Sport", false)
+    botarDois("Bahia", false)
+</script>
 <footer>
     <a href="index.html">
         <button id="voltar">
@@ -184,6 +185,11 @@
     <a onclick="limpar()">
         <button id="voltar">
             LIMPAR
+        </button>
+    </a>
+    <a onclick="personalizar(false)">
+        <button id="voltar">
+            PERSONALIZAR TIMES
         </button>
     </a>
 </footer>

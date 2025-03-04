@@ -1,0 +1,71 @@
+footer > a{
+    width: 323px !important;
+    display: block !important;
+    margin-top: 0 !important;
+    margin-bottom: 30px !important; 
+}
+
+footer{
+    position: absolute;
+    left: 70%;
+    top: 30%;
+}
+
+@media only screen and (max-width: 1420px){
+    footer{
+        left: 68%;
+    }
+}
+@media only screen and (max-width:1365px) and (min-width: 1240px) {
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width:1210px) and (min-width: 510px) {
+    footer{
+        position: static;
+        margin: 10px 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    footer > a{
+        display: inline !important;
+    }
+}
+@media only screen and (max-width:1240px) and (min-width:1210px) {
+    footer > a{
+        width: 223px !important;
+    }
+    footer{
+        position: absolute;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 510px){
+   footer{
+        position: static;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    footer > a{
+        display: inline !important;
+    }
+}
+@media only screen and (max-width:270px){
+    footer{
+        position: static;
+        margin: 50px;
+    }
+}
+
+#escolha{
+    position: absolute;
+}

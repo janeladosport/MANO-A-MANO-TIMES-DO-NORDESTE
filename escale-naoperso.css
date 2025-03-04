@@ -1,0 +1,21 @@
+#escolha{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100% !important;
+    max-width: 100%;
+    align-content: space-around;
+    max-height: 3500px;
+    align-content: space-around;
+}
+
+
+.nome-escolha{
+    max-width: 500px;
+}
+
+#escolha{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+}

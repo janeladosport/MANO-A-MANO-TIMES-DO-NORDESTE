@@ -79,9 +79,8 @@
     flex-wrap: wrap;
     margin: 10px 0;
 }
-#escolha{
+#escolha, #escolha-dois{
     max-width: 500px;
-    position: absolute;
 }
 
 .body{
@@ -92,39 +91,24 @@
     height: 100%;
 }
 
-footer > a{
-    width: 323px !important;
-    display: block !important;
-    margin-top: 0 !important;
-    margin-bottom: 30px !important; 
-}
-
-footer{
-    position: absolute;
-    left: 70%;
-    top: 30%;
-}
-
 a#voltar{
     text-decoration: none;
     text-align: center;
 }
 
-@media only screen and (max-width: 1420px){
-    footer{
-        left: 68%;
+@media only screen and (min-width: 1555px){
+    .jogador-selectable{
+        max-width: 150px;
+        max-height: 150px;
+    }
+    .jogador-selectable:hover{
+        max-width: 155px;
+        max-height: 155px;
     }
 }
 
 @media only screen and (max-width:1365px) and (min-width: 1240px) {
-    footer > a{
-        width: 223px !important;
-    }
-    footer{
-        position: absolute;
-        left: 75%;
-    }
-    .campo{
+   .campo{
         left: 55%;
     }
 }
@@ -152,16 +136,6 @@ a#voltar{
     }
     .escolha-box{
         width: 465px;
-    }
-    footer{
-        position: static;
-        margin: 10px 0;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-    }
-    footer > a{
-        display: inline !important;
     }
 }
 
@@ -191,13 +165,6 @@ a#voltar{
 @media only screen and (max-width:1240px) and (min-width:1210px) {
     .campo{
         left: 56%;
-    }
-    footer > a{
-        width: 223px !important;
-    }
-    footer{
-        position: absolute;
-        left: 75%;
     }
 }
 
@@ -230,15 +197,6 @@ a#voltar{
     }
     .escolha-box{
         width: 400px;
-    }
-    footer{
-        position: static;
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-around;
-    }
-    footer > a{
-        display: inline !important;
     }
 }
 
@@ -505,10 +463,6 @@ a#voltar{
     }
     .limpar{
         display: none !important;
-    }
-    footer{
-        position: static;
-        margin: 50px;
     }
     .aviso{
         display: block !important;
