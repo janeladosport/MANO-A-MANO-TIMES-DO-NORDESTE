@@ -304,6 +304,10 @@ a#voltar{
     #escolha, .escolha-box{
         margin-left: 0px;
         width: 350px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
     }
     #le,#pe{
         left: -3%;
