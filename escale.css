@@ -490,12 +490,12 @@ a#voltar{
         width: 250px;
     }
     .jogador-selectable{
-        max-width: 110px;
-        max-height: 110px;
+        max-width: 105px;
+        max-height: 105px;
     }
     .jogador-selectable:hover{
-        max-width: 113px;
-        max-height: 113px;
+        max-width: 108px;
+        max-height: 108px;
     }
 }
 
