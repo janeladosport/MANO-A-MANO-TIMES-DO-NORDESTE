@@ -19,6 +19,9 @@ let timeUno
 let timeDuno
 
 function selecionarUm(elemento){
+        if (document.getElementById("escolha")){
+            document.getElementById("escolha").remove()
+        }
     time = elemento.value
     botarUm(time, true)
 }
@@ -57,6 +60,7 @@ function botarUm(time, verify){
             imagem[i].querySelector('img').src = bahia[i]
             imagem[i].setAttribute("onclick", "clicar(this)")
             }
+
     } if (time == "Ceara") {
         for (i=0; i < imagem.length; i++){
             imagem[i].querySelector('img').src = ceara[i]
@@ -74,6 +78,9 @@ function botarUm(time, verify){
 }
 
 function selecionarDois(elemento){
+    if (document.getElementById("escolha")){
+        document.getElementById("escolha").remove()
+    }
     time = elemento.value
     botarDois(time, true)
 }

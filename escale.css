@@ -6,16 +6,20 @@
     background-image: white;
 }
 .jogador-selectable{
-    max-width: 120px;
-    max-height: 120px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
     margin: 5px;
     transition-duration: 0.3s;
     transition-timing-function :cubic-bezier();
 }
 .jogador-selectable:hover{
-    max-width: 123px;
-    max-height: 123px;
+    width: 123px;
+    height: 123px;
+}
+.incomum:hover{
+    width: 120px;
+    height: 120px;
 }
 .span-escolha{
     margin: 5px;
@@ -98,12 +102,19 @@ a#voltar{
 
 @media only screen and (min-width: 1555px){
     .jogador-selectable{
-        max-width: 150px;
-        max-height: 150px;
+        width: 150px;
+        height: 150px;
     }
     .jogador-selectable:hover{
-        max-width: 155px;
-        max-height: 155px;
+        width: 155px;
+        height: 155px;
+    }
+    .incomum:hover{
+        width: 150px;
+        height: 150px;
+    }
+    .vitoria{
+        display: none;
     }
 }
 
@@ -454,6 +465,10 @@ a#voltar{
     .jogador-selectable:hover{
         max-width: 108px;
         max-height: 108px;
+    }
+    .incomum:hover{
+        max-width: 105px;
+        max-height: 105px;
     }
 }
 

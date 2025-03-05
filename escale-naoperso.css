@@ -9,6 +9,10 @@
     align-content: space-around;
 }
 
+.trikas{
+    max-height: 3010px !important;
+}
+
 
 .nome-escolha{
     max-width: 500px;
@@ -18,4 +22,12 @@
     display: flex;
     justify-content: space-around;
     column-gap: 10px;
+}
+@media only screen and (max-width:1555px){
+    #escolha{
+        max-height: 3000px;
+    }
+    .trikas{
+        max-height: 2700px !important;
+    }
 }

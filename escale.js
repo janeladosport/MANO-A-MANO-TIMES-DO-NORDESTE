@@ -103,8 +103,31 @@ function botarEscale(time, clean, perso, numb, check){
                 imagem.setAttribute("id", id)
             }
         }
-        
     }
+    if (escolha){
+        if (time == "Fortaleza" || time == "Bahia" || time == "Vitoria"){
+            if (numb=="um"){console.log("EXECUTANDO CRIAÇÃO...", "Time: ", time, "Numb: ", numb)
+            let divFortal = document.createElement("div")
+            divFortal.setAttribute("class", "nome-escolha anormal")
+            escolha.appendChild(divFortal)
+            let imagemF = document.createElement("img")
+            divFortal.appendChild(imagemF)
+            imagemF.setAttribute("class", "jogador-selectable incomum")
+            divFortal.style.flexDirection = "column"
+            divFortal.style.opacity = "0"
+            imagemF.style.cursor = "default"
+            if (time == "Vitoria"){
+                imagemF.setAttribute("class", "jogador-selectable incomum vitoria")
+            }
+            if (time == "Fortaleza" || time == "Bahia"){
+                let imagemFD = document.createElement("img")
+                divFortal.appendChild(imagemFD)
+                imagemFD.setAttribute("class", "jogador-selectable incomum")
+                imagemFD.style.cursor = "default" 
+            }
+        } 
+    }     
+}
 }
 
 function limparEscolhaEscale(){
