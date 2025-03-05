@@ -2,11 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 100% !important;
-    max-width: 100%;
     align-content: space-around;
-    max-height: 3500px;
     align-content: space-around;
+}
+
+@media only screen and (min-width:1555px){
+    #escolha{
+        max-height: 3500px;
+        width: 100% !important;
+        max-width: 100%;
+    }
 }
 
 .trikas{
@@ -23,11 +28,56 @@
     justify-content: space-around;
     column-gap: 10px;
 }
-@media only screen and (max-width:1555px){
+@media only screen and (max-width:1555px) and (min-width:1210px){
     #escolha{
         max-height: 3000px;
+        width: 100% !important;
+        max-width: 100%;
     }
     .trikas{
         max-height: 2700px !important;
+    }
+}
+
+@media only screen and (max-width:1210px) and (min-width:1050px){
+    #escolha{
+        max-height: 3000px;
+        max-width: 90vw;
+        align-self: center;
+    }
+    .trikas{
+        max-height: 2700px !important;
+    }
+}
+
+@media only screen and (max-width:1050px) and (min-width:1005px){
+    #escolha{
+        max-height: 3000px;
+        max-width: 80vw;
+        align-self: center;
+    }
+    .nome-escolha{
+        width: 50% !important;
+        max-width: 50% !important;
+    }
+    .trikas{
+        max-height: 2700px !important;
+    }
+}
+
+@media only screen and (max-width: 1240px){
+    footer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer a{
+        max-height: 59px;
+        width: 50%;
+    }
+    footer button{
+        width: 100% !important;
+        height: 100%;
+        margin: 0 !important;
     }
 }

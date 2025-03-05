@@ -6,8 +6,8 @@ var leSport = ["Lateral Esquerda", "le-esc", "imagens/sport/igor-carius.png", "i
 var volSport = ["1º Volante", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/adriel.png", "imagens/sport/ze-lucas.png"]    
 var mcSport = ["2º Volante", "mc-esc", "imagens/sport/sergio-oliveira.png", "imagens/sport/dominguez.png", "imagens/sport/du-queiroz.png"]
 var meiSport = ["Meia", "mei-esc", "imagens/sport/lucas-lima.png", "imagens/sport/hyoran.png", "imagens/sport/titi-ortiz.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/chino-atencio.png"]
-var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png"]
-var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/gustavo-maia.png"]
+var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/lucas-lima.png"]
+var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/gustavo-maia.png", "imagens/sport/carlos-alberto.png"]
 var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens/sport/pablo.png", "imagens/sport/artur-sousa.png" ,"imagens/sport/lenny-lobato.png"]
 
 var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png", "imagens/bahia/danilo-fernandes.png", "imagens/bahia/denis-junior.png"]

@@ -205,3 +205,11 @@ select{
     }
 
 } */
+
+@media only screen and (max-width:625px){
+    div.row{
+        flex-wrap: wrap;
+        border: 2px solid white;
+        padding: 8px;
+    }
+}
