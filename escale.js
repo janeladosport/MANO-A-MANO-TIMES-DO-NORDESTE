@@ -213,6 +213,7 @@ function alterarTime(elemento, numb){
     let verificate = verificarDuplicataAntes("item", elemento.src)
     console.log("Verificate: ", verificate)
     if (verificate == true) {
+        limpar()
         timesFut[elemento.dataset.info][numeros[elemento.id]] = elemento.src
         if (numb = "um"){
             botarUm(timeUno, false)
