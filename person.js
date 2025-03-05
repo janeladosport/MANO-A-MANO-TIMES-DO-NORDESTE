@@ -160,5 +160,9 @@ function personalizar(elemento, checar){
     elemento.querySelector("button").innerHTML = "RECOLHER"
     botarEscale(timeUno, false, true, "um", true, elemento)
     botarEscale(timeDuno, false, true, "dois", false, elemento)
-
+    let escolha = document.getElementById("escolha")
+    if (escolha){
+        let offset = 80
+        window.scrollTo({ top: escolha.getBoundingClientRect().top + window.scrollY - offset,behavior: "smooth" });
+    }
 }

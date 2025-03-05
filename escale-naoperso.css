@@ -69,7 +69,6 @@
     footer{
         display: flex;
         align-items: center;
-        flex-direction: column;
     }
     footer a{
         max-height: 59px;
@@ -80,4 +79,30 @@
         height: 100%;
         margin: 0 !important;
     }
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 98vw;
+    background-color: #211e1e;
+    height: 80px;
+    border-radius: 0 0 15px 15px;
+}
+
+#titulo{
+    margin-top: 120px;
+}
+
+footer a{
+    flex: 1;
+    display: flex;
+}
+
+footer button{
+    
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0 !important;
 }

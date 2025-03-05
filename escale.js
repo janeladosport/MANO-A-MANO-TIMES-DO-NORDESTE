@@ -77,12 +77,15 @@ function botarEscale(time, clean, perso, numb, check, elemento){
     if (check == true){
         console.log("Checando")
         if (document.getElementById("escolha")){
-            console.log("Tem escolha")
-            document.getElementById("escolha").remove()
+            window.scrollTo({top: 0, behavior: "smooth"})
             if (elemento){
+                
                 elemento.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
                 console.log("Tem elemento", elemento.querySelector("button").innerHTML)
             }
+            console.log("Tem escolha")
+            document.getElementById("escolha").remove()
+            
             return false
         } else{
             createEscolha()
