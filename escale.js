@@ -46,25 +46,43 @@ var pdVitoria = ["Ponta direita", "pd-esc", "imagens/vitoria/gustavo-mosquito.pn
 var peVitoria = ["Ponta esquerda", "pe-esc", "imagens/vitoria/lucas-braga.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/carlos-eduardo.png", "imagens/vitoria/bruno-xavier.png"]
 var caVitoria = ["Centroavante", "ca-esc", "imagens/vitoria/janderson.png", "imagens/vitoria/fabri.png", "imagens/vitoria/carlinhos.png"]
 
+var golCeara = ["Goleiro", "gol-esc", "imagens/ceara/bruno-ferreira.png", "imagens/ceara/fernando-miguel.png", "imagens/ceara/keiller.png", "imagens/ceara/richard.png"]
+var ldCeara = ["Lateral Direito", "ld-esc", "imagens/ceara/fabiano-souza.png", "imagens/ceara/rafael-ramos.png", "imagens/ceara/dieguinho.png"]
+var zdCeara = ["Zagueiro Direito", "zd-esc", "imagens/ceara/marllon.png", "imagens/ceara/eder.png", "imagens/ceara/gabriel-lacerda.png", "imagens/ceara/marcos-vitor.png"]
+var zeCeara = ["Zagueiro Esquerdo", "ze-esc", "imagens/ceara/ramon-menezes.png", "imagens/ceara/luiz-otavio.png", "imagens/ceara/william-machado.png"]
+var leCeara = ["Lateral Esquerdo", "le-esc", "imagens/ceara/matheus-bahia.png", "imagens/ceara/nicolas.png", "imagens/ceara/william-machado.png"]
+var volCeara = ["1º Volante", "vol-esc", "imagens/ceara/richardson.png", "imagens/ceara/dieguinho.png", "imagens/ceara/fernando-sobral.png"]
+var mcCeara = ["2º Volante", "mc-esc", "imagens/ceara/fernando-sobral.png", "imagens/ceara/lourenço.png", "imagens/ceara/matheus-araujo.png"]
+var meiCeara = ["Meia", "mei-esc", "imagens/ceara/lucas-mugni.png", "imagens/ceara/romulo.png", "imagens/ceara/recalde.png", "imagens/ceara/matheus-araujo.png"]
+var pdCeara = ["Ponta direita", "pd-esc", "imagens/ceara/pedro-henrique.png", "imagens/ceara/galeano.png", "imagens/ceara/joao-victor.png", "imagens/ceara/bruno-tubarao.png"]
+var peCeara = ["Ponta esquerda", "pe-esc", "imagens/ceara/fernandinho.png", "imagens/ceara/pedro-henrique.png", "imagens/ceara/alejandro-martinez.png", "imagens/ceara/joao-victor.png"]
+var caCeara = ["Centroavante", "ca-esc", "imagens/ceara/pedro-raul.png", "imagens/ceara/aylon.png"]
+
 var dados = {
     Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
     Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
-    Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria]
+    Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
+    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
 };
-// , ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport
 
 function selecionarEscale(elemento){
     var time = elemento.value
     botarEscale(time, true, false, "", false)
 }
 
-function botarEscale(time, clean, perso, numb, check){
+function botarEscale(time, clean, perso, numb, check, elemento){
+    
     console.log("check: ", check)
     if (check == true){
         console.log("Checando")
         if (document.getElementById("escolha")){
+            console.log("Tem escolha")
             document.getElementById("escolha").remove()
+            if (elemento){
+                elemento.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
+                console.log("Tem elemento", elemento.querySelector("button").innerHTML)
+            }
             return false
         } else{
             createEscolha()
@@ -75,6 +93,7 @@ function botarEscale(time, clean, perso, numb, check){
     }
     limparCampoEscale()
     let timeValor = dados[time]
+    let escolha
     for (i=0; i < timeValor.length; i++){
         let div = document.createElement("div")
         let span = document.createElement("div")
@@ -82,7 +101,7 @@ function botarEscale(time, clean, perso, numb, check){
         let nome = timeI[0]
         let id = timeI[1]
         span.innerHTML = nome
-        let escolha = document.getElementById("escolha")
+        escolha = document.getElementById("escolha")
         if (escolha){
             escolha.appendChild(div)
             span.setAttribute("class", "span-escolha")
@@ -105,7 +124,7 @@ function botarEscale(time, clean, perso, numb, check){
         }
     }
     if (escolha){
-        if (time == "Fortaleza" || time == "Bahia" || time == "Vitoria"){
+        if (time == "Fortaleza" || time == "Bahia" || time == "Vitoria" || time == "Ceara"){
             if (numb=="um"){console.log("EXECUTANDO CRIAÇÃO...", "Time: ", time, "Numb: ", numb)
             let divFortal = document.createElement("div")
             divFortal.setAttribute("class", "nome-escolha anormal")

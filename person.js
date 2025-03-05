@@ -150,14 +150,15 @@ function checarPs(){
     }
 }
 
-function personalizar(ps, dois){
-    if (ps == true){
+function personalizar(elemento, checar){
+    if (checar == true){
         var tof = checarPs()
         if (tof == false){
             return
         }
     }
-    
-    botarEscale(timeUno, false, true, "um", true)
-    botarEscale(timeDuno, false, true, "dois", false)
+    elemento.querySelector("button").innerHTML = "RECOLHER"
+    botarEscale(timeUno, false, true, "um", true, elemento)
+    botarEscale(timeDuno, false, true, "dois", false, elemento)
+
 }

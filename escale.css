@@ -5,6 +5,9 @@
     background-color: white;
     background-image: white;
 }
+.incomum{
+    opacity: 0;
+}
 .jogador-selectable{
     width: 120px;
     height: 120px;
