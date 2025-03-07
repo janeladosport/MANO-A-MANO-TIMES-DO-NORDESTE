@@ -78,10 +78,11 @@
         html2canvas(salvado, {
     useCORS: true,
     allowTaint: false,
-    backgroundColor: null
+    backgroundColor: null,
+    scale: 4
 }).then(function(canvas) {
     const link = document.createElement('a');
-    link.href = canvas.toDataURL("image/png");
+    link.href = canvas.toDataURL("image/png", 1.0);
     link.download = 'minha-escalação.png';
     link.click();
 });
