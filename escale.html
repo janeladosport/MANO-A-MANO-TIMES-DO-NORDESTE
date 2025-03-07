@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="escale-footer.css">
     <script src="escale.js"></script>
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
 </head>
 <body>
     <div class="aviso" style="display: none;">
@@ -37,19 +38,19 @@
                 </select>
             </div>
         </div>
-        <div class="campo">
-            <img class="jogador" id="ca">
-            <img class="jogador" id="pe">
-            <img class="jogador" id="pd">
-            <img class="jogador" id="mei">
-            <img class="jogador" id="mc">
-            <img class="jogador" id="vol">
-            <img class="jogador" id="ld">
-            <img class="jogador" id="le">
-            <img class="jogador" id="ze">
-            <img class="jogador" id="zd">
-            <img class="jogador" id="gol">
-            <img src="imagens/campo de futebol.avif" id="campo">
+        <div class="campo" id="camp">
+            <img class="jogador" id="ca" crossorigin="anonymous">
+            <img class="jogador" id="pe" crossorigin="anonymous">
+            <img class="jogador" id="pd" crossorigin="anonymous">
+            <img class="jogador" id="mei" crossorigin="anonymous">
+            <img class="jogador" id="mc" crossorigin="anonymous">
+            <img class="jogador" id="vol" crossorigin="anonymous">
+            <img class="jogador" id="ld" crossorigin="anonymous">
+            <img class="jogador" id="le" crossorigin="anonymous">
+            <img class="jogador" id="ze" crossorigin="anonymous">
+            <img class="jogador" id="zd" crossorigin="anonymous">
+            <img class="jogador" id="gol" crossorigin="anonymous">
+            <img src="imagens/campo de futebol.avif" id="campo" crossorigin="anonymous">
         </div>
     </div>
     <footer>
@@ -63,7 +64,27 @@
                 LIMPAR
 
         </a>
+        <a onclick="salvar()" id="voltar" class="limpar">
+
+            SALVAR ESCALAÇÃO
+
+    </a>
     </footer>
 </body>
-
+<script>
+    function salvar(){
+        const salvado = document.getElementById("camp")
+        console.log(salvado)
+        html2canvas(salvado, {
+    useCORS: true,
+    allowTaint: false,
+    backgroundColor: null
+}).then(function(canvas) {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL("image/png");
+    link.download = 'minha-escalação.png';
+    link.click();
+});
+    }
+</script>
 </html>
