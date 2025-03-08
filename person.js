@@ -21,6 +21,11 @@ let timeDuno
 function selecionarUm(elemento){
         if (document.getElementById("escolha")){
             document.getElementById("escolha").remove()
+            let button = document.querySelector("a[onclick='personalizar(this, true)'")
+            console.log("BOTÃO: ", button)
+            if (button){
+                button.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
+            }
         }
     time = elemento.value
     botarUm(time, true)
@@ -80,6 +85,11 @@ function botarUm(time, verify){
 function selecionarDois(elemento){
     if (document.getElementById("escolha")){
         document.getElementById("escolha").remove()
+        let button = document.querySelector("a[onclick='personalizar(this, true)'")
+        console.log("BOTÃO: ", button)
+        if (button){
+            button.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
+        }
     }
     time = elemento.value
     botarDois(time, true)

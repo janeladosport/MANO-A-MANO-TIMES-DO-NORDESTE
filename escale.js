@@ -82,9 +82,10 @@ function botarEscale(time, clean, perso, numb, check, elemento){
                 
                 elemento.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
                 console.log("Tem elemento", elemento.querySelector("button").innerHTML)
-            }
+            } 
             console.log("Tem escolha")
             document.getElementById("escolha").remove()
+            
             
             return false
         } else{
