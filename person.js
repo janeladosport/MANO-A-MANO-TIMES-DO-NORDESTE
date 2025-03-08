@@ -10,6 +10,13 @@ timesFut = {
     Ceara: ceara,
     Vitoria: vitoria
 }
+fotosTimes = {
+    Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],
+    Sport: ["imagens/escudos/sport.svg", "Sport"],
+    Bahia: ["imagens/escudos/bahia.png", "Bahia"],
+    Ceara: ["imagens/escudos/ceara.png", "Ceará"],
+    Vitoria: ["imagens/escudos/vitoria.png", "Vitória"]
+}
 let corBahia = "linear-gradient(90deg, rgb(7, 99, 171), rgb(255,255,255), rgb(238, 49, 38))"
 let corSport = "linear-gradient(90deg, rgb(227, 26, 33), rgb(35,31,32))"
 let corFortaleza = "linear-gradient(90deg, rgb(40, 97, 166), rgb(209,47,20), rgb(254,254,254))"
@@ -17,6 +24,10 @@ let corCeara = "linear-gradient(90deg, black,white)"
 let corVitoria = "linear-gradient(90deg, rgb(237, 27, 59), rgb(36,31,33))"
 let timeUno
 let timeDuno
+let imgFutUm
+let nameFutUm
+let nameFutDois
+let imgFutDois
 
 function selecionarUm(elemento){
         if (document.getElementById("escolha")){
@@ -28,7 +39,10 @@ function selecionarUm(elemento){
             }
         }
     time = elemento.value
-    botarUm(time, true)
+    imgFutUm = fotosTimes[time][0]
+    nameFutUm = fotosTimes[time][1]
+    let veri = botarUm(time, true)
+    botarNome(veri)
 }
 
 function createEscolha(){
@@ -78,7 +92,10 @@ function botarUm(time, verify){
             } 
     }
     if (verify == true){
-        verificar()
+        let ver = verificar()
+        if (ver == false){
+            return false
+        }
     }     
 }
 
@@ -92,7 +109,10 @@ function selecionarDois(elemento){
         }
     }
     time = elemento.value
-    botarDois(time, true)
+    imgFutDois = fotosTimes[time][0]
+    nameFutDois = fotosTimes[time][1]
+    let veri = botarDois(time, true)
+    botarNome(veri)
 }
 
 function botarDois(time, verify){
@@ -126,7 +146,10 @@ function botarDois(time, verify){
     }
 
     if (verify == true){
-        verificar()
+        let ver = verificar()
+        if (ver == false){
+            return false
+        }
     }   
     
 }
@@ -142,6 +165,7 @@ function verificar(){
         console.log(aviso)
         aviso.style.display="flex"
         console.log('É igual')
+        return false
     } if (timeUm.value != timeDois.value){
         mam.style.display = "block"
         mam.style.flexDirection = "column"
@@ -158,15 +182,18 @@ function checarPs(){
     } if (selectDois.value == "Time 2"){
         return false
     }
+    
 }
 
 function personalizar(elemento, checar){
+    console.log("DADOS: ",imgFutUm, imgFutDois, nameFutUm, nameFutDois)
     if (checar == true){
         var tof = checarPs()
         if (tof == false){
             return
         }
     }
+    
     elemento.querySelector("button").innerHTML = "RECOLHER"
     botarEscale(timeUno, false, true, "um", true, elemento)
     botarEscale(timeDuno, false, true, "dois", false, elemento)
@@ -174,5 +201,29 @@ function personalizar(elemento, checar){
     if (escolha){
         let offset = 80
         window.scrollTo({ top: escolha.getBoundingClientRect().top + window.scrollY - offset,behavior: "smooth" });
+    }
+}
+
+function botarNome(igual){
+    if (checarPs() == false){
+        return
+    } 
+    let titulo = document.getElementById("titulo")
+    console.log(titulo)
+    let imagemFutUm = document.createElement("img")
+    imagemFutUm.src = imgFutUm
+    let imagemFutDois = document.createElement("img")
+    imagemFutDois.src = imgFutDois
+    let span = document.createElement("span")
+    span.innerHTML = `${nameFutUm} X ${nameFutDois}`
+    span.style.textTransform = "uppercase"
+    span.style.margin = 0
+    span.style.fontWeight = 700
+    titulo.innerHTML = ""
+    titulo.appendChild(imagemFutUm)
+    titulo.appendChild(span)
+    titulo.appendChild(imagemFutDois)
+    if (igual == false){
+        titulo.innerHTML = "PERSONALIZADO"
     }
 }
