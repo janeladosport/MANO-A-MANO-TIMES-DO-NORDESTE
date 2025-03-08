@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALE SEU TIME</title>
+    <link rel="stylesheet" href="escale.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="escale-footer.css">
+    <script src="escale.js"></script>
+    <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="aviso" style="display: none;">
+        Resolução não suportada. Tente diminuir o zoom.
+    </div>
+    <div class="body">
+        <div id="escolha">
+            <div class="escolha-box">
+                <select name="Time 1" id="timeUm" onchange="selecionarEscale(this)">
+                    <option disabled selected>Time</option>
+                    <option value="Fortaleza">
+                        Fortaleza
+                    </option>
+                    <option value="Sport">
+                        Sport
+                    </option>
+                    <option value="Bahia">
+                        Bahia
+                    </option>
+                    <option value="Ceara">
+                        Ceará
+                    </option>
+                    <option value="Vitoria">
+                        Vitória
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="campo" id="camp">
+            <img class="jogador" id="ca" crossorigin="anonymous">
+            <img class="jogador" id="pe" crossorigin="anonymous">
+            <img class="jogador" id="pd" crossorigin="anonymous">
+            <img class="jogador" id="mei" crossorigin="anonymous">
+            <img class="jogador" id="mc" crossorigin="anonymous">
+            <img class="jogador" id="vol" crossorigin="anonymous">
+            <img class="jogador" id="ld" crossorigin="anonymous">
+            <img class="jogador" id="le" crossorigin="anonymous">
+            <img class="jogador" id="ze" crossorigin="anonymous">
+            <img class="jogador" id="zd" crossorigin="anonymous">
+            <img class="jogador" id="gol" crossorigin="anonymous">
+            <img src="imagens/campo de futebol.avif" id="campo" crossorigin="anonymous">
+        </div>
+    </div>
+    <footer>
+        <a href="index.html" id="voltar">
+
+                VOLTAR
+
+        </a>
+        <a onclick="limparCampoEscale()" id="voltar" class="limpar">
+
+                LIMPAR
+
+        </a>
+        <a onclick="salvar()" id="voltar" class="limpar">
+
+            SALVAR ESCALAÇÃO
+
+    </a>
+    </footer>
+</body>
+<script>
+    function salvar(){
+        const salvado = document.getElementById("camp")
+        console.log(salvado)
+        html2canvas(salvado, {
+    useCORS: true,
+    allowTaint: false,
+    backgroundColor: null,
+    scale: 4
+}).then(function(canvas) {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL("image/png", 1.0);
+    link.download = 'minha-escalação.png';
+    link.click();
+});
+    }
+</script>
+</html>

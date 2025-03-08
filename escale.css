@@ -1,0 +1,492 @@
+.jogador, .jogador-selectable{
+    
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    background-image: white;
+}
+.incomum{
+    opacity: 0;
+}
+.jogador-selectable{
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    margin: 5px;
+    transition-duration: 0.3s;
+    transition-timing-function :cubic-bezier();
+}
+.jogador-selectable:hover{
+    width: 123px;
+    height: 123px;
+}
+.incomum:hover{
+    width: 120px;
+    height: 120px;
+}
+.span-escolha{
+    margin: 5px;
+    flex-grow: 10;
+    width: 100%;
+}
+
+.jogador{
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    position: absolute; 
+}
+#ca{
+  transform: translate(180px, 35px);
+}
+#pd{
+    transform: translate(320px, 85px);
+}
+#pe{
+    transform: translate(46px, 85px);
+}
+#mei{
+    transform: translate(180px, 150px);
+}
+#mc{
+    transform: translate(100px, 250px);
+}
+#vol{
+    transform: translate(260px, 250px);
+}
+#ld{
+    transform: translate(320px, 350px);
+}
+#le{
+    transform: translate(46px, 350px);
+}
+#ze{
+    transform: translate(100px, 440px);
+}
+#zd{
+    transform: translate(260px, 440px);
+}
+#gol{
+    transform: translate(180px, 535px);
+}
+.campo{
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 626px;
+    max-width: 443px;
+    border: 2.3px solid white;
+}
+.nome-escolha{
+    color: white;
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+#escolha, #escolha-dois{
+    max-width: 500px;
+}
+
+.body{
+    margin-top: 50px;
+    margin-left: 40px;
+    display: flex;
+    height: 100%;
+}
+
+a#voltar{
+    text-decoration: none;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1555px){
+    .jogador-selectable{
+        width: 150px;
+        height: 150px;
+    }
+    .jogador-selectable:hover{
+        width: 155px;
+        height: 155px;
+    }
+    .incomum:hover{
+        width: 150px;
+        height: 150px;
+    }
+    .vitoria{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1365px) and (min-width: 1240px) {
+   .campo{
+        left: 55%;
+    }
+}
+
+@media only screen and (max-width:1210px) and (min-width: 510px) {
+    .body{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .campo{
+        position: relative;
+        display: block;
+        order: 1;
+        flex: 1;
+    }
+    #escolha{
+        position: static;
+        order: 2;
+        flex: 1;
+        margin-top: 30px;
+        margin-left: 30px;
+        align-self: center;
+    }
+    .escolha-box{
+        width: 465px;
+    }
+}
+
+ /* @media only screen and (max-width:400px) {
+    .body{
+        display: none;
+    }
+    .limpar{
+        display: none !important;
+    }
+    footer{
+        position: static;
+        margin: 50px;
+    }
+    .aviso{
+        display: block !important;
+        font-weight: 600;
+        color: rgb(194, 14, 14);
+        text-align: center;
+        font-size: 20pt;
+        margin: 100px;
+    }
+} */
+
+
+
+@media only screen and (max-width:1240px) and (min-width:1210px) {
+    .campo{
+        left: 56%;
+    }
+}
+
+@media only screen and (max-height: 688px){
+    .body{
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 510px){
+    .body{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        justify-content: center;
+    }
+    .campo{
+        position: relative;
+        display: block;
+        order: 1;
+        flex: 1;
+    }
+    #escolha{
+        position: static;
+        order: 2;
+        flex: 1;
+        margin-top: 30px;
+        margin-left: 30px;
+        align-self: center;
+    }
+    .escolha-box{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 465px){
+    .campo, #campo{
+        width: 420px;
+        height: 594px;
+    }
+    .jogador{
+        max-width: 76px;
+        max-height: 76px;
+        left: -2.8%;
+        top: -4%;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .campo, #campo{
+        width: 400px;
+        height: 565px;
+    }
+    .jogador{
+        max-width: 72px;
+        max-height: 72px;
+        left: -4%;
+        top: -4%;
+    }
+    #ld, #pd{
+        left: -8%;
+    }
+    #gol{
+        top: -9%;
+    }
+    #zd, #ze{
+        top: -5%;
+    }
+    #escolha{
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 420px) and (min-width:400px){
+    .campo, #campo{
+        width: 380px;
+        height: 537px;
+    }
+    .jogador{
+        max-width: 70px;
+        max-height: 70px;
+        left: -7%;
+        top: -8%;
+    }
+    #ld, #pd{
+        left: -12%;
+    }
+    #gol{
+        top: -14%;
+    }
+    #zd, #ze{
+        top: -9%;
+        left: -6%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 350px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #le,#pe{
+        left: -3%;
+    }
+    #mei{
+        top: -6%;
+    }
+    #ca{
+        top: -1.8%;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) and (min-width: 365px){
+    .campo, #campo{
+        width: 350px;
+        height: 495px;
+    }
+    .jogador{
+        max-width: 60px;
+        max-height: 60px;
+        left: -5%;
+        top: -8%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 350px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -18%;
+    }
+    #vol, #mc, #mei{
+        left: -10.5%;
+    }
+    #gol{
+        top: -22%;
+        left: -11%;
+    }
+    #zd, #ze{
+        top: -15%;
+        left: -11%;
+    }
+    #le,#ld{
+        top: -11%;
+    } 
+    #mei{
+        top: -3%;
+    }
+    #ca{
+        top: -1.8%;
+        left: -10%;
+    } 
+    
+}
+
+@media only screen and (max-width: 365px) and (min-width:320px){
+    .campo, #campo{
+        width: 300px;
+        height: 424px;
+    }
+    .jogador{
+        max-width: 50px;
+        max-height: 50px;
+        left: -3%;
+        top: -15%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 300px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -34%;
+    }
+    #le, #pe{
+        left: -5.8%;
+    }
+    #vol{
+        left: -24.5%;
+    }
+    #mc{
+        left: -12.6%;
+    }
+    #mei{
+        left: -18.5%;
+        top: -6%;
+    }
+    #gol{
+        top: -40%;
+        left: -19%;
+    }
+    #zd, #ze{
+        top: -30%;
+    }
+    #zd{
+        left: -25%;
+    }
+    #ze{
+        left: -10%;
+    }
+    #le,#ld{
+        top: -23%;
+    } 
+    #ca{
+        top: -2.8%;
+        left: -18.7%;
+    } 
+    #pd, #pe{
+        top: -5%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .campo, #campo{
+        width: 250px;
+        height: 353px;
+    }
+    .jogador{
+        max-width: 46px;
+        max-height: 46px;
+        top: -32%;
+    }
+    #escolha, .escolha-box{
+        margin-left: 0px;
+        width: 275px;
+        justify-content: center;
+    }
+    .nome-escolha{
+        justify-content: center;
+    }
+    #ld, #pd{
+        left: -56%;
+    }
+    #le, #pe{
+        left: -9%;
+    }
+    #vol{
+        left: -42%;
+    }
+    #mc{
+        left: -21.6%;
+    }
+    #mei{
+        left: -32%;
+        top: -18%;
+    }
+    #gol{
+        top: -65%;
+        left: -32%;
+    }
+    #zd, #ze{
+        top: -54%;
+    }
+    #zd{
+        left: -46%;
+    }
+    #ze{
+        left: -18%;
+    }
+    #le,#ld{
+        top: -44%;
+    } 
+    #ca{
+        top: -4.8%;
+        left: -32%;
+    } 
+    #pd, #pe{
+        top: -5%;
+    }
+}
+
+@media only screen and (max-width: 285px){
+    #escolha, .escolha-box{
+        width: 250px;
+    }
+    .jogador-selectable{
+        max-width: 105px;
+        max-height: 105px;
+    }
+    .jogador-selectable:hover{
+        max-width: 108px;
+        max-height: 108px;
+    }
+    .incomum:hover{
+        max-width: 105px;
+        max-height: 105px;
+    }
+}
+
+@media only screen and (max-width:270px){
+    .body{
+        display: none;
+    }
+    .limpar{
+        display: none !important;
+    }
+    .aviso{
+        display: block !important;
+        font-weight: 600;
+        color: rgb(194, 14, 14);
+        text-align: center;
+        font-size: 20pt;
+        margin: 100px;
+    }
+}
