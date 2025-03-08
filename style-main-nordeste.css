@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media only screen and (max-width:910px) {
     div.item, div.item > img, div.item-resultado, div.item-resultado > img{
         width: 100px;
@@ -106,3 +107,113 @@ div.row, .row-esc{
         padding: 8px;
     }
 }
+=======
+@media only screen and (max-width:910px) {
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 100px;
+        height: 100px;
+    }
+    div.item > img:hover{
+        width: 105px;
+        height: 105px;
+    }
+    .esc-div{
+        display: none;
+    }
+}
+@media only screen and (min-width: 910px) and (max-width:1180px) {
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 120px;
+        height: 120px;
+    }
+    div.item > img:hover{
+        width: 125px;
+        height: 125px;
+    }
+    .esc-div{
+        width: 120px;
+    }
+}
+
+@media only screen and (min-width: 1180px) and (max-width:1340px) {
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 150px;
+        height: 150px;
+    }
+    div.item > img:hover{
+        width: 145px;
+        height: 145px;
+    }
+    .esc-div{
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 1340px) and (max-width:1496px) {
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 180px;
+        height: 180px;
+    }
+    div.item > img:hover{
+        width: 185px;
+        height: 185px;
+    }
+    .esc-div{
+        width: 180px;
+    }
+}
+
+@media only screen and (min-width: 1496px) and (max-width: 1600px){
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 200px;
+        height: 200px;
+    }
+    div.item > img:hover{
+        width: 205px;
+        height: 205px;
+    }
+    .esc-div{
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1799px){
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 220px;
+        height: 220px;
+    }
+    div.item > img:hover{
+        width: 225px;
+        height: 225px;
+    }
+    .esc-div{
+        width: 220px;
+    }
+}
+
+@media only screen and (min-width: 1800px){
+    div.item, div.item > img, div.item-resultado, div.item-resultado > img{
+        width: 240px;
+        height: 240px;
+    }
+    div.item > img:hover{
+        width: 245px;
+        height: 245px;
+    }
+    .esc-div{
+        width: 240px;
+    }
+}
+
+div.row, .row-esc{
+    justify-content: space-between;
+}
+
+@media only screen and (max-width:795px){
+    div.row{
+        flex-wrap: wrap;
+        border: 2px solid white;
+        padding: 8px;
+    }
+}
+>>>>>>> 92c27306c1797e9dbc342f5d7e09dc9afd23b078

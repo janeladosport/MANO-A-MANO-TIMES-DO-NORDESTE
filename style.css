@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer > a{
     margin-left: 20px;
     border-radius: 15px;
@@ -213,3 +214,220 @@ select{
         padding: 8px;
     }
 }
+=======
+footer > a{
+    margin-left: 20px;
+    border-radius: 15px;
+}
+
+a{
+    padding: 20px;
+    border: 0;
+    cursor: pointer;
+    width: 35%;
+    margin: 10px;
+    background-color: rgb(194, 1, 39);
+    border-radius: 3px;
+}
+
+button, a#voltar{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", Arial, Helvetica, Sans-serif;
+    font-size: 13pt;
+    background-color: rgb(194, 1, 39);
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+div.item, div.item > img{
+    transition-duration: 0.44s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+div.item{
+    padding: 5px;
+}
+
+div#flex > a:hover, div#flex > a:hover > button, footer > a:hover > button, footer > a:hover, a#voltar:hover{
+    background-color: rgb(165, 1, 34);
+}
+
+
+#flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(39, 36, 36);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+#titulo{
+    color: white;
+    text-align: center;
+    margin: 40px 0px 30px;
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+button#voltar, a#voltar{
+    width:16%;
+    margin-top: 60px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+div.row, .row-esc, #lista{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+div.item, div.item > img{
+    cursor: pointer;
+    user-select: none;
+}
+
+img, div.mam, #titulo, span{
+    user-select: none;
+}
+
+div.item > img, div.item-resultado{
+    border: 2.6px solid white;
+    border-radius: 12px;
+}
+
+span{
+    color: white;
+    font-size: 20pt;
+    font-weight: 1000;
+}
+
+@media only screen and (max-width:1000px) and (min-width: 701px){
+    #flex > a{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:700px){
+    #flex > a{
+        width: 65%;
+    }
+}
+
+#titulo > img, img.esc{
+    max-width: 40px;
+    max-height: 40px;
+    margin: 0 10px;
+}
+span.nada{
+    width: 40px;
+    height: 40px;
+    border: 0 !important;
+}
+
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esc-div{
+    display: flex;
+    justify-content: center;
+}
+
+#aviso{
+    color: red;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 7% 0;
+}
+
+#lista{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+select{
+    padding: 16px 9px;
+    border: 0;
+    border-radius: 10px;
+}
+
+select{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.242);
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.153);
+    text-align: center;
+    outline: none;
+    border: 2.3px solid black;
+}
+
+.tricolor{
+    color: black;
+}
+
+.normal{
+    color: white;
+    text-shadow: 0.5px 0.5px rgba(255, 255, 255, 0.595);
+    border: 2.3px solid white;
+}
+
+@media only screen and (max-width: 1500px) and (min-width:660px){
+    div.simulacao-lista{
+        width: 214.8px;
+        height: 52.8px;
+        margin: 0 20px;
+    }
+    .box-lista{
+        width: 214.8px;
+        display: flex;
+        justify-content: center;
+        margin: 0 20px;
+    }
+    #lista span{
+        width: 17.04px;
+    }
+}
+
+@media only screen and (max-width: 660px){
+    #mam-lista{
+        display: flex;
+        justify-content: center;
+    }
+    .box-lista{
+        margin: 0 50px;
+    }
+    #lista span{
+        width: 17.04px;
+    }
+}
+
+/* @media only screen and (min-width: 1500px){
+    #mam-lista, #lista{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 40px;
+    }
+
+} */
+
+@media only screen and (max-width:625px){
+    div.row{
+        flex-wrap: wrap;
+        border: 2px solid white;
+        padding: 8px;
+    }
+}
+>>>>>>> 92c27306c1797e9dbc342f5d7e09dc9afd23b078
