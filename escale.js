@@ -78,16 +78,22 @@ function botarEscale(time, clean, perso, numb, check, elemento){
         console.log("Checando")
         if (document.getElementById("escolha")){
             window.scrollTo({top: 0, behavior: "smooth"})
-            if (elemento){
-                
+            if (elemento & elemento != "ignore"){
                 elemento.querySelector("button").innerHTML = "PERSONALIZAR TIMES"
                 console.log("Tem elemento", elemento.querySelector("button").innerHTML)
-            } 
+            }
             console.log("Tem escolha")
             document.getElementById("escolha").remove()
+            if (elemento){
+                if (elemento != "ignore"){
+                    return false
+                } else{
+                    createEscolha()
+                }
+            } else{
+                return false
+            }
             
-            
-            return false
         } else{
             createEscolha()
         }
@@ -98,6 +104,7 @@ function botarEscale(time, clean, perso, numb, check, elemento){
     limparCampoEscale()
     let timeValor = dados[time]
     let escolha
+    console.log("Ainda estou aqui")
     for (i=0; i < timeValor.length; i++){
         let div = document.createElement("div")
         let span = document.createElement("div")
@@ -119,6 +126,11 @@ function botarEscale(time, clean, perso, numb, check, elemento){
                 imagem.setAttribute("class", "jogador-selectable")
                 imagem.setAttribute("data-info", time)
                 imagem.setAttribute("onclick", "clicarEscale(this)")
+                if (elemento){
+                    if (elemento == "ignore"){
+                        imagem.setAttribute("onclick", "clicarEscale(this, true)")
+                    }
+                }
                 if (perso == true){
                     imagem.removeAttribute("onclick")
                     imagem.setAttribute("onclick", `alterarTime(this, '${numb}')`)
@@ -167,8 +179,11 @@ function limparCampoEscale(){
     }
 }
 
-function clicarEscale(elemento){
+function clicarEscale(elemento, nocamp){
     let ver = verificarDuplicata("jogador", elemento.src)
+    if (nocamp){
+        ver = verificarDuplicata("img-jogador", elemento.src)
+    }
     if (ver == false){
         return
     }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIER LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tier-list.css">
+    <link rel="stylesheet" href="escale-naocampo.css">
+    <script src="tier-list.js"></script>
+    <script src="escale.js"></script>
+    <script src="person.js"></script>
+    <script src="scrip.js"></script>
+</head>
+<body>
+    <select name="time" id="time" onchange="tierlistTimeChange(this)">
+        <option value="Time" disabled selected>Time</option>
+        <option value="Fortaleza">Fortaleza</option>
+        <option value="Sport">Sport</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Ceara">Ceará</option>
+        <option value="Vitoria">Vitória</option>
+    </select>
+</body>
+<footer>
+    <a href="index.html">
+        <button id="voltar">
+            VOLTAR
+        </button>
+    </a>
+    <a onclick="limparTier()">
+        <button id="voltar">
+            LIMPAR
+        </button>
+    </a>
+    <a onclick="concluirTier()">
+        <button id="voltar">
+            CONCLUIR
+        </button>
+    </a>
+</footer>
+<script>
+    iniciate()
+</script>
+</html>

@@ -59,9 +59,13 @@ function createEscolha(){
     
 }
 
-function botarUm(time, verify){
+function botarUm(time, verify, change){
+    console.log("BOTANDO UM...")
     timeUno = time
     let imagem = document.getElementsByClassName("time-um")
+    if (change){
+        imagem = document.getElementsByClassName("titulares")
+    }
     let leng = imagem.length
     if (time == "Fortaleza"){
       for (i=0; i < imagem.length; i++){

@@ -1,0 +1,131 @@
+.jogador-tier, .img-jogador{
+    width: 120px;
+    height: 120px;
+    
+}
+.img-jogador{
+    border-radius: 17px;
+}
+.jogador-tier{
+    border: 3px solid white;
+    border-radius: 20px;
+
+}
+
+#tier, #tier-reserva, #tier-tecnico, div#tier-order{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+#tier span , #tier-reserva span, #tier-tecnico span, div#tier-order span{
+    flex-basis: 100%;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+select{
+    margin-left: 20px;
+}
+
+body{
+    margin-top: 100px;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 98vw;
+    background-color: #211e1e;
+    height: 80px;
+    border-radius: 0 0 15px 15px;
+}
+footer a{
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+}
+
+footer button{
+    
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 0 !important;
+}
+
+#tier a {
+    display: flex;
+    flex-basis: 100%;
+    margin: 0 100px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+#tier a > button{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+#tier a, #tier button{
+    border-radius: 20px;
+}
+
+.container-family{
+    width: 500px;
+}
+
+.pec{
+    color: #d73131;
+}
+
+.ruim{
+    color: #d76631;
+}
+
+.regular{
+    color: #ccd731;
+}
+
+.ok{
+    color: #abd731;
+}
+
+.bom {
+    color: #73d731;
+}
+
+.mec {
+    color: #25b92d;
+}
+
+@media only screen and (min-width: 1085px){
+    #tier-order{
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 1350px;
+    }
+}
+
+div.mec{
+    order: 1
+}
+div.bom{
+    order: 2;
+}
+div.ok{
+    order: 3;
+}
+div.regular{
+    order: 4;
+}
+div.ruim{
+    order: 5;
+}
+div.pec{
+    order: 6;
+}
