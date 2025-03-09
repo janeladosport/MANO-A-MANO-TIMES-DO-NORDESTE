@@ -116,6 +116,9 @@ function verificarTierListNota(){
 }
 
 function ordenar(){
+    if (verificarTierListNota() == false){
+        return
+    }
     let create
     let order
     let classes = ["pec", "ruim", "regular", "ok", "bom", "mec"]
@@ -241,6 +244,7 @@ function concluirTier(){
             notaSet(range, span, spanClass)
     })
     }
+    ordenarButton()
 }
 
 
