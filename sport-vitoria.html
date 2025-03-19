@@ -21,7 +21,7 @@
 <body>
     <div id="titulo">
         <img src="imagens/escudos/sport.svg" alt="">
-        SPORT X VITÓRIA
+        SPORT X VITÓRIA - 19/03
         <img src="imagens/escudos/vitoria.png" alt="">
     </div>
     
@@ -173,6 +173,8 @@
     <!-- <div id="escolha"></div> -->
 </body>
 <script>
+    vitoria = ["imagens/vitoria/gabriel.png", "imagens/vitoria/claudinho.png", "imagens/vitoria/lucas-halter.png", "imagens/vitoria/ze-marcos.png", "imagens/vitoria/hugo.png", "imagens/vitoria/ricardo-ryller.png" ,"imagens/vitoria/ronald.png", "imagens/vitoria/pepê.png", "imagens/vitoria/gustavo-mosquito.png", "imagens/vitoria/janderson.png", "imagens/vitoria/carlinhos.png"]
+    sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "imagens/sport/lucas-cunha.png", "imagens/sport/joao-silva.png", "imagens/sport/igor-carius.png", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/dominguez.png", "imagens/sport/gustavo-maia.png", "imagens/sport/carlos-alberto.png", "imagens/sport/artur-sousa.png"]
     botarUm("Sport", false)
     botarDois("Vitoria", false)
 </script>
@@ -187,10 +189,23 @@
             LIMPAR
         </button>
     </a>
-    <a onclick="personalizar(this)">
-        <button id="voltar">
-            PERSONALIZAR TIMES
-        </button>
-    </a>
 </footer>
+<style>
+    footer {
+        display: block;
+        position: static;
+        background-color: unset;
+    }
+    footer a{
+        display: unset;
+    }
+    button#voltar{
+        width: 16% !important;
+        height: unset !important;
+        margin-top: 60px !important;
+    }
+    #titulo{
+        margin: 40px 0 30px;
+    }
+</style>
 </html>

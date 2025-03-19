@@ -13,13 +13,13 @@ var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens
 var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png", "imagens/bahia/danilo-fernandes.png", "imagens/bahia/denis-junior.png"]
 var ldBahia = ["Lateral Direito" , "ld-esc", "imagens/bahia/santi-arias.png", "imagens/bahia/gilberto.png"]
 var leBahia = ["Lateral Esquerdo", "le-esc", "imagens/bahia/luciano-juba.png", "imagens/bahia/iago-borduchi.png", "imagens/bahia/ramos-mingo.png", "imagens/bahia/rezende.png"]
-var zdBahia = ["Zagueiro Direito", "zd-esc", "imagens/bahia/kanu.png", "imagens/bahia/gabriel-xavier.png"]
-var zeBahia = ["Zagueiro Esquerdo", "ze-esc", "imagens/bahia/ramos-mingo.png", "imagens/bahia/kanu.png", "imagens/bahia/vitor-hugo.png", "imagens/bahia/rezende.png"]
-var volBahia = ["1º Volante", "vol-esc", "imagens/bahia/caio-alexandre.png", "imagens/bahia/acevedo.png", "imagens/bahia/rezende.png", "imagens/bahia/rodrigo-nestor.png"]
+var zdBahia = ["Zagueiro Direito", "zd-esc", "imagens/bahia/kanu.png", "imagens/bahia/gabriel-xavier.png", "imagens/bahia/david-duarte.png"]
+var zeBahia = ["Zagueiro Esquerdo", "ze-esc", "imagens/bahia/ramos-mingo.png", "imagens/bahia/kanu.png", "imagens/bahia/vitor-hugo.png", "imagens/bahia/rezende.png", "imagens/bahia/david-duarte.png"]
+var volBahia = ["1º Volante", "vol-esc", "imagens/bahia/caio-alexandre.png", "imagens/bahia/acevedo.png", "imagens/bahia/rezende.png", "imagens/bahia/rodrigo-nestor.png", "imagens/bahia/yago-felipe.png"]
 var mcBahia = ["2º volante", "mc-esc", "imagens/bahia/jean-lucas.png", "imagens/bahia/erick.png", "imagens/bahia/rodrigo-nestor.png"]
-var meiBahia = ["Meia", "mei-esc", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/cauly.png", "imagens/bahia/rodrigo-nestor.png", "imagens/bahia/erick.png"]
-var pdBahia = ["Ponta direita", "pd-esc", "imagens/bahia/ademir.png", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/lucho-rodriguez.png"]
-var peBahia = ["Ponta esquerda", "pe-esc", "imagens/bahia/erick-pulga.png", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/luciano-juba.png"]
+var meiBahia = ["Meia", "mei-esc", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/cauly.png", "imagens/bahia/rodrigo-nestor.png", "imagens/bahia/erick.png", "imagens/bahia/michel-araujo.png"]
+var pdBahia = ["Ponta direita", "pd-esc", "imagens/bahia/ademir.png", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/michel-araujo.png"]
+var peBahia = ["Ponta esquerda", "pe-esc", "imagens/bahia/erick-pulga.png", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/luciano-juba.png", "imagens/bahia/michel-araujo.png"]
 var caBahia = ["Centroavante", "ca-esc", "imagens/bahia/lucho-rodriguez.png", "imagens/bahia/william-jose.png"]
 
 var golFortaleza = ["Goleiro", "gol-esc", "imagens/fortaleza/joao-ricardo.png", "imagens/fortaleza/brenno.png", "imagens/fortaleza/magrao.png"]
@@ -140,7 +140,7 @@ function botarEscale(time, clean, perso, numb, check, elemento){
         }
     }
     if (escolha){
-        if (time == "Fortaleza" || time == "Bahia" || time == "Vitoria" || time == "Ceara"){
+        if (time == "Fortaleza" || time == "Vitoria" || time == "Ceara"){
             if (numb=="um"){console.log("EXECUTANDO CRIAÇÃO...", "Time: ", time, "Numb: ", numb)
             let divFortal = document.createElement("div")
             divFortal.setAttribute("class", "nome-escolha anormal")
@@ -154,7 +154,7 @@ function botarEscale(time, clean, perso, numb, check, elemento){
             if (time == "Vitoria"){
                 imagemF.setAttribute("class", "jogador-selectable incomum vitoria")
             }
-            if (time == "Fortaleza" || time == "Bahia"){
+            if (time == "Fortaleza"){
                 let imagemFD = document.createElement("img")
                 divFortal.appendChild(imagemFD)
                 imagemFD.setAttribute("class", "jogador-selectable incomum")
