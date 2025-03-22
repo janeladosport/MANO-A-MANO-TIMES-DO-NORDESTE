@@ -66,12 +66,17 @@ var dados = {
     Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
 };
 
+function selecionarEscaleEsq(elemento){
+    var time = elemento.value
+    botarEscale(time, true, false, "", false, false, true)
+}
+
 function selecionarEscale(elemento){
     var time = elemento.value
     botarEscale(time, true, false, "", false)
 }
 
-function botarEscale(time, clean, perso, numb, check, elemento){
+function botarEscale(time, clean, perso, numb, check, elemento, changeable){
     
     console.log("check: ", check)
     if (check == true){
@@ -126,6 +131,9 @@ function botarEscale(time, clean, perso, numb, check, elemento){
                 imagem.setAttribute("class", "jogador-selectable")
                 imagem.setAttribute("data-info", time)
                 imagem.setAttribute("onclick", "clicarEscale(this)")
+                if(changeable == true){
+                    imagem.setAttribute("onclick", "clicarEscaleEsq(this)")
+                }
                 if (elemento){
                     if (elemento == "ignore"){
                         imagem.setAttribute("onclick", "clicarEscale(this, true)")

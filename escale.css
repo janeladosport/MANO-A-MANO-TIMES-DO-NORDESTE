@@ -39,6 +39,18 @@
 #ca{
   transform: translate(180px, 35px);
 }
+#ca2{
+    transform: translate(240px, 35px);
+}
+#ca1{
+    transform: translate(120px, 35px);
+}
+#pd442{
+    transform: translate(320px, 140px)
+}
+#pe442{
+    transform: translate(46px, 140px)
+}
 #pd{
     transform: translate(320px, 85px);
 }
@@ -48,8 +60,20 @@
 #mei{
     transform: translate(180px, 150px);
 }
+#mei442{
+    transform: translate(180px, 130px);
+}
 #mc{
     transform: translate(100px, 250px);
+}
+#mc1-442{
+    transform: translate(100px, 215px);
+}
+#mc2-442{
+    transform: translate(260px, 215px);
+}
+#vol442{
+    transform: translate(180px, 300px);
 }
 #vol{
     transform: translate(260px, 250px);
@@ -497,4 +521,10 @@ a#voltar{
     height: 100%;
     position: absolute;
     z-index: 2;
+}
+
+@media only screen and (min-width:1210px){
+    #camp{
+        position: fixed;
+    }
 }

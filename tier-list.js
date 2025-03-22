@@ -249,8 +249,8 @@ function concluirTier(){
 
 
 
-function concluir(element){
-    element.remove()
+function concluir(element, ignore){
+    if (ignore != true){element.remove()}
     let titularesCounte = document.getElementsByClassName("jogador-selectable")
     for (i = 0; i < titularesCounte.length; i++){
         titularesCounte[i].setAttribute("onclick", "substitutos(this)")

@@ -23,6 +23,7 @@ button, a#voltar{
     border: 0;
     cursor: pointer;
     width: 100%;
+    user-select: none;
 }
 
 div.item, div.item > img{

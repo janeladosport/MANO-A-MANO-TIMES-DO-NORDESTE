@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIER LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tier-list.css">
+    <link rel="stylesheet" href="escale-naocampo.css">
+    <script src="tier-list.js"></script>
+    <script src="escale.js"></script>
+    <script src="person.js"></script>
+    <script src="scrip.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+</head>
+<body>
+    <select name="time" id="time" onchange="tierlistTimeChange(this)">
+        <option value="Time" disabled selected>Time</option>
+        <option value="Fortaleza">Fortaleza</option>
+        <option value="Sport">Sport</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Ceara">Ceará</option>
+        <option value="Vitoria">Vitória</option>
+    </select>
+</body>
+<footer>
+    <a href="index.html">
+        <button id="voltar">
+            VOLTAR
+        </button>
+    </a>
+    <a onclick="concluirTier()">
+        <button id="voltar">
+            CONCLUIR
+        </button>
+    </a>
+</footer>
+<script>
+    iniciate()
+    tierlistTimeChange({
+    value: "Sport"
+})
+clicarEscale({src: "imagens/sport/caique-frança.png", id: "gol-esc"}, true)
+clicarEscale({src: "imagens/sport/hereda.png", id: "ld-esc"}, true)
+clicarEscale({src: "imagens/sport/joao-silva.png", id: "zd-esc"}, true)
+clicarEscale({src: "imagens/sport/chico.png", id: "ze-esc"}, true)
+clicarEscale({src: "imagens/sport/igor-carius.png", id: "le-esc"}, true)
+clicarEscale({src: "imagens/sport/christian-rivera.png", id: "vol-esc"}, true)
+clicarEscale({src: "imagens/sport/sergio-oliveira.png", id: "mc-esc"}, true)
+clicarEscale({src: "imagens/sport/lucas-lima.png", id: "mei-esc"}, true)
+clicarEscale({src: "imagens/sport/barletta.png", id: "pd-esc"}, true)
+clicarEscale({src: "imagens/sport/romarinho.png", id: "pe-esc"}, true)
+clicarEscale({src: "imagens/sport/lenny-lobato.png", id: "ca-esc"}, true)
+concluir("", true)
+substitutos({src: "imagens/sport/carlos-alberto.png"})
+substitutos({src: "imagens/sport/pablo.png"})
+substitutos({src: "imagens/sport/dalbert.png"})
+substitutos({src: "imagens/sport/dominguez.png"})
+substitutos({src: "imagens/sport/gustavo-maia.png"})
+concluirTier()
+</script>
+</html>
