@@ -294,6 +294,15 @@ a#voltar{
     #escolha{
         margin-left: 0;
     }
+    #ze3{
+        transform: translate(80px, 420px);
+    }
+    #zd3{
+        transform: translate(280px, 420px);
+    }
+    #zc3{
+        transform: translate(180px, 420px);
+    }
 }
 
 @media only screen and (max-width: 420px) and (min-width:400px){

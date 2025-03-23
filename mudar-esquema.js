@@ -458,7 +458,7 @@ window.addEventListener("resize", function (){mudou();})
 
 function mudou(){
     let muda = document.querySelector("a[onclick='mudarEsquema()']")
-    if (window.innerWidth <= 420){
+    if (window.innerWidth <= 425){
         muda.style.setProperty("display", "none", "important")
     } else if (window.innerWidth <= 1210){
         muda.style.setProperty("display", "inline", "important")
