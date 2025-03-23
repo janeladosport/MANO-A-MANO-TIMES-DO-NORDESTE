@@ -1,3 +1,4 @@
+let atual
 function verifyEsquemaExisting(){
     if (document.getElementById("esquema")){
         document.getElementById("esquema").remove()
@@ -452,3 +453,17 @@ function converterCaminhoParaRelativo(caminhoAbsoluto) {
     }
     return caminhoAbsoluto;
 }
+
+window.addEventListener("resize", function (){mudou();})
+
+function mudou(){
+    let muda = document.querySelector("a[onclick='mudarEsquema()']")
+    if (window.innerWidth <= 420){
+        muda.style.setProperty("display", "none", "important")
+    } else if (window.innerWidth <= 1210){
+        muda.style.setProperty("display", "inline", "important")
+    } else {
+        muda.style.setProperty("display", "block", "important")
+    } 
+}
+
