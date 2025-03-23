@@ -446,8 +446,7 @@ function clicarEscaleEsq(elemento){
 }
 
 function converterCaminhoParaRelativo(caminhoAbsoluto) {
-   const diretorioBase = 'C:/Users/cesar_w0/.git/MANO-A-MANO-TIMES-DO-NORDESTE-main/';
-//    const diretorioBase = 'https://janeladosport.github.io/MANO-A-MANO-TIMES-DO-NORDESTE/';
+    const diretorioBase = 'https://janeladosport.github.io/MANO-A-MANO-TIMES-DO-NORDESTE/;
     if (caminhoAbsoluto.startsWith('file:///') && caminhoAbsoluto.includes(diretorioBase)) {
         return caminhoAbsoluto.replace('file:///' + diretorioBase, '');
     }
