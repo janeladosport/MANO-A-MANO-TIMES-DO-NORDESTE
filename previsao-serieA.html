@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIER LIST</title>
+    <title>PREVISÃO SÉRIE A</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="tier-maker.css">
     <script src="escale.js"></script>
@@ -17,7 +17,7 @@
     </div>
     <div id="selectable">SELECIONE O JOGADOR QUE DESEJA SUBSTITUIR</div>
     <div id="alert">NÃO SELECIONE JOGADORES IGUAIS</div>
-    
+    <a href="index.html" id="voltar" style="width: 16%; text-decoration: none;">VOLTAR</a>
 </body>
 <script>
     let tier = document.getElementById("tier")
@@ -41,7 +41,8 @@
     tierPerson.id = "tier-person"
     tierPerson.classList.add("tier-person-sA")
     tierPerson.classList.add("tier-container")
-    document.body.appendChild(tierPerson)
+    console.log(document.querySelector("a[onclick='index.html']"))
+    document.body.insertBefore(tierPerson, document.querySelector("a[href='index.html']"))
     for (i=0; i < escudos.length; i++){
         let imgEsc = document.createElement("img")
         imgEsc.classList.add("player")
