@@ -151,6 +151,7 @@ a#voltar{
 .class-sA-cont{
     border-right: 1px solid white;
     min-height: 40px;
+    max-height: 40px;
 }
 .class-sA-cont .tier-container{
     padding: 1px 0;
@@ -195,4 +196,7 @@ img[data-value="Vitória"]{
     height: 90%;
     display: flex;
     align-items: center;
+}
+.escudos{
+    user-select: none;
 }

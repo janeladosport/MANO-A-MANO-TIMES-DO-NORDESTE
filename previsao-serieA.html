@@ -9,6 +9,8 @@
     <script src="escale.js"></script>
     <script src="tier-maker.js"></script>
     <script src="person.js"></script>
+    <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
 </head>
 <body>
     <div id="tier">
@@ -38,7 +40,7 @@
     tierPerson.style.padding = "10px 0"
     tierPerson.id = "tier-person"
     tierPerson.classList.add("tier-person-sA")
-    tierPerson.classList.add("container")
+    tierPerson.classList.add("tier-container")
     document.body.appendChild(tierPerson)
     for (i=0; i < escudos.length; i++){
         let imgEsc = document.createElement("img")
@@ -47,9 +49,23 @@
         tierPerson.appendChild(imgEsc)
         imgEsc.src = escudos[i][0]
         imgEsc.setAttribute("data-value", escudos[i][1])
-        console.log(i)
     }
     load(true)
     document.body.style.justifyContent = "center"
+    function salvar(){
+        const salvado = document.getElementById("tier")
+        console.log(salvado)
+        html2canvas(salvado, {
+    useCORS: true,
+    allowTaint: false,
+    backgroundColor: null,
+    scale: 4
+}).then(function(canvas) {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL("image/png", 1.0);
+    link.download = 'minha-escalação.png';
+    link.click();
+});
+    }
 </script>
 </html>

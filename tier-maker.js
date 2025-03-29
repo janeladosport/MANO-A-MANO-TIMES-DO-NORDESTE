@@ -42,7 +42,6 @@ function selectTimeTierList(selection){
         drag.appendChild(draggable)
         draggable.setAttribute("class", "player")
         draggable.setAttribute("draggable", "true")
-        // draggable.setAttribute("ondragend", "dragable(this)")
     }
     load()
 }
@@ -52,7 +51,6 @@ function limparTierMaker(drag){
     for (i=0; i < tierContainer.length; i++){
         let imgsContainer = tierContainer[i].querySelectorAll("img")
         for (h=0; h < imgsContainer.length; h++){
-            console.log("EXE2")
             imgsContainer[h].remove()
         }
     }
@@ -68,9 +66,6 @@ function limparTierMaker(drag){
     if (tpr){tpr.remove()}
 }
 
-function dragable(element){
-console.log(converterCaminhoParaRelativo(element.src))
-}
 
 function converterCaminhoParaRelativo(caminhoAbsoluto) {
     const diretorioBase = 'https://janeladosport.github.io/MANO-A-MANO-TIMES-DO-NORDESTE/';
@@ -81,102 +76,143 @@ function converterCaminhoParaRelativo(caminhoAbsoluto) {
 }
 
 function load(cantTwo){
-const images = document.querySelectorAll(".player");
-const dropZones = document.querySelectorAll(".tier-container");
-let isOverDropZone = false;
-        document.body.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            if (!isOverDropZone) {
-                document.body.style.cursor = "not-allowed";
-            }
-        });
-
-
-        document.body.addEventListener("drop", (e) => {
-            e.preventDefault(); // Impede que imagens sejam soltas em qualquer lugar
-            document.body.style.cursor = "default"; 
-        });
-        const smallPlaceholder = document.createElement("canvas");
-        smallPlaceholder.width = 10;
-        smallPlaceholder.height = 10;
-        const ctx = smallPlaceholder.getContext("2d");
-        ctx.fillStyle = "rgba(0,0,0,0.5)";
-        ctx.fillRect(0, 0, 10, 10);
-        images.forEach(img => {
-            img.addEventListener("dragstart", (e) => {
-                e.dataTransfer.setData("text/plain", e.target.id);
-                e.target.classList.add("dragging");
-                document.body.style.cursor = "not-allowed"; // Cursor proibido por padrão
-                e.dataTransfer.setDragImage(smallPlaceholder, 5, 5)
-            });
-
-            img.addEventListener("dragend", (e) => {
-                e.target.classList.remove("dragging");
-                document.body.style.cursor = "default"; // Retorna ao normal ao soltar
-            });
-        });
-
-        dropZones.forEach(zone => {
-            zone.addEventListener("dragover", (e) => {
+    const images = document.querySelectorAll(".player");
+    const dropZones = document.querySelectorAll(".tier-container");
+    let isOverDropZone = false;
+            document.body.addEventListener("dragover", (e) => {
                 e.preventDefault();
-                isOverDropZone = true; // Marca que estamos sobre uma área válida
-                zone.style.borderColor = "green";
-                document.body.style.cursor = "default"; // Cursor normal dentro da zona
-            });
-
-            zone.addEventListener("dragleave", () => {
-                isOverDropZone = false; // Saiu da zona válida
-                zone.style.borderColor = "#aaa";
-                document.body.style.cursor = "not-allowed"; // Volta para proibido
-            });
-
-            zone.addEventListener("drop", (e) => {
-                e.preventDefault();
-                isOverDropZone = false; // Soltou na zona válida
-                const draggedElement = document.querySelector(".dragging");
-                if (draggedElement) {
-                    if (cantTwo == true){
-                        if (zone.querySelector("img")){
-                            let sibling = zone.querySelector(".escudos").nextElementSibling
-                            console.log(sibling)
-                            if (sibling){console.log("tem sibling");sibling.remove()}
-                            document.getElementById("tier-person").appendChild(zone.querySelector("img"))
-                            
-                        } else{
-                            let sibling = draggedElement.nextElementSibling
-                            if (sibling && draggedElement.classList.contains("selected")){
-                                sibling.remove()
-                            }
-                        }
-                    } 
-                    if (draggedElement.parentElement.classList.contains("player")){
-                        zone.appendChild(draggedElement.parentElement)
-                    } else{
-                        let divPlayer = document.createElement("div")
-                    zone.appendChild(divPlayer);
-                    let nome = document.createElement("span")
-                    nome.classList.add("nome")
-                    let nomeInner = draggedElement.getAttribute("data-value") 
-                    divPlayer.classList.add("player")
-                    divPlayer.appendChild(draggedElement)
-                    divPlayer.setAttribute("draggable", "true")
-                    console.log(nome.innerHTML)
-                    nome.innerHTML = nomeInner
-                    draggedElement.insertAdjacentElement("afterend", nome)
-                    }
-                    
-                    load()
-                    if(zone.id != "tier-select-content"){draggedElement.classList.add("selected")} else if (draggedElement.classList.contains("selected")){draggedElement.classList.remove("selected")}
+                if (!isOverDropZone) {
+                    document.body.style.cursor = "not-allowed";
                 }
-                document.body.style.cursor = "default"; // Cursor normal ao soltar na área correta
             });
-        });    
     
+            document.body.addEventListener("drop", (e) => {
+                e.preventDefault(); // Impede que imagens sejam soltas em qualquer lugar
+                document.body.style.cursor = "default"; 
+            });
+            const smallPlaceholder = document.createElement("canvas");
+            smallPlaceholder.width = 10;
+            smallPlaceholder.height = 10;
+            const ctx = smallPlaceholder.getContext("2d");
+            ctx.fillStyle = "rgba(0,0,0,0.5)";
+            ctx.fillRect(0, 0, 10, 10);
+            images.forEach(img => {
+                img.addEventListener("dragstart", (e) => {
+                    e.dataTransfer.setData("text/plain", e.target.id);
+                    e.target.classList.add("dragging");
+                    document.body.style.cursor = "not-allowed"; // Cursor proibido por padrão
+                    e.dataTransfer.setDragImage(smallPlaceholder, 5, 5)
+                });
     
-    }
+                img.addEventListener("dragend", (e) => {
+                    e.target.classList.remove("dragging");
+                    document.body.style.cursor = "default"; // Retorna ao normal ao soltar
+                });
+            });
+    
+            dropZones.forEach(zone => {
+                zone.addEventListener("dragover", (e) => {
+                    e.preventDefault();
+                    isOverDropZone = true; // Marca que estamos sobre uma área válida
+                    zone.style.borderColor = "green";
+                    document.body.style.cursor = "default"; // Cursor normal dentro da zona
+                });
+    
+                zone.addEventListener("dragleave", () => {
+                    isOverDropZone = false; // Saiu da zona válida
+                    zone.style.borderColor = "#aaa";
+                    document.body.style.cursor = "not-allowed"; // Volta para proibido
+                });
+    
+                zone.addEventListener("drop", (e) => {
+                    e.preventDefault();
+                    isOverDropZone = false; // Soltou na zona válida
+                    const draggedElement = document.querySelector(".dragging");
+                    console.log("É IMG", draggedElement)
+                    if (draggedElement) {
+                        
+                        if (cantTwo == true){
+                            if (zone.querySelector("img") && zone.id != "tier-person" && draggedElement.tagName == "DIV"){
+                                let sibling = zone.querySelector(".escudos").nextElementSibling
+                                if (sibling){sibling.remove()}
+                                document.getElementById("tier-person").appendChild(zone.querySelector("img"))
+                                
+                            } else if (zone.querySelector("img") && zone.id != "tier-person" && draggedElement.tagName == "IMG"){
+                                let sibling = zone.querySelector(".escudos").nextElementSibling
+                                document.getElementById("tier-person").appendChild(zone.querySelector("img"))
+                                let parent = sibling.parentElement
+                                if (sibling){sibling.remove(); parent.remove()}
+                            } else if (zone.id == "tier-person" && draggedElement.tagName == "DIV"){
+                                draggedElement.lastElementChild.remove()
+                                let img = draggedElement.firstElementChild
+                                draggedElement.remove()
+                                document.getElementById("tier-person").appendChild(img)
+                            } else if (zone.id == "tier-person" && draggedElement.tagName == "IMG"){
+                                draggedElement.nextElementSibling.remove()
+                                let img = draggedElement
+                                draggedElement.parentElement.remove()
+                                document.getElementById("tier-person").appendChild(draggedElement)
+                                return
+                            } 
+                        } 
+                        if (draggedElement.parentElement && draggedElement.parentElement.classList.contains("player")){
+                            zone.appendChild(draggedElement.parentElement)
+                        }
+                        else if (zone.id != "tier-person"){
+                            console.log("não é tier person")
+                            let divPlayer = document.createElement("div")
+                        zone.appendChild(divPlayer);
+                        let nome = document.createElement("span")
+                        nome.classList.add("nome")
+                        let nomeInner = draggedElement.getAttribute("data-value") 
+                        divPlayer.classList.add("player")
+                        divPlayer.appendChild(draggedElement)
+                        divPlayer.setAttribute("draggable", "true")
+                        divPlayer.addEventListener("dragstart", (e) => {
+                            e.dataTransfer.setData("text/plain", e.target.id);
+                            e.target.classList.add("dragging");
+                            document.body.style.cursor = "not-allowed"; // Cursor proibido por padrão
+                            e.dataTransfer.setDragImage(smallPlaceholder, 5, 5)
+                        });
+            
+                        divPlayer.addEventListener("dragend", (e) => {
+                            e.target.classList.remove("dragging");
+                            document.body.style.cursor = "default"; // Retorna ao normal ao soltar
+                        });
+                        nome.innerHTML = nomeInner
+                        draggedElement.insertAdjacentElement("afterend", nome)
+                        }
+                        
+                        if(zone.id != "tier-select-content"){draggedElement.classList.add("selected")} else if (draggedElement.classList.contains("selected")){draggedElement.classList.remove("selected")}
+                        
+                    }
+                    verificarTimesTier()
+                    document.body.style.cursor = "default"; // Cursor normal ao soltar na área correta
+
+                });
+            });    
+        }
     function esperar(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
+
+function verificarTimesTier(){
+   let containers = document.getElementById("tier").querySelectorAll(".tier-container")
+    for (i=0; i < containers.length; i ++){
+        if (!containers[i].querySelector(".player")){
+            return
+        }
+    }
+    console.log("JÁ PODE BAIXAR")
+    let newButton = document.createElement("a")
+    document.body.appendChild(newButton)
+    newButton.id = "voltar"
+    newButton.innerHTML = "BAIXAR TABELA"
+    newButton.style.position = "fixed"
+    newButton.style.left = "1%"
+    newButton.setAttribute("onclick", "salvar()")
+    newButton.style.width = "unset"
+}
 let alreadySelected = false
 function colocar(source, element){
     let players = document.getElementsByClassName("player")
@@ -184,7 +220,6 @@ function colocar(source, element){
             let playerEspO = players[i]
             let playerEsp = converterCaminhoParaRelativo(source)
             players[i].addEventListener("click", async function change(){
-                console.log("CLICOU")
                 let playersNew = document.getElementsByClassName("player")
                 let nomeArquivo
                 let srcSet = new Set()
@@ -192,8 +227,6 @@ function colocar(source, element){
                 for (h=0; h < playersNew.length; h++){
                     let atual = converterCaminhoParaRelativo(playersNew[h].src)
                     if (srcSet.has(playerEsp)){
-                        console.log(playerEsp)
-                        console.log(srcSet)
                        document.getElementById("selectable").style.display = "none"
                        document.getElementById("tier-select-content").classList.add("selecione-jogador")
                        document.getElementById("alert").style.display = "block"
@@ -208,11 +241,8 @@ function colocar(source, element){
                     if (retorno == true){
                         return
                     }
-                    console.log("BREKOU NÃO")
                     srcSet.add(atual)
-                    console.log(atual)
                 }
-                console.log('passei')
                 playerEspO.src = source
                 element.classList.remove("selecionado")
                 alreadySelected = false
@@ -238,7 +268,6 @@ function changePlayerTier(element){
     } else{
         let players = document.getElementsByClassName("player")
         for (i=0; i < players.length; i++){players[i].removeEventListener('click', false)}
-        console.log(document.getElementsByClassName("selecionado")[0])
         document.getElementsByClassName("selecionado")[0].classList.remove("selecionado")
         element.classList.add("selecionado")
         alreadySelected = true
@@ -254,7 +283,6 @@ function personalizarTier(){
     let timeValor = dados[time]
     let tp = document.getElementById("tier-person")
     if (tp){
-        console.log("tem tp", tp)
         tp.remove()
         return
     }
@@ -294,7 +322,6 @@ function personalizarTier(){
 function adReservas(){
     let tierContent = document.getElementById("tier-select-content")
     let reservas = document.getElementsByClassName("reserva")
-    console.log(reservas)
     if (reservas.length > 0){personalizarTier(); return; window.scrollTo({ top: document.getElementById("tier-person").offsetTop - 180, behavior: "smooth" })}
     if (tierContent){
         for (i=0; i < 5; i++){
