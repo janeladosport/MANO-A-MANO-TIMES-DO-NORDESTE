@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIER LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tier-maker.css">
+    <script src="escale.js"></script>
+    <script src="tier-maker.js"></script>
+    <script src="person.js"></script>
+</head>
+<body>
+    <div id="tier">
+    </div>
+    <div id="selectable">SELECIONE O JOGADOR QUE DESEJA SUBSTITUIR</div>
+    <div id="alert">NÃO SELECIONE JOGADORES IGUAIS</div>
+    
+</body>
+<script>
+    let tier = document.getElementById("tier")
+    tier.classList.add("tier-sA")
+    for (i=0; i < 20; i++){
+        let container = document.createElement("div")
+        container.classList.add("container")
+        container.classList.add("class-sA-cont")
+        tier.appendChild(container)
+        let tierName = document.createElement("div")
+        tierName.classList.add("tier-name")
+        tierName.classList.add("class-sA")
+        tierName.innerHTML = i + 1
+        container.appendChild(tierName)
+        let tierContainer = document.createElement("div")
+        tierContainer.classList.add("tier-container")
+        container.appendChild(tierContainer)
+    }
+    let tierPerson = document.createElement("div")
+    tierPerson.style.padding = "10px 0"
+    tierPerson.id = "tier-person"
+    tierPerson.classList.add("tier-person-sA")
+    tierPerson.classList.add("container")
+    document.body.appendChild(tierPerson)
+    for (i=0; i < escudos.length; i++){
+        let imgEsc = document.createElement("img")
+        imgEsc.classList.add("player")
+        imgEsc.classList.add("escudos")
+        tierPerson.appendChild(imgEsc)
+        imgEsc.src = escudos[i][0]
+        imgEsc.setAttribute("data-value", escudos[i][1])
+        console.log(i)
+    }
+    load(true)
+    document.body.style.justifyContent = "center"
+</script>
+</html>

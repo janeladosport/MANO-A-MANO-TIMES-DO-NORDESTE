@@ -77,7 +77,7 @@ function selecionarEscale(elemento){
 }
 
 function botarEscale(time, clean, perso, numb, check, elemento, changeable){
-    
+    console.log("number", numb)
     console.log("check: ", check)
     if (check == true){
         console.log("Checando")

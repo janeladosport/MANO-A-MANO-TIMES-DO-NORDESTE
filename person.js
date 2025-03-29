@@ -94,7 +94,7 @@ function botarUm(time, verify, change){
             imagem[i].querySelector('img').src = vitoria[i]
             imagem[i].setAttribute("onclick", "clicar(this)")
             } 
-    }
+    } 
     if (verify == true){
         let ver = verificar()
         if (ver == false){
@@ -147,6 +147,12 @@ function botarDois(time, verify){
             imagemDois[i].querySelector('img').src = vitoria[i]
             imagemDois[i].setAttribute("onclick", "clicar(this)")
             } 
+    }else{
+        for (i=0; i < imagemDois.length; i++){
+            console.log("FAZENDO", timesFut[timeUno][i])
+            imagemDois[i].querySelector('img').src = timesFut[timeDuno][i]
+            imagemDois[i].setAttribute("onclick", "clicar(this)")
+        }
     }
 
     if (verify == true){

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIER LIST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tier-maker.css">
+    <script src="escale.js"></script>
+    <script src="tier-maker.js"></script>
+    <script src="person.js"></script>
+</head>
+<body>
+    
+    <div id="tier">
+        <div class="container">
+            <div class="tier-name" id="mec">MELHOR EM CAMPO</div>
+            <div class="tier-container"></div>
+        </div>
+        <div class="container">
+            <div class="tier-name" id="bom">BOM</div>
+            <div class="tier-container"></div>
+        </div>
+        <div class="container">
+            <div class="tier-name" id="ok">OK</div>
+            <div class="tier-container"></div>
+        </div>
+        <div class="container">
+            <div class="tier-name" id="regular">REGULAR</div>
+            <div class="tier-container"></div>
+        </div>
+        <div class="container">
+            <div class="tier-name" id="ruim">RUIM</div>
+            <div class="tier-container"></div>
+        </div>
+        <div class="container">
+            <div class="tier-name" id="pec">PIOR EM CAMPO</div>
+            <div class="tier-container"></div>
+        </div>
+    </div>
+    <footer>
+        <a id="voltar" onclick="personalizarTier(this)">PERSONALIZAR TIME</a>
+        <a id="voltar" onclick="adReservas(this)">ADICIONAR RESERVAS E TREINADOR</a>
+    </footer>
+    <div id="select">
+        <select name="Time " id="timeUm" onchange="selectTimeTierList(this)">
+            <option disabled selected>Time</option>
+            <option value="Fortaleza">
+                Fortaleza
+            </option>
+            <option value="Sport">
+                Sport
+            </option>
+            <option value="Bahia">
+                Bahia
+            </option>
+            <option value="Ceara">
+                Ceará
+            </option>
+            <option value="Vitoria">
+                Vitória
+            </option>
+        </select>
+    </div>
+    <div id="selectable">SELECIONE O JOGADOR QUE DESEJA SUBSTITUIR</div>
+    <div id="alert">NÃO SELECIONE JOGADORES IGUAIS</div>
+    
+</body>
+</html>
