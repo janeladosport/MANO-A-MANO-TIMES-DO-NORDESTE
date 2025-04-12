@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport X São Paulo</title>
+    <title>Sport X Vasco</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-main.css">
     <script src="scrip.js"></script>
@@ -17,12 +17,34 @@
     <link rel="stylesheet" href="escale.css">
     <link rel="stylesheet" href="escale-naoperso.css">
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <style>
+        span.counter-um, span.counter-dois{
+            border: 1px solid white;
+            padding: 5px;
+            margin: 0 25px;
+            border-radius: 2px;
+        }
+        #titulo{
+            position: fixed;
+            width: 100vw;
+            margin: 0 !important;
+            padding: 40px 0 30px;
+            background-color: rgb(19, 17, 17);
+            top: 0;
+        }
+        .row:first-of-type{
+            padding-top: 140px;
+        }
+        body{margin: 0;}
+    </style>
 </head>
 <body>
     <div id="titulo">
         <img src="imagens/escudos/sport.svg" alt="">
-        SPORT X SÃO PAULO - 28/03
-        <img src="imagens/escudos/sao-paulo.webp" alt="">
+        <span class="counter-um">0</span>
+        SPORT X VASCO 
+        <span class="counter-dois">0</span>
+        <img src="imagens/escudos/vasco.png" alt="">
     </div>
     
         <div class="mam">
@@ -173,9 +195,9 @@
     <!-- <div id="escolha"></div> -->
 </body>
 <script>
-    saoPaulo = ["imagens/sao paulo/rafael.png", "imagens/sao paulo/cedric.png", "imagens/sao paulo/alan-franco.png", "imagens/sao paulo/arboleda.png", "imagens/sao paulo/sabino.png", "imagens/sao paulo/luiz-gustavo.png" ,"imagens/sao paulo/alisson.png", "imagens/sao paulo/matheus-alves.png", "imagens/sao paulo/luciano.png", "imagens/sao paulo/enzo-diaz.png", "imagens/sao paulo/calleri.png"]
-    sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "imagens/sport/joao-silva.png", "imagens/sport/chico.png", "imagens/sport/igor-carius.png", "imagens/sport/christian-rivera.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/lucas-lima.png", "imagens/sport/lenny-lobato.png", "imagens/sport/barletta.png", "imagens/sport/pablo.png"]
-    timesFut["Sao Paulo"] = saoPaulo
+    timeDois = ["imagens/vasco/leo-jardim.png", "imagens/vasco/paulo-henrique.png", "imagens/vasco/joao-victor.png", "imagens/vasco/lucas-freitas.png", "imagens/vasco/lucas-piton.png", "imagens/vasco/hugo-moura.png" ,"imagens/vasco/tche-tche.png", "imagens/vasco/coutinho.png", "imagens/vasco/nuno-moreira.png", "imagens/vasco/garre.png", "imagens/vasco/vegetti.png"]
+    sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "imagens/sport/joao-silva.png", "imagens/sport/lucas-cunha.png", "imagens/sport/chico.png", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/lucas-lima.png", "imagens/sport/barletta.png", "imagens/sport/pablo.png"]
+    timesFut["Sao Paulo"] = timeDois
     botarUm("Sport", false)
     botarDois("Sao Paulo", false)
 </script>
