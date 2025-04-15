@@ -67,6 +67,7 @@ var dados = {
 };
 
 function selecionarEscaleEsq(elemento){
+    console.log('fiz')
     var time = elemento.value
     botarEscale(time, true, false, "", false, false, true)
 }
@@ -109,8 +110,9 @@ function botarEscale(time, clean, perso, numb, check, elemento, changeable){
     limparCampoEscale()
     let timeValor = dados[time]
     let escolha
-    console.log("Ainda estou aqui")
+    
     for (i=0; i < timeValor.length; i++){
+        console.log("Ainda estou aqui")
         let div = document.createElement("div")
         let span = document.createElement("div")
         let timeI = timeValor[i]
