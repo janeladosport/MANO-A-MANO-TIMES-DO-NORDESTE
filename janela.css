@@ -1,0 +1,50 @@
+.jogador-selectable{
+    width: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.nome-escolha{
+    align-items: center;
+}
+.jogador-selectable:hover{
+    width: 125px;
+}
+
+.selecting, .selected{
+    opacity: 50%;
+    background-color: white;
+}
+#selecting-div{
+    display: flex;
+
+}
+#button-janela{
+    transform: translateX(-50%);
+    left: 50%;
+    width: 80%;
+    height: 18px;
+    padding: 2px;
+    margin: 2px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier();
+    text-align: center;
+}
+
+.selecting:hover, .selected:hover{
+    width: 120px;
+    height: 150px;
+}
+
+#button-janela:hover{
+    background-color: rgb(117, 1, 24);
+}
+
+.suspense{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+
+}

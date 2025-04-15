@@ -72,6 +72,12 @@ function selecionarEscaleEsq(elemento){
     botarEscale(time, true, false, "", false, false, true)
 }
 
+function selecionarEscaleEsq(elemento){
+    console.log('fiz')
+    var time = elemento.value
+    botarEscale(time, true, false, "", false, false, 'janelaSelect()')
+}
+
 function selecionarEscale(elemento){
     var time = elemento.value
     botarEscale(time, true, false, "", false)
@@ -135,7 +141,7 @@ function botarEscale(time, clean, perso, numb, check, elemento, changeable){
                 imagem.setAttribute("onclick", "clicarEscale(this)")
                 if(changeable == true){
                     imagem.setAttribute("onclick", "clicarEscaleEsq(this)")
-                }
+                } else if (changeable == "janelaSelect()"){imagem.setAttribute("onclick", "janelaSelect(this)")}
                 if (elemento){
                     if (elemento == "ignore"){
                         imagem.setAttribute("onclick", "clicarEscale(this, true)")

@@ -11,12 +11,30 @@
     <script src="person.js"></script>
     <script src="mudar-esquema.js"></script>
     <link rel="stylesheet" href="escale.css">
+    <link rel="stylesheet" href="janela.css">
 </head>
 <body>
-    <footer></footer>
+    <select name="Time 1" id="timeUm" onchange="selecionarEscaleEsq(this); verifyAndExcluse()">
+                    <option disabled selected>Time</option>
+                    <option value="Fortaleza">
+                        Fortaleza
+                    </option>
+                    <option value="Sport">
+                        Sport
+                    </option>
+                    <option value="Bahia">
+                        Bahia
+                    </option>
+                    <option value="Ceara">
+                        Ceará
+                    </option>
+                    <option value="Vitoria">
+                        Vitória
+                    </option>
+                </select>
 </body>
 <script>
     createEscolha()
-    selecionarEscaleEsq({value: "Sport"})
+    verifyAndExcluse()
 </script>
 </html>
