@@ -84,6 +84,8 @@ img, div.mam, #titulo, span{
 
 div.item > img, div.item-resultado{
     border: 2.6px solid white;
+}
+div.item > img, div.item-resultado, div.item-resultado > img{
     border-radius: 12px;
 }
 
