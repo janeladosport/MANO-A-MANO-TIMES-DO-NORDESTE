@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALE SEU TIME</title>
+    <link rel="stylesheet" href="escale.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="escale-footer.css">
+    <script src="escale.js"></script>
+    <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <script src="mudar-esquema.js"></script>
+    <script src="escale-tier.js"></script>
+    <script src="person.js"></script>
+    <link rel="stylesheet" href="escale-tier.css">
+     <style>
+        .butao{
+            width: 75%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #272626;
+            border-radius: 5px;
+        }
+        #esquema{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+     </style>
+</head>
+<body>
+    <div class="aviso" style="display: none;">
+        Resolução não suportada. Tente diminuir o zoom.
+    </div>
+    <div class="body">
+        <div id="escolha">
+            <div class="escolha-box">
+                <select name="Time 1" id="timeUm" onchange="selectElencoTierList(this)">
+                    <option disabled selected>Time</option>
+                    <option value="Fortaleza">
+                        Fortaleza
+                    </option>
+                    <option value="Sport">
+                        Sport
+                    </option>
+                    <option value="Bahia">
+                        Bahia
+                    </option>
+                    <option value="Ceara">
+                        Ceará
+                    </option>
+                    <option value="Vitoria">
+                        Vitória
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="campo 4-3-3" id="camp">
+            <img class="jogador" id="ca">
+            <img class="jogador" id="pe">
+            <img class="jogador" id="pd">
+            <img class="jogador" id="mei">
+            <img class="jogador" id="mc">
+            <img class="jogador" id="vol">
+            <img class="jogador" id="ld">
+            <img class="jogador" id="le">
+            <img class="jogador" id="ze">
+            <img class="jogador" id="zd">
+            <img class="jogador" id="gol">
+            <img src="imagens/campo de futebol.avif" id="campo">
+        </div>
+    </div>
+    <footer>
+        <a href="index.html" id="voltar">
+
+                VOLTAR
+
+        </a>
+        <a onclick="limparCampoEscale()" id="voltar" class="limpar">
+
+                LIMPAR
+
+        </a>
+        <a onclick="mudarEsquema(true)" id="voltar" class="limpar">
+
+            MUDAR ESQUEMA
+
+    </a>
+        <a onclick="salvar()" id="voltar" class="limpar">
+
+            SALVAR ESCALAÇÃO
+
+    </a>
+    </footer>
+</body>
+<script>
+    function salvar(){
+        const salvado = document.getElementById("camp")
+        console.log(salvado)
+        html2canvas(salvado, {
+    useCORS: true,
+    allowTaint: false,
+    backgroundColor: null,
+    scale: 4
+}).then(function(canvas) {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL("image/png", 1.0);
+    link.download = 'minha-escalação.png';
+    link.click();
+});
+    }
+    if (window.innerWidth <= 425){
+    let muda = document.querySelector("a[onclick='mudarEsquema()']")
+    muda.style.setProperty("display", "none", "important")
+}
+</script>
+</html>

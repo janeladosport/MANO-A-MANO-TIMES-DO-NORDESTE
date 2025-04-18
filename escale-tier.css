@@ -1,0 +1,20 @@
+.player{
+    height: 120px;
+    width: 120px;
+    margin: 2px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.tier-container{
+    margin-top: 15px;
+    max-width: 510px;
+}
+.tier-container span{
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15pt;
+}
+body{
+    margin: 0;
+    padding: 0;
+}

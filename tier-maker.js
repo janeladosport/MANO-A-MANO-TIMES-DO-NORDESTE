@@ -43,8 +43,8 @@ function selectTimeTierList(selection){
         draggable.setAttribute("class", "player")
         draggable.setAttribute("draggable", "true")
     }
-    load()
-}
+        load()
+    }
 
 function limparTierMaker(drag){
     let tierContainer = document.querySelectorAll('.container')
@@ -77,7 +77,7 @@ function converterCaminhoParaRelativo(caminhoAbsoluto) {
 
 function load(cantTwo){
     const images = document.querySelectorAll(".player");
-    const dropZones = document.querySelectorAll(".tier-container");
+        const dropZones = document.querySelectorAll(".tier-container");
     let isOverDropZone = false;
             document.body.addEventListener("dragover", (e) => {
                 e.preventDefault();
@@ -186,6 +186,7 @@ function load(cantTwo){
                         if(zone.id != "tier-select-content"){draggedElement.classList.add("selected")} else if (draggedElement.classList.contains("selected")){draggedElement.classList.remove("selected")}
                         
                     }
+                    
                     verificarTimesTier()
                     document.body.style.cursor = "default"; // Cursor normal ao soltar na área correta
 
@@ -196,8 +197,8 @@ function load(cantTwo){
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-function verificarTimesTier(){
-   let containers = document.getElementById("tier").querySelectorAll(".tier-container")
+function verificarTimesTier(containers){
+   if (!containers) {let containers = document.getElementById("tier").querySelectorAll(".tier-container")}
     for (i=0; i < containers.length; i ++){
         if (!containers[i].querySelector(".player")){
             return

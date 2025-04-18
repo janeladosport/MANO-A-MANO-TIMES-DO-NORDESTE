@@ -72,11 +72,7 @@ function selecionarEscaleEsq(elemento){
     botarEscale(time, true, false, "", false, false, true)
 }
 
-function selecionarEscaleEsq(elemento){
-    console.log('fiz')
-    var time = elemento.value
-    botarEscale(time, true, false, "", false, false, 'janelaSelect()')
-}
+
 
 function selecionarEscale(elemento){
     var time = elemento.value

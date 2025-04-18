@@ -25,7 +25,7 @@ function cleanPlayers(){
     }
 }
 
-function clicou(elemento, esq){
+function clicou(elemento, esq, doesLoad){
     verifyEsquemaExisting()
     let players = esquemas[Number(esq)][1]
     cleanPlayers()
@@ -37,9 +37,10 @@ function clicou(elemento, esq){
     }
     document.getElementById("camp").setAttribute("class", "campo")
     document.getElementById("camp").classList.add(esquemas[Number(esq)][0])
+    if (doesLoad == true){load()}
 }
 
-function mudarEsquema(){
+function mudarEsquema(isTier){
     if (verifyEsquemaExisting() == false){
         return
     }
@@ -53,8 +54,9 @@ function mudarEsquema(){
         esquema.appendChild(butao)
         butao.innerHTML = esquemas[i][0]
         butao.setAttribute("class", "butao")
-        butao.setAttribute("onclick", `clicou(this, ${i})`)
+        if(isTier == true){butao.setAttribute("onclick", `clicou(this, ${i}, true)`)} else {butao.setAttribute("onclick", `clicou(this, ${i})`)}
     }
+    
 }
 
 let counta = "first"

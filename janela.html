@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="scrip.js"></script>
     <script src="escale.js"></script>
-    <script src="person.js"></script>
-    <script src="mudar-esquema.js"></script>
+    <script src="person.js"></script> 
     <link rel="stylesheet" href="escale.css">
     <link rel="stylesheet" href="janela.css">
 </head>
@@ -36,5 +35,11 @@
 <script>
     createEscolha()
     verifyAndExcluse()
+    function selecionarEscaleEsq(elemento){
+    console.log('fiz')
+    var time = elemento.value
+    botarEscale(time, true, false, "", false, false, "janelaSelect()")
+}
+    window.removeEventListener("resize", function (){mudou();})
 </script>
 </html>
