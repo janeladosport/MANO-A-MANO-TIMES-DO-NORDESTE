@@ -47,6 +47,7 @@ function selectTimeTierList(selection){
     }
 let firstTime = false
 function selectElencoTierList(selection){
+    limparCampoEscale()
     var drag = document.createElement("div")
     limparTierMaker(drag)
     var time = selection.value
@@ -67,7 +68,7 @@ function selectElencoTierList(selection){
             draggable.setAttribute("draggable", "true")
         }
     }
-        load()
+        
     if (firstTime == false){
         let newSpan = document.createElement("span")
         newSpan.innerHTML = "ARRASTE O JOGADOR PARA A POSIÇÃO"
@@ -83,10 +84,11 @@ function selectElencoTierList(selection){
         newSpan.style.padding = "5px 0 "
         firstTime = true
     }
+    load()
     }
 
 function limparTierMaker(drag){
-    let tierContainer = document.querySelectorAll('.container')
+    let tierContainer = document.querySelectorAll('.tier-container')
     for (i=0; i < tierContainer.length; i++){
         let imgsContainer = tierContainer[i].querySelectorAll("img")
         for (h=0; h < imgsContainer.length; h++){
@@ -136,6 +138,7 @@ function load(cantTwo){
             ctx.fillStyle = "rgba(0,0,0,0.5)";
             ctx.fillRect(0, 0, 10, 10);
             images.forEach(img => {
+                
                 img.addEventListener("dragstart", (e) => {
                     e.dataTransfer.setData("text/plain", e.target.id);
                     e.target.classList.add("dragging");
@@ -148,52 +151,52 @@ function load(cantTwo){
                     document.body.style.cursor = "default"; // Retorna ao normal ao soltar
                 });
             });
-    
+            removeAllEventListeners(dropZones)
             dropZones.forEach(zone => {
+                if (zone.id != 'campo'){
                 zone.addEventListener("dragover", (e) => {
                     e.preventDefault();
                     isOverDropZone = true; // Marca que estamos sobre uma área válida
                     document.body.style.cursor = "default"; // Cursor normal dentro da zona
-                });
+                }, {once: true});
     
                 zone.addEventListener("dragleave", () => {
                     isOverDropZone = false; // Saiu da zona válida
                     document.body.style.cursor = "not-allowed"; // Volta para proibido
-                });
+                }, {once: true});
     
                 zone.addEventListener("drop", (e) => {
                     e.preventDefault();
                     isOverDropZone = false; // Soltou na zona válida
                     const draggedElement = document.querySelector(".dragging");
-                    console.log("É IMG", draggedElement)
                     if (draggedElement) {
-                        let ver = verificarDuplicata("jogador", draggedElement.src)
+                        console.log(document.getElementsByClassName("jogador"), draggedElement.src)
+                        let ver = verificarDuplicataTier("jogador", draggedElement.src)
+                        
                         if (ver == false){
+                            console.log(ver)
                             return
                         }
+                        zone.src = draggedElement.src
                         if (firstTime == true){let newspan = document.getElementById("new-span"); if(newspan){newspan.remove()}}
-                        zone.src = draggedElement.src;
                         let nomeInner = draggedElement.getAttribute("data-value") 
                         draggedElement.addEventListener("dragstart", (e) => {
                             e.dataTransfer.setData("text/plain", e.target.id);
                             e.target.classList.add("dragging");
                             document.body.style.cursor = "not-allowed"; // Cursor proibido por padrão
                             e.dataTransfer.setDragImage(smallPlaceholder, 5, 5)
-                        });
+                        }, {once:true});
             
                         draggedElement.addEventListener("dragend", (e) => {
                             e.target.classList.remove("dragging");
                             document.body.style.cursor = "default"; // Retorna ao normal ao soltar
-                        });
-                        draggedElement.insertAdjacentElement("afterend", nome)
-                        }
-                        
+                        }, {once:true})}                       
                         if(zone.id != "tier-select-content"){draggedElement.classList.add("selected")} else if (draggedElement.classList.contains("selected")){draggedElement.classList.remove("selected")}
                     verificarTimesTier()
                     document.body.style.cursor = "default"; // Cursor normal ao soltar na área correta
 
-                });
-            });    
+                }, { once: true }); }
+            }, {once: true})   
         }
     function esperar(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -343,4 +346,75 @@ function adReservas(){
         load()
         window.scrollTo({ top: document.getElementById("tier-person").offsetTop - 180, behavior: "smooth" })
     }
+}
+
+function verificarDuplicataTier(classe, source){
+    let imagens = document.getElementsByClassName(classe);
+    let srcSet = new Set();
+    let permitidoCount = 0;
+    let permitido = "branco.png"
+   
+    for (i=0; i < imagens.length; i++) {
+        nomeArquivoAtual = source.substring(source.lastIndexOf("/") + 1) 
+        nomeArquivo = imagens[i].src.substring(imagens[i].src.lastIndexOf("/") + 1)
+        
+        if (nomeArquivoAtual == permitido) {
+            permitidoCount++;
+            continue; 
+        }
+        if (nomeArquivoAtual == nomeArquivo) {
+            alert("Não iguais")
+            console.log("SRC SET", srcSet, "NOME ATUAL", nomeArquivoAtual, "NOME ARQUIVO", nomeArquivo, imagens, imagens[i])
+            return false;
+        }
+        srcSet.add(nomeArquivo);
+    }
+
+    return true;
+}
+
+function removeAllEventListeners(objects){
+    objects.forEach(zone => {
+        zone.removeEventListener("dragover", (e) => {
+            e.preventDefault();
+            isOverDropZone = true; // Marca que estamos sobre uma área válida
+            document.body.style.cursor = "default"; // Cursor normal dentro da zona
+        });
+
+        zone.removeEventListener("dragleave", () => {
+            isOverDropZone = false; // Saiu da zona válida
+            document.body.style.cursor = "not-allowed"; // Volta para proibido
+        });
+
+        zone.removeEventListener("drop", (e) => {
+            e.preventDefault();
+            isOverDropZone = false; // Soltou na zona válida
+            const draggedElement = document.querySelector(".dragging");
+            if (draggedElement) {
+                console.log(document.getElementsByClassName("jogador"), draggedElement.src)
+                let ver = verificarDuplicataTier("jogador", draggedElement.src)
+                
+                if (ver == false){
+                    console.log(ver)
+                    return
+                }
+                zone.src = draggedElement.src
+                if (firstTime == true){let newspan = document.getElementById("new-span"); if(newspan){newspan.remove()}}
+                let nomeInner = draggedElement.getAttribute("data-value") 
+                draggedElement.removeEventListener("dragstart", (e) => {
+                    e.dataTransfer.setData("text/plain", e.target.id);
+                    e.target.classList.add("dragging");
+                    document.body.style.cursor = "not-allowed"; // Cursor proibido por padrão
+                    e.dataTransfer.setDragImage(smallPlaceholder, 5, 5)
+                });
+    
+                draggedElement.removeEventListener("dragend", (e) => {
+                    e.target.classList.remove("dragging");
+                    document.body.style.cursor = "default"; // Retorna ao normal ao soltar
+                })}                       
+                if(zone.id != "tier-select-content"){draggedElement.classList.add("selected")} else if (draggedElement.classList.contains("selected")){draggedElement.classList.remove("selected")}
+            document.body.style.cursor = "default"; // Cursor normal ao soltar na área correta
+
+        })
+    })
 }
