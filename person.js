@@ -124,9 +124,11 @@ function botarDois(time, verify){
     let imagemDois = document.getElementsByClassName("time-dois")
     if (time == "Fortaleza"){
       for (i=0; i < imagemDois.length; i++){
+        console.log(fortaleza[i])
         imagemDois[i].querySelector('img').src = fortaleza[i]
         imagemDois[i].setAttribute("onclick", "clicar(this)")
         }  
+        return
     } if (time == "Sport") {
         for (i=0; i < imagemDois.length; i++){
             imagemDois[i].querySelector('img').src = sport[i]
@@ -147,7 +149,7 @@ function botarDois(time, verify){
             imagemDois[i].querySelector('img').src = vitoria[i]
             imagemDois[i].setAttribute("onclick", "clicar(this)")
             } 
-    }else{
+    } else{
         for (i=0; i < imagemDois.length; i++){
             console.log("FAZENDO", timesFut[timeUno][i])
             imagemDois[i].querySelector('img').src = timesFut[timeDuno][i]

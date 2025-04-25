@@ -17,11 +17,36 @@
     <link rel="stylesheet" href="escale.css">
     <link rel="stylesheet" href="escale-naoperso.css">
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
+    <style>
+        span.counter-um, span.counter-dois{
+            border: 1px solid white;
+            padding: 5px;
+            margin: 0 25px;
+            border-radius: 2px;
+        }
+        #titulo{
+            position: fixed;
+            width: 100vw;
+            margin: 0 !important;
+            margin-top: 60px !important;
+            padding: 30px 0 30px;
+            padding-bottom: 10px;
+            background-color: rgb(19, 17, 17);
+            top: 0;
+        }
+        .row:first-of-type{
+            padding-top: 140px;
+        }
+        body{margin: 0;}
+
+    </style>
 </head>
 <body>
     <div id="titulo">
         <img src="imagens/escudos/sport.svg" alt="">
+        <span class="counter-um">0</span>
         SPORT X FORTALEZA
+        <span class="counter-dois">0</span>
         <img src="imagens/escudos/fortaleza.png" alt="">
     </div>
     
@@ -173,6 +198,8 @@
     <!-- <div id="escolha"></div> -->
 </body>
 <script>
+    fortaleza = ["imagens/fortaleza/joao-ricardo.png", "imagens/fortaleza/tinga.png", "imagens/fortaleza/titi.png", "imagens/fortaleza/gustavo-mancha.png", "imagens/fortaleza/eros-mancuso.png", "imagens/fortaleza/rosseto.png", "imagens/fortaleza/lucas-sasha.png", "imagens/fortaleza/calebe.png", "imagens/fortaleza/pikachu.png", "imagens/fortaleza/allanzinho.png", "imagens/fortaleza/deyverson.png"]
+    sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "imagens/sport/joao-silva.png", "imagens/sport/chico.png", "imagens/sport/igor-carius.png", "imagens/sport/ze-lucas.png", "imagens/sport/du-queiroz.png", "imagens/sport/dominguez.png", "imagens/sport/lucas-lima.png", "imagens/sport/barletta.png", "imagens/sport/paciencia.png"]
     botarUm("Sport", false)
     botarDois("Fortaleza", false)
 </script>

@@ -363,7 +363,7 @@ function verificarDuplicataTier(classe, source){
             continue; 
         }
         if (nomeArquivoAtual == nomeArquivo) {
-            alert("Não iguais")
+            alert("Não selecione jogadores iguais")
             console.log("SRC SET", srcSet, "NOME ATUAL", nomeArquivoAtual, "NOME ARQUIVO", nomeArquivo, imagens, imagens[i])
             return false;
         }
