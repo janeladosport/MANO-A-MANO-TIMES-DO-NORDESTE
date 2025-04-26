@@ -53,7 +53,7 @@ async function adicionarScriptNoHtml(objeto) {
     const updateResponse = await fetch(apiUrl, {
       method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`,
+        'Authorization': `token ${tk}`,
         'Accept': 'application/vnd.github.v3+json'
       },
       body: JSON.stringify({
