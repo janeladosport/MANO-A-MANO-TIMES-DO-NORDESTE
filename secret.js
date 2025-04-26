@@ -1,5 +1,5 @@
 async function adicionarScriptNoHtml(objeto) {
-    const token = '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'; 
+    const token = document.getElementById("token").value; 
     const repo = 'janeladosport/MANO-A-MANO-TIMES-DO-NORDESTE';
     const path = 'sport-fortaleza.html';
     const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
@@ -22,7 +22,7 @@ async function adicionarScriptNoHtml(objeto) {
     // 1. Buscar o arquivo atual
     const getResponse = await fetch(apiUrl, {
       headers: {
-        'Authorization': `token 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`,
+        'Authorization': `token ${token}`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
