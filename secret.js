@@ -22,7 +22,6 @@ async function adicionarScriptNoHtml(objeto) {
     // 1. Buscar o arquivo atual
     
     const fileData = await getResponse.json();
-    const conteudoAtual = atob(fileData.content); // Decodifica o conteúdo Base64
   
     // 2. Adicionar nova <script> antes do </body>
     const novaTagScript = `
