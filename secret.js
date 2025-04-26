@@ -4,6 +4,7 @@ async function adicionarScriptNoHtml(objeto) {
     const path = 'sport-fortaleza.html';
     const apiUrl = `https://api.github.com/repos/${repo}/contents/${path}`;
     let timeUm = []
+    let jogadoresUm = document.querySelectorAll(".time-um")
     for (i=0; i < jogadoresUm.length; i++){
         const url = jogadoresUm[i].querySelector("img").src;
         const penultimaBarra = url.lastIndexOf('/', url.lastIndexOf('/', url.lastIndexOf('/') - 1) - 1);
