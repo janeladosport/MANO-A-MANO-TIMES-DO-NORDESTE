@@ -22,7 +22,7 @@ async function adicionarScriptNoHtml(objeto) {
     // 1. Buscar o arquivo atual
     const getResponse = await fetch(apiUrl, {
       headers: {
-        'Authorization': `token ${token}`,
+        'Authorization': `token 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`,
         'Accept': 'application/vnd.github.v3+json'
       }
     });
