@@ -17,8 +17,9 @@ async function adicionarScriptNoHtml(objeto) {
         const url = jogadoresDois[i].querySelector("img").src;
         const penultimaBarra = url.lastIndexOf('/', url.lastIndexOf('/', url.lastIndexOf('/') - 1) - 1);
         const resultado = url.substring(penultimaBarra + 1);
-        timeDois.push(`'${resultado}'`)
+        timeDois.push(resultado)
     }
+    console.log(timeUm, timeDois)
     // 1. Buscar o arquivo atual
     const getResponse = await fetch(apiUrl, {
       headers: {
@@ -41,10 +42,17 @@ async function adicionarScriptNoHtml(objeto) {
   </script>
   `;
   
-    const novoConteudo = conteudoAtual.replace(
-      '</body>',
-      `${novaTagScript}\n</body>` // Insere o novo script antes do fechamento </body>
-    );
+    // 2. Remover qualquer <script> adicionado anteriormente (por exemplo, aquele que começa com "fortaleza = [...];")
+const conteudoSemScriptAntigo = conteudoAtual.replace(
+    /<script>\s*fortaleza\s*=\s*\[.*?\][\s\S]*?<\/script>/,
+    ''
+  );
+  
+  // 3. Adicionar nova <script> antes do </body>
+  const novoConteudo = conteudoSemScriptAntigo.replace(
+    '</body>',
+    `${novaTagScript}\n</body>`
+  );
   
     // 3. Codificar de novo em Base64
     const novoConteudoBase64 = btoa(novoConteudo);
