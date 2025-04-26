@@ -17,7 +17,7 @@ async function adicionarScriptNoHtml(objeto) {
         const url = jogadoresDois[i].querySelector("img").src;
         const penultimaBarra = url.lastIndexOf('/', url.lastIndexOf('/', url.lastIndexOf('/') - 1) - 1);
         const resultado = url.substring(penultimaBarra + 1);
-        timeDois.push(resultado)
+        timeDois.push(`'${resultado}'`)
     }
     console.log(timeUm, timeDois)
     // 1. Buscar o arquivo atual
@@ -33,8 +33,8 @@ async function adicionarScriptNoHtml(objeto) {
     // 2. Adicionar nova <script> antes do </body>
     const novaTagScript = `
   <script>
-    fortaleza = [${timeUm}]
-    sport = [${timeDois}]
+    fortaleza = [${timeDois}]
+    sport = [${timeUm}]
     timesFut["Fortaleza"] = fortaleza
     timesFut["Sport"] = sport
     botarUm("Sport", false)
