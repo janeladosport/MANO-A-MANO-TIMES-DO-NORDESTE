@@ -20,12 +20,7 @@ async function adicionarScriptNoHtml(objeto) {
         timeDois.push(resultado)
     }
     // 1. Buscar o arquivo atual
-    const getResponse = await fetch(apiUrl, {
-      headers: {
-        'Authorization': `token ${tk}`,
-        'Accept': 'application/vnd.github.v3+json'
-      }
-    });
+    
     const fileData = await getResponse.json();
     const conteudoAtual = atob(fileData.content); // Decodifica o conteúdo Base64
   
