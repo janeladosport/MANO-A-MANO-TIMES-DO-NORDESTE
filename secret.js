@@ -58,7 +58,8 @@ async function adicionarScriptNoHtml(objeto) {
       body: JSON.stringify({
         message: 'Adicionando nova tag <script> automaticamente',
         content: novoConteudoBase64,
-        sha: fileData.sha
+        sha: fileData.sha,
+        branch: 'main'
       })
     });
   
