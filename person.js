@@ -3,12 +3,21 @@ let sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "im
 let bahia = ["imagens/bahia/marcos-felipe.png", "imagens/bahia/santi-arias.png", "imagens/bahia/kanu.png", "imagens/bahia/ramos-mingo.png", "imagens/bahia/luciano-juba.png", "imagens/bahia/caio-alexandre.png", "imagens/bahia/jean-lucas.png", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/ademir.png", "imagens/bahia/erick-pulga.png", "imagens/bahia/lucho-rodriguez.png"]
 let ceara = ["imagens/ceara/bruno-ferreira.png", "imagens/ceara/fabiano-souza.png", "imagens/ceara/marllon.png", "imagens/ceara/ramon-menezes.png", "imagens/ceara/matheus-bahia.png", "imagens/ceara/richardson.png", "imagens/ceara/fernando-sobral.png", "imagens/ceara/lucas-mugni.png", "imagens/ceara/pedro-henrique.png", "imagens/ceara/fernandinho.png", "imagens/ceara/pedro-raul.png"]
 let vitoria = ["imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/claudinho.png", "imagens/vitoria/neris.png", "imagens/vitoria/lucas-halter.png", "imagens/vitoria/jamerson.png", "imagens/vitoria/baralhas.png" ,"imagens/vitoria/pepê.png", "imagens/vitoria/matheusinho.png", "imagens/vitoria/gustavo-mosquito.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/janderson.png"]
+flu = "imagens/fluminense/"
+let fluminense = [flu + "fabio.png", flu + "guga.png", flu + "ignacio.png", flu + "freytes.png", flu + "fuentes.png", flu + "martinelli.png", flu + "nonato.png", flu + "ganso.png", flu + "arias.png", flu + "keno.png", flu + "everaldo.png"]
+let cor = "imagens/corinthians/"
+corinthians = [cor + "hugo-souza.png", cor + "matheuzinho.png", cor + "andre-ramalho.png", cor + "caca.png", cor + "angileri.png", cor + "raniele.png", cor + "martinez.png", cor + "igor-coronado.png", cor + "carillo.png", cor + "depay.png", cor + "yuri-alberto.png"]
+let int = "imagens/inter/"
+let internacional = [int + "anthoni.png", int + "aguirre.png", int + "vitao.png", int + "victor-gabriel.png", int + "bernabei.png", int + "fernando.png", int + "thiago-maia.png", int + "alan-patrick.png", int + "bruno-tabata.png", int + "wesley.png", int + "enner-valencia.png"]
 timesFut = {
     Fortaleza: fortaleza,
     Sport: sport,
     Bahia: bahia,
     Ceara: ceara,
-    Vitoria: vitoria
+    Vitoria: vitoria,
+    Fluminense: fluminense,
+    Corinthians: corinthians,
+    Inter: internacional
 }
 fotosTimes = {
     Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],
@@ -59,6 +68,7 @@ function createEscolha(){
     
 }
 
+
 function botarUm(time, verify, change){
     console.log("BOTANDO UM...")
     timeUno = time
@@ -67,34 +77,10 @@ function botarUm(time, verify, change){
         imagem = document.getElementsByClassName("titulares")
     }
     let leng = imagem.length
-    if (time == "Fortaleza"){
-      for (i=0; i < imagem.length; i++){
-        imagem[i].querySelector('img').src = fortaleza[i]
+    for (i=0; i < imagem.length; i++){
+        imagem[i].querySelector("img").src = timesFut[time][i]
         imagem[i].setAttribute("onclick", "clicar(this)")
-        }  
-    } if (time == "Sport") {
-        for (i=0; i < imagem.length; i++){
-            console.log("Executando: ", (i + 1))
-            imagem[i].querySelector('img').src = sport[i]
-            imagem[i].setAttribute("onclick", "clicar(this)")
-            }
-    } if (time == "Bahia") {
-        for (i=0; i < imagem.length; i++){
-            imagem[i].querySelector('img').src = bahia[i]
-            imagem[i].setAttribute("onclick", "clicar(this)")
-            }
-
-    } if (time == "Ceara") {
-        for (i=0; i < imagem.length; i++){
-            imagem[i].querySelector('img').src = ceara[i]
-            imagem[i].setAttribute("onclick", "clicar(this)")
-            }
-    } if (time == "Vitoria") {
-        for (i=0; i < imagem.length; i++){
-            imagem[i].querySelector('img').src = vitoria[i]
-            imagem[i].setAttribute("onclick", "clicar(this)")
-            } 
-    } 
+    }
     if (verify == true){
         let ver = verificar()
         if (ver == false){
@@ -115,46 +101,15 @@ function selecionarDois(elemento){
     time = elemento.value
     imgFutDois = fotosTimes[time][0]
     nameFutDois = fotosTimes[time][1]
-    let veri = botarDois(time, true)
-    botarNome(veri)
+    botarDois(time, false)
 }
 
 function botarDois(time, verify){
     timeDuno = time
     let imagemDois = document.getElementsByClassName("time-dois")
-    if (time == "Fortaleza"){
-      for (i=0; i < imagemDois.length; i++){
-        console.log(fortaleza[i])
-        imagemDois[i].querySelector('img').src = fortaleza[i]
+    for (i=0; i < imagemDois.length; i++){
+        imagemDois[i].querySelector("img").src = timesFut[time][i]
         imagemDois[i].setAttribute("onclick", "clicar(this)")
-        }  
-        return
-    } if (time == "Sport") {
-        for (i=0; i < imagemDois.length; i++){
-            imagemDois[i].querySelector('img').src = sport[i]
-            imagemDois[i].setAttribute("onclick", "clicar(this)")
-            }
-    } if (time == "Bahia") {
-        for (i=0; i < imagemDois.length; i++){
-            imagemDois[i].querySelector('img').src = bahia[i]
-            imagemDois[i].setAttribute("onclick", "clicar(this)")
-            }
-    } if (time == "Ceara") {
-        for (i=0; i < imagemDois.length; i++){
-            imagemDois[i].querySelector('img').src = ceara[i]
-            imagemDois[i].setAttribute("onclick", "clicar(this)")
-            }
-    } if (time == "Vitoria") {
-        for (i=0; i < imagemDois.length; i++){
-            imagemDois[i].querySelector('img').src = vitoria[i]
-            imagemDois[i].setAttribute("onclick", "clicar(this)")
-            } 
-    } else{
-        for (i=0; i < imagemDois.length; i++){
-            console.log("FAZENDO", timesFut[timeUno][i])
-            imagemDois[i].querySelector('img').src = timesFut[timeDuno][i]
-            imagemDois[i].setAttribute("onclick", "clicar(this)")
-        }
     }
 
     if (verify == true){

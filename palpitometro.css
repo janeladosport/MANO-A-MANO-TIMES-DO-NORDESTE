@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+span{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+span.counter-um, span.counter-dois{
+    border: 1px solid white;
+    padding: 5px !important;
+    margin: 0 25px !important;
+    border-radius: 2px;
+}
+#new-span{
+    text-transform: uppercase;
+}
+#head{
+    text-transform: uppercase;
+    text-align: center;
+    width: 99vw;
+    display: block;
+    margin-top: 10px !important;
+}
+#palpites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.palpites-img{
+    width: 80px;
+}
+.jogo-palpite{
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.palpite-span{
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.palpites-input{
+    width: 35px;
+    height: 50px;
+    background-color: rgb(46, 44, 44);
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 20pt;
+    text-align: center;
+}
+.palpites-input:hover{
+    background-color: rgb(70, 68, 68);
+}
+.palpites-button{
+    flex: 1 1 100%;
+    margin-top: 5px;
+    border-radius: 7px;
+    display: block;
+    max-width: 90%;
+    height: 35px;
+}
+.palpites-button-alone{
+    margin-top: 25px;
+    border-radius: 7px;
+    display: block;
+    max-width: 90%;
+    height: 35px;
+}
