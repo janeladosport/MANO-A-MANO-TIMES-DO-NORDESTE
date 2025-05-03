@@ -9,6 +9,8 @@ let cor = "imagens/corinthians/"
 corinthians = [cor + "hugo-souza.png", cor + "matheuzinho.png", cor + "andre-ramalho.png", cor + "caca.png", cor + "angileri.png", cor + "raniele.png", cor + "martinez.png", cor + "igor-coronado.png", cor + "carillo.png", cor + "depay.png", cor + "yuri-alberto.png"]
 let int = "imagens/inter/"
 let internacional = [int + "anthoni.png", int + "aguirre.png", int + "vitao.png", int + "victor-gabriel.png", int + "bernabei.png", int + "fernando.png", int + "thiago-maia.png", int + "alan-patrick.png", int + "bruno-tabata.png", int + "wesley.png", int + "enner-valencia.png"]
+let bot = "imagens/botafogo/"
+let botafogo = [bot + "john.png",bot + "vitinho.png", bot + "jair.png", bot+"david-ricardo.png", bot + "cuiabano.png", bot + "danilo-barbosa.png", bot + "marlon-freitas.png", bot + "patrick-de-paula.png", bot + "artur.png", bot + "igor-jesus.png", bot + "mastriani.png"]
 timesFut = {
     Fortaleza: fortaleza,
     Sport: sport,
@@ -17,7 +19,8 @@ timesFut = {
     Vitoria: vitoria,
     Fluminense: fluminense,
     Corinthians: corinthians,
-    Inter: internacional
+    Inter: internacional,
+    Botafogo: botafogo
 }
 fotosTimes = {
     Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],
