@@ -47,6 +47,9 @@ let cea = "imagens/ceara/"
 ceara = [cea + "fernando-miguel.png", cea + "fabiano-souza.png", cea + "marllon.png", cea + "william-machado.png", cea + "matheus-bahia.png", cea + "dieguinho.png", cea + "fernando-sobral.png", cea + "lucas-mugni.png", cea + "galeano.png", cea + "pedro-henrique.png", cea + "pedro-raul.png"]
 timesFut['Ceara'] = ceara
 
+let bah = "imagens/bahia/"
+bahia = [bah + "marcos-felipe.png", bah + "gabriel-xavier.png", bah + "david-duarte.png", bah + "ramos-mingo.png", bah + "luciano-juba.png", bah + "caio-alexandre.png", bah + "jean-lucas.png", bah + "everton-ribeiro.png", bah + "ademir.png", bah + "erick-pulga.png", bah + "william-jose.png"]
+timesFut['Bahia'] = bahia
 
 
 function createGames(){
