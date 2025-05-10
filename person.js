@@ -2,15 +2,37 @@ let fortaleza = ["imagens/fortaleza/joao-ricardo.png", "imagens/fortaleza/eros-m
 let sport = ["imagens/sport/caique-frança.png", "imagens/sport/hereda.png", "imagens/sport/joao-silva.png", "imagens/sport/chico.png", "imagens/sport/igor-carius.png", "imagens/sport/christian-rivera.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/lucas-lima.png", "imagens/sport/chino-atencio.png", "imagens/sport/lenny-lobato.png", "imagens/sport/paciencia.png"]
 let bahia = ["imagens/bahia/marcos-felipe.png", "imagens/bahia/santi-arias.png", "imagens/bahia/kanu.png", "imagens/bahia/ramos-mingo.png", "imagens/bahia/luciano-juba.png", "imagens/bahia/caio-alexandre.png", "imagens/bahia/jean-lucas.png", "imagens/bahia/everton-ribeiro.png", "imagens/bahia/ademir.png", "imagens/bahia/erick-pulga.png", "imagens/bahia/lucho-rodriguez.png"]
 let ceara = ["imagens/ceara/bruno-ferreira.png", "imagens/ceara/fabiano-souza.png", "imagens/ceara/marllon.png", "imagens/ceara/ramon-menezes.png", "imagens/ceara/matheus-bahia.png", "imagens/ceara/richardson.png", "imagens/ceara/fernando-sobral.png", "imagens/ceara/lucas-mugni.png", "imagens/ceara/pedro-henrique.png", "imagens/ceara/fernandinho.png", "imagens/ceara/pedro-raul.png"]
-let vitoria = ["imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/claudinho.png", "imagens/vitoria/neris.png", "imagens/vitoria/lucas-halter.png", "imagens/vitoria/jamerson.png", "imagens/vitoria/baralhas.png" ,"imagens/vitoria/pepê.png", "imagens/vitoria/matheusinho.png", "imagens/vitoria/gustavo-mosquito.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/janderson.png"]
+let vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "neris", "lucas-halter", "jamerson", "baralhas", "pepê", "matheusinho", "gustavo-mosquito", "wellington-rato", "janderson"])
 flu = "imagens/fluminense/"
 let fluminense = [flu + "fabio.png", flu + "guga.png", flu + "ignacio.png", flu + "freytes.png", flu + "fuentes.png", flu + "martinelli.png", flu + "nonato.png", flu + "ganso.png", flu + "arias.png", flu + "keno.png", flu + "everaldo.png"]
-let cor = "imagens/corinthians/"
-corinthians = [cor + "hugo-souza.png", cor + "matheuzinho.png", cor + "andre-ramalho.png", cor + "caca.png", cor + "angileri.png", cor + "raniele.png", cor + "martinez.png", cor + "igor-coronado.png", cor + "carillo.png", cor + "depay.png", cor + "yuri-alberto.png"]
-let int = "imagens/inter/"
-let internacional = [int + "anthoni.png", int + "aguirre.png", int + "vitao.png", int + "victor-gabriel.png", int + "bernabei.png", int + "fernando.png", int + "thiago-maia.png", int + "alan-patrick.png", int + "bruno-tabata.png", int + "wesley.png", int + "enner-valencia.png"]
-let bot = "imagens/botafogo/"
-let botafogo = [bot + "john.png",bot + "vitinho.png", bot + "jair.png", bot+"david-ricardo.png", bot + "cuiabano.png", bot + "danilo-barbosa.png", bot + "marlon-freitas.png", bot + "patrick-de-paula.png", bot + "artur.png", bot + "igor-jesus.png", bot + "mastriani.png"]
+
+let corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "angileri", "raniele", "alex-santana", "carillo", "romero", "depay", "yuri-alberto"])
+
+let internacional = srcConjunto("inter", ["anthoni", "aguirre", "vitao", "victor-gabriel", "bernabei", "fernando", "thiago-maia", "alan-patrick", "bruno-tabata", "wesley", "enner-valencia"])
+
+let botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "cuiabano", "danilo-barbosa", "marlon-freitas", "patrick-de-paula", "artur", "igor-jesus", "mastriani"])
+
+let vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "lucas-freitas", "joao-victor", "lucas-piton", "hugo-moura", "tche-tche", "coutinho", "nuno-moreira", "garre", "vegetti"])
+
+let bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "guzman", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "lucas-barbosa", "laquintana", "sasha"])
+
+let juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "abner", "alan-ruschel", "giraldo", "jadson", "mandaca", "batalla", "enio", "gilberto"])
+
+let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "edson-carioca", "fabricio-daniel", "cristian-renato"])
+
+function srcConjunto(time, jogadores){
+    let conjunto = []
+    for (i=0; i < jogadores.length; i++){
+        conjunto.push(`imagens/${time}/${jogadores[i]}.png`)
+    }
+    console.log(conjunto)
+    return conjunto 
+}
+
+function srcImg(team, player){
+    return `imagens/${team}/${player}.png`
+}
+
 timesFut = {
     Fortaleza: fortaleza,
     Sport: sport,
@@ -20,7 +42,11 @@ timesFut = {
     Fluminense: fluminense,
     Corinthians: corinthians,
     Inter: internacional,
-    Botafogo: botafogo
+    Botafogo: botafogo,
+    Vasco: vasco,
+    Bragantino: bragantino,
+    Juventude: juventude,
+    Mirassol: mirassol
 }
 fotosTimes = {
     Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],

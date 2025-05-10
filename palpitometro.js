@@ -1,6 +1,6 @@
 escudos = {
     'fluminense': 'imagens/escudos/fluminense.png',
-    'sport': 'imagens/escudos/sport.svg',
+    'sport': 'imagens/escudos/sport.png',
     'corinthians': 'imagens/escudos/corinthians.png',
     'flamengo': 'imagens/escudos/flamengo.png',
     'saopaulo': 'imagens/escudos/sao-paulo.png',
@@ -21,10 +21,16 @@ escudos = {
     'fortaleza': 'imagens/escudos/fortaleza.png'
 }
 jogos = [
-    ['Fluminense X Sport', escudos['fluminense'], escudos['sport'], ['fluminense', 'sport']],
-    ['Ceará X Vitória', escudos['ceara'], escudos['vitoria'], ['ceara', 'vitoria']],
-    ['Corinthians X Internacional', escudos['corinthians'], escudos['inter'], ['corinthians', 'inter']],
-    ['Bahia X Botafogo', escudos['bahia'], escudos['botafogo'], ['bahia', 'botafogo']]
+    ['Fortaleza X Juventude', escudos['fortaleza'], escudos['juventude'], ['fortaleza', 'juventude']],
+    ['Mirassol X Corinthians', escudos['mirassol'], escudos['corinthians'], ['mirassol', 'corinthians']],
+    ['Grêmio X RB Bragantino', escudos['gremio'], escudos['bragantino'], ['gremio', 'bragantino'], true],
+    ['Vitória X Vasco', escudos['vitoria'], escudos['vasco'], ['vitoria', 'vasco']],
+    ['Flamengo X Bahia', escudos['flamengo'], escudos['bahia'], ['flamengo', 'bahia'], true],
+    ['Sport X Cruzeiro', escudos['sport'], escudos['cruzeiro'], ['sport', 'cruzeiro'], true],
+    ['Palmeiras X São Paulo', escudos['palmeiras'], escudos['saopaulo'], ['palmeiras', 'saopaulo'], true],
+    ['Atlético-MG X Fluminense', escudos['atletico'], escudos['fluminense'], ['atletico', 'fluminense'], true],
+    ['Botafogo X Internacional', escudos['botafogo'], escudos['inter'], ['botafogo', 'inter'], true],
+    ['Santos X Ceará', escudos['santos'], escudos['ceara'], ['santos', 'ceara'], true]
 ]
 
 correspondencia = {
@@ -32,16 +38,16 @@ correspondencia = {
     'vitoria': "Vitória",
     'gremio': "Grêmio",
     'atletico': "Atlético-MG",
-    "saopaulo": "São Paulo"
+    "saopaulo": "São Paulo",
+    "bragantino": "RB Bragantino"
 }
 
 let spt = "imagens/sport/"
 sport = [spt + "caique-frança.png", spt + "hereda.png", spt + "joao-silva.png", spt + "chico.png", spt + "igor-carius.png", spt + "christian-rivera.png", spt + "ze-lucas.png", spt + "lucas-lima.png", spt + "barletta.png", spt + "lenny-lobato.png", spt + "pablo.png"]
 timesFut['Sport'] = sport
 
-let vit = "imagens/vitoria/"
-vitoria = [vit + "lucas-arcanjo.png", vit + "claudinho.png", vit + "lucas-halter.png", vit + "edu.png", vit + "jamerson.png", vit + "baralhas.png", vit + "ronald.png", vit + "matheusinho.png", vit + "erick.png", vit + "gustavo-mosquito.png", vit + "janderson.png"]
-timesFut['Vitoria'] = vitoria
+vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "edu", "neris", "hugo", "ricardo-ryller", "ronald", "wellington-rato", "osvaldo", "gustavo-mosquito", "fabri"])
+timesFut["Vitoria"] = vitoria
 
 let cea = "imagens/ceara/"
 ceara = [cea + "fernando-miguel.png", cea + "fabiano-souza.png", cea + "marllon.png", cea + "william-machado.png", cea + "matheus-bahia.png", cea + "dieguinho.png", cea + "fernando-sobral.png", cea + "lucas-mugni.png", cea + "galeano.png", cea + "pedro-henrique.png", cea + "pedro-raul.png"]
@@ -51,9 +57,24 @@ let bah = "imagens/bahia/"
 bahia = [bah + "marcos-felipe.png", bah + "gabriel-xavier.png", bah + "david-duarte.png", bah + "ramos-mingo.png", bah + "luciano-juba.png", bah + "caio-alexandre.png", bah + "jean-lucas.png", bah + "everton-ribeiro.png", bah + "ademir.png", bah + "erick-pulga.png", bah + "william-jose.png"]
 timesFut['Bahia'] = bahia
 
+fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "kuscevic", "gustavo-mancha", "bruno-pacheco", "rosseto", "lucas-sasha", "martinez", "marinho", "breno-lopes", "deyverson"])
+timesFut['Fortaleza'] = fortaleza
+
+vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "luiz-gustavo", "lucas-piton", "hugo-moura", "tche-tche", "matheus-carvalho", "coutinho", "rayan", "vegetti"])
+timesFut["Vasco"] = vasco
+
+function srcConjunto(time, jogadores){
+    let conjunto = []
+    for (i=0; i < jogadores.length; i++){
+        conjunto.push(`imagens/${time}/${jogadores[i]}.png`)
+    }
+    console.log(conjunto)
+    return conjunto 
+}
 
 function createGames(){
     let palpites = document.getElementById("palpites")
+    
     for (i=0; i < jogos.length; i++){
         let newCabine = document.createElement("div")
         newCabine.classList.add("jogo-palpite")
@@ -78,9 +99,11 @@ function createGames(){
 
         let newInput = document.createElement("input")
         newInput.classList.add('palpites-input')
+        newInput.setAttribute("type", "number")
 
         let newInputD = document.createElement("input")
         newInputD.classList.add('palpites-input')
+        newInputD.setAttribute("type", "number")
 
         let spanX = document.createElement("span")
         spanX.innerHTML = "X"
@@ -89,6 +112,7 @@ function createGames(){
         buttonMAM.classList.add("palpites-button-alone")
         buttonMAM.innerHTML = "MANO A MANO"
         buttonMAM.setAttribute("onclick", "mam(this)")
+        if (jogos[i][4]==true){buttonMAM.setAttribute("disabled",""); buttonMAM.style.backgroundColor =  'gray'; buttonMAM.style.cursor = "not-allowed"}
         
 
         newCabine.appendChild(newImg)
@@ -109,7 +133,9 @@ function mam(element){
     let timeDois = palpites.getAttribute("datainfo-dois")
     
     selecionarUm({value:timeUm}, element.parentElement, escudos[timeUm], escudos[timeDois])
+    document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
     selecionarDois({value:timeDois})
+    
 }
 
 function selecionarUm(elemento, element, escUm, escDois){
@@ -137,6 +163,8 @@ botarDois(time, false)
 function createMAM(element, escUm, escDois){
     if (document.getElementsByClassName("mam")[0]){
         let titleExisted = document.getElementById("titulo")
+        titleExisted.querySelector(".counter-um").innerHTML = "0"
+        titleExisted.querySelector(".counter-dois").innerHTML = "0"
         let allImgs = titleExisted.querySelectorAll("img")
         allImgs[0].src = escUm
         allImgs[1].src = escDois
