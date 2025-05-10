@@ -33,13 +33,8 @@ async function adicionarScriptNoHtml(objeto) {
     // 2. Adicionar nova <script> antes do </body>
     const novaTagScript = `
   <script>
-<<<<<<< HEAD
     fortaleza = [${timeUm}]
     sport = [${timeDois}]
-=======
-    fortaleza = [${timeDois}]
-    sport = [${timeUm}]
->>>>>>> b6f2d6e79716fd5456d0a4616a22220dde18a2e6
     timesFut["Fortaleza"] = fortaleza
     timesFut["Sport"] = sport
     botarUm("Sport", false)

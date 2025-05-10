@@ -20,6 +20,8 @@ let juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "
 
 let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "edson-carioca", "fabricio-daniel", "cristian-renato"])
 
+let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "pulgar", "allan", "arrascaeta", "gerson", "cebolinha", "pedro"])
+
 function srcConjunto(time, jogadores){
     let conjunto = []
     for (i=0; i < jogadores.length; i++){
@@ -46,7 +48,8 @@ timesFut = {
     Vasco: vasco,
     Bragantino: bragantino,
     Juventude: juventude,
-    Mirassol: mirassol
+    Mirassol: mirassol,
+    Flamengo: flamengo
 }
 fotosTimes = {
     Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],

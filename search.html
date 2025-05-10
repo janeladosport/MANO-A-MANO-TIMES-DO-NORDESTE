@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+        input{
+            padding: 30px;
+        }
+        button{
+            padding: 30px;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" autocomplete="off">
+    <button onclick="selected(this)">pesquisar</button>
+</body>
+<script>
+    function selected (jogador) {
+        jogador = jogador.parentElement.querySelector("input").value
+        window.open(`https://www.google.com/search?as_st=y&as_q=${jogador}&as_epq=&as_oq=&as_eq=&imgsz=l&imgar=s&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=&tbs=&udm=2`)
+    }
+</script>
+</html>
