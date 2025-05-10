@@ -172,6 +172,7 @@ botarDois(time, false)
 
 function createMAM(element, escUm, escDois){
     if (document.getElementsByClassName("mam")[0]){
+        limpar()
         let titleExisted = document.getElementById("titulo")
         titleExisted.querySelector(".counter-um").innerHTML = "0"
         titleExisted.querySelector(".counter-dois").innerHTML = "0"
