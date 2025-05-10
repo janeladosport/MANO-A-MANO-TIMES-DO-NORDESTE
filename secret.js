@@ -9,7 +9,7 @@ async function adicionarScriptNoHtml(objeto) {
         const url = jogadoresUm[i].querySelector("img").src;
         const penultimaBarra = url.lastIndexOf('/', url.lastIndexOf('/', url.lastIndexOf('/') - 1) - 1);
         const resultado = url.substring(penultimaBarra + 1);
-        timeUm.push(resultado)
+        timeUm.push(`'${resultado}'`)
     }
     let jogadoresDois = document.querySelectorAll(".time-dois")
     let timeDois = []
@@ -19,15 +19,22 @@ async function adicionarScriptNoHtml(objeto) {
         const resultado = url.substring(penultimaBarra + 1);
         timeDois.push(resultado)
     }
+    console.log(timeUm, timeDois)
     // 1. Buscar o arquivo atual
-    
+    const getResponse = await fetch(apiUrl, {
+      headers: {
+        'Authorization': `token ${tk}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    });
     const fileData = await getResponse.json();
+    const conteudoAtual = atob(fileData.content); // Decodifica o conteúdo Base64
   
     // 2. Adicionar nova <script> antes do </body>
     const novaTagScript = `
   <script>
-    fortaleza = ${timeUm}
-    sport = ${timeDois}
+    fortaleza = [${timeUm}]
+    sport = [${timeDois}]
     timesFut["Fortaleza"] = fortaleza
     timesFut["Sport"] = sport
     botarUm("Sport", false)
@@ -35,10 +42,17 @@ async function adicionarScriptNoHtml(objeto) {
   </script>
   `;
   
-    const novoConteudo = conteudoAtual.replace(
-      '</body>',
-      `${novaTagScript}\n</body>` // Insere o novo script antes do fechamento </body>
-    );
+    // 2. Remover qualquer <script> adicionado anteriormente (por exemplo, aquele que começa com "fortaleza = [...];")
+const conteudoSemScriptAntigo = conteudoAtual.replace(
+    /<script>\s*fortaleza\s*=\s*\[.*?\][\s\S]*?<\/script>/,
+    ''
+  );
+  
+  // 3. Adicionar nova <script> antes do </body>
+  const novoConteudo = conteudoSemScriptAntigo.replace(
+    '</body>',
+    `${novaTagScript}\n</body>`
+  );
   
     // 3. Codificar de novo em Base64
     const novoConteudoBase64 = btoa(novoConteudo);
@@ -47,7 +61,7 @@ async function adicionarScriptNoHtml(objeto) {
     const updateResponse = await fetch(apiUrl, {
       method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`,
+        'Authorization': `token ${tk}`,
         'Accept': 'application/vnd.github.v3+json'
       },
       body: JSON.stringify({
