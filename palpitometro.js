@@ -46,22 +46,26 @@ let spt = "imagens/sport/"
 sport = [spt + "caique-frança.png", spt + "hereda.png", spt + "joao-silva.png", spt + "chico.png", spt + "igor-carius.png", spt + "christian-rivera.png", spt + "ze-lucas.png", spt + "lucas-lima.png", spt + "barletta.png", spt + "lenny-lobato.png", spt + "pablo.png"]
 timesFut['Sport'] = sport
 
-vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "edu", "neris", "hugo", "ricardo-ryller", "ronald", "wellington-rato", "osvaldo", "gustavo-mosquito", "fabri"])
+vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "neris", "lucas-halter", "jamerson", "ricardo-ryller", "ronald", "matheusinho", "erick", "osvaldo", "janderson"])
 timesFut["Vitoria"] = vitoria
 
 let cea = "imagens/ceara/"
 ceara = [cea + "fernando-miguel.png", cea + "fabiano-souza.png", cea + "marllon.png", cea + "william-machado.png", cea + "matheus-bahia.png", cea + "dieguinho.png", cea + "fernando-sobral.png", cea + "lucas-mugni.png", cea + "galeano.png", cea + "pedro-henrique.png", cea + "pedro-raul.png"]
 timesFut['Ceara'] = ceara
 
-let bah = "imagens/bahia/"
-bahia = [bah + "marcos-felipe.png", bah + "gabriel-xavier.png", bah + "david-duarte.png", bah + "ramos-mingo.png", bah + "luciano-juba.png", bah + "caio-alexandre.png", bah + "jean-lucas.png", bah + "everton-ribeiro.png", bah + "ademir.png", bah + "erick-pulga.png", bah + "william-jose.png"]
+bahia = srcConjunto("bahia", ["marcos-felipe", "gabriel-xavier", "david-duarte", "ramos-mingo", "luciano-juba", "acevedo", "jean-lucas", "cauly", "everton-ribeiro", "erick-pulga", "lucho-rodriguez"])
 timesFut['Bahia'] = bahia
+
+
 
 fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "kuscevic", "gustavo-mancha", "bruno-pacheco", "rosseto", "lucas-sasha", "martinez", "marinho", "breno-lopes", "deyverson"])
 timesFut['Fortaleza'] = fortaleza
 
-vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "luiz-gustavo", "lucas-piton", "hugo-moura", "tche-tche", "matheus-carvalho", "coutinho", "rayan", "vegetti"])
+vasco = srcConjunto("vasco", ["leo-jardim", "puma-rodriguez", "joao-victor", "luiz-gustavo", "lucas-piton", "hugo-moura", "matheus-carvalho", "coutinho", "nuno-moreira", "rayan", "vegetti"])
 timesFut["Vasco"] = vasco
+
+corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "felix-torres", "caca", "angileri", "raniele", "carillo", "breno-bidon", "romero", "depay", "yuri-alberto"])
+timesFut["Corinthians"] = corinthians
 
 function srcConjunto(time, jogadores){
     let conjunto = []
