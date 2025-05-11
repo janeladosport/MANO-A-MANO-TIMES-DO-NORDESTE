@@ -1,7 +1,7 @@
 let escudos = [
-    ["imagens/escudos/sport.svg", "Sport"],
+    ["imagens/escudos/sport.png", "Sport"],
     ["imagens/escudos/fortaleza.png", "Fortaleza"],
-    ["imagens/escudos/sao-paulo.webp", "São Paulo"],
+    ["imagens/escudos/sao-paulo.png", "São Paulo"],
     ["imagens/escudos/palmeiras.png", "Palmeiras"],
     ["imagens/escudos/inter.png", "Internacional"],
     ["imagens/escudos/ceara.png", "Ceará"],
