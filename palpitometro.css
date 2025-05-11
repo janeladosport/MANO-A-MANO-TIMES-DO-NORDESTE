@@ -77,3 +77,6 @@ span.counter-um, span.counter-dois{
     max-width: 90%;
     height: 35px;
 }
+.result-span{
+    font-size: 30pt;
+}
