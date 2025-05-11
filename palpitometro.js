@@ -21,15 +21,10 @@ escudos = {
     'fortaleza': 'imagens/escudos/fortaleza.png'
 }
 jogos = [
-    ['Fortaleza X Juventude', escudos['fortaleza'], escudos['juventude'], ['fortaleza', 'juventude']],
-    ['Mirassol X Corinthians', escudos['mirassol'], escudos['corinthians'], ['mirassol', 'corinthians']],
-    ['Grêmio X RB Bragantino', escudos['gremio'], escudos['bragantino'], ['gremio', 'bragantino']],
-    ['Vitória X Vasco', escudos['vitoria'], escudos['vasco'], ['vitoria', 'vasco']],
-    ['Flamengo X Bahia', escudos['flamengo'], escudos['bahia'], ['flamengo', 'bahia']],
-    ['Sport X Cruzeiro', escudos['sport'], escudos['cruzeiro'], ['sport', 'cruzeiro'], true],
-    ['Palmeiras X São Paulo', escudos['palmeiras'], escudos['saopaulo'], ['palmeiras', 'saopaulo'], true],
-    ['Atlético-MG X Fluminense', escudos['atletico'], escudos['fluminense'], ['atletico', 'fluminense'], true],
-    ['Botafogo X Internacional', escudos['botafogo'], escudos['inter'], ['botafogo', 'inter'], true],
+    ['Sport X Cruzeiro', escudos['sport'], escudos['cruzeiro'], ['sport', 'cruzeiro']],
+    ['Palmeiras X São Paulo', escudos['palmeiras'], escudos['saopaulo'], ['palmeiras', 'saopaulo']],
+    ['Atlético-MG X Fluminense', escudos['atletico'], escudos['fluminense'], ['atletico', 'fluminense']],
+    ['Botafogo X Internacional', escudos['botafogo'], escudos['inter'], ['botafogo', 'inter']],
     ['Santos X Ceará', escudos['santos'], escudos['ceara'], ['santos', 'ceara'], true]
 ]
 
@@ -42,8 +37,7 @@ correspondencia = {
     "bragantino": "RB Bragantino"
 }
 
-let spt = "imagens/sport/"
-sport = [spt + "caique-frança.png", spt + "hereda.png", spt + "joao-silva.png", spt + "chico.png", spt + "igor-carius.png", spt + "christian-rivera.png", spt + "ze-lucas.png", spt + "lucas-lima.png", spt + "barletta.png", spt + "lenny-lobato.png", spt + "pablo.png"]
+sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "ze-lucas", "sergio-oliveira", "chino-atencio", "barletta", "pablo"])
 timesFut['Sport'] = sport
 
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "neris", "lucas-halter", "jamerson", "ricardo-ryller", "ronald", "matheusinho", "erick", "osvaldo", "janderson"])
@@ -56,7 +50,8 @@ timesFut['Ceara'] = ceara
 bahia = srcConjunto("bahia", ["marcos-felipe", "gabriel-xavier", "david-duarte", "ramos-mingo", "luciano-juba", "acevedo", "jean-lucas", "cauly", "everton-ribeiro", "erick-pulga", "lucho-rodriguez"])
 timesFut['Bahia'] = bahia
 
-
+botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "rwan-cruz", "jeffinho", "cuiabano", "igor-jesus"])
+timesFut['Botafogo'] = botafogo
 
 fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "kuscevic", "gustavo-mancha", "bruno-pacheco", "rosseto", "lucas-sasha", "martinez", "marinho", "breno-lopes", "deyverson"])
 timesFut['Fortaleza'] = fortaleza
@@ -72,6 +67,10 @@ timesFut["Gremio"] = gremio
 
 bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "guzman", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "lucas-barbosa", "vinicinho", "sasha"])
 timesFut["Bragantino"] = bragantino
+
+fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "ignacio", "freytes", "fuentes", "martinelli", "nonato", "ganso", "arias", "canobbio", "everaldo"])
+timesFut["Fluminense"] = fluminense
+
 
 function srcConjunto(time, jogadores){
     let conjunto = []
