@@ -4,16 +4,16 @@ function escudos(time){
 }
 
 jogos = [
-    ['sport', 'cruzeiro'],
-    ['palmeiras', 'saopaulo'],
-    ['atletico', 'fluminense'],
-    ['botafogo', 'inter'],
-    ['fortaleza', 'juventude', [5,0]],
-    ['mirassol', 'corinthians', [2,1]],
-    ['gremio', 'bragantino', [1,1]],
-    ['vitoria', 'vasco', [2,1]],
-    ['flamengo', 'bahia',[1,0]],
-    ['santos', 'ceara', true]
+    ['sport', 'ceara'],
+    ['vasco', 'fortaleza'],
+    ['saopaulo', 'gremio'],
+    ['bahia', 'vitoria'],
+    ['corinthians', 'santos', ],
+    ['juventude', 'fluminense'],
+    ['flamengo', 'botafogo'],
+    ['bragantino', 'palmeiras'],
+    ['cruzeiro', 'atletico'],
+    ['inter', 'mirassol']
 ]
 
 correspondencia = {
