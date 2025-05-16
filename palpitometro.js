@@ -8,27 +8,25 @@ jogos = [
     ['vasco', 'fortaleza'],
     ['saopaulo', 'gremio'],
     ['bahia', 'vitoria'],
-    ['corinthians', 'santos', ],
-    ['juventude', 'fluminense'],
-    ['flamengo', 'botafogo'],
-    ['bragantino', 'palmeiras'],
-    ['cruzeiro', 'atletico'],
-    ['inter', 'mirassol']
+    ['corinthians', 'santos', true],
+    ['juventude', 'fluminense', true],
+    ['flamengo', 'botafogo', true],
+    ['bragantino', 'palmeiras', true],
+    ['cruzeiro', 'atletico', true],
+    ['inter', 'mirassol', true]
 ]
 
 correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
 
-sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "ze-lucas", "sergio-oliveira", "chino-atencio", "barletta", "pablo"])
+sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "antonio-carlos", "chico", "christian-rivera", "du-queiroz", "lucas-lima", "barletta", "igor-carius", "pablo"])
 timesFut['Sport'] = sport
+ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
+timesFut['Ceara'] = ceara
 
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "gustavo-mosquito", "janderson", "renato-kayzer"])
 timesFut["Vitoria"] = vitoria
-
-let cea = "imagens/ceara/"
-ceara = [cea + "fernando-miguel.png", cea + "fabiano-souza.png", cea + "marllon.png", cea + "william-machado.png", cea + "matheus-bahia.png", cea + "dieguinho.png", cea + "fernando-sobral.png", cea + "lucas-mugni.png", cea + "galeano.png", cea + "pedro-henrique.png", cea + "pedro-raul.png"]
-timesFut['Ceara'] = ceara
 
 bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "cauly", "erick-pulga", "lucho-rodriguez"])
 timesFut['Bahia'] = bahia

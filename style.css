@@ -216,3 +216,10 @@ select{
         padding: 8px;
     }
 }
+
+span.counter-um, span.counter-dois{
+            border: 1px solid white;
+            padding: 5px;
+            margin: 0 25px;
+            border-radius: 2px;
+        }
