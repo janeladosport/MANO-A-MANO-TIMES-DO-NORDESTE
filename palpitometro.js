@@ -23,14 +23,14 @@ correspondencia = {
 sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "ze-lucas", "sergio-oliveira", "chino-atencio", "barletta", "pablo"])
 timesFut['Sport'] = sport
 
-vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "neris", "lucas-halter", "jamerson", "ricardo-ryller", "ronald", "matheusinho", "erick", "osvaldo", "janderson"])
+vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "gustavo-mosquito", "janderson", "renato-kayzer"])
 timesFut["Vitoria"] = vitoria
 
 let cea = "imagens/ceara/"
 ceara = [cea + "fernando-miguel.png", cea + "fabiano-souza.png", cea + "marllon.png", cea + "william-machado.png", cea + "matheus-bahia.png", cea + "dieguinho.png", cea + "fernando-sobral.png", cea + "lucas-mugni.png", cea + "galeano.png", cea + "pedro-henrique.png", cea + "pedro-raul.png"]
 timesFut['Ceara'] = ceara
 
-bahia = srcConjunto("bahia", ["marcos-felipe", "gabriel-xavier", "david-duarte", "ramos-mingo", "luciano-juba", "acevedo", "jean-lucas", "cauly", "everton-ribeiro", "erick-pulga", "lucho-rodriguez"])
+bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "cauly", "erick-pulga", "lucho-rodriguez"])
 timesFut['Bahia'] = bahia
 
 botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "rwan-cruz", "jeffinho", "cuiabano", "igor-jesus"])
@@ -126,7 +126,6 @@ function createGames(){
     }
 }
 
-createGames()
 
 function mam(element){
     let palpites = element.parentElement

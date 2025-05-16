@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PALPITÔMETRO</title>
+    <title>BAVI MANO A MANO</title>
     <link rel="stylesheet" href="palpitometro.css">
     <link rel="stylesheet" href="style.css">
     <script src="person.js"></script>    
@@ -13,12 +13,15 @@
     <meta name="og:description" content="Faça seus palpites e o mano a mano para os jogos de hoje">
     <meta name="og:image" content="imagens/capa.png">
     <link rel="image_src" href="imagens/capa.png">
+    <script src="palpitometro.js"></script>
 </head>
 <body>
-    <span id="head">Palpitômetro da rodada 07</span>
-    <div id="palpites"></div>
-    <footer></footer>
 </body>
-<script src="palpitometro.js"></script>
-<script>createGames()</script>
+<script>
+    document.body.setAttribute("datainfo-um","bahia")
+    document.body.setAttribute("datainfo-dois","vitoria")
+    createMAM(document.body, escudos("bahia"), escudos("vitoria"))
+    botarUm("Bahia", false)
+    botarDois("Vitoria", false)
+</script>
 </html>
