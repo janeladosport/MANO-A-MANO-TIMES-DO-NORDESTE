@@ -9,7 +9,7 @@ jogos = [
     ['saopaulo', 'gremio'],
     ['bahia', 'vitoria'],
     ['corinthians', 'santos'],
-    ['juventude', 'fluminense', true],
+    ['juventude', 'fluminense'],
     ['flamengo', 'botafogo', true],
     ['bragantino', 'palmeiras', true],
     ['cruzeiro', 'atletico', true],
@@ -20,6 +20,7 @@ correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
 
+juventude = srcConjunto("juventude", ["gustavo", "ewerthon", "abner", "angel", "alan-ruschel", "caique", "jadson", "mandaca", "jean-carlos", "batalla", "gabriel-taliari"])
 sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "antonio-carlos", "chico", "christian-rivera", "du-queiroz", "lucas-lima", "barletta", "igor-carius", "pablo"])
 ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "gustavo-mosquito", "janderson", "renato-kayzer"])
@@ -30,7 +31,7 @@ vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lu
 corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "angileri", "raniele", "martinez", "breno-bidon", "carillo", "depay", "yuri-alberto"])
 gremio = srcConjunto("gremio", ["tiago-volpi", "joao-pedro", "jemerson", "wagner-leonardo", "marlon", "dodi", "villasanti", "monsalve", "arezo", "amuzu", "braithwaite"])
 bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "guzman", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "lucas-barbosa", "vinicinho", "sasha"])
-fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "ignacio", "freytes", "fuentes", "martinelli", "nonato", "ganso", "arias", "canobbio", "everaldo"])
+fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "martinelli", "nonato", "ganso", "arias", "keno", "everaldo"])
 saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "alan-franco", "enzo-diaz", "alisson", "marcos-antonio", "oscar", "ferreirinha", "lucas-ferreira", "andre-silva"])
 console.log(timesFut, "bfr")
 timesFut = setTimesFut()
