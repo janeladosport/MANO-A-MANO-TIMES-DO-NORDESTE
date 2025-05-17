@@ -30,6 +30,10 @@ let cruzeiro = srcConjunto("cruzeiro", ["cassio", "fagner", "fabricio-bruno", "v
 
 let atletico = srcConjunto("atletico", ["everson", "natanael", "romulo", "alonso", "caio-paulista", "rubens", "fausto-vera", "scarpa", "rony", "cuello", "hulk"])
 
+let gremio = srcConjunto("gremio", ["tiago-volpi", "igor-serrote", "jemerson", "wagner-leonardo", "marlon", "dodi", "camilo", "cristaldo", "alysson", "cristian-oliveira", "braithwaite"])
+
+let santos = srcConjunto("santos", ["gabriel-brazao", "aderlan", "ze-ivaldo", "luan-peres", "escobar", "rincon", "gabriel-bontempo", "rollheiser", "barreal", "soteldo", "tiquinho-soares"])
+
 function srcConjunto(time, jogadores){
     let conjunto = []
     for (i=0; i < jogadores.length; i++){
@@ -42,7 +46,7 @@ function srcConjunto(time, jogadores){
 function srcImg(team, player){
     return `imagens/${team}/${player}.png`
 }
-
+function setTimesFut(){
 timesFut = {
     Fortaleza: fortaleza,
     Sport: sport,
@@ -61,8 +65,13 @@ timesFut = {
     Saopaulo: saopaulo,
     Palmeiras: palmeiras,
     Cruzeiro: cruzeiro,
-    Atletico: atletico
+    Atletico: atletico,
+    Gremio: gremio,
+    Santos: santos
 }
+return timesFut
+}
+timesFut = setTimesFut()
 fotosTimes = {
     Fortaleza: ["imagens/escudos/fortaleza.png", "Fortaleza"],
     Sport: ["imagens/escudos/sport.svg", "Sport"],
