@@ -120,3 +120,15 @@ function limpar(){
     }
     count()
 }
+
+function createElement(tag, properties){
+    let newElement = document.createElement(tag)
+    if (!properties){return newElement}
+    for (j=0; j < properties.length; j++){
+        let actual = properties[j]
+        if (actual[0] == 'class'){newElement.classList.add(actual[1])} else if (actual[0] == 'innerHTML'){newElement.innerHTML = actual[1]} else{
+            newElement.setAttribute(actual[0], actual[1])
+        }
+    }
+    return newElement
+}

@@ -1,14 +1,14 @@
 var golSport = ["Goleiro", "gol-esc", "imagens/sport/caique-frança.png", "imagens/sport/thiago-couto.png", "imagens/sport/davi.png"]
-var ldSport = ["Lateral direita", "ld-esc", "imagens/sport/hereda.png", "imagens/sport/matheus-alexandre.png", "imagens/sport/di-placido.png", "imagens/sport/du-queiroz.png"] 
+var ldSport = ["Lateral direita", "ld-esc", "imagens/sport/hereda.png", "imagens/sport/du-queiroz.png", 'imagens/sport/kayan.png'] 
 var zdSport = ["Zagueiro Direito", "zd-esc", "imagens/sport/joao-silva.png", "imagens/sport/lucas-cunha.png", "imagens/sport/antonio-carlos.png", "imagens/sport/marcelo-ajul.png", "imagens/sport/rafael-thyere.png"]
 var zeSport = ["Zagueiro Esquerdo", "ze-esc", "imagens/sport/chico.png", "imagens/sport/joao-silva.png", "imagens/sport/renzo.png"] 
 var leSport = ["Lateral Esquerda", "le-esc", "imagens/sport/igor-carius.png", "imagens/sport/dalbert.png"]    
-var volSport = ["1º Volante", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/adriel.png", "imagens/sport/ze-lucas.png"]    
+var volSport = ["1º Volante", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/ze-lucas.png"]    
 var mcSport = ["2º Volante", "mc-esc", "imagens/sport/sergio-oliveira.png", "imagens/sport/dominguez.png", "imagens/sport/du-queiroz.png"]
 var meiSport = ["Meia", "mei-esc", "imagens/sport/lucas-lima.png", "imagens/sport/hyoran.png", "imagens/sport/titi-ortiz.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/chino-atencio.png"]
-var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/lucas-lima.png"]
-var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png", "imagens/sport/gustavo-maia.png", "imagens/sport/carlos-alberto.png"]
-var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens/sport/pablo.png", "imagens/sport/artur-sousa.png" ,"imagens/sport/lenny-lobato.png"]
+var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "imagens/sport/barletta.png", "imagens/sport/romarinho.png", "imagens/sport/lucas-lima.png"]
+var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png","imagens/sport/carlos-alberto.png"]
+var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens/sport/pablo.png", "imagens/sport/artur-sousa.png"]
 
 var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png", "imagens/bahia/danilo-fernandes.png", "imagens/bahia/ronaldo.png"]
 var ldBahia = ["Lateral Direito" , "ld-esc", "imagens/bahia/santi-arias.png", "imagens/bahia/gilberto.png"]
@@ -65,3 +65,15 @@ var dados = {
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
 };
+
+function createElement(tag, properties){
+    let newElement = document.createElement(tag)
+    if (!properties){return newElement}
+    for (j=0; j < properties.length; j++){
+        let actual = properties[j]
+        if (actual[0] == 'class'){newElement.classList.add(actual[1])} else if (actual[0] == 'innerHTML'){newElement.innerHTML = actual[1]} else{
+            newElement.setAttribute(actual[0], actual[1])
+        }
+    }
+    return newElement
+}

@@ -2,10 +2,32 @@ let ids = {
     0: "gol", 1: "ld", 2: "zd", 3: "ze", 4: "le", 5: "vol", 6: "mc", 7: "mei", 8: "pd", 9: "pe", 10: "ca"
 }
 
-esqGrid = {
+let zagSport = ["Zagueiros", "zag-esc", "imagens/sport/joao-silva.png", "imagens/sport/lucas-cunha.png", "imagens/sport/antonio-carlos.png", "imagens/sport/rafael-thyere.png", "imagens/sport/chico.png"]
+var avolSport = ["Volantes", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/ze-lucas.png", "imagens/sport/dominguez.png"]
+var dados = {
+    Sport: [golSport, ldSport, zagSport, leSport, avolSport, meiSport, pdSport, peSport, caSport],
+    Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
+    Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
+    Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
+    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
+};
+
+let esquemas = {
+    0: '4-3-3',
+    1: '4-4-2',
+    2: '4-4-2-losango',
+    3: '3-4-3',
+    4: '3-5-2',
+    5: '3-6-1'
+}
+
+let esqGrid = {
     "4-3-3": [['2/4', 7], [4, 5], [3,6], [2,6], [1,5], ['2/4', '6/4'], ['2/4', '5/3'], ['2/4', '4/2'], [1, 2], [4,2], ['2/4', 1]],
     "4-4-2": [['2/4', 7], [4, 5], [3,6], [2,6], [1,5], ['2/4', '4'], ['2/4', '4/2'], ['2', 1], [1, 2], [4,2], ['3', 1]],
-    "4-4-2-losango": [['2/4', 7], [4, 5], [3,6], [2,6], [1,5], ['2/4', '4'], ['2/4', '4/2'], ['2', 1], ['1/3', '2/5'], ['3/5', '2/5'], ['3', 1]]
+    "4-4-2-losango": [['2/4', 7], [4, 5], [3,6], [2,6], [1,5], ['2/4', '4'], ['2/4', '4/2'], ['2', 1], ['1/3', '2/5'], ['3/5', '2/5'], ['3', 1]],
+    "3-4-3": [['2/4', 7], ['1/3', 6], ['2/4',6], ['3/5',6], [1,5], [4,5], ['2/4', '4'], ['2/4', '2/4'], [1, 2], [4,2], ['2/4', 1]],
+    "3-5-2": [['2/4', 7], ['1/3', 6], ['2/4',6], ['3/5',6], [1,5], [4,5], ['2', '4'], ['2/4', '2/4'], [3, 4], [2,1], ['3', 1]],
+    "3-6-1": [['2/4', 7], [4, 5], ['1/3',6], ['2/4',6], [1,5], ['2/4', '4'], ['2/4', '4/2'], ['2/4', 1], ['1/3', '2/5'], ['3/5', '2/5'], ['3/5', 6]],
 }
 
 let draggedSource
@@ -122,4 +144,30 @@ function putElenco(team){
             }
         }
     }
+}
+function putScreenEsquema(){
+    let campo = document.getElementById("campo")
+    let white = document.createElement("div")
+    white.id = 'whiteScreen'
+    white.style.backgroundColor = "white"
+    white.style.position = "absolute"
+    white.style.width = "100%"
+    white.style.height = "100%"
+    campo.appendChild(white)
+    console.log("EXE")
+    let newDiv = createElement('div', [['id', 'esqScreen']])
+    campo.appendChild(newDiv)
+    for (i=0; i < Object.keys(esquemas).length; i++){
+        console.log("EXE", i)
+        let newButton = createElement("button", [['class', 'esq-button'], ['onclick', 'changeEsq(this)'], ['innerHTML', esquemas[i]]])
+        newDiv.appendChild(newButton)
+    }
+}
+
+function changeEsq(element){
+    let newEsquema = element.innerHTML
+    document.getElementById("campo").setAttribute("datainfo", newEsquema)
+    createCampo()
+    document.getElementById('whiteScreen').remove()
+    document.getElementById('esqScreen').remove()
 }

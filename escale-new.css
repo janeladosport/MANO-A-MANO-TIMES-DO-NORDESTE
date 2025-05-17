@@ -83,3 +83,14 @@ select{
     height: 103px;
 }
 
+#esqScreen{
+    display: grid;
+    position: absolute;
+    width: 60%;
+    gap: 15px;
+}
+
+.esq-button{
+    padding: 10px;
+    background-color: black;
+}
