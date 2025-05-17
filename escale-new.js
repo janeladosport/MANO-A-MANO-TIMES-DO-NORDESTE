@@ -1,4 +1,4 @@
-ids = {
+let ids = {
     0: "gol", 1: "ld", 2: "zd", 3: "ze", 4: "le", 5: "vol", 6: "mc", 7: "mei", 8: "pd", 9: "pe", 10: "ca"
 }
 
@@ -49,31 +49,32 @@ function removeDraggedClass(){
 //     }
 // }
 
+function subs(newsource){
+    const novaURL = window.location.href.replace(/[^/]+$/, `${newsource}.html`)
+    return novaURL
+}
+function href(source){window.open(source, "_self")}
+
 function verificarReplica(source){
     let players = document.body.querySelectorAll(".player")
     for (i=0; i < players.length; i++){
         if (source == players[i].src){
             let id = players[i].id
             let classe = players[i].classList[0]
-            let stylesheet = players[i].style
-            console.log(stylesheet)
             let onclick = players[i].getAttribute("onclick")
             players[i].removeAttribute("src")
             let newPlayer = criarE("img", id, classe, false, onclick)
-            newPlayer.style = stylesheet
             let parent = players[i].parentElement
             players[i].remove()
             
             let campo = document.querySelector("div#campo")
             let esquema = campo.getAttribute("datainfo")
             let number
-            for (i=0; i < ids.length; i++){ 
-                console.log(ids[i], id)
+            for (i=0; i < Object.keys(ids).length; i++){
                 if (ids[i] == id){
                     number = i
                     
-            }}
-            
+            }}            
             newPlayer.style.gridColumn = esqGrid[esquema][number][0]
             newPlayer.style.gridRow = esqGrid[esquema][number][1]
             parent.appendChild(newPlayer)
@@ -110,7 +111,6 @@ function putElenco(team){
     let teamConjunto = dados[team]
     for (i=0; i < teamConjunto.length; i++){
         let newClass = teamConjunto[i]
-        console.log("efdsfs")
         for (h=0; h < newClass.length; h++){
             if (h != 0 && h != 1){
                 let newImg = criarE("img", newClass[1], "jogador", newClass[h], "playerEscale(this)")

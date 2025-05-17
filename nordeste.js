@@ -55,15 +55,31 @@ function checar(){
         } 
     }
     if (hasNoSource != true){
+        if(document.getElementsByClassName('escale')[0] == undefined){
         let newButton = createElement("button", [['id', 'voltar'], ['innerHTML', 'ESCALAÇÃO DO NORDESTE'], ['class', 'escale'], ['onclick', 'selecaoNordeste()']])
-        document.body.appendChild(newButton)
-        console.log("FALSE", newButton)
+        document.body.appendChild(newButton)}
     } else{
         console.log("TRUE")
     }
 }
 
 function selecaoNordeste(){
+    let campo = document.getElementById("campo")
+    let mam = document.getElementsByClassName("mam")[0]
+    let buttonNordeste = document.getElementsByClassName("escale")[0]
+    if (campo.style.display == "grid"){
+        mam.style.display = "block"
+        buttonNordeste.innerHTML = "ESCALAÇÃO DO NORDESTE"
+        campo.style.display = 'none'
+    } else{
     let itemResults = document.getElementsByClassName("item-resultado")
-    
+    mam.style.display = 'none'
+    campo.style.display = 'grid'
+    createCampo()
+    for (i=0; i < itemResults.length; i++){
+        let player = document.getElementById(ids[i])
+        console.log(itemResults[i])
+        player.src = itemResults[i].querySelector("img").src
+    }
+    buttonNordeste.innerHTML = "PERSONALIZAR ESCALAÇÃO"}
 }

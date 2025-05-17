@@ -83,10 +83,3 @@ select{
     height: 103px;
 }
 
-#voltar{
-    position: fixed;
-    transform: translateX(-50%);
-    left: 85%;
-    padding: 14px;
-    border-radius: 15px;
-}

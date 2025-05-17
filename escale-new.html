@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="escale-new.css">
     <script src="escale-new.js"></script>
     <script src="elenco-data-base.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.3/html2canvas.min.js"></script>
+    <style>#voltar{
+    position: fixed;
+    transform: translateX(-50%);
+    left: 85%;
+    padding: 14px;
+    border-radius: 15px;
+}</style>
 </head>
 <body>
     <select name="team" id="team" onselect="selectTeam(this)" oninput="selectTeam(this)">
@@ -19,8 +27,27 @@
         <option value="Vitoria">Vitoria</option>
     </select>
     <div id="e-campo">
-        <button id="voltar">VOLTAR</button>
+        <button id="voltar" onclick="href(subs('index'))">VOLTAR</button>
+        <button id="voltar" onclick="putScreenEsquema()" style="margin-top: 134px;">MUDAR ESQUEMA</button>
+        <button id="voltar" onclick="salvar()" style="margin-top: 204px;">SALVAR ESCALAÇÃO</button>
         <div id="campo" datainfo="4-3-3"></div>
     </div>
 </body>
+<script>
+    function salvar(){
+        const salvado = document.getElementById("campo")
+        console.log(salvado)
+        html2canvas(salvado, {
+    useCORS: true,
+    allowTaint: false,
+    backgroundColor: null,
+    scale: 4
+}).then(function(canvas) {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL("image/png", 1.0);
+    link.download = 'minha-escalação.png';
+    link.click();
+});
+    }
+</script>
 </html>
