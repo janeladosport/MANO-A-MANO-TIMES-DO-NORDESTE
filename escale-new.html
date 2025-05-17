@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCALE SEU TIME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="escale-new.css">
+    <script src="escale-new.js"></script>
+    <script src="elenco-data-base.js"></script>
+</head>
+<body>
+    <select name="team" id="team" onselect="selectTeam(this)" oninput="selectTeam(this)">
+        <option selected disabled>Time</option>
+        <option value="Fortaleza">Fortaleza</option>
+        <option value="Sport">Sport</option>
+        <option value="Bahia">Bahia</option>
+        <option value="Ceara">Ceará</option>
+        <option value="Vitoria">Vitoria</option>
+    </select>
+    <div id="e-campo">
+        <button id="voltar">VOLTAR</button>
+        <div id="campo" datainfo="4-3-3"></div>
+    </div>
+</body>
+</html>
