@@ -20,15 +20,15 @@ let juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "
 
 let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "edson-carioca", "fabricio-daniel", "cristian-renato"])
 
-let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "pulgar", "allan", "arrascaeta", "gerson", "cebolinha", "pedro"])
+let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "evertton-araujo", "de-la-cruz", "arrascaeta", "luiz-araujo", "michael", "bruno-henrique"])
 
 let saopaulo = srcConjunto("sao paulo", ["rafael", "ferraresi", "arboleda", "alan-franco", "enzo-diaz", "alisson", "marcos-antonio", "matheus-alves", "cedric", "ferreirinha", "andre-silva"])
 
-let palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "gustavo-gomez", "bruno-fuchs", "piquerez", "martinez", "richard-rios", "paulinho", "felipe-anderson", "estevao", "vitor-roque"])
+let palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "gustavo-gomez", "murilo", "piquerez", "martinez", "richard-rios", "facundo-torres", "felipe-anderson", "estevao", "vitor-roque"])
 
-let cruzeiro = srcConjunto("cruzeiro", ["cassio", "fagner", "fabricio-bruno", "villalba", "kaiki", "walace", "lucas-silva", "matheus-pereira", "christian", "wanderson", "kaio-jorge"])
+let cruzeiro = srcConjunto("cruzeiro", ["cassio", "fagner", "fabricio-bruno", "villalba", "kaiki", "lucas-romero", "lucas-silva", "matheus-pereira", "christian", "wanderson", "kaio-jorge"])
 
-let atletico = srcConjunto("atletico", ["everson", "natanael", "romulo", "alonso", "caio-paulista", "rubens", "fausto-vera", "scarpa", "rony", "cuello", "hulk"])
+let atletico = srcConjunto("atletico", ["everson", "natanael", "lyanco", "alonso", "rubens", "alan-franco", "fausto-vera", "scarpa", "bernard", "rony", "hulk"])
 
 let gremio = srcConjunto("gremio", ["tiago-volpi", "igor-serrote", "jemerson", "wagner-leonardo", "marlon", "dodi", "camilo", "cristaldo", "alysson", "cristian-oliveira", "braithwaite"])
 
