@@ -20,7 +20,7 @@ let juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "
 
 let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "negueba", "iury-castilho", "edson-carioca"])
 
-let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "evertton-araujo", "de-la-cruz", "arrascaeta", "luiz-araujo", "michael", "bruno-henrique"])
+let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "evertton-araujo", "de-la-cruz", "luiz-araujo", "bruno-henrique", "cebolinha", "pedro"])
 
 let saopaulo = srcConjunto("sao paulo", ["rafael", "ferraresi", "arboleda", "alan-franco", "enzo-diaz", "alisson", "marcos-antonio", "matheus-alves", "cedric", "ferreirinha", "andre-silva"])
 
