@@ -13,7 +13,7 @@ jogos = [
     ['flamengo', 'botafogo'],
     ['bragantino', 'palmeiras'],
     ['cruzeiro', 'atletico'],
-    ['inter', 'mirassol', true]
+    ['inter', 'mirassol']
 ]
 
 correspondencia = {

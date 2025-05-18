@@ -8,7 +8,7 @@ let fluminense = [flu + "fabio.png", flu + "guga.png", flu + "ignacio.png", flu 
 
 let corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "angileri", "raniele", "alex-santana", "carillo", "romero", "depay", "yuri-alberto"])
 
-let internacional = srcConjunto("inter", ["anthoni", "aguirre", "vitao", "victor-gabriel", "bernabei", "fernando", "thiago-maia", "oscar-romero", "bruno-tabata", "wesley", "lucca"])
+let internacional = srcConjunto("inter", ["anthoni", "aguirre", "vitao", "juninho", "bernabei", "ronaldo", "thiago-maia", "alan-patrick", "bruno-tabata", "wesley", "ricardo-mathias"])
 
 let botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "cuiabano", "danilo-barbosa", "marlon-freitas", "patrick-de-paula", "artur", "igor-jesus", "mastriani"])
 
@@ -18,7 +18,7 @@ let bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-
 
 let juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "abner", "alan-ruschel", "giraldo", "jadson", "mandaca", "batalla", "enio", "gilberto"])
 
-let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "edson-carioca", "fabricio-daniel", "cristian-renato"])
+let mirassol = srcConjunto("mirassol", ["walter", "lucas-ramon", "joao-victor", "jemmes", "reinaldo", "neto-moura", "danielzinho", "gabriel", "negueba", "iury-castilho", "edson-carioca"])
 
 let flamengo = srcConjunto("flamengo", ["rossi", "wesley", "leo-ortiz", "leo-pereira", "alex-sandro", "evertton-araujo", "de-la-cruz", "arrascaeta", "luiz-araujo", "michael", "bruno-henrique"])
 
