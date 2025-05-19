@@ -31,8 +31,8 @@ function count(){
 
 }
 
-janelaInners = {0: "MANTÉM", 1: "PODE FICAR", 2: "NÃO QUERO", 3: "VAZA DESGRAÇA"}
-janelaClass = {"MANTÉM": ["imagens/check.png", "rgb(0, 190, 32)"], "PODE FICAR": ["imagens/soso.png", "rgb(218, 214, 15)"], "NÃO QUERO": ["imagens/soso.png", "rgb(226, 90, 0)"], "VAZA DESGRAÇA": ["imagens/bad.png", "rgb(175, 15, 15)"]}
+janelaInners = {0: "MANTÉM", 1: "PODE FICAR", 2: "EMPRESTA", 3: "VAZA DESGRAÇA"}
+janelaClass = {"MANTÉM": ["imagens/check.png", "rgb(0, 190, 32)"], "PODE FICAR": ["imagens/soso.png", "rgb(218, 214, 15)"], "EMPRESTA": ["imagens/emprestimo.png", "rgb(226, 90, 0)"], "VAZA DESGRAÇA": ["imagens/bad.png", "rgb(175, 15, 15)"]}
 
 function removeSelecting(){
     let selecting = document.querySelector(".selecting")
