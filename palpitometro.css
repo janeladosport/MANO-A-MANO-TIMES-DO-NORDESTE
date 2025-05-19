@@ -36,7 +36,6 @@ span.counter-um, span.counter-dois{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-right: 10px;
 }
 .palpites-img{
     width: 75px;
