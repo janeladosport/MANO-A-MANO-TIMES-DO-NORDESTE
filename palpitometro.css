@@ -2,7 +2,15 @@
     margin: 0;
     padding: 0;
 }
-
+:root{
+    --corBoxSpanJogo: rgb(36, 36, 36);
+    --corBoxJogo: rgb(54, 54, 54);
+    --corFontJogo: rgb(255, 255, 255);
+    --shadowSpanJogo: rgba(20, 20, 20, 0.425);
+    --shadowTextSpanJogo:1px 1px 3px rgba(0, 0, 0, 0.363); 
+    --shadowBoxSpanJogo: 1px 1px 3px rgb(48, 48, 48);
+    --shadowBoxJogo: 1px 1px 4px rgba(255, 255, 255, 0.281);
+}
 span{
     padding: 0 !important;
     margin: 0 !important;
@@ -23,6 +31,7 @@ span.counter-um, span.counter-dois{
     padding: 10px !important;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.068);
+    background-color: rgb(63, 59, 59);
 }
 #head{
     text-transform: uppercase;
@@ -45,25 +54,27 @@ span.counter-um, span.counter-dois{
     display: flex;
     flex-wrap: wrap;
     width: 310px;
-    background-color: black;
+    background-color: var(--corBoxJogo);
     padding: 20px;
     border-radius: 12px;
     margin-left: 20px;
     margin-top: 10px;
     justify-content: space-evenly;
     align-items: center;
+    box-shadow: var(--shadowBoxJogo);
 }
 .palpite-span{
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.363);
+    text-shadow: var(--shadowTextSpanJogo);
     flex-basis: 100%;
     width: auto;
     text-align: center;
     margin-bottom: 8px !important;
     padding: 5px !important;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--corBoxSpanJogo);
     border-radius: 10px;
-    box-shadow: 1px 1px 3px rgba(20, 20, 20, 0.425);
+    box-shadow: var(--shadowBoxSpanJogo);
     cursor: pointer;
+    color: var(--corFontJogo);
 }
 
 .palpites-input{
@@ -75,6 +86,8 @@ span.counter-um, span.counter-dois{
     color: white;
     font-size: 20pt;
     text-align: center;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 .palpites-input:hover{
     background-color: rgb(70, 68, 68);
@@ -94,6 +107,11 @@ span.counter-um, span.counter-dois{
     max-width: 65%;
     height: 35px;
     background-color: rgb(102, 6, 25);
+    transition-duration: 0.12s;
+    transition-timing-function: cubic-bezier();
+}
+.palpites-button-alone:hover{
+    background-color: rgb(129, 8, 32);
 }
 .result-span{
     background-color: rgb(15, 15, 15);
