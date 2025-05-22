@@ -1,0 +1,15 @@
+#team-one-container{
+
+}
+#team-two-container{
+
+}
+#container-all{
+    display: flex;
+    justify-content: space-around;
+}
+
+.span-team{
+    text-align: center;
+    text-transform: uppercase;
+}

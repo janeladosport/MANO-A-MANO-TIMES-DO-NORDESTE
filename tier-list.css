@@ -1,16 +1,4 @@
-.jogador-tier, .img-jogador{
-    width: 120px;
-    height: 120px;
-    
-}
-.img-jogador{
-    border-radius: 17px;
-}
-.jogador-tier{
-    border: 3px solid white;
-    border-radius: 20px;
 
-}
 
 #tier, #tier-reserva, #tier-tecnico, div#tier-order{
     display: flex;
@@ -75,33 +63,7 @@ footer button{
     border-radius: 20px;
 }
 
-.container-family{
-    width: 500px;
-}
 
-.pec{
-    color: #d73131;
-}
-
-.ruim{
-    color: #d76631;
-}
-
-.regular{
-    color: #ccd731;
-}
-
-.ok{
-    color: #abd731;
-}
-
-.bom {
-    color: #73d731;
-}
-
-.mec {
-    color: #25b92d;
-}
 
 @media only screen and (min-width: 1085px){
     #tier-order{

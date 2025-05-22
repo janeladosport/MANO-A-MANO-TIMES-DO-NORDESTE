@@ -47,7 +47,7 @@ function srcImg(team, player){
     return `imagens/${team}/${player}.png`
 }
 function setTimesFut(){
-timesFut = {
+let timesFut = {
     Fortaleza: fortaleza,
     Sport: sport,
     Bahia: bahia,

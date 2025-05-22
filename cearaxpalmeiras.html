@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEARÁ X PALMEIRAS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="palpitometro.css">
+    <script src="person.js"></script>
+    <script src="palpitometro.js"></script>
+    <script src="scrip.js"></script>
+    <link rel="stylesheet" href="style-main.css">
+    <link rel="stylesheet" href="game.css">
+    <style>.pec{color: #d73131;} .ruim{color: #d76631;} .regular{color: #ccd731;} .ok{color: #abd731;} .bom {color: #73d731;} .mec {color: #25b92d;} .jogador-tier, .img-jogador{
+    width: 120px;
+    height: 120px;
+    
+}
+.img-jogador{
+    border-radius: 17px;
+}
+.jogador-tier{
+    border: 3px solid white;
+    border-radius: 20px;
+
+}
+.container-family{
+    width: 500px;
+}
+.container-family span{
+    padding-left: 20px !important;
+    padding-bottom: 30px !important;
+    margin-top: 15px !important;
+}</style>
+</head>
+<body>
+    <div id="palpites"></div>
+</body>
+<script>
+    
+    jogos = [['ceara', 'palmeiras']]
+    ceara = srcConjunto("ceara", ['fernando-miguel', 'rafael-ramos', 'marllon', 'william-machado', 'matheus-bahia', 'dieguinho', 'fernando-sobral', 'lucas-mugni', 'galeano', 'pedro-henrique', 'pedro-raul'])
+    palmeiras = srcConjunto("palmeiras", ['weverton', 'giay', 'bruno-fuchs', 'gustavo-gomez', 'piquerez', 'anibal-moreno','lucas-evangelista', 'estevao', 'felipe-anderson', 'mauricio', 'vitor-roque'])
+    timesFut = setTimesFut()
+    createGames()
+    document.getElementsByClassName('palpites-button-alone')[0].setAttribute("onclick", "verifyMAMNOTES(), mam(this)")
+    let jogoPalpites = document.getElementsByClassName("jogo-palpite")[0]
+    let button = document.createElement("button")
+    button.classList.add("palpites-button-alone")
+    button.innerHTML = "NOTAS"
+    button.setAttribute("onclick", "verifyMAMNOTES(), notes('Ceara', 'Palmeiras')")
+    jogoPalpites.appendChild(button)
+    corresp = {
+    'Ceara': "Ceará", 'Vitoria': "Vitória", 'Gremio': "Grêmio", 'Atletico': "Atlético-MG", "Saopaulo": "São Paulo", "Bragantino": "RB Bragantino", 'Inter': 'Internacional'
+}
+function verifyMAMNOTES(){
+let containerall = document.getElementById("container-all")
+        let mam = document.getElementsByClassName("mam")[0]
+        if (containerall){containerall.remove()}
+        if (mam){mam.remove()}
+}
+    function notes(timeUm, timeDois){
+        console.log(timesFut, timeUm, timesFut[timeUm])
+        let teamOne = timesFut[timeUm]
+        let teamTwo = timesFut[timeDois]
+        console.log(teamOne)
+        let containerAll = document.createElement("div")
+        containerAll.id = 'container-all'
+        let containerTeamOne = document.createElement("div")
+        containerTeamOne.id = 'team-one-container'
+        let titleOne = document.createElement("div")
+        let titleTwo = document.createElement("div")
+        titleOne.id ='titulo'
+        titleTwo.id = 'titulo'
+        containerTeamOne.appendChild(titleOne)
+        let spanTO = document.createElement("span")
+        if (corresp[timeUm]){
+        spanTO.innerHTML = corresp[timeUm]}
+        else {
+            spanTO.innerHTML = timeUm
+        }
+        spanTO.classList.add("span-team")
+        let newMax = document.createElement("img")
+        newMax.id = "maximizar"
+        newMax.src = "imagens/maximizar.png"
+        newMax.setAttribute("onclick",'maximizar(this)')
+        newMax.style.left = '40%'
+        titleOne.appendChild(newMax)
+        titleOne.appendChild(spanTO)
+        let containerTeamTwo = document.createElement("div")
+        containerTeamOne.id = 'team-one-container'
+        let spanTT = document.createElement("span")
+        if (corresp[timeDois]){
+        spanTT.innerHTML = corresp[timeDois]}
+        else {
+            spanTT.innerHTML = timeDois
+        }
+        let newMaxT = document.createElement("img")
+        newMaxT.id = "maximizar"
+        newMaxT.src = "imagens/maximizar.png"
+        newMaxT.setAttribute("onclick",'maximizar(this)')
+        titleTwo.appendChild(newMaxT)
+        containerTeamTwo.appendChild(titleTwo)
+        spanTT.classList.add("span-team")
+        titleTwo.appendChild(spanTT)
+        document.body.appendChild(containerAll)
+        containerAll.appendChild(containerTeamOne)
+        containerAll.appendChild(containerTeamTwo)
+        constructNotes(teamOne, containerTeamOne)
+        constructNotes(teamTwo, containerTeamTwo)
+    }
+    function constructNotes(conjunto, mother){
+        for (i=0; i < conjunto.length; i++){
+            let jogadorTier = document.createElement("div")
+            jogadorTier.classList.add("jogador-tier")
+            mother.appendChild(jogadorTier)
+            let newImg = document.createElement("img")
+            newImg.classList.add("img-jogador")
+            newImg.src = conjunto[i]
+            jogadorTier.appendChild(newImg)
+            let range = document.createElement("input")
+            let span = document.createElement("span")
+            let spanClass = document.createElement("span")
+            let newDiv = document.createElement("div")
+            newDiv.setAttribute("class", "container-nota")
+            newDiv.style.display = "flex"
+            newDiv.style.flexWrap = "wrap"
+            span.style.flexBasis = "auto"
+            spanClass.style.flexBasis = "auto"
+            span.style.marginTop = "15px"
+            spanClass.style.marginTop = "15px"
+            spanClass.setAttribute("class", "classificacao")
+            range.setAttribute("type", "range")
+            range.setAttribute("min", 0)
+            range.setAttribute("max", 10)
+            range.setAttribute("step", 0.5)
+            range.style.flexBasis = "100%"
+            range.style.width = "300px"
+            range.style.marginBottom = "15px"
+            newDiv.style.alignItems = "center"
+            newDiv.style.justifyContent = "center"
+            span.innerHTML = "0"
+            jogadorTier.appendChild(newDiv)
+            newDiv.appendChild(span)
+            newDiv.appendChild(spanClass)
+            newDiv.appendChild(range)
+            jogadorTier.classList.add("container-family")
+            jogadorTier.style.display = "flex"
+            jogadorTier.style.margin = "10px"
+            range.addEventListener("input", function(){
+                notaSet(range, span, spanClass)
+        })
+        }
+    }
+    function notaSet(elemento, span, classificacao){
+    nota = elemento.value
+    span.innerHTML = nota
+    if (nota <= 2.5){
+        classificacao.innerHTML = "PIOR EM CAMPO"
+        classificacao.setAttribute("class", "pec")
+        span.setAttribute("class", "pec")
+    } if (nota > 2.5 & nota <= 4){
+        classificacao.innerHTML = "RUIM"
+        classificacao.setAttribute ("class", "ruim")
+        span.setAttribute ("class", "ruim")
+    } if (nota > 4 & nota <= 5.5){
+        classificacao.innerHTML = "REGULAR"
+        classificacao.setAttribute("class", "regular")
+        span.setAttribute("class", "regular")
+    } if (nota > 5.5 & nota <= 7){
+        classificacao.innerHTML = "OK"
+        classificacao.setAttribute("class", "ok")
+        span.setAttribute("class", "ok")
+    } if (nota > 7 & nota <= 8.5){
+        classificacao.innerHTML = "BOM"
+        classificacao.setAttribute("class", "bom")
+        span.setAttribute("class", "bom")
+    } if (nota > 8.5 & nota <= 10){
+        classificacao.innerHTML = "MELHOR EM CAMPO"
+        classificacao.setAttribute("class", "mec")
+        span.setAttribute("class", "mec")
+    }
+    let verificar = verificarTierListNota()
+    if (verificar == true){
+        ordenarButton()
+    }
+}
+
+    function maximizar(elemento){
+    let mam = elemento.parentElement.parentElement
+    personStyle(mam, {'position': 'fixed', 'top': 0, 'left': 0, 'width': '100vw', 'height': '100vh', 'display': 'block', "overflowY": 'auto', 'background-color': 'rgb(39, 36, 36)', 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center', 'z-index': 9999})
+    if (elemento.style.left == '40%'){
+        elemento.style.left = '90%'
+        elemento.setAttribute("metadata", "40%")
+    }
+
+    elemento.setAttribute("onclick", "minimizar(this)")
+    elemento.src = 'imagens/minimizar.png'
+
+}
+function minimizar(elemento){
+    let mam = elemento.parentElement.parentElement
+    mam.style = undefined
+    window.scrollTo({top: document.getElementById("titulo").offsetTop - 150})
+    elemento.setAttribute("onclick", "maximizar(this)")
+    elemento.src = "imagens/maximizar.png"
+    if (elemento.getAttribute("metadata")){
+        elemento.style.left = elemento.getAttribute("metadata")
+    }
+}
+
+</script>
+</html>

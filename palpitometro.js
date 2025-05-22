@@ -15,6 +15,8 @@ jogos = [
     ['bragantino', 'juventude']
 ]
 
+
+
 correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
