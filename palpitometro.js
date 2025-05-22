@@ -185,6 +185,11 @@ function createMAM(element, escUm, escDois){
         titulo.appendChild(newSpan)
         titulo.appendChild(counterDois)
         titulo.appendChild(escudoDois)
+        let newMax = document.createElement("img")
+    newMax.id = "maximizar"
+    newMax.src = "imagens/maximizar.png"
+    newMax.setAttribute("onclick",'maximizar(this)')
+    titulo.appendChild(newMax)
     for (i=0; i < 11; i++){
         let row = document.createElement("div")
         row.classList.add("row")
@@ -204,8 +209,8 @@ function createMAM(element, escUm, escDois){
 
         let itemResultado = document.createElement("div")
         itemResultado.setAttribute("class", "item-resultado")
-        let imgResultado = document.createElement("img")
-        itemResultado.appendChild(imgResultado)
+        // let imgResultado = document.createElement("img")
+        // itemResultado.appendChild(imgResultado)
 
         let spanD = document.createElement("span")
         spanD.innerHTML = "="
@@ -215,5 +220,6 @@ function createMAM(element, escUm, escDois){
         row.appendChild(itemDois)
         row.appendChild(spanD)
         row.appendChild(itemResultado)
+        
     }
 }

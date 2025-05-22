@@ -20,6 +20,10 @@
     width: 123px;
     height: 123px;
 }
+.dragged{
+    width: 123px;
+    height: 123px;
+}
 .incomum:hover{
     width: 120px;
     height: 120px;
@@ -152,6 +156,10 @@ a#voltar{
         width: 150px;
         height: 150px;
     }
+    .dragged{
+    width: 153px;
+    height: 153px;
+}
     .jogador-selectable:hover{
         width: 155px;
         height: 155px;
@@ -518,6 +526,10 @@ a#voltar{
         max-width: 105px;
         max-height: 105px;
     }
+    .dragged{
+    width: 103px;
+    height: 103px;
+}
     .jogador-selectable:hover{
         max-width: 108px;
         max-height: 108px;
@@ -557,4 +569,10 @@ a#voltar{
     #camp{
         position: fixed;
     }
+}
+
+
+
+.dragged{
+    border: 3px solid red;
 }
