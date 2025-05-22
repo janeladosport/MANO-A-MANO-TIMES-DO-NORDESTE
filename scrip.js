@@ -99,7 +99,12 @@ function selecionarClass(elemento){
 function clicar(elemento){
     const imagem = elemento.querySelector('img');
     const imagemSrc = imagem.src;
-    const ultimoItem = elemento.parentElement.querySelector('.item-resultado img');
+    let ultimoItem = elemento.parentElement.querySelector('.item-resultado img');
+    if (!ultimoItem){
+        let newImg = document.createElement("img")
+        elemento.parentElement.querySelector(".item-resultado").appendChild(newImg)
+        ultimoItem = newImg
+    }
     ultimoItem.src = imagemSrc;
     let itemResultado = elemento.parentElement.querySelector(".item-resultado")
     if (itemResultado.classList.contains("time-um")){itemResultado.classList.remove("time-um")} else if (itemResultado.classList.contains("time-dois")){itemResultado.classList.remove("time-dois")}
@@ -114,9 +119,11 @@ function limpar(){
     for (let i = 0; i < resultado.length; i++){
         if (resultado[i].classList.contains("time-um")){console.log("TEM 1"); resultado[i].classList.remove("time-um")
         } if (resultado[i].classList.contains("time-dois")){console.log("TEM 2");resultado[i].classList.remove("time-dois")}
+        let imgRes = resultado[i].querySelector("img")
+        if (imgRes){
         resultado[i].querySelector('img').remove()
         let img = document.createElement('img')
-        resultado[i].append(img)
+        resultado[i].append(img)}
     }
     count()
 }
@@ -131,4 +138,28 @@ function createElement(tag, properties){
         }
     }
     return newElement
+}
+
+function personStyle(element, attributes){
+    let stylesheet = element.style
+    for (i=0; i < Object.keys(attributes).length; i++){
+        let attributeName = Object.keys(attributes)[i]
+        stylesheet[attributeName] = attributes[attributeName]
+
+    }
+    return stylesheet
+}
+
+function maximizar(elemento){
+    let mam = document.querySelector(".mam")
+    personStyle(mam, {'position': 'fixed', 'top': 0, 'left': 0, 'width': '100vw', 'height': '100vh', 'display': 'block', "overflowY": 'auto', 'background-color': 'rgb(39, 36, 36)'})
+    elemento.setAttribute("onclick", "minimizar(this)")
+    elemento.src = 'imagens/minimizar.png'
+}
+function minimizar(elemento){
+    let mam = document.querySelector(".mam")
+    mam.style = undefined
+    window.scrollTo({top: document.getElementById("titulo").offsetTop - 150})
+    elemento.setAttribute("onclick", "maximizar(this)")
+    elemento.src = "imagens/maximizar.png"
 }

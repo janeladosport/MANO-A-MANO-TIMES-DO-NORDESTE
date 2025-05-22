@@ -145,7 +145,7 @@ function botarEscale(time, clean, perso, numb, check, elemento, changeable){
                 }
                 if (perso == true){
                     imagem.removeAttribute("onclick")
-                    imagem.setAttribute("onclick", `alterarTime(this, '${numb}')`)
+                    imagem.setAttribute("onclick", `playerEscale(this, '${numb}')`)
                 }
                 imagem.setAttribute("id", id)
             }
@@ -177,6 +177,16 @@ function botarEscale(time, clean, perso, numb, check, elemento, changeable){
 }
 }
 
+function removeDraggedClass(){
+    document.body.querySelector(".dragged").classList.remove("dragged")
+    draggedSource = undefined
+}
+function playerEscale(elemento){
+    console.log("Exe")
+    if(document.body.querySelector(".dragged")){removeDraggedClass()}
+    elemento.classList.add("dragged")
+    draggedSource = elemento.src
+}
 function limparEscolhaEscale(){
     var escolhas = document.getElementsByClassName("nome-escolha")
     for (i = escolhas.length - 1; i >= 0; i--){
