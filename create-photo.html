@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRIAR FOTO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="photo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="photo">
+        
+    </div>
+    <input type="text" autocomplete="off" id="search">
+    <button onclick="selected(this)" style="width: 140px;">pesquisar</button>
+    <select id="team">
+        <option value="Saopaulo">São Paulo</option>
+        <option value="Sport">Sport</option>
+        <option value="Fortaleza">Fortaleza</option>
+    </select>
+    <input type="text" autocomplete="off" placeholder="NOME JOGADOR" id="name-player">
+    <input type="text" autocomplete="off" placeholder="LINK JOGADOR">
+    <button onclick="execute()" style="width: 140px;">EXECUTAR</button>
+<script>
+    function selected (jogador) {
+        jogador = jogador.parentElement.querySelector("input#search").value
+        window.open(`https://www.google.com/search?as_st=y&as_q=${jogador}&as_epq=&as_oq=&as_eq=&imgsz=l&imgar=s&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=&tbs=&udm=2`)
+    }
+    alvinegro = ['black']
+    tricolorAV = ['rgb(227,29,26)', 'rgb(13,90,165)']
+    rubronegro = [false, 'black', 'rgb(211,10,17)']
+    let colorTimes = {
+    Fortaleza: tricolorAV,
+    Sport: rubronegro,
+    Bahia: tricolorAV,
+    Ceara: alvinegro,
+    Vitoria: rubronegro,
+    // Fluminense: fluminense,
+    // Corinthians: alvinegro,
+    // Inter: internacional,
+    // Botafogo: botafogo,
+    // Vasco: vasco,
+    // Bragantino: bragantino,
+    // Juventude: juventude,
+    // Mirassol: mirassol,
+    Flamengo: rubronegro,
+    // Saopaulo: saopaulo,
+    // Palmeiras: palmeiras,
+    // Cruzeiro: cruzeiro,
+    Atletico: alvinegro,
+    // Gremio: gremio,
+    Santos: alvinegro
+}
+
+function execute(){
+    let conjunto = document.getElementById("team").value
+    console.log(conjunto)
+    let corresp = colorTimes[conjunto]
+    console.log(corresp)
+    if (corresp[0] == false){
+        console.log("é")
+        let color = corresp[1]
+        let border = corresp[2]
+        let photo = document.getElementById("photo")
+        let ns = document.createElement("span")
+        ns.classList.add("text")
+        ns.style.color = color
+        ns.innerHTML = document.getElementById("name-player").value
+        ns.style.fontSize = "79.76px"
+        ns.style.fontFamily = 'Roboto Condensed'
+        size = 2
+        ns.style.textShadow = `${size}px ${size}px 0 ${border},
+  -${size}px ${size}px 0 ${border},
+   ${size}px -${size}px 0 ${border},
+  -${size}px -${size}px 0 ${border},
+   0 ${size}px 0 ${border},
+   ${size}px 0 0 ${border},
+   0 -${size}px 0 ${border},
+  -${size}px 0 0 ${border}`
+        photo.appendChild(ns)
+    }
+}
+</script>
+</body>
+</html>
