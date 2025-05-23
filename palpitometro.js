@@ -108,6 +108,15 @@ function createGames(){
     }
 }
 
+function cleanItemResultado(){
+    itemResultado = document.getElementsByClassName("item-resultado")
+    for (let item of itemResultado){
+        let img = item.querySelector("img")
+        if (img){
+            img.remove()
+        }
+    }
+}
 
 function mam(element){
     let palpites = element.parentElement
@@ -117,6 +126,7 @@ function mam(element){
     selecionarUm({value:timeUm}, element.parentElement, escudos(timeUm), escudos(timeDois))
     document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
     selecionarDois({value:timeDois})
+    cleanItemResultado()
     
 }
 
