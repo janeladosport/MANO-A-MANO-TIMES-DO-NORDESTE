@@ -22,7 +22,7 @@ correspondencia = {
 }
 
 juventude = srcConjunto("juventude", ["gustavo", "ewerthon", "abner", "angel", "alan-ruschel", "caique", "jadson", "mandaca", "jean-carlos", "batalla", "gabriel-taliari"])
-sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "antonio-carlos", "chico", "christian-rivera", "du-queiroz", "lucas-lima", "barletta", "igor-carius", "pablo"])
+sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "du-queiroz", "lucas-lima", "chino-atencio", "barletta", "pablo"])
 ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "wellington-rato", "osvaldo", "renato-kayzer"])
 bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "cauly", "erick-pulga", "lucho-rodriguez"])
