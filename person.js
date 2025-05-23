@@ -8,7 +8,7 @@ let fluminense = [flu + "fabio.png", flu + "guga.png", flu + "ignacio.png", flu 
 
 let corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "angileri", "raniele", "alex-santana", "carillo", "romero", "depay", "yuri-alberto"])
 
-let internacional = srcConjunto("inter", ["anthoni", "aguirre", "vitao", "juninho", "bernabei", "ronaldo", "thiago-maia", "alan-patrick", "bruno-tabata", "wesley", "ricardo-mathias"])
+let internacional = srcConjunto("inter", ["anthoni", "aguirre", "rogel", "juninho", "ramon", "ronaldo", "thiago-maia", "alan-patrick", "gustavo-prado", "wesley", "ricardo-mathias"])
 
 let botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "cuiabano", "danilo-barbosa", "marlon-freitas", "patrick-de-paula", "artur", "igor-jesus", "mastriani"])
 
