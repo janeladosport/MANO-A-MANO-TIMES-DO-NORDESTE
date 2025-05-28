@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEARÁ X PALMEIRAS</title>
+    <title>BAHIA X INTERNACIONAL</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="palpitometro.css">
     <script src="person.js"></script>
@@ -38,9 +38,8 @@
 </body>
 <script>
     
-    jogos = [['ceara', 'palmeiras']]
+    jogos = [['inter', 'bahia']]
     ceara = srcConjunto("ceara", ['fernando-miguel', 'rafael-ramos', 'marllon', 'william-machado', 'matheus-bahia', 'dieguinho', 'fernando-sobral', 'lucas-mugni', 'galeano', 'pedro-henrique', 'pedro-raul'])
-    palmeiras = srcConjunto("palmeiras", ['weverton', 'giay', 'bruno-fuchs', 'gustavo-gomez', 'piquerez', 'anibal-moreno','lucas-evangelista', 'estevao', 'felipe-anderson', 'mauricio', 'vitor-roque'])
     timesFut = setTimesFut()
     createGames()
     document.getElementsByClassName('palpites-button-alone')[0].setAttribute("onclick", "verifyMAMNOTES(), mam(this)")
@@ -48,7 +47,7 @@
     let button = document.createElement("button")
     button.classList.add("palpites-button-alone")
     button.innerHTML = "NOTAS"
-    button.setAttribute("onclick", "verifyMAMNOTES(), notes('Ceara', 'Palmeiras')")
+    button.setAttribute("onclick", "verifyMAMNOTES(), notes('Bahia', 'Inter')")
     jogoPalpites.appendChild(button)
     corresp = {
     'Ceara': "Ceará", 'Vitoria': "Vitória", 'Gremio': "Grêmio", 'Atletico': "Atlético-MG", "Saopaulo": "São Paulo", "Bragantino": "RB Bragantino", 'Inter': 'Internacional'
