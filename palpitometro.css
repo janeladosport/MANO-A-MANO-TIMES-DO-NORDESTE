@@ -46,7 +46,7 @@ div.item-resultado {
     border: 0 !important;
     box-shadow: 0.2px 0.2px 4px 0px #00000040;
 }
-.maximizar{
+.maximizar, #maximizar{
     position: absolute;
     width: 40px;
     height: 40px;
@@ -63,7 +63,7 @@ div.item-resultado {
     left: 86%;
 }
 
-.maximizar:hover{
+.maximizar:hover, #maximizar{
     background-color: rgb(22, 21, 21);
 }
 
