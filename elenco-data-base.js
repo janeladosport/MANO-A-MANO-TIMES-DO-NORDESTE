@@ -86,10 +86,11 @@ function elConjunto(position, clube, players){
 
 var golSp = elConjunto('gol', 'sao paulo', ['rafael', 'jandrei'])
 var latSp = elConjunto('lat', 'sao paulo', ['enzo-diaz', 'wendell', 'igor-vinicius', 'cedric'])
-var zagSp = elConjunto('zag','sao paulo', ['alan-franco', 'arboleda', 'ferraresi', 'sabino', 'ruan'])
+var zagSp = elConjunto('zag','sao paulo', ['alan-franco', 'arboleda', 'ferraresi', 'sabino', 'ruan', 'patryck'])
 var volSp = elConjunto('avol', 'sao paulo', ['alisson', 'bobadilla', 'marcos-antonio', 'pablo-maia', 'luiz-gustavo'])
-var meiSp = elConjunto('mei', 'sao paulo', ['lucas-moura', 'matheus-alves', 'oscar'])
+var meiSp = elConjunto('mei', 'sao paulo', ['lucas-moura', 'matheus-alves', 'oscar', 'rodriguinho'])
 var ponSp = elConjunto("pon", 'sao paulo', ['ferreirinha', 'lucas-ferreira', 'luciano'])
+var caSp = elConjunto("ca", 'sao paulo', ['andre-silva', 'calleri', 'ryan-francisco'])
 
 var dados = {
     Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
