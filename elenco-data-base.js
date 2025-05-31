@@ -58,6 +58,39 @@ var pdCeara = ["Ponta direita", "pd-esc", "imagens/ceara/pedro-henrique.png", "i
 var peCeara = ["Ponta esquerda", "pe-esc", "imagens/ceara/fernandinho.png", "imagens/ceara/pedro-henrique.png", "imagens/ceara/alejandro-martinez.png", "imagens/ceara/joao-victor.png"]
 var caCeara = ["Centroavante", "ca-esc", "imagens/ceara/pedro-raul.png", "imagens/ceara/aylon.png"]
 
+
+var positions = {
+    gol: ['Goleiro', 'gol-esc'],
+    ld: ['Lateral Direito', 'ld-esc'],
+    lat: ['Laterais', 'lat-esc'],
+    zag: ['Zagueiros', 'zag-esc'],
+    zd: ['Zagueiro Direito', 'zd-esc'],
+    ze: ['Zagueiro Esquerdo', 'ze-esc'],
+    le: ['Lateral Esquerdo', 'le-esc'],
+    avol: ['Volantes', 'vol-esc'],
+    mei: ['Meias', 'mei-esc'],
+    pon: ['Pontas', 'pon-esc'],
+    ca: ['Centroavante', 'ca-esc']
+}
+
+function elConjunto(position, clube, players){
+    let n1 = positions[position][0]
+    let n2 = positions[position][1]
+    let newConjunto = []
+    newConjunto.push(n1, n2)
+    for (i=0; i < players.length; i++){
+        newConjunto.push(`imagens/${clube}/${players[i]}.png`)
+    }
+    return newConjunto
+}
+
+var golSp = elConjunto('gol', 'sao paulo', ['rafael', 'jandrei'])
+var latSp = elConjunto('lat', 'sao paulo', ['enzo-diaz', 'wendell', 'igor-vinicius', 'cedric'])
+var zagSp = elConjunto('zag','sao paulo', ['alan-franco', 'arboleda', 'ferraresi', 'sabino', 'ruan'])
+var volSp = elConjunto('avol', 'sao paulo', ['alisson', 'bobadilla', 'marcos-antonio', 'pablo-maia', 'luiz-gustavo'])
+var meiSp = elConjunto('mei', 'sao paulo', ['lucas-moura', 'matheus-alves', 'oscar'])
+var ponSp = elConjunto("pon", 'sao paulo', ['ferreirinha', 'lucas-ferreira', 'luciano'])
+
 var dados = {
     Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],

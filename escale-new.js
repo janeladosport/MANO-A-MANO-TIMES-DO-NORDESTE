@@ -9,7 +9,8 @@ var dados = {
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
     Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
-    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
+    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara],
+    Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp]
 };
 
 let esquemas = {
@@ -124,13 +125,18 @@ function criarE(tag, ide, classe, source, onclick){
     return newTag
 }
 
-function putElenco(team){
+function putElenco(team,isNotBody){
     if (document.body.querySelector("#elenco")){
-        document.body.querySelector("#elenco").remove()
+        if (!isNotBody){
+        document.body.querySelector("#elenco").remove()}
     }
     let elenco = criarE("div", "elenco")
-    document.body.appendChild(elenco)
+    if (isNotBody){
+        isNotBody.appendChild(elenco)
+    } else{
+    document.body.appendChild(elenco)}
     let teamConjunto = dados[team]
+    console.log(team)
     for (i=0; i < teamConjunto.length; i++){
         let newClass = teamConjunto[i]
         for (h=0; h < newClass.length; h++){

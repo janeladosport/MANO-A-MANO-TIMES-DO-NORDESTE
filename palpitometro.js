@@ -1,3 +1,6 @@
+let teamOne
+let teamTwo
+
 function escudos(time){
     if (time == "saopaulo"){time = 'sao-paulo'}
     return `imagens/escudos/${time}.png`
@@ -21,19 +24,21 @@ correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
 
-juventude = srcConjunto("juventude", ["gustavo", "ewerthon", "abner", "angel", "alan-ruschel", "caique", "jadson", "mandaca", "jean-carlos", "batalla", "gabriel-taliari"])
+juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "marcos-paulo", "alan-ruschel", "caique", "daniel-peixoto", "mandaca", "batalla", "giovany", "gilberto"])
 sport = srcConjunto("sport", ["caique-frança", "hereda", "lucas-cunha", "antonio-carlos", "chico", "christian-rivera", "ze-lucas", "lucas-lima", "barletta", "igor-carius", "pablo"])
 ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "wellington-rato", "osvaldo", "renato-kayzer"])
 bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "cauly", "erick-pulga", "william-jose"])
-botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "rwan-cruz", "cuiabano", "igor-jesus"])
-fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "david-luiz", "gustavo-mancha", "gaston-avila", "rosseto", "pol-fernandez", "pochettino", "pikachu", "breno-lopes", "lucero"])
-vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "luiz-gustavo", "lucas-piton", "hugo-moura", "tche-tche", "nuno-moreira", "adson", "rayan", "vegetti"])
+botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "rwan-cruz", "artur", "igor-jesus"])
+fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "david-luiz", "gustavo-mancha", "bruno-pacheco", "ze-welisson", "martinez", "pochettino", "pikachu", "breno-lopes", "lucero"])
+vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lucas-freitas", "lucas-piton", "jair", "tche-tche", "coutinho", "nuno-moreira","rayan", "vegetti"])
 corinthians = srcConjunto("corinthians", ["hugo-souza", "felix-torres", "andre-ramalho", "caca", "angileri", "maycon", "raniele", "carillo", "romero", "igor-coronado", "yuri-alberto"])
-gremio = srcConjunto("gremio", ["tiago-volpi", "joao-pedro", "kannemann", "wagner-leonardo", "marlon", "dodi", "villasanti", "cristaldo", "cristian-oliveira", "amuzu", "braithwaite"])
-bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "guzman", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "lucas-barbosa", "vinicinho", "sasha"])
+gremio = srcConjunto("gremio", ["tiago-volpi", "ronald", "wagner-leonardo", "kannemann", "marlon", "dodi", "villasanti", "cristaldo", "cristian-oliveira", "aravena", "braithwaite"])
+bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "laquintana", "vinicinho", "sasha"])
 fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "martinelli", "hercules", "ganso", "arias", "keno", "everaldo"])
-saopaulo = srcConjunto("sao paulo", ["rafael", "ferraresi", "arboleda", "alan-franco", "enzo-diaz", "alisson", "oscar", "luciano", "cedric", "lucas-ferreira", "andre-silva"])
+saopaulo = srcConjunto("sao paulo", ["rafael", "ferraresi", "arboleda", "alan-franco", "enzo-diaz", "pablo-maia", "bobadilla", "luciano", "cedric", "lucas-ferreira", "ryan-francisco"])
+santos = srcConjunto("santos", ['gabriel-brazao', 'leo-godoy', 'joao-basso', 'ze-ivaldo', 'escobar', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'deivid-washington'])
+flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira', 'alex-sandro', 'evertton-araujo', 'gerson', 'arrascaeta', 'luiz-araujo', 'cebolinha', 'bruno-henrique'])
 timesFut = setTimesFut()
 
 
@@ -109,8 +114,8 @@ function createGames(){
             let button = document.createElement("button")
             button.classList.add("palpites-button-alone")
             button.innerHTML = "NOTAS"
-            let teamOne = getFirstUppercase(newCabine.getAttribute("datainfo-um"))
-            let teamTwo = getFirstUppercase(newCabine.getAttribute("datainfo-dois"))
+            teamOne = getFirstUppercase(newCabine.getAttribute("datainfo-um"))
+            teamTwo = getFirstUppercase(newCabine.getAttribute("datainfo-dois"))
             button.setAttribute("onclick", `verifyMAMNOTES(); notes('${teamOne}', '${teamTwo}');`);            
             newCabine.appendChild(button)
         }
@@ -142,7 +147,10 @@ function mam(element){
     document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
     selecionarDois({value:timeDois})
     cleanItemResultado()
-    
+    if (document.getElementById("person-div")){
+        document.getElementById("person-div").remove()
+        document.getElementsByClassName("selected")[0].classList.remove("selected")
+    }
 }
 
 function selecionarUm(elemento, element, escUm, escDois){
@@ -177,11 +185,29 @@ function createMAM(element, escUm, escDois){
         allImgs[0].src = escUm
         allImgs[1].src = escDois
         let nsExist = document.getElementById("new-span")
-        let teamOne = element.getAttribute("datainfo-um")
-        if (correspondencia[teamOne]){console.log("tem corresp");teamOne = correspondencia[teamOne]}
-        let teamTwo = element.getAttribute("datainfo-dois")
-        if (correspondencia[teamTwo]){console.log("tem corresp");teamTwo = correspondencia[teamTwo]}
-        nsExist.innerHTML = `${teamOne[0].toUpperCase() + teamOne.substring(1)} X ${teamTwo[0].toUpperCase() + teamTwo.substring(1)}`
+        teamOne = element.getAttribute("datainfo-um")
+        let newTeamOne
+        let newTeamTwo
+        if (correspondencia[teamOne]){newTeamOne = firstLetterUpercase(correspondencia[teamOne])} else{newTeamOne = teamOne}
+        teamTwo = element.getAttribute("datainfo-dois")
+        if (correspondencia[teamTwo]){newTeamTwo = firstLetterUpercase(correspondencia[teamTwo])} else {newTeamTwo = teamTwo}
+        nsExist.innerHTML = `${newTeamOne} X ${newTeamTwo}`
+        if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+            if (document.getElementById("personalizar")){
+        document.getElementById("personalizar").remove()
+        console.log("REMOVIDO", teamOne, teamTwo)
+    }
+    console.log(dados[firstLetterUpercase(teamOne)])
+    let newPerson = document.createElement("img")
+    newPerson.classList.add("maximizar")
+    newPerson.id = 'personalizar'
+    newPerson.src = "imagens/personalizar.png"
+    newPerson.setAttribute("onclick", 'personalizar(this)')
+    titleExisted.appendChild(newPerson)
+    } else if (document.getElementById("personalizar")){
+        document.getElementById("personalizar").remove()
+        console.log("REMOVIDO", teamOne, teamTwo)
+    }
         return
     }
     let mam = document.createElement('div')
@@ -197,11 +223,14 @@ function createMAM(element, escUm, escDois){
         counterDois.innerHTML = "0"
         let newSpan = document.createElement("span")
         newSpan.id = 'new-span'
-        let teamOne = element.getAttribute("datainfo-um")
-        if (correspondencia[teamOne]){console.log("tem corresp");teamOne = correspondencia[teamOne]}
-        let teamTwo = element.getAttribute("datainfo-dois")
-        if (correspondencia[teamTwo]){console.log("tem corresp");teamTwo = correspondencia[teamTwo]}
-        newSpan.innerHTML = `${teamOne[0].toUpperCase() + teamOne.substring(1)} X ${teamTwo[0].toUpperCase() + teamTwo.substring(1)}`
+        teamOne = element.getAttribute("datainfo-um")
+        teamTwo = element.getAttribute("datainfo-dois")
+        let newTeamOne
+        let newTeamTwo
+        if (correspondencia[teamOne]){newTeamOne = firstLetterUpercase(correspondencia[teamOne])} else{newTeamOne = teamOne}
+        teamTwo = element.getAttribute("datainfo-dois")
+        if (correspondencia[teamTwo]){newTeamTwo = firstLetterUpercase(correspondencia[teamTwo])} else {newTeamTwo = teamTwo}
+        newSpan.innerHTML = `${newTeamOne} X ${newTeamTwo}`
         let escudoUm = document.createElement("img")
         escudoUm.src = escUm
         let escudoDois = document.createElement("img")
@@ -214,9 +243,22 @@ function createMAM(element, escUm, escDois){
         titulo.appendChild(escudoDois)
         let newMax = document.createElement("img")
     newMax.id = "maximizar"
-    newMax.src = "imagens/maximizar.png"
+    newMax.classList.add("maximizar")
     newMax.setAttribute("onclick",'maximizar(this)')
+    newMax.src = 'imagens/maximizar.png'
     titulo.appendChild(newMax)
+    if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+    console.log(dados[firstLetterUpercase(teamOne)])
+    let newPerson = document.createElement("img")
+    newPerson.classList.add("maximizar")
+    newPerson.id = 'personalizar'
+    newPerson.src = "imagens/personalizar.png"
+    newPerson.setAttribute("onclick", 'personalizar(this)')
+    titulo.appendChild(newPerson)
+    } else if (document.getElementById("personalizar")){
+        document.getElementById("personalizar").remove()
+        console.log("REMOVIDO", teamOne, teamTwo)
+    }
     for (i=0; i < 11; i++){
         let row = document.createElement("div")
         row.classList.add("row")
@@ -263,8 +305,8 @@ let containerall = document.getElementById("container-all")
 }
     function notes(timeUm, timeDois){
         console.log(timesFut, timeUm, timesFut[timeUm])
-        let teamOne = timesFut[timeUm]
-        let teamTwo = timesFut[timeDois]
+        teamOne = timesFut[timeUm]
+        teamTwo = timesFut[timeDois]
         console.log(teamOne)
         let containerAll = document.createElement("div")
         containerAll.id = 'container-all'
@@ -410,4 +452,39 @@ function minimizar(elemento){
     if (elemento.getAttribute("metadata")){
         elemento.style.left = elemento.getAttribute("metadata")
     }
+}
+
+function firstLetterUpercase(string){
+   return String(string)[0].toUpperCase() +  String(string).substring(1)
+}
+
+function personalizar(element){
+    let isSelected=false
+    if (element.classList.contains("selected")){isSelected=true}
+    if (isSelected == false){
+        element.classList.add("selected")
+        let newDiv = document.createElement("div")
+        newDiv.id = 'person-div'
+        document.body.appendChild(newDiv)
+        putElenco(firstLetterUpercase(teamOne), newDiv)
+        putElenco(firstLetterUpercase(teamTwo), newDiv)
+        setAllOnclick('item', 'changeSource(this)')
+    } else if (isSelected == true){
+        element.classList.remove("selected")
+        document.getElementById('person-div').remove()
+        setAllOnclick("item", "clicar(this)")
+    }
+}
+
+function setAllOnclick (classe,onclick){
+    let conjunto = document.getElementsByClassName(classe)
+    for (i=0; i < conjunto.length; i++){
+        conjunto[i].setAttribute("onclick", onclick)
+    }
+}
+
+function changeSource(element){
+    if (document.querySelector(".dragged") == null) {return}
+    element.querySelector("img").src = document.querySelector(".dragged").src
+    document.querySelector(".dragged").classList.remove("dragged")
 }
