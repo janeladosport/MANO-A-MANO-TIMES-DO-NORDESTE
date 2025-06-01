@@ -1,4 +1,4 @@
-const currentVersion = "1.0.3"; // mesma versão do último push
+const currentVersion = "1.0.2"; // mesma versão do último push
   const versionUrl = "version.txt"; // caminho para o arquivo
 let isVersionNew = false
   async function checkForUpdate() {
