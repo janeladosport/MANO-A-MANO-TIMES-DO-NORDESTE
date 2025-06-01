@@ -1,4 +1,4 @@
-let currentVersion = "1.0.3"; // versão atual que o site está usando
+let currentVersion = "1.0.4"; // versão atual que o site está usando
 let hasShownNotice = false;
 
 async function checkForUpdate() {
