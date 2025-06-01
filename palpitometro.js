@@ -8,7 +8,7 @@ function escudos(time){
 
 jogos = [
     ['bahia', 'saopaulo', [2,1], "notas"],
-    ['vasco', 'bragantino', [0,2], "notas"],
+    ['vasco', 'bragantino', [0,2]],
     ['mirassol', 'sport'],
     ['santos', 'botafogo'],
     ['juventude', 'gremio'],
@@ -34,7 +34,7 @@ fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "david-lui
 vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lucas-freitas", "lucas-piton", "jair", "tche-tche", "coutinho", "nuno-moreira","rayan", "vegetti"])
 corinthians = srcConjunto("corinthians", ["hugo-souza", "felix-torres", "andre-ramalho", "caca", "angileri", "maycon", "raniele", "carillo", "romero", "igor-coronado", "yuri-alberto"])
 gremio = srcConjunto("gremio", ["tiago-volpi", "ronald", "wagner-leonardo", "kannemann", "marlon", "dodi", "villasanti", "cristaldo", "cristian-oliveira", "aravena", "braithwaite"])
-bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "laquintana", "vinicinho", "sasha"])
+bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "vinicinho", "pitta", "sasha"])
 fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "martinelli", "hercules", "ganso", "arias", "keno", "everaldo"])
 saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "sabino", "wendell", "pablo-maia", "bobadilla", "luciano", "lucas-ferreira", "enzo-diaz", "ryan-francisco"])
 santos = srcConjunto("santos", ['gabriel-brazao', 'leo-godoy', 'joao-basso', 'ze-ivaldo', 'escobar', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'deivid-washington'])
