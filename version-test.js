@@ -19,9 +19,15 @@ async function checkForUpdate() {
   }
 }
 
+function reloadWithoutCache() {
+  const currentUrl = window.location.href.split("?")[0];
+  const newUrl = currentUrl + "?updated=" + new Date().getTime();
+  window.location.href = newUrl;
+}
+
   function showUpdateNotice() {
     const notice = document.createElement("div");
-    notice.setAttribute("onclick", 'window.location.reload()')
+    notice.setAttribute("onclick", 'reloadWithoutCache()')
     notice.classList.add("transition")
     notice.innerText = "Novas atualizações no site. Clique aqui para atualizar a página.";
     notice.style.position = "fixed";
