@@ -29,20 +29,18 @@ let isVersionNew = false
     let topSet = 0 - notice.offsetHeight
     notice.style.inset = `${topSet}px 0 0 0`
     notice.style.top = 0
-//     let counter = 0
-// function mostrarAviso() {
-//   if (counter >= 3) return; // para após 3 repetições
-//   notice.style.top = "0"; // aparece
-//   setTimeout(() => {
-//     notice.style.top = `${topSet}px`; // esconde após 5s
-//     counter++;
-//     if (counter < 3) {
-//       setTimeout(mostrarAviso, 60000); // espera 1 min e repete
-//     }
-//   }, 5000); // visível por 5s
-// }
-// // exibe imediatamente ao carregar
-// mostrarAviso();
+    let counter = 0
+function mostrarAviso() {
+  if (counter >= 3) return; // para após 3 repetições
+  notice.style.top = "0"; // aparece
+  setTimeout(() => {
+    notice.style.top = `${topSet}px`; // esconde após 5s
+    counter++;
+    if (counter < 3) {
+      setTimeout(mostrarAviso, 60000); // espera 1 min e repete
+    }
+  }, 5000); // visível por 5s
+}
+// exibe imediatamente ao carregar
+mostrarAviso();
   }
-
-showUpdateNotice()
