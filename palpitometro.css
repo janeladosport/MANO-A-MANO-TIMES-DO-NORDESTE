@@ -20,6 +20,10 @@
     text-decoration: none;
     color: white;
 }
+.transition{
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 :root{
     --corBoxSpanJogo: rgb(36, 36, 36);
     --corBoxJogo: rgb(0, 0, 0);
