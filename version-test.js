@@ -1,13 +1,14 @@
 const currentVersion = "1.0.0"; // mesma versão do último push
   const versionUrl = "version.txt"; // caminho para o arquivo
-
+let isVersionNew = false
   async function checkForUpdate() {
     try {
         console.log("TRYING")
       const response = await fetch(versionUrl + '?t=' + new Date().getTime()); // evita cache
       const latestVersion = (await response.text()).trim();
-      if (latestVersion !== currentVersion) {
+      if (latestVersion !== currentVersion && isVersionNew == false) {
         showUpdateNotice();
+        isVersionNew = true
         console.log("MUDOU A VERSÃO")
       } else{
         console.log(`NÃO TEM NOVIDADE. ERA: ${latestVersion} e É: ${currentVersion}`)
