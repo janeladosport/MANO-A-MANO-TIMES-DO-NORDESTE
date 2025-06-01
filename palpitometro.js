@@ -25,7 +25,7 @@ correspondencia = {
 }
 
 juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "marcos-paulo", "alan-ruschel", "caique", "daniel-peixoto", "mandaca", "batalla", "giovany", "gilberto"])
-sport = srcConjunto("sport", ["caique-frança", "hereda", "lucas-cunha", "antonio-carlos", "chico", "christian-rivera", "ze-lucas", "lucas-lima", "barletta", "igor-carius", "pablo"])
+sport = srcConjunto("sport", ["caique-frança", "hereda", "lucas-cunha", "antonio-carlos", "chico", "christian-rivera", "ze-lucas", "lucas-lima", "romarinho", "igor-carius", "pablo"])
 ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "wellington-rato", "osvaldo", "renato-kayzer"])
 bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "ademir", "erick-pulga", "william-jose"])
@@ -39,6 +39,7 @@ fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva"
 saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "sabino", "wendell", "pablo-maia", "bobadilla", "luciano", "lucas-ferreira", "enzo-diaz", "ryan-francisco"])
 santos = srcConjunto("santos", ['gabriel-brazao', 'leo-godoy', 'joao-basso', 'ze-ivaldo', 'escobar', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'deivid-washington'])
 flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira', 'alex-sandro', 'evertton-araujo', 'gerson', 'arrascaeta', 'luiz-araujo', 'cebolinha', 'bruno-henrique'])
+mirassol = srcConjunto("mirassol", ['walter', 'lucas-ramon', 'joao-victor', 'jemmes', 'reinaldo', 'neto-moura', 'danielzinho', 'yago-felipe', 'gabriel', 'negueba', 'edson-carioca'])
 timesFut = setTimesFut()
 
 

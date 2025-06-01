@@ -92,6 +92,14 @@ var meiSp = elConjunto('mei', 'sao paulo', ['lucas-moura', 'matheus-alves', 'osc
 var ponSp = elConjunto("pon", 'sao paulo', ['ferreirinha', 'lucas-ferreira', 'luciano'])
 var caSp = elConjunto("ca", 'sao paulo', ['andre-silva', 'calleri', 'ryan-francisco'])
 
+var golMir = elConjunto("gol", 'mirassol', ['walter', 'alex-muralha'])
+var latMir = elConjunto("lat", 'mirassol', ['lucas-ramon', 'reinaldo', 'daniel-borges'])
+var zagMir = elConjunto("zag", 'mirassol', ['joao-victor', 'jemmes', 'luiz-otavio', 'david-braz'])
+var avolMir = elConjunto("avol", 'mirassol', ['neto-moura', 'danielzinho', 'yago-felipe', 'jose-aldo', 'roni'])
+var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim'])
+var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'fabricio-daniel'])
+var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
+
 var dados = {
     Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],

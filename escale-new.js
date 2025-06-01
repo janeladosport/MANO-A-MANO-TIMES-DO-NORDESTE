@@ -10,7 +10,8 @@ var dados = {
     Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara],
-    Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp]
+    Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
+    Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir]
 };
 
 let esquemas = {
