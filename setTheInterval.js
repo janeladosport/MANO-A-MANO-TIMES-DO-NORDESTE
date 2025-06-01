@@ -1,0 +1,1 @@
+let myInterval = setInterval(checkForUpdate, 30000);

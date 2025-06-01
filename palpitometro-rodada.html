@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <script>
+    let scripts = ['scrip', 'person','elenco-data-base', 'escale-new', 'version-test', 'version', 'palpitometro', 'createTheGame', 'setTheInterval']
+    let csss = ['palpitometro', 'style', 'style-main', 'game']
+    for (i=0; i < scripts.length; i++){
+      const timestamp = new Date().getTime();
+      const script = document.createElement("script");
+      script.src = `${scripts[i]}.js?t=` + timestamp;
+      document.head.appendChild(script);
+    }
+    for (i=0; i < csss.length; i++){
+      const timestamp = new Date().getTime();
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = `${csss[i]}.css?t=` + timestamp;
+      document.head.appendChild(link);
+    }
+
+      </script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PALPITÔMETRO</title>
-    <link rel="stylesheet" href="palpitometro.css?v=<?=filemtime($file);?>">
-    <link rel="stylesheet" href="style.css?v=<?=filemtime($file);?>">
-    <script src="person.js?v=<?=filemtime($file);?>"></script>    
-    <link rel="stylesheet" href="style-main.css?v=<?=filemtime($file);?>"> 
-    <script src="scrip.js?v=<?=filemtime($file);?>"></script> -
     <meta name="og:title" content="PALPITÔMETRO RODADA 10 - SÉRIE A">
     <meta name="og:description" content="Faça seus palpites e o mano a mano para os jogos de hoje">
     <meta name="og:image" content="imagens/capa.png">
     <link rel="image_src" href="imagens/capa.png">
-    <link rel="stylesheet" href="game.css">
-    <script src="elenco-data-base.js?v=<?=filemtime($file);?>"></script>
-    <script src="escale-new.js?v=<?=filemtime($file);?>"></script>
-    <script src="version-test.js?v=<?=filemtime($file);?>"></script>
-    <script src="version.js?v=<?=filemtime($file);?>"></script>
 </head>
 <body>
     <span id="head">Palpitômetro da rodada 10</span>
@@ -25,8 +33,4 @@
     <footer></footer>
     <button id="back" href="index.html"><a id="back-a" href="index.html">VOLTAR</a></button>
 </body>
-<script src="palpitometro.js"></script>
-<script>createGames()
-  let myInterval = setInterval(checkForUpdate, 30000);
-</script>
 </html>
