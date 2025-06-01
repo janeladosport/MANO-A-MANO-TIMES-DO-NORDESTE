@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <script>
-    let scripts = ['scrip', 'person','elenco-data-base', 'escale-new', 'palpitometro', 'createTheGame', 'setTheInterval']
+    let scripts = ['scrip', 'person','elenco-data-base', 'escale-new', 'palpitometro', 'createTheGame']
     let csss = ['palpitometro', 'style', 'style-main', 'game']
     for (i=0; i < scripts.length; i++){
       const timestamp = new Date().getTime();
       const script = document.createElement("script");
       script.src = `${scripts[i]}.js?t=` + timestamp;
+      script.defer = true
       document.head.appendChild(script);
     }
     for (i=0; i < csss.length; i++){
