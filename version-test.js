@@ -9,9 +9,10 @@ let isVersionNew = false
       if (latestVersion !== currentVersion && isVersionNew == false) {
         showUpdateNotice();
         isVersionNew = true
+        clearInterval(myInterval)
         console.log("MUDOU A VERSÃO")
       } else{
-        console.log(`NÃO TEM NOVIDADE. ERA: ${latestVersion} e É: ${currentVersion}`)
+        console.log(`NÃO TEM NOVIDADE. ERA: ${currentVersion} e É: ${latestVersion}`)
       }
     } catch (error) {
       console.error("Erro ao verificar versão:", error);
@@ -20,30 +21,28 @@ let isVersionNew = false
 
   function showUpdateNotice() {
     const notice = document.createElement("div");
+    notice.setAttribute("onclick", 'window.location.reload()')
     notice.classList.add("transition")
-    notice.innerText = "Uma nova versão do site está disponível. Atualize a página.";
+    notice.innerText = "Novas atualizações no site. Atualize a página.";
     notice.style.position = "fixed";
-    notice.style.height = 'fit-content'
-    notice.style.padding = "1em";
-    notice.style.backgroundColor = "#ffcc00";
-    notice.style.color = "#000";
-    notice.style.textAlign = "center";
-    notice.style.zIndex = "9999";
     document.body.appendChild(notice)
     let topSet = 0 - notice.offsetHeight
     notice.style.inset = `${topSet}px 0 0 0`
-    let counter = 0
-function mostrarAviso() {
-  if (counter >= 3) return; // para após 3 repetições
-  notice.style.top = "0"; // aparece
-  setTimeout(() => {
-    notice.style.top = `${topSet}px`; // esconde após 5s
-    counter++;
-    if (counter < 3) {
-      setTimeout(mostrarAviso, 60000); // espera 1 min e repete
-    }
-  }, 5000); // visível por 5s
-}
-// exibe imediatamente ao carregar
-mostrarAviso();
+    notice.style.top = 0
+//     let counter = 0
+// function mostrarAviso() {
+//   if (counter >= 3) return; // para após 3 repetições
+//   notice.style.top = "0"; // aparece
+//   setTimeout(() => {
+//     notice.style.top = `${topSet}px`; // esconde após 5s
+//     counter++;
+//     if (counter < 3) {
+//       setTimeout(mostrarAviso, 60000); // espera 1 min e repete
+//     }
+//   }, 5000); // visível por 5s
+// }
+// // exibe imediatamente ao carregar
+// mostrarAviso();
   }
+
+showUpdateNotice()

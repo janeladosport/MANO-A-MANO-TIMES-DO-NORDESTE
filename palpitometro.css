@@ -22,7 +22,19 @@
 }
 .transition{
     transition-duration: 0.5s;
+    cursor: pointer;
+    background-color: rgba(110, 7, 0, 0.999);
+    color: white;
+    box-shadow: 1px 1px 4px black;
+    padding: 1em;
+    height: fit-content;
+    text-align: center;
+    z-index: 10000;
+    user-select: none;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.transition:hover{
+    background-color: rgba(90, 6, 0, 0.999);
 }
 :root{
     --corBoxSpanJogo: rgb(36, 36, 36);
