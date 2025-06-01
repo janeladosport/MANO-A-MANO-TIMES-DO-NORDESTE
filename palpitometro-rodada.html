@@ -3,13 +3,23 @@
   <script>
     let scripts = ['scrip', 'person','elenco-data-base', 'escale-new', 'palpitometro', 'createTheGame']
     let csss = ['palpitometro', 'style', 'style-main', 'game']
-    for (i=0; i < scripts.length; i++){
-      const timestamp = new Date().getTime();
-      const script = document.createElement("script");
-      script.src = `${scripts[i]}.js?t=` + timestamp;
-      script.defer = true
-      document.head.appendChild(script);
-    }
+    function loadScriptsSequentially(scripts, index = 0) {
+  if (index >= scripts.length) return;
+
+  const timestamp = new Date().getTime();
+  const script = document.createElement("script");
+  script.src = `${scripts[index]}.js?t=${timestamp}`;
+  script.defer = true;
+
+  script.onload = () => {
+    // Quando esse script carregar, carrega o próximo
+    loadScriptsSequentially(scripts, index + 1);
+  };
+
+  document.head.appendChild(script);
+}
+
+loadScriptsSequentially(scripts);
     for (i=0; i < csss.length; i++){
       const timestamp = new Date().getTime();
       const link = document.createElement("link");
@@ -17,7 +27,6 @@
       link.href = `${csss[i]}.css?t=` + timestamp;
       document.head.appendChild(link);
     }
-
       </script>
 <head>
     <meta charset="UTF-8">
@@ -34,4 +43,6 @@
     <footer></footer>
     <button id="back" href="index.html"><a id="back-a" href="index.html">VOLTAR</a></button>
 </body>
+<script>
+</script>
 </html>
