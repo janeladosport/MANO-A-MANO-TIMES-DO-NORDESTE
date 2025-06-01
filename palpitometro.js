@@ -254,7 +254,7 @@ function createMAM(element, escUm, escDois){
     newPerson.classList.add("maximizar")
     newPerson.id = 'personalizar'
     newPerson.src = "imagens/personalizar.png"
-    newPerson.setAttribute("onclick", 'personalizar(this)')
+    newPerson.setAttribute("onclick", 'personalizar(this), limpar()')
     titulo.appendChild(newPerson)
     } else if (document.getElementById("personalizar")){
         document.getElementById("personalizar").remove()
