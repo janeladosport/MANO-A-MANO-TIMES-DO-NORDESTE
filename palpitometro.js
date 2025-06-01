@@ -470,7 +470,7 @@ function personalizar(element){
         putElenco(firstLetterUpercase(teamOne), newDiv)
         putElenco(firstLetterUpercase(teamTwo), newDiv)
         setAllOnclick('item', 'changeSource(this)')
-        document.getElementsByClassName("mam")[0].style.marginBottom = "50%"
+        document.getElementsByClassName("mam")[0].style.marginBottom = "50vh"
     } else if (isSelected == true){
         element.classList.remove("selected")
         document.getElementById('person-div').remove()
