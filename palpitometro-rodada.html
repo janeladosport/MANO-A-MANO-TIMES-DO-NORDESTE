@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PALPITÔMETRO</title>
-    <link rel="stylesheet" href="palpitometro.css?v=<?=hash_file('md5', $file);?">
-    <link rel="stylesheet" href="style.css?v=<?=hash_file('md5', $file);?">
-    <script src="person.js?v=<?=hash_file('md5', $file);?"></script>    
-    <link rel="stylesheet" href="style-main.css?v=<?=hash_file('md5', $file);?"> 
-    <script src="scrip.js?v=<?=hash_file('md5', $file);?"></script> -
+    <link rel="stylesheet" href="palpitometro.css?v=<?=filemtime($file);?>">
+    <link rel="stylesheet" href="style.css?v=<?=filemtime($file);?>">
+    <script src="person.js?v=<?=filemtime($file);?>"></script>    
+    <link rel="stylesheet" href="style-main.css?v=<?=filemtime($file);?>"> 
+    <script src="scrip.js?v=<?=filemtime($file);?>"></script> -
     <meta name="og:title" content="PALPITÔMETRO RODADA 10 - SÉRIE A">
     <meta name="og:description" content="Faça seus palpites e o mano a mano para os jogos de hoje">
     <meta name="og:image" content="imagens/capa.png">
     <link rel="image_src" href="imagens/capa.png">
     <link rel="stylesheet" href="game.css">
-    <script src="elenco-data-base.js?v=<?=hash_file('md5', $file);?"></script>
-    <script src="escale-new.js?v=<?=hash_file('md5', $file);?"></script>
-    <script src="version-test.js?v=<?=hash_file('md5', $file);?"></script>
-    <script src="version.js?v=<?=hash_file('md5', $file);?"></script>
+    <script src="elenco-data-base.js?v=<?=filemtime($file);?>"></script>
+    <script src="escale-new.js?v=<?=filemtime($file);?>"></script>
+    <script src="version-test.js?v=<?=filemtime($file);?>"></script>
+    <script src="version.js?v=<?=filemtime($file);?>"></script>
 </head>
 <body>
     <span id="head">Palpitômetro da rodada 10</span>
