@@ -1,29 +1,29 @@
-const currentVersion = "1.0.2"; // mesma versão do último push
-  const versionUrl = "version.txt"; // caminho para o arquivo
-let isVersionNew = false
-  async function checkForUpdate() {
-    try {
-        console.log("TRYING")
-      const response = await fetch(versionUrl + '?t=' + new Date().getTime()); // evita cache
-      const latestVersion = (await response.text()).trim();
-      if (latestVersion !== currentVersion && isVersionNew == false) {
-        showUpdateNotice();
-        isVersionNew = true
-        clearInterval(myInterval)
-        console.log("MUDOU A VERSÃO")
-      } else{
-        console.log(`NÃO TEM NOVIDADE. ERA: ${currentVersion} e É: ${latestVersion}`)
-      }
-    } catch (error) {
-      console.error("Erro ao verificar versão:", error);
+let currentVersion = "1.0.3"; // versão atual que o site está usando
+let hasShownNotice = false;
+
+async function checkForUpdate() {
+  try {
+    const response = await fetch("version.js?t=" + new Date().getTime());
+    const text = await response.text();
+    const match = text.match(/appVersion\s*=\s*["'](.*?)["']/);
+    const latestVersion = match ? match[1] : null;
+    if (latestVersion && latestVersion !== currentVersion && !hasShownNotice) {
+      console.log(`Nova versão detectada: ${latestVersion}`);
+      showUpdateNotice(); // sua função para avisar o usuário
+      hasShownNotice = true;
+    } else {
+      console.log(`Sem novidade. Versão atual: ${currentVersion}, última: ${latestVersion}`);
     }
+  } catch (err) {
+    console.error("Erro ao buscar versão:", err);
   }
+}
 
   function showUpdateNotice() {
     const notice = document.createElement("div");
     notice.setAttribute("onclick", 'window.location.reload()')
     notice.classList.add("transition")
-    notice.innerText = "Novas atualizações no site. Atualize a página.";
+    notice.innerText = "Novas atualizações no site. Clique aqui para atualizar a página.";
     notice.style.position = "fixed";
     document.body.appendChild(notice)
     let topSet = 0 - notice.offsetHeight
