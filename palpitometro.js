@@ -9,13 +9,14 @@ function escudos(time){
 jogos = [
     ['bahia', 'saopaulo', [2,1], "notas"],
     ['vasco', 'bragantino', [0,2]],
-    ['mirassol', 'sport'],
-    ['santos', 'botafogo'],
-    ['juventude', 'gremio'],
-    ['flamengo', 'fortaleza'],
-    ['corinthians', 'vitoria'],
-    ['ceara', 'atletico'],
-    ['cruzeiro', 'palmeiras']
+    ['mirassol', 'sport', [1,0], 'notas'],
+    ['santos', 'botafogo', [0,1]],
+    ['juventude', 'gremio', [0,2]],
+    ['flamengo', 'fortaleza', [5,0]],
+    ['corinthians', 'vitoria', [0,0], 'notas'],
+    ['ceara', 'atletico', [0,1]],
+    ['cruzeiro', 'palmeiras', [2,1]],
+    ['inter', 'fluminense', [0,1]]
 ]
 
 
@@ -24,22 +25,25 @@ correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
 
+internacional = srcConjunto("inter", ['anthoni', 'aguirre', 'vitao', 'juninho', 'ramon', 'fernando', 'bruno-henrique', 'alan-patrick', 'vitinho', 'wesley', 'borre'])
 juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "marcos-paulo", "alan-ruschel", "caique", "daniel-peixoto", "mandaca", "batalla", "giovany", "gilberto"])
 sport = srcConjunto("sport", ["caique-frança", "hereda", "lucas-cunha", "antonio-carlos", "chico", "ze-lucas", "du-queiroz", "lucas-lima", "barletta", "igor-carius", "pablo"])
-ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "matheus-bahia", "dieguinho", "lourenço", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
-vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "jamerson", "ricardo-ryller", "baralhas", "ronald", "wellington-rato", "osvaldo", "renato-kayzer"])
+ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "nicolas", "dieguinho", "fernando-sobral", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
+vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "ze-marcos", "baralhas", "ronald", "lucas-braga", "janderson" ,"jamerson", "renato-kayzer"])
 bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "ademir", "erick-pulga", "william-jose"])
-botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "rwan-cruz", "artur", "igor-jesus"])
-fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "eros-mancuso", "david-luiz", "gustavo-mancha", "bruno-pacheco", "ze-welisson", "martinez", "pochettino", "pikachu", "breno-lopes", "lucero"])
+botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "artur", "savarino", "rwan-cruz"])
+fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "tinga", "kuscevic", "gustavo-mancha", "eros-mancuso", "ze-welisson", "martinez", "pochettino", "lucca-prior", "marinho", "deyverson"])
 vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lucas-freitas", "lucas-piton", "jair", "tche-tche", "coutinho", "nuno-moreira","rayan", "vegetti"])
-corinthians = srcConjunto("corinthians", ["hugo-souza", "felix-torres", "andre-ramalho", "caca", "angileri", "maycon", "raniele", "carillo", "romero", "igor-coronado", "yuri-alberto"])
+corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "matheus-bidu", "maycon", "raniele", "breno-bidon", "depay", "talles-magno", "hector-hernandez"])
 gremio = srcConjunto("gremio", ["tiago-volpi", "ronald", "wagner-leonardo", "kannemann", "marlon", "dodi", "villasanti", "cristaldo", "cristian-oliveira", "aravena", "braithwaite"])
 bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "vinicinho", "pitta", "sasha"])
-fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "martinelli", "hercules", "ganso", "arias", "keno", "everaldo"])
+fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "rene", "thiago-santos", "nonato", "martinelli", "arias", "kevin-serna", "everaldo"])
 saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "sabino", "wendell", "pablo-maia", "bobadilla", "luciano", "lucas-ferreira", "enzo-diaz", "ryan-francisco"])
-santos = srcConjunto("santos", ['gabriel-brazao', 'leo-godoy', 'joao-basso', 'ze-ivaldo', 'escobar', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'deivid-washington'])
+santos = srcConjunto("santos", ['gabriel-brazao', 'escobar', 'joao-basso', 'ze-ivaldo', 'souza', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'barreal'])
 flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira', 'alex-sandro', 'evertton-araujo', 'gerson', 'arrascaeta', 'luiz-araujo', 'cebolinha', 'bruno-henrique'])
 mirassol = srcConjunto("mirassol", ['walter', 'lucas-ramon', 'joao-victor', 'jemmes', 'reinaldo', 'jose-aldo', 'danielzinho', 'yago-felipe', 'gabriel', 'negueba', 'edson-carioca'])
+atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
+cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
 timesFut = setTimesFut()
 
 
