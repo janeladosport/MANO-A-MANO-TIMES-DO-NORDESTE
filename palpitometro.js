@@ -19,12 +19,8 @@ correspondencia = {
 
 internacional = srcConjunto("inter", ['anthoni', 'aguirre', 'vitao', 'juninho', 'ramon', 'fernando', 'bruno-henrique', 'alan-patrick', 'vitinho', 'wesley', 'borre'])
 juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "marcos-paulo", "alan-ruschel", "caique", "daniel-peixoto", "mandaca", "batalla", "giovany", "gilberto"])
-sport = srcConjunto("sport", ["caique-frança", "hereda", "lucas-cunha", "antonio-carlos", "chico", "ze-lucas", "du-queiroz", "lucas-lima", "barletta", "igor-carius", "pablo"])
-ceara = srcConjunto("ceara", ["fernando-miguel", "fabiano-souza", "marllon", "william-machado", "nicolas", "dieguinho", "fernando-sobral", "lucas-mugni", "galeano", "pedro-henrique", "pedro-raul"])
 vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "edu", "lucas-halter", "ze-marcos", "baralhas", "ronald", "lucas-braga", "janderson" ,"jamerson", "renato-kayzer"])
-bahia = srcConjunto("bahia", ["marcos-felipe", "gilberto", "david-duarte", "ramos-mingo", "luciano-juba", "caio-alexandre", "jean-lucas", "everton-ribeiro", "ademir", "erick-pulga", "william-jose"])
 botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "artur", "savarino", "rwan-cruz"])
-fortaleza = srcConjunto("fortaleza", ["joao-ricardo", "tinga", "kuscevic", "gustavo-mancha", "eros-mancuso", "ze-welisson", "martinez", "pochettino", "lucca-prior", "marinho", "deyverson"])
 vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lucas-freitas", "lucas-piton", "jair", "tche-tche", "coutinho", "nuno-moreira","rayan", "vegetti"])
 corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "matheus-bidu", "maycon", "raniele", "breno-bidon", "depay", "talles-magno", "hector-hernandez"])
 gremio = srcConjunto("gremio", ["tiago-volpi", "ronald", "wagner-leonardo", "kannemann", "marlon", "dodi", "villasanti", "cristaldo", "cristian-oliveira", "aravena", "braithwaite"])
