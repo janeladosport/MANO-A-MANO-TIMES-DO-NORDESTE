@@ -7,16 +7,8 @@ function escudos(time){
 }
 
 jogos = [
-    ['bahia', 'saopaulo', [2,1], "notas"],
-    ['vasco', 'bragantino', [0,2]],
-    ['mirassol', 'sport', [1,0], 'notas'],
-    ['santos', 'botafogo', [0,1]],
-    ['juventude', 'gremio', [0,2]],
-    ['flamengo', 'fortaleza', [5,0]],
-    ['corinthians', 'vitoria', [0,0], 'notas'],
-    ['ceara', 'atletico', [0,1]],
-    ['cruzeiro', 'palmeiras', [2,1]],
-    ['inter', 'fluminense', [0,1]]
+    ['sport', 'ceara'],
+    ['fortaleza', 'bahia']
 ]
 
 
