@@ -148,6 +148,13 @@ body::-webkit-scrollbar-thumb{
     left: 50%;
 }
 
+#back{
+    position: fixed;
+    top: 90%;
+    text-align: center;
+    padding: 10px;
+}
+
 #head{
     text-transform: uppercase;
     text-align: center;
@@ -157,6 +164,7 @@ body::-webkit-scrollbar-thumb{
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.425);
 }
 #palpites{
+    margin-top: 90px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -296,4 +304,94 @@ body::-webkit-scrollbar-thumb{
     border: 3px solid red;
     width: 103px;
     height: 103px;
+}
+.info{
+    width: 25px;
+    height: 25px;
+    float: right;
+    align-self: center;
+    position: relative;
+}
+.info:hover{
+    width: 26px;
+    height: 26px;
+}
+#hide{
+    display: none;
+}
+#info-match{
+    color: white;
+    font-weight: 600;
+    font-size: 15pt;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: rgb(72, 72, 72);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.transmission-box{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.transmission-img{
+    margin: 10px 0;
+    max-height: 70px;
+    max-width: 70px;
+}
+.info-title{
+    font-weight: 1000;
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.info-back-button{
+    position: absolute;
+    top: 85%;
+    left: 75%;
+    background-color: rgb(136, 0, 0);
+    width: fit-content;
+    padding: 10px 28px;
+    border-radius: 10px;
+    transition-duration: 0.3s ;
+    transition-timing-function: cubic-bezier();
+}
+.info-back-button:hover{
+    background-color: rgb(162, 0, 0);
+}
+.iframe-campo{
+    margin-top: 50px;
+    width: 100vw;
+    height: 400vh;
+    border: 0;
+}
+.choice{
+    background-color: gray;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 160px;
+    color: black;
+    font-weight: 600;
+    font-size: 20pt;
+    text-transform: uppercase;
+    border-radius: 12px;
+    text-align: center;
+}
+.team-img-choice{
+    margin: 5px 17px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition-duration: 0.4s; 
+    transition-timing-function: cubic-bezier();
+}
+.team-img-choice:hover{
+    background-color: #673232;
 }

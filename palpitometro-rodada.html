@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <script>
-    let scripts = ['scrip', 'person','elenco-data-base', 'escale-new', 'palpitometro', 'createTheGame', 'version', 'version-test', 'setTheInterval']
-    let csss = ['palpitometro', 'style', 'style-main', 'game']
-    function loadScriptsSequentially(scripts, index = 0) {
-  if (index >= scripts.length) return;
 
-  const timestamp = new Date().getTime();
-  const script = document.createElement("script");
-  script.src = `${scripts[index]}.js?t=${timestamp}`;
-  script.defer = true;
-
-  script.onload = () => {
-    // Quando esse script carregar, carrega o próximo
-    loadScriptsSequentially(scripts, index + 1);
-  };
-
-  document.head.appendChild(script);
-}
-
-loadScriptsSequentially(scripts);
-    for (i=0; i < csss.length; i++){
-      const timestamp = new Date().getTime();
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = `${csss[i]}.css?t=` + timestamp;
-      document.head.appendChild(link);
-    }
-      </script>
-<head>
+<head>     
+  <script src="goto.js"></script>
+  <link rel="stylesheet" href="palpitometro.css">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style-main.css">
+       <link rel="stylesheet" href="game.css">
+    <script src="scrip.js"></script>
+    <script src="person.js"></script>
+    <script src="elenco-data-base.js"></script>
+    <script src="escale-new.js"></script>
+    <script src="palpitometro.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PALPITÔMETRO</title>
@@ -38,11 +21,18 @@ loadScriptsSequentially(scripts);
     <link rel="image_src" href="imagens/capa.png">
 </head>
 <body>
-    <span id="head">Palpitômetro - Quartas de final - Copa do nordeste</span>
+  <div id="title">
+        <img src="imagens/MANO A MANO ICONE.ico" alt="" class="pointer" onclick="goto('index.html')">
+        Palpitômetro - Quartas de final - Copa do nordeste
+    </div>
+    <a href="index.html" id="back">VOLTAR</a>
+    <span id="head"></span>
     <div id="palpites"></div>
     <footer></footer>
-    <button id="back" href="index.html"><a id="back-a" href="index.html">VOLTAR</a></button>
 </body>
+
+    <script src="createTheGame.js"></script>
 <script>
+  
 </script>
 </html>

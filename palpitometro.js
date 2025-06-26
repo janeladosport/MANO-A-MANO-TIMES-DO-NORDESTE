@@ -7,11 +7,78 @@ function escudos(time){
 }
 
 jogos = [
-    ['sport', 'ceara'],
-    ['fortaleza', 'bahia']
+    ['sport', 'ceara', null, 'escale'],
+    ['bahia', 'fortaleza', null, 'escale']
 ]
 
+info = {
+    'sportxceara': {
+        'title': ['SPORT X CEARÁ'],
+        'transm': ['sbt', 'premiere'],
+        'arbitro': [],
+        'data': '21:30, 9 de Julho - Quarta-feira',
+        'local': 'Ilha do Retiro, Recife-PE'
+    },
+    'bahiaxfortaleza': {
+        'title': ['BAHIA X FORTALEZA'],
+        'transm': ['espn', 'sbt', 'premiere'],
+        'arbitro': [],
+        'data': '21:30, 9 de Julho - Quarta-feira',
+        'local': 'Arena Fonte Nova - Salvador-BA'
+    }
+}
 
+function hideAndShow(item){
+    if (document.getElementById("info-match") == item){console.log("É IGUAL")}
+    if (document.getElementById("info-match") && document.getElementById("info-match") != item){
+        console.log("2")
+        document.getElementById("info-match").id = 'hide'
+    } 
+    if (item.id == 'info-match'){
+        item.id = 'hide'
+    } else{
+        console.log("3")
+        item.id = 'info-match'
+    }
+}
+
+function createNewInfo(infoConfronto, newInfo){
+    let dAndP = ['title', 'data', 'local']
+    for (a=0;a<dAndP.length; a++){
+        if (infoConfronto[dAndP[a]]){
+            let newProp = createElement('div', [['innerHTML', infoConfronto[dAndP[a]]]])
+            if (dAndP[a] == 'title'){newProp.classList.add('info-title')}
+            newInfo.appendChild(newProp)
+        }
+    }
+    if (infoConfronto['transm']){
+        let conjunto = infoConfronto['transm']
+        let transmBox = createElement("div", [['class', 'transmission-box']])
+        newInfo.appendChild(transmBox)
+        let nsp = createElement("div", [['id', 'transmission-span'], ['innerHTML', 'Transmissão:']])
+        transmBox.appendChild(nsp)
+        for (t=0; t < conjunto.length; t++){
+            let newImg = createElement('img', [['src', `imagens/${conjunto[t]}.png`], ['class', 'transmission-img']])
+            transmBox.appendChild(newImg)
+        }
+    }
+
+    let buttonBack = createElement("button", [['innerHTML', 'VOLTAR'], ['class', 'info-back-button']])
+    newInfo.appendChild(buttonBack)
+    buttonBack.addEventListener('click', function (e){hideAndShow(newInfo)})
+}
+
+function setProperties(infoConfronto, palpiteSpan){
+    let newItem = document.createElement("img")
+    newItem.src = 'imagens/info.png'
+    newItem.classList.add("info")
+    palpiteSpan.appendChild(newItem)
+    let newInfo = document.createElement("div")
+    newInfo.id = 'hide'
+    createNewInfo(infoConfronto, newInfo)
+    document.body.appendChild(newInfo)
+    newItem.addEventListener('click', function (e) {hideAndShow(newInfo)})
+}
 
 correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
@@ -50,16 +117,21 @@ function createGames(){
         newCabine.setAttribute("datainfo-um", jogos[i][0])
         newCabine.setAttribute("datainfo-dois", jogos[i][1])
         palpites.appendChild(newCabine)
-
         let span = document.createElement("span")
         let sTu; let sTd; let inputone; let inputtwo
         
+        let firstTeam = jogos[i][0]
+        let secondTeam = jogos[i][1]
         if (correspondencia[jogos[i][0]]){sTu = correspondencia[jogos[i][0]]} else {sTu = jogos[i][0][0].toUpperCase() + jogos[i][0].substring(1)}
         if (correspondencia[jogos[i][1]]){sTd = correspondencia[jogos[i][1]]} else {sTd = jogos[i][1][0].toUpperCase() + jogos[i][1].substring(1)}
         span.innerHTML = `${sTu} X ${sTd}`
         newCabine.appendChild(span)
         span.classList.add("palpite-span")
-
+        let confronto = `${jogos[i][0]}x${jogos[i][1]}`
+        if (info[confronto]){
+            setProperties(info[confronto], span)
+        }
+        
         let escudoUm = escudos(jogos[i][0])
         let newImg = document.createElement("img")
         newImg.src = escudoUm
@@ -111,9 +183,48 @@ function createGames(){
             teamTwo = getFirstUppercase(newCabine.getAttribute("datainfo-dois"))
             button.setAttribute("onclick", `verifyMAMNOTES(); notes('${teamOne}', '${teamTwo}');`);            
             newCabine.appendChild(button)
+        } else if (jogos[i][3]=='escale'){
+            buttonMAM.setAttribute("onclick", 'verifyEscale(), mam(this)')
+            let button = createElement('button', [['class', 'palpites-button-alone'], ['innerHTML', 'ESCALE SEU TIME']])
+            button.addEventListener("click", function (){
+                verifyEscale()
+                if (document.getElementsByClassName("mam")[0]){ document.getElementsByClassName("mam")[0].remove()}
+                let choice = createElement('div', [['class', 'choice']])
+                document.body.appendChild(choice)
+                let divspan = createElement("div", [['class', 'choice-span'], ['innerHTML', 'Selecione o time:']])
+                let img1 = createElement("img", [['class', 'team-img-choice'], ['src', escudoUm]])
+                let img2 = createElement("img", [['class', 'team-img-choice'], ['src', escudoDois]])
+                choice.appendChild(divspan)
+                choice.appendChild(img1)
+                choice.appendChild(img2)
+                img1.addEventListener("click", function (){
+                    createIframe(firstLetterUpercase(firstTeam))
+                    choice.remove()
+                })
+                img2.addEventListener("click", function (){
+                    createIframe(firstLetterUpercase(secondTeam))
+                    choice.remove()
+                })
+            })
+            newCabine.appendChild(button)
+    
         }
         
     }
+}
+
+function verifyEscale(){
+    console.log('verificando')
+    if (document.getElementsByTagName('iframe')[0]){
+        document.getElementsByTagName('iframe')[0].remove()
+    }
+}
+
+function createIframe(team){
+    let iframe = createElement('iframe', [['src', 'escale-pure.html'], ['class', 'iframe-campo']])
+    document.body.appendChild(iframe)
+    iframe.onload = function (){
+    iframe.contentWindow.selectTeam({value: team})}
 }
 
 function getFirstUppercase(text){

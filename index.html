@@ -11,28 +11,78 @@
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
 </head>
 <body id="inicio">
-    <div id="titulo">
+    <div id="title" onclick="goto('index.html')">
+        <img src="imagens/MANO A MANO ICONE.ico" alt="">
         MANO A MANO - TIMES DO NORDESTE
     </div>
     <div id="flex">
+        <div class="emmet-esp">
+            <div class="tool" onclick="goto('palpitometro-rodada.html')">
+                <a href="palpitometro-rodada.html" id="especial">
+                    <button>PALPITOMETRO + MANO A MANO - COPA DO NORDESTE</button>
+                </a>
+                <div class="desc">
+                    Faça seus palpites e o mano a mano das quartas de final da copa do nordeste
+                </div>
+            </div>
+        </div>
+        <div style="flex: 1 1 100%; text-align: center; font-size: 18pt; color: white;font-weight: 600; text-transform: uppercase;margin: 10px 0;">Ferramentas em manutenção até 04/06...</div>
+        <div class="tool block">
+            <a><button>Mano a Mano: NORDESTE + Escalação do nordeste</button></a>
+            <div class="desc"> Quais os melhores jogadores dos 5 times da Série A do nordeste? Monte sua seleção</div>
+        </div>
+        <div class="tool block">
+            <a><button>Mano a Mano Personalizado</button></a>
+            <div class="desc">Quer fazer Bahia X Vitória, Sport X Fortaleza, Ceará X Fortaleza? Faça o mano a mano entre quaisquer times do nordeste</div>
+        </div>
+        <div class="tool block">
+            <a><button>Escale seu time</button></a>
+            <div class="desc">Escale seu time ideal para o próximo jogo</div>
+        </div>
+        <div class="tool block"> 
+            <a><button>Tier List</button> </a>
+            <div class="desc"> Faça o ranking das notas dos jogadores no jogo do seu time! </div>
+        </div>
+        <!-- <div class="tool" onclick="goto('nordeste.html')">
+            <a href="nordeste.html">
+                <button>Mano a Mano: NORDESTE + Escalação do nordeste</button>
+            </a>
+            <div class="desc">
+                Quais os melhores jogadores dos 5 times da Série A do nordeste? Monte sua seleção
+            </div>
+        </div>
+        <div class="tool" onclick="goto('personalizado.html')">
+            <a href="personalizado.html">
+                <button>Mano a Mano Personalizado</button>
+            </a>
+            <div class="desc">
+                Quer fazer Bahia X Vitória, Sport X Fortaleza, Ceará X Fortaleza? Faça o mano a mano entre quaisquer times do nordeste
+            </div>
+        </div>
+        <div class="tool" onclick="goto('escale-new.html')">
+            <a href="escale-new.html">
+                <button>Escale seu time</button>
+            </a>
+            <div class="desc">
+                Escale seu time ideal para o próximo jogo
+            </div>
+        </div>
+        <div class="tool" onclick="goto('tier-list.html')">
+            <a href="tier-list.html">
+                <button>Tier List</button>
+            </a>
+            <div class="desc">
+                Faça o ranking das notas dos jogadores no jogo do seu time!
+            </div>
+        </div> -->
+    </div>
+    <!-- <div id="flex">
         <a href="palpitometro-rodada.html" id="especial">
             <button>PALPITÔMETRO + MANO A MANO - COPA DO NORDESTE - QUARTAS DE FINAL</button>
         </a>
         <a href="nordeste.html">
             <button>Mano a Mano: NORDESTE + ESCALAÇÃO DO NORDESTE</button>
         </a>
-        <!-- <a href="sport-vitoria.html">
-            <button>Mano a Mano: Sport x Vitória</button>
-        </a>
-        <a href="sport-fortaleza.html">
-            <button>Mano a Mano: Sport x Fortaleza</button>
-        </a>
-        <a href="sport-bahia.html">
-            <button>Mano a Mano: Sport x Bahia</button>
-        </a>
-        <a href="sport-ceara.html">
-            <button>Mano a Mano: Sport x Ceará</button>
-        </a> -->
         <a href="personalizado.html">
             <button>Mano a Mano Personalizado</button>
         </a>
@@ -42,11 +92,31 @@
         <a href="tier.html">
             <button>Tier List</button>
         </a>
-    </div>
+    </div> -->
 </body>
 <style>
+    .block, .block a, .block a button{
+        cursor: not-allowed;
+    }
+    .block a{
+        background-color: rgb(69, 68, 68);
+    }
+    .block .desc{
+        background-color: rgb(1, 1, 1);
+        color: white;
+    }
     #especial, #especial button{
         background-color: rgb(230, 2, 2);
+        flex-basis: 100%;
+    }
+    .emmet-esp{
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .emmet-esp .tool{
+        width: 78%;
     }
 </style>
+<script src="goto.js"></script>
 </html>

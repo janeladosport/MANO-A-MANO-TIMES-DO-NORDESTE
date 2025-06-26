@@ -1,18 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+:root{
+    --brr-btt: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
 footer > a{
     margin-left: 20px;
     border-radius: 15px;
 }
 
-a{
-    padding: 20px;
+.tool{
     border: 0;
     cursor: pointer;
-    width: 35%;
+    width: 25%;
+    height: fit-content;
     margin: 10px;
+}
+
+.tool a{
+    align-items: center;
+    height: 42px;
+    z-index: 9999;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    transition-property: border-radius;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier();
+    border-radius: var(--brr-btt);
+    background-color: rgb(168, 0, 0);
+}
+
+.desc{
+    z-index: 0;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier();
+    top: -60px;
+    opacity: 0;
+    height: 0;
     background-color: rgb(194, 1, 39);
-    border-radius: 3px;
+}
+
+.tool:hover a{
+    border-radius: var(--brr-btt) var(--brr-btt) 0 0 ;
+}
+
+.tool:hover .desc{
+    padding: 20px;
+    height: fit-content;
+    opacity: 1;
+    top: 0;
+    border-radius: 0 0 var(--brr-btt) var(--brr-btt);
 }
 
 button, a#voltar{
@@ -21,11 +63,11 @@ button, a#voltar{
     font-weight: 600;
     font-family: "Roboto", Arial, Helvetica, Sans-serif;
     font-size: 13pt;
-    background-color: rgb(194, 1, 39);
     border: 0;
     cursor: pointer;
     width: 100%;
     user-select: none;
+    background: none;
 }
 
 div.item, div.item > img{
@@ -41,12 +83,20 @@ div#flex > a:hover, div#flex > a:hover > button, footer > a:hover > button, foot
     background-color: rgb(165, 1, 34);
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 10pt;
+}
 
 #flex{
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 90px;
+    flex-basis: 50%;
+    justify-content: center;
 }
 
 body{
@@ -54,12 +104,32 @@ body{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-#titulo{
-    color: white;
-    text-align: center;
-    margin: 40px 0px 30px;
+.pointer{
+    cursor: pointer;
+}
+
+#title{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    color: rgb(255, 255, 255);
     font-size: 20pt;
     font-weight: 700;
+    text-align: start;
+    padding: 10px;
+    padding-left: 30px;
+    height: 50px;
+    top: 0;
+}
+
+#titulo{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button#voltar, a#voltar{
@@ -80,7 +150,7 @@ div.item, div.item > img{
     user-select: none;
 }
 
-img, div.mam, #titulo, span{
+img, div.mam, #title, span{
     user-select: none;
 }
 
@@ -109,7 +179,7 @@ span{
     }
 }
 
-#titulo > img, img.esc{
+#titulo > img, img.esc, #title > img, img.esc{
     max-width: 40px;
     max-height: 40px;
     margin: 0 10px;
@@ -120,11 +190,6 @@ span.nada{
     border: 0 !important;
 }
 
-#titulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .esc-div{
     display: flex;
