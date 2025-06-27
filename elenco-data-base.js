@@ -41,17 +41,14 @@ var meiBahia = elConjunto('mei', 'bahia', ['everton-ribeiro', 'cauly'])
 var ponBahia = elConjunto('pon', 'bahia', ['erick-pulga','ademir', 'michel-araujo', 'kayky'])
 var caBahia = elConjunto('ca', 'bahia', ['william-jose', 'lucho-rodriguez'])
 
-var golFortaleza = ["Goleiro", "gol-esc", "imagens/fortaleza/joao-ricardo.png", "imagens/fortaleza/brenno.png", "imagens/fortaleza/magrao.png"]
-var ldFortaleza = ["Lateral Direito", "ld-esc", "imagens/fortaleza/eros-mancuso.png", "imagens/fortaleza/tinga.png", "imagens/fortaleza/britez.png"]
-var leFortaleza = ["Lateral Esquerdo", "le-esc", "imagens/fortaleza/bruno-pacheco.png", "imagens/fortaleza/diogo-barbosa.png", "imagens/fortaleza/felipe-jonatan.png", "imagens/fortaleza/eros-mancuso.png", "imagens/fortaleza/gaston-avila.png"]
-var zdFortaleza = ["Zagueiro Direito", "zd-esc", "imagens/fortaleza/david-luiz.png", "imagens/fortaleza/britez.png", "imagens/fortaleza/kuscevic.png", "imagens/fortaleza/gustavo-mancha.png"]
-var zeFortaleza = ["Zagueiro Esquerdo", "ze-esc", "imagens/fortaleza/gaston-avila.png", "imagens/fortaleza/titi.png", "imagens/fortaleza/david-luiz.png"]
-var volFortaleza = ["1º Volante", "vol-esc", "imagens/fortaleza/pol-fernandez.png", "imagens/fortaleza/rosseto.png", "imagens/fortaleza/ze-welisson.png", "imagens/fortaleza/lucas-sasha.png", "imagens/fortaleza/pedro-augusto.png"]
-var mcFortaleza = ["2º Volante", "mc-esc", "imagens/fortaleza/ze-welisson.png", "imagens/fortaleza/lucas-sasha.png", "imagens/fortaleza/martinez.png"]
-var meiFortaleza = ["Meia", "mei-esc", "imagens/fortaleza/pochettino.png", "imagens/fortaleza/calebe.png", "imagens/fortaleza/martinez.png", "imagens/fortaleza/kervin-andrade.png"]
-var pdFortaleza = ["Ponta direita", "pd-esc", "imagens/fortaleza/pikachu.png", "imagens/fortaleza/marinho.png"]
-var peFortaleza = ["Ponta esquerda", "pe-esc", "imagens/fortaleza/moises.png", "imagens/fortaleza/breno-lopes.png"]
-var caFortaleza = ["Centroavante", "ca-esc", "imagens/fortaleza/lucero.png", "imagens/fortaleza/renato-kayzer.png", "imagens/fortaleza/dylan-borrero.png"]
+var golFortaleza = elConjunto('gol', 'fortaleza', ['joao-ricardo', 'brenno', 'magrao'])
+var ldFortaleza = elConjunto('ld', 'fortaleza', ['eros-mancuso', 'tinga'])
+var leFortaleza = elConjunto('le', 'fortaleza', ['bruno-pacheco', 'diogo-barbosa'])
+var zagFortaleza = elConjunto('zag', 'fortaleza', ['david-luiz', 'gustavo-mancha', 'britez', 'kuscevic', 'gaston-avila'])
+var volFortaleza = elConjunto('avol', 'fortaleza', ['ze-welisson', 'lucas-sasha', 'martinez', 'rosseto', 'rodrigo-santos'])
+var meiFortaleza = elConjunto('mei', 'fortaleza', ['pochettino', 'calebe', 'kervin-andrade', 'matheus-pereira'])
+var ponFortaleza = elConjunto('pon', 'fortaleza', ['marinho', 'breno-lopes', 'lucca-prior', 'moises', 'pikachu'])
+var caFortaleza = elConjunto('ca', 'fortaleza', ['deyverson', 'lucero'])
 
 var golVitoria = ["Goleiro", "gol-esc", "imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/gabriel.png", "imagens/vitoria/fintelman.png"]
 var ldVitoria = ["Lateral Direito", "ld-esc", "imagens/vitoria/claudinho.png", "imagens/vitoria/raul-caceres.png"]

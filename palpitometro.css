@@ -329,9 +329,9 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(72, 72, 72);
     padding: 25px;
     border-radius: 18px;
-    transition-duration: 0.3s;
+    transition-duration: 0.25s;
     transition-timing-function: cubic-bezier();
-    transform-origin: center;
+    transform-origin: 0 0;
 }
 #hide{
     scale: 0; 
