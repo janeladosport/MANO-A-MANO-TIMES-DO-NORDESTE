@@ -10,10 +10,15 @@
     <script src="escale.js"></script>
     <script src="person.js"></script> 
     <link rel="stylesheet" href="escale.css">
+    <script src="goto.js"></script>
     <link rel="stylesheet" href="janela.css">
     <script src="elenco-data-base.js"></script>
 </head>
 <body>
+    <div id="title">
+        <img src="imagens/MANO A MANO ICONE.ico" alt="" class="pointer" onclick="goto('index.html')">
+        FICA E SAI: Janela de transferências intertemporada
+    </div>
     <select name="Time 1" id="timeUm" onchange="selecionarEscaleEsq(this); verifyAndExcluse()">
                     <option disabled selected>Time</option>
                     <option value="Fortaleza">

@@ -1,5 +1,6 @@
 .jogador-selectable{
-    width: 120px;
+    width: 130px;
+    height: 150px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -8,10 +9,13 @@
     max-width: 500px;
 }
 .jogador-selectable:hover{
-    width: 125px;
+    width: 135px;
+    height: 155px;
 }
 
 .selecting, .selected{
+    width: 130px;
+    height: 150px;
     opacity: 50%;
     background-color: white;
 }
@@ -34,7 +38,7 @@
 }
 
 .selecting:hover, .selected:hover{
-    width: 120px;
+    width: 130px;
     height: 150px;
 }
 
@@ -73,5 +77,5 @@
 }
 
 select{
-    margin: 30px 0 0 30px;
+    margin: 80px 0 0 30px;
 }

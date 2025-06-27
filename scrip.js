@@ -58,7 +58,6 @@ function janelaSelect(elemento){
     let div = document.createElement("div")
     elemento.parentElement.insertBefore(div, elemento)
     div.appendChild(elemento)
-    div.style.width = "130px"
     div.style.height = "150px"
     div.style.position = "relative"
     for(i=0; i < 4; i++){
