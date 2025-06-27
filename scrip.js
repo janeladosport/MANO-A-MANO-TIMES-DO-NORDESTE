@@ -152,7 +152,7 @@ function personStyle(element, attributes){
 
 function maximizar(elemento){
     let mam = document.querySelector(".mam")
-    personStyle(mam, {'position': 'fixed', 'top': 0, 'left': 0, 'width': '100vw', 'height': '100vh', 'display': 'block', "overflowY": 'auto', 'background-color': 'rgb(39, 36, 36)'})
+    personStyle(mam, {'position': 'fixed', 'top': 0, 'left': 0, 'width': '30vw', 'height': '40vh', 'display': 'block', "overflowY": 'auto', 'background-color': 'rgb(39, 36, 36)'})
     elemento.setAttribute("onclick", "minimizar(this)")
     elemento.src = 'imagens/minimizar.png'
 }

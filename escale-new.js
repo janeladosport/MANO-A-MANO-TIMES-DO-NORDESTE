@@ -2,14 +2,12 @@ let ids = {
     0: "gol", 1: "ld", 2: "zd", 3: "ze", 4: "le", 5: "vol", 6: "mc", 7: "mei", 8: "pd", 9: "pe", 10: "ca"
 }
 
-let zagSport = ["Zagueiros", "zag-esc", "imagens/sport/joao-silva.png", "imagens/sport/lucas-cunha.png", "imagens/sport/antonio-carlos.png", "imagens/sport/rafael-thyere.png", "imagens/sport/chico.png"]
-var avolSport = ["Volantes", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/ze-lucas.png", "imagens/sport/dominguez.png"]
 var dados = {
-    Sport: [golSport, ldSport, zagSport, leSport, avolSport, meiSport, pdSport, peSport, caSport],
+    Sport: [golSport, ldSport, zagSport, leSport, volSport, meiSport, ponSport, caSport],
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
     Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
-    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara],
+    Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara],
     Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
     Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir]
 };

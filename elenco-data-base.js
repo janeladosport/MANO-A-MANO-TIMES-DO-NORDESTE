@@ -1,14 +1,36 @@
-var golSport = ["Goleiro", "gol-esc", "imagens/sport/caique-frança.png", "imagens/sport/thiago-couto.png", "imagens/sport/davi.png"]
-var ldSport = ["Lateral direita", "ld-esc", "imagens/sport/hereda.png", "imagens/sport/du-queiroz.png", 'imagens/sport/kayan.png'] 
-var zdSport = ["Zagueiro Direito", "zd-esc", "imagens/sport/joao-silva.png", "imagens/sport/lucas-cunha.png", "imagens/sport/antonio-carlos.png", "imagens/sport/marcelo-ajul.png", "imagens/sport/rafael-thyere.png"]
-var zeSport = ["Zagueiro Esquerdo", "ze-esc", "imagens/sport/chico.png", "imagens/sport/joao-silva.png", "imagens/sport/renzo.png"] 
-var leSport = ["Lateral Esquerda", "le-esc", "imagens/sport/igor-carius.png", "imagens/sport/dalbert.png"]    
-var volSport = ["1º Volante", "vol-esc", "imagens/sport/christian-rivera.png", "imagens/sport/du-queiroz.png", "imagens/sport/ze-lucas.png"]    
-var mcSport = ["2º Volante", "mc-esc", "imagens/sport/sergio-oliveira.png", "imagens/sport/dominguez.png", "imagens/sport/du-queiroz.png"]
-var meiSport = ["Meia", "mei-esc", "imagens/sport/lucas-lima.png", "imagens/sport/hyoran.png", "imagens/sport/titi-ortiz.png", "imagens/sport/sergio-oliveira.png", "imagens/sport/chino-atencio.png"]
-var pdSport = ["Ponta direita", "pd-esc", "imagens/sport/chino-atencio.png", "imagens/sport/barletta.png", "imagens/sport/romarinho.png", "imagens/sport/lucas-lima.png"]
-var peSport = ["Ponta esquerda", "pe-esc", "imagens/sport/barletta.png", "imagens/sport/lenny-lobato.png", "imagens/sport/romarinho.png","imagens/sport/carlos-alberto.png"]
-var caSport = ["Centroavante", "ca-esc", "imagens/sport/paciencia.png", "imagens/sport/pablo.png", "imagens/sport/artur-sousa.png"]
+var positions = {
+    gol: ['Goleiro', 'gol-esc'],
+    ld: ['Lateral Direito', 'ld-esc'],
+    lat: ['Laterais', 'lat-esc'],
+    zag: ['Zagueiros', 'zag-esc'],
+    zd: ['Zagueiro Direito', 'zd-esc'],
+    ze: ['Zagueiro Esquerdo', 'ze-esc'],
+    le: ['Lateral Esquerdo', 'le-esc'],
+    avol: ['Volantes', 'vol-esc'],
+    mei: ['Meias', 'mei-esc'],
+    pon: ['Pontas', 'pon-esc'],
+    ca: ['Centroavante', 'ca-esc']
+}
+
+function elConjunto(position, clube, players){
+    let n1 = positions[position][0]
+    let n2 = positions[position][1]
+    let newConjunto = []
+    newConjunto.push(n1, n2)
+    for (i=0; i < players.length; i++){
+        newConjunto.push(`imagens/${clube}/${players[i]}.png`)
+    }
+    return newConjunto
+}
+
+var golSport = elConjunto('gol', 'sport', ['caique-frança', 'thiago-couto', 'davi'])
+var ldSport = elConjunto('ld', 'sport', ['hereda', 'matheus-alexandre', 'kayan'])
+var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'rafael-thyere', 'lucas-cunha', 'antonio-carlos'])
+var leSport = elConjunto('le', 'sport', ['igor-carius', 'dalbert'])
+var volSport = elConjunto('avol', 'sport', ['christian-rivera', 'ze-lucas', 'pedro-augusto', 'dominguez', 'du-queiroz', 'adriel'])
+var meiSport = elConjunto('mei', 'sport', ['lucas-lima', 'sergio-oliveira', 'hyoran', 'titi-ortiz'])
+var ponSport = elConjunto('pon', 'sport', ['barletta', 'chino-atencio', 'romarinho', 'carlos-alberto'])
+var caSport = elConjunto('ca', 'sport', ['paciencia', 'pablo', 'ze-roberto'])
 
 var golBahia = ["Goleiro", "gol-esc" , "imagens/bahia/marcos-felipe.png", "imagens/bahia/danilo-fernandes.png", "imagens/bahia/ronaldo.png"]
 var ldBahia = ["Lateral Direito" , "ld-esc", "imagens/bahia/santi-arias.png", "imagens/bahia/gilberto.png"]
@@ -46,43 +68,14 @@ var pdVitoria = ["Ponta direita", "pd-esc", "imagens/vitoria/gustavo-mosquito.pn
 var peVitoria = ["Ponta esquerda", "pe-esc", "imagens/vitoria/lucas-braga.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/carlos-eduardo.png", "imagens/vitoria/bruno-xavier.png"]
 var caVitoria = ["Centroavante", "ca-esc", "imagens/vitoria/janderson.png", "imagens/vitoria/fabri.png", "imagens/vitoria/carlinhos.png"]
 
-var golCeara = ["Goleiro", "gol-esc", "imagens/ceara/bruno-ferreira.png", "imagens/ceara/fernando-miguel.png", "imagens/ceara/keiller.png", "imagens/ceara/richard.png"]
-var ldCeara = ["Lateral Direito", "ld-esc", "imagens/ceara/fabiano-souza.png", "imagens/ceara/rafael-ramos.png", "imagens/ceara/dieguinho.png"]
-var zdCeara = ["Zagueiro Direito", "zd-esc", "imagens/ceara/marllon.png", "imagens/ceara/eder.png", "imagens/ceara/gabriel-lacerda.png", "imagens/ceara/marcos-vitor.png"]
-var zeCeara = ["Zagueiro Esquerdo", "ze-esc", "imagens/ceara/ramon-menezes.png", "imagens/ceara/luiz-otavio.png", "imagens/ceara/william-machado.png"]
-var leCeara = ["Lateral Esquerdo", "le-esc", "imagens/ceara/matheus-bahia.png", "imagens/ceara/nicolas.png", "imagens/ceara/william-machado.png"]
-var volCeara = ["1º Volante", "vol-esc", "imagens/ceara/richardson.png", "imagens/ceara/dieguinho.png", "imagens/ceara/fernando-sobral.png"]
-var mcCeara = ["2º Volante", "mc-esc", "imagens/ceara/fernando-sobral.png", "imagens/ceara/lourenço.png", "imagens/ceara/matheus-araujo.png"]
-var meiCeara = ["Meia", "mei-esc", "imagens/ceara/lucas-mugni.png", "imagens/ceara/romulo.png", "imagens/ceara/recalde.png", "imagens/ceara/matheus-araujo.png"]
-var pdCeara = ["Ponta direita", "pd-esc", "imagens/ceara/pedro-henrique.png", "imagens/ceara/galeano.png", "imagens/ceara/joao-victor.png", "imagens/ceara/bruno-tubarao.png"]
-var peCeara = ["Ponta esquerda", "pe-esc", "imagens/ceara/fernandinho.png", "imagens/ceara/pedro-henrique.png", "imagens/ceara/alejandro-martinez.png", "imagens/ceara/joao-victor.png"]
-var caCeara = ["Centroavante", "ca-esc", "imagens/ceara/pedro-raul.png", "imagens/ceara/aylon.png"]
-
-
-var positions = {
-    gol: ['Goleiro', 'gol-esc'],
-    ld: ['Lateral Direito', 'ld-esc'],
-    lat: ['Laterais', 'lat-esc'],
-    zag: ['Zagueiros', 'zag-esc'],
-    zd: ['Zagueiro Direito', 'zd-esc'],
-    ze: ['Zagueiro Esquerdo', 'ze-esc'],
-    le: ['Lateral Esquerdo', 'le-esc'],
-    avol: ['Volantes', 'vol-esc'],
-    mei: ['Meias', 'mei-esc'],
-    pon: ['Pontas', 'pon-esc'],
-    ca: ['Centroavante', 'ca-esc']
-}
-
-function elConjunto(position, clube, players){
-    let n1 = positions[position][0]
-    let n2 = positions[position][1]
-    let newConjunto = []
-    newConjunto.push(n1, n2)
-    for (i=0; i < players.length; i++){
-        newConjunto.push(`imagens/${clube}/${players[i]}.png`)
-    }
-    return newConjunto
-}
+var golCeara = elConjunto('gol', 'ceara', ['bruno-ferreira', 'fernando-miguel', 'keiller', 'richard'])
+var ldCeara = elConjunto('ld', 'ceara', ['fabiano-souza', 'rafael-ramos', 'dieguinho'])
+var zagCeara = elConjunto('zag', 'ceara', ['marllon', 'william-machado', 'eder', 'ramon-menezes', 'gabriel-lacerda', 'luiz-otavio', 'marcos-vitor'])
+var leCeara = elConjunto('le', 'ceara', ['matheus-bahia', 'nicolas', 'william-machado'])
+var volCeara = elConjunto("avol", 'ceara', ['dieguinho', 'fernando-sobral', 'lourenço', 'richardson'])
+var meiCeara = elConjunto("mei", 'ceara', ['lucas-mugni', 'matheus-araujo', 'romulo', 'recalde'])
+var ponCeara = elConjunto("pon", 'ceara', ['pedro-henrique', 'fernandinho', 'galeano', 'bruno-tubarao', 'joao-victor', 'alejandro-martinez'])
+var caCeara = elConjunto("ca", 'ceara', ['pedro-raul', 'aylon', 'guilherme'])
 
 var golSp = elConjunto('gol', 'sao paulo', ['rafael', 'jandrei'])
 var latSp = elConjunto('lat', 'sao paulo', ['enzo-diaz', 'wendell', 'igor-vinicius', 'cedric'])
@@ -101,7 +94,7 @@ var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'fabricio-daniel'])
 var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
 
 var dados = {
-    Sport: [golSport, ldSport, zdSport, zeSport, leSport, volSport, mcSport, meiSport, pdSport, peSport, caSport],
+    Sport: [golSport, ldSport, zagSport, leSport, volSport, meiSport, ponSport, caSport],
     Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
     Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],

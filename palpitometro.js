@@ -218,6 +218,9 @@ function verifyEscale(){
     if (document.getElementsByTagName('iframe')[0]){
         document.getElementsByTagName('iframe')[0].remove()
     }
+    if (document.getElementsByClassName('choice')[0]){
+        document.getElementsByClassName('choice')[0].remove()
+    }
 }
 
 function createIframe(team){
@@ -542,7 +545,9 @@ let containerall = document.getElementById("container-all")
         elemento.style.left = '90%'
         elemento.setAttribute("metadata", "40%")
     }
-
+    if (document.getElementById("elenco")){
+        personStyle(mam, {'height': '50vh'})
+    }
     elemento.setAttribute("onclick", "minimizar(this)")
     elemento.src = 'imagens/minimizar.png'
 
@@ -564,8 +569,13 @@ function firstLetterUpercase(string){
 
 function personalizar(element){
     let isSelected=false
+    let mam = document.getElementsByClassName("mam")[0]
+    
     if (element.classList.contains("selected")){isSelected=true}
     if (isSelected == false){
+        if (mam.style.position == "fixed"){
+        mam.style.height = "50vh"
+    }
         element.classList.add("selected")
         let newDiv = document.createElement("div")
         newDiv.id = 'person-div'
@@ -575,11 +585,15 @@ function personalizar(element){
         setAllOnclick('item', 'changeSource(this)')
         document.getElementsByClassName("mam")[0].style.marginBottom = "52vh"
     } else if (isSelected == true){
+        if (mam.style.position == "fixed"){
+        mam.style.height = "100vh"
+    }
         element.classList.remove("selected")
         document.getElementById('person-div').remove()
         setAllOnclick("item", "clicar(this)")
         document.getElementsByClassName("mam")[0].style.marginBottom = "0"
     }
+    
 }
 
 function setAllOnclick (classe,onclick){
