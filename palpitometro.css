@@ -316,10 +316,7 @@ body::-webkit-scrollbar-thumb{
     width: 26px;
     height: 26px;
 }
-#hide{
-    display: none;
-}
-#info-match{
+.info-box{
     color: white;
     font-weight: 600;
     font-size: 15pt;
@@ -332,6 +329,15 @@ body::-webkit-scrollbar-thumb{
     background-color: rgb(72, 72, 72);
     padding: 25px;
     border-radius: 18px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier();
+    transform-origin: center;
+}
+#hide{
+    scale: 0; 
+}
+#info-match{
+    scale: 1;
 }
 
 .transmission-box{

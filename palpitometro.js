@@ -74,6 +74,7 @@ function setProperties(infoConfronto, palpiteSpan){
     newItem.classList.add("info")
     palpiteSpan.appendChild(newItem)
     let newInfo = document.createElement("div")
+    newInfo.classList.add("info-box")
     newInfo.id = 'hide'
     createNewInfo(infoConfronto, newInfo)
     document.body.appendChild(newInfo)
