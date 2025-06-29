@@ -57,8 +57,8 @@ footer{
     background-color: rgb(176, 209, 31);
 }
 .player{
-    width: 120px;
-    height: 120px;    
+    width: 100px;
+    height: 100px;    
     cursor: grabbing;
     user-select: none;
     pointer-events: painted;
@@ -90,7 +90,7 @@ body{
     transition-duration: 0.3s;
     transition-timing-function: cubic-bezier();
     flex-wrap: wrap;
-    min-height: 120px;
+    min-height: 100px;
 }
 .selecione-jogador{
     background-color: rgb(51, 0, 0) !important;

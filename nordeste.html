@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIMES DO NORDESTE</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="escale-new.css">
     <link rel="stylesheet" href="style-main-nordeste.css">
+    <link rel="stylesheet" href="style.css">
     <script src="scrip.js"></script>
+    <script src="goto.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -18,25 +19,8 @@
     <link rel="shortcut icon" href="imagens/MANO A MANO ICONE.ico" type="image/x-icon">
     <script src="person.js"></script>
     <script src="escale-new.js"></script>
-    <style>
-        .escale{
-            position: fixed;
-            top: 13px;
-            border-radius: 15px;
-            height: 80px;
-            width: 30% !important;
-            font-size: 20pt !important;
-            opacity: 95%;
-            margin: 0 !important;
-            transform: translateX(-50%);
-            left: 16%;
-        }
-    </style>
 </head>
 <body>
-    <div id="titulo">
-        TIMES DO NORDESTE
-    </div>
     <div class="mam">
         <div class="row-esc">
             <div class="esc-div"><img src="imagens/escudos/sport.svg" alt="" class="esc"></div>
@@ -56,16 +40,12 @@
     <div id="campo" datainfo="4-3-3" style="opacity: 0; display: none;"></div>
 </body>
 <footer>
-    <a href="index.html">
-        <button id="voltar">
-            VOLTAR
-        </button>
-    </a>
-    <a onclick="limpar()">
-        <button id="voltar">
-            LIMPAR
-        </button>
-    </a>
+    <div id="title">
+        <img src="imagens/MANO A MANO ICONE.ico" alt="" class="pointer" onclick="goto('index.html')">
+        Mano a Mano: NORDESTE + Escalação do nordeste
+    </div>
+    <a href="index.html" id="back">VOLTAR</a>
+    <a onclick="limpar()" id="back" style="left: 15%; cursor: pointer;">LIMPAR</a>
 </footer>
 <script src="nordeste.js"></script>
 <script>

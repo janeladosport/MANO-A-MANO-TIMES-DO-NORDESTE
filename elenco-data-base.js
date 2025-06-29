@@ -89,10 +89,10 @@ var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
 
 var dados = {
     Sport: [golSport, ldSport, zagSport, leSport, volSport, meiSport, ponSport, caSport],
-    Bahia: [golBahia, ldBahia, zdBahia, zeBahia, leBahia, volBahia, mcBahia, meiBahia, pdBahia, peBahia, caBahia],
-    Fortaleza: [golFortaleza, ldFortaleza, zdFortaleza, zeFortaleza, leFortaleza, volFortaleza, mcFortaleza, meiFortaleza, pdFortaleza, peFortaleza, caFortaleza],
+    Bahia: [golBahia, ldBahia, zagBahia, leBahia, volBahia, meiBahia, ponBahia, caBahia],
+    Fortaleza: [golFortaleza, ldFortaleza, zagFortaleza, leFortaleza, volFortaleza, meiFortaleza, ponFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
-    Ceara: [golCeara, ldCeara,zdCeara, zeCeara, leCeara, volCeara, mcCeara, meiCeara, pdCeara, peCeara, caCeara]
+    Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara]
 };
 
 function createElement(tag, properties){

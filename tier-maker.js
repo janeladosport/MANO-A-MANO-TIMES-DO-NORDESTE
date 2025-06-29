@@ -23,7 +23,7 @@ let escudos = [
 
 let tecnicos = {
     Fortaleza: "imagens/fortaleza/vojvoda.png",
-    Sport: "imagens/sport/pepa.png",
+    Sport: "imagens/sport/daniel-paulista.png",
     Bahia: "imagens/bahia/rogerio-ceni.png",
     Ceara: "imagens/ceara/leo-conde.png",
     Vitoria: "imagens/vitoria/thiago-carpini.png"
@@ -325,10 +325,13 @@ function adReservas(){
     let reservas = document.getElementsByClassName("reserva")
     if (reservas.length > 0){personalizarTier(); return; window.scrollTo({ top: document.getElementById("tier-person").offsetTop - 180, behavior: "smooth" })}
     if (tierContent){
+        if (!document.getElementById("tier-person")){
+        personalizarTier()}
         for (i=0; i < 5; i++){
             let newImg = document.createElement("img")
             tierContent.appendChild(newImg)
             newImg.innerHTML = `Reserva ${i+1}`
+            newImg.src = `imagens/reserva-${i+1}.png`
             newImg.setAttribute("class", "player")
             newImg.classList.add("reserva")
         newImg.setAttribute("draggable", "true")

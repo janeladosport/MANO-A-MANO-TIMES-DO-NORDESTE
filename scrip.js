@@ -122,7 +122,9 @@ function limpar(){
         if (imgRes){
         resultado[i].querySelector('img').remove()
         let img = document.createElement('img')
-        resultado[i].append(img)}
+        resultado[i].append(img)
+        img.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    }
     }
     count()
 }

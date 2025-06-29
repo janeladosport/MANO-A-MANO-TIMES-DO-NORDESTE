@@ -2,17 +2,7 @@
     margin: 0;
     padding: 0;
 }
-#back{
-    width: 145px;
-    font-size: 20pt;
-    font-family: 'Roboto';
-    border-radius: 20px;
-    height: 35px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background-color: #651515;
-}
+
 #back-a{
     background: none;
     padding: 0;
@@ -148,12 +138,6 @@ body::-webkit-scrollbar-thumb{
     left: 50%;
 }
 
-#back{
-    position: fixed;
-    top: 90%;
-    text-align: center;
-    padding: 10px;
-}
 
 #head{
     text-transform: uppercase;

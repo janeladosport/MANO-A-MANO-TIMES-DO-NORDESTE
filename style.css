@@ -290,3 +290,21 @@ span.counter-um, span.counter-dois{
             margin: 0 25px;
             border-radius: 2px;
         }
+
+#back{
+    width: 145px;
+    font-size: 20pt;
+    font-family: 'Roboto';
+    border-radius: 20px;
+    height: 35px;
+    position: fixed;
+    left: 20px;
+    background-color: #651515;
+    top: 90%;
+    text-align: center;
+    padding: 20px;
+}
+
+#back, #title{
+    box-sizing: unset;
+}

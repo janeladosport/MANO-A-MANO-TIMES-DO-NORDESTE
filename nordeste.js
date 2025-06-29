@@ -1,4 +1,11 @@
 let teams = [sport, bahia, vitoria, fortaleza, ceara]
+let teamNumber = {
+    0: 'sport',
+    1: 'bahia',
+    2: 'vitoria',
+    3: 'fortaleza',
+    4: 'ceara'
+}
         let mam = document.getElementsByClassName("mam")[0]
         for (i=0; i < 11; i++){
             let newRow = createElement('div', [['class', 'row']])
@@ -9,6 +16,7 @@ let teams = [sport, bahia, vitoria, fortaleza, ceara]
             playerSpan(newRow, 4, i, '=')
             let item = createElement("div", [['class', 'item-resultado']])
             let itemResult = createElement("img")
+            itemResult.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
             item.appendChild(itemResult)
             newRow.appendChild(item)
 }
@@ -31,7 +39,7 @@ function playerSpan(newRow, h, i, inner){
 }
 
 function createPlayer(newRow,h,i){
-    let item = createElement("div", [['class', 'item'], ['onclick', 'clicar(this), checar()']])
+    let item = createElement("div", [['class', 'item'], ['onclick', 'clicar(this), checar()'], ['class', teamNumber[h]]])
     let img = document.createElement("img")
     item.appendChild(img)
     newRow.appendChild(item)
@@ -49,8 +57,10 @@ function checar(){
     let hasNoSource
     for (n=0; n<itemResults.length; n++){
         let actual = itemResults[n].querySelector("img")
-        if (!actual.src){
+        console.log(actual.src)
+        if (!actual.src || actual.src == "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="){
             hasNoSource = true
+        console.log("TRUE", actual.src)
             break
         } 
     }
@@ -64,22 +74,36 @@ function checar(){
 }
 
 function selecaoNordeste(){
-    let campo = document.getElementById("campo")
+    let campo = document.getElementsByTagName("iframe")[0]
+    if (!campo){
+    let iframe = createElement("iframe", [['src', 'only-camp.html']])
+    iframe.onload = () => {
+    putPlayersIframe(iframe)
+    }
+    document.body.appendChild(iframe)
+    campo = iframe
+    personStyle(campo, {'width': '100vw', 'height': '80vh', 'border': 0, 'margin-top': '95px'})
+    
+    }
     let mam = document.getElementsByClassName("mam")[0]
     let buttonNordeste = document.getElementsByClassName("escale")[0]
-    if (campo.style.display == "grid"){
+    if (campo.style.display == "block"){
         mam.style.display = "block"
         buttonNordeste.innerHTML = "ESCALAÇÃO DO NORDESTE"
         campo.style.display = 'none'
     } else{
-    let itemResults = document.getElementsByClassName("item-resultado")
     mam.style.display = 'none'
-    campo.style.display = 'grid'
-    createCampo()
+    campo.style.display = 'block'
+    buttonNordeste.innerHTML = "PERSONALIZAR ESCALAÇÃO"
+    putPlayersIframe(campo)
+}
+}
+
+function putPlayersIframe(iframe){
+    let itemResults = document.getElementsByClassName("item-resultado")
     for (i=0; i < itemResults.length; i++){
-        let player = document.getElementById(ids[i])
-        console.log(itemResults[i])
+        let player = iframe.contentDocument.querySelector(`#${ids[i]}`)
+        console.log(player)
         player.src = itemResults[i].querySelector("img").src
     }
-    buttonNordeste.innerHTML = "PERSONALIZAR ESCALAÇÃO"}
 }
