@@ -8,7 +8,9 @@ function escudos(time){
 
 jogos = [
     ['sport', 'ceara', null, 'escale'],
-    ['bahia', 'fortaleza', null, 'escale']
+    ['bahia', 'fortaleza', null, 'escale'],
+    ['vitoria', 'confiança', true],
+    ['csa', 'ferroviario', true]
 ]
 
 info = {
@@ -25,6 +27,18 @@ info = {
         'arbitro': [],
         'data': '21:30, 9 de Julho - Quarta-feira',
         'local': 'Arena Fonte Nova - Salvador-BA'
+    },
+    'vitoriaxconfiança':{
+        'title': ['VITÓRIA X CONFIANÇA'],
+        'data': '21:30, 8 de Julho - Terça-feira',
+        'local': 'Barradão - Salvador-BA',
+        'transm': ['premiere']
+    },
+    'csaxferroviario':{
+        'title': ['CSA X FERROVIÁRIO'],
+        'data': '19:00, 8 de Julho - Quarta-feira',
+        'local': 'Estádio Rei Pelé, Maceió-AL',
+        'transm': ['premiere', 'espn']
     }
 }
 

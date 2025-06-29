@@ -39,7 +39,6 @@ function srcConjunto(time, jogadores){
     for (i=0; i < jogadores.length; i++){
         conjunto.push(`imagens/${time}/${jogadores[i]}.png`)
     }
-    console.log(conjunto)
     return conjunto 
 }
 
