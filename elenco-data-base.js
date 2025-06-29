@@ -23,7 +23,7 @@ function elConjunto(position, clube, players){
     return newConjunto
 }
 
-var golSport = elConjunto('gol', 'sport', ['gabriel', 'caique-frança', 'thiago-couto', 'davi'])
+var golSport = elConjunto('gol', 'sport', ['gabriel', 'caique-frança', 'davi'])
 var ldSport = elConjunto('ld', 'sport', ['hereda', 'matheus-alexandre', 'kayan'])
 var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'rafael-thyere', 'lucas-cunha', 'antonio-carlos'])
 var leSport = elConjunto('le', 'sport', ['igor-carius', 'dalbert'])
