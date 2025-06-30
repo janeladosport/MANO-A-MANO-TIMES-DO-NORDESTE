@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>     
+  <script src="goto.js"></script>
+  <link rel="stylesheet" href="palpitometro.css">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style-main.css">
+       <link rel="stylesheet" href="game.css">
+    <script src="scrip.js"></script>
+    <script src="person.js"></script>
+    <script src="elenco-data-base.js"></script>
+    <script src="escale-new.js"></script>
+    <script src="palpitometro.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALPITÔMETRO</title>
+    <meta name="og:title" content="PALPITÔMETRO COPA DO NORDESTE">
+    <meta name="og:description" content="Faça seus palpites e o mano a mano para os jogos de hoje">
+    <meta name="og:image" content="imagens/capa.png">
+    <link rel="image_src" href="imagens/capa.png">
+</head>
+<body>
+  <div id="title">
+        <img src="imagens/MANO A MANO ICONE.ico" alt="" class="pointer" onclick="goto('index.html')">
+        Palpitômetro - Quartas de final - Copa do nordeste
+    </div>
+    <a href="index.html" id="back">VOLTAR</a>
+    <div id="palpites"></div>
+    <footer></footer>
+</body>
+<script>
+  jogos = [
+    ['fluminense', 'internazionale', true, 'notas']
+]
+</script>
+    <script src="createTheGame.js"></script>
+<script>
+  function notes(timeUm, timeDois){
+        console.log(timesFut, timeUm, timesFut[timeUm])
+        teamOne = timesFut[timeUm]
+        let containerAll = document.createElement("div")
+        containerAll.id = 'container-all'
+        let containerTeamOne = document.createElement("div")
+        containerTeamOne.id = 'team-one-container'
+        let titleOne = document.createElement("div")
+       titleOne.id ='titulo'
+        containerTeamOne.appendChild(titleOne)
+        let spanTO = document.createElement("span")
+        if (corresp[timeUm]){
+        spanTO.innerHTML = corresp[timeUm]}
+        else {
+            spanTO.innerHTML = timeUm
+        }
+        spanTO.classList.add("span-team")
+        let newMax = document.createElement("img")
+        newMax.id = "maximizar"
+        newMax.src = "imagens/maximizar.png"
+        newMax.setAttribute("onclick",'maximizar(this)')
+        newMax.style.left = '70%'
+        titleOne.appendChild(newMax)
+        titleOne.appendChild(spanTO)
+        containerTeamOne.id = 'team-one-container'
+        let newMaxT = document.createElement("img")
+        newMaxT.id = "maximizar"
+        newMaxT.src = "imagens/maximizar.png"
+        newMaxT.setAttribute("onclick",'maximizar(this)')
+        document.body.appendChild(containerAll)
+        containerAll.appendChild(containerTeamOne)
+        constructNotes(teamOne, containerTeamOne)
+        document.getElementById("titulo").scrollIntoView({behavior: 'smooth'})
+    }
+</script>
+</html>
