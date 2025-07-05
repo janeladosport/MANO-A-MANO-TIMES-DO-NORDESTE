@@ -23,7 +23,7 @@
 <body>
   <div id="title">
         <img src="imagens/MANO A MANO ICONE.ico" alt="" class="pointer" onclick="goto('index.html')">
-        Mundial de Clubes - FLUMINENSE X INTERNAZIONALE
+        Mundial de Clubes - PALMEIRAS X CHELSEA
     </div>
     <a href="index.html" id="back">VOLTAR</a>
     <div id="palpites"></div>
@@ -31,20 +31,21 @@
 </body>
 <script>
   jogos = [
-    ['palmeiras', 'chelsea', true, 'notas']
+    ['palmeiras', 'chelsea', null, 'notas']
 ]
 info = {
   'palmeirasxchelsea': {
         'title': ['PALMEIRAS X CHELSEA'],
-        'transm': ['sbt', 'premiere'],
+        'transm': ['globo', 'sportv', 'dazn', 'cazetv'],
         'arbitro': ['Árbitro: Alireza Faghani (IRÃ) <br> Auxiliares: Anton Shchetinin e Ashley Beecham (AUST)'],
         'data': '21:30, 9 de Julho - Quarta-feira',
-        'local': 'Ilha do Retiro, Recife-PE'
+        'local': 'Ilha do Retiro, Recife-PE',
+        'escalação': 'imagens/palxchea.png'
     }
   }
 </script>
     <script src="createTheGame.js"></script>
-<script>
+<!-- <script>
   function notes(timeUm, timeDois){
         console.log(timesFut, timeUm, timesFut[timeUm])
         teamOne = timesFut[timeUm]
@@ -79,5 +80,5 @@ info = {
         constructNotes(teamOne, containerTeamOne)
         document.getElementById("titulo").scrollIntoView({behavior: 'smooth'})
     }
-</script>
+</script> -->
 </html>
