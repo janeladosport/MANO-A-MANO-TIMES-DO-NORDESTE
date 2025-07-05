@@ -57,7 +57,7 @@ function hideAndShow(item){
 }
 
 function createNewInfo(infoConfronto, newInfo){
-    let dAndP = ['title', 'data', 'local']
+    let dAndP = ['title', 'data', 'local', 'arbitro']
     for (a=0;a<dAndP.length; a++){
         if (infoConfronto[dAndP[a]]){
             let newProp = createElement('div', [['innerHTML', infoConfronto[dAndP[a]]]])
