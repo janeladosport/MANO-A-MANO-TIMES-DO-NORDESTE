@@ -9,7 +9,7 @@ function escudos(time){
 jogos = [
     ['sport', 'ceara', null, 'escale'],
     ['bahia', 'fortaleza', null, 'escale'],
-    ['vitoria', 'confiança', true],
+    ['vitoria', 'confiança', [1,0, true]],
     ['csa', 'ferroviario', true]
 ]
 
@@ -180,6 +180,9 @@ function createGames(){
             inputtwo = document.createElement('span')
             inputtwo.innerHTML = jogos[i][2][1]
             inputone.classList.add("result-span"); inputtwo.classList.add("result-span")
+            if (jogos[i][2][2] == true){
+                buttonMAM.setAttribute("disabled",""); buttonMAM.style.backgroundColor =  'gray'; buttonMAM.style.cursor = "not-allowed"
+            }
         } 
         
 

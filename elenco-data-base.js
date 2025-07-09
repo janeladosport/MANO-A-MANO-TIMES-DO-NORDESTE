@@ -25,10 +25,10 @@ function elConjunto(position, clube, players){
 
 var golSport = elConjunto('gol', 'sport', ['gabriel', 'caique-frança', 'davi'])
 var ldSport = elConjunto('ld', 'sport', ['hereda', 'matheus-alexandre', 'kayan'])
-var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'rafael-thyere', 'lucas-cunha', 'antonio-carlos'])
-var leSport = elConjunto('le', 'sport', ['igor-carius', 'dalbert'])
-var volSport = elConjunto('avol', 'sport', ['christian-rivera', 'ze-lucas', 'pedro-augusto', 'dominguez', 'du-queiroz', 'adriel'])
-var meiSport = elConjunto('mei', 'sport', ['lucas-lima', 'sergio-oliveira', 'hyoran', 'titi-ortiz'])
+var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'rafael-thyere'])
+var leSport = elConjunto('le', 'sport', ['igor-carius'])
+var volSport = elConjunto('avol', 'sport', ['christian-rivera', 'ze-lucas', 'pedro-augusto', 'dominguez', 'adriel'])
+var meiSport = elConjunto('mei', 'sport', ['lucas-lima', 'sergio-oliveira', 'hyoran'])
 var ponSport = elConjunto('pon', 'sport', ['barletta', 'chino-atencio', 'romarinho', 'carlos-alberto'])
 var caSport = elConjunto('ca', 'sport', ['paciencia', 'pablo', 'ze-roberto'])
 
