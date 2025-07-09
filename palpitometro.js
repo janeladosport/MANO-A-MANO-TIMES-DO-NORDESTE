@@ -76,10 +76,26 @@ function createNewInfo(infoConfronto, newInfo){
             transmBox.appendChild(newImg)
         }
     }
+    if (infoConfronto['escalação']){
+        let newbutton = createElement("button", [['innerHTML', 'ESCALAÇÕES'], ['class', 'button-escale']])
+        newbutton.addEventListener('click', () => {
+            window.open(infoConfronto['escalação'])
+        })
+        newInfo.appendChild(newbutton)
+    }
 
     let buttonBack = createElement("button", [['innerHTML', 'VOLTAR'], ['class', 'info-back-button']])
     newInfo.appendChild(buttonBack)
     buttonBack.addEventListener('click', function (e){hideAndShow(newInfo)})
+}
+
+function showEscale(){
+    let imgEscale = document.getElementById("escalação")
+    if (imgEscale && imgEscale.style.display == 'none'){
+        imgEscale.style.display = 'block'
+    } else if (imgEscale && imgEscale.style.display == 'block'){
+        imgEscale.style.display = 'none'
+    }
 }
 
 function setProperties(infoConfronto, palpiteSpan){
@@ -114,7 +130,10 @@ flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira
 mirassol = srcConjunto("mirassol", ['walter', 'lucas-ramon', 'joao-victor', 'jemmes', 'reinaldo', 'jose-aldo', 'danielzinho', 'yago-felipe', 'gabriel', 'negueba', 'edson-carioca'])
 atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
 cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
+palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "bruno-fuchs", "micael", "vanderlan", "martinez", "richard-rios", "estevao", "allan", "facundo-torres", "vitor-roque"])
+let chelsea = srcConjunto("chelsea", ["sanchez", "gusto", "chalobah", "colwill", "cucurella", "andrey-santos", "enzo-fernandez", "nkunku", "pedro-neto", "cole-palmer", "delap"])
 timesFut = setTimesFut()
+timesFut['Chelsea'] = chelsea
 
 
 function srcConjunto(time, jogadores){
