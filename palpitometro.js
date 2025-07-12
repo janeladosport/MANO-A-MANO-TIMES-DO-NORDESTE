@@ -174,6 +174,9 @@ function createGames(){
             inputtwo = document.createElement('span')
             inputtwo.innerHTML = jogos[i][2][1]
             inputone.classList.add("result-span"); inputtwo.classList.add("result-span")
+            if (jogos[i][2][2] == true){
+                buttonMAM.setAttribute("disabled",""); buttonMAM.style.backgroundColor =  'gray'; buttonMAM.style.cursor = "not-allowed"
+            }
         } 
         
 
