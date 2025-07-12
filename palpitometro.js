@@ -17,6 +17,8 @@ jogos = [
     ['juventude','sport', null, "escale"]
 ]
 
+info = null
+
 function hideAndShow(item){
     if (document.getElementById("info-match") == item){console.log("É IGUAL")}
     if (document.getElementById("info-match") && document.getElementById("info-match") != item){
