@@ -7,7 +7,7 @@ function escudos(time){
 }
 
 jogos = [
-    ['flamengo','saopaulo']
+    ['flamengo','saopaulo'],
     ['inter', 'vitoria'],
     ['vasco','botafogo'],
     ['bahia', 'atletico'],
