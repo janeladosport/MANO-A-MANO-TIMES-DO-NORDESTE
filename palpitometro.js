@@ -17,8 +17,6 @@ jogos = [
     ['juventude','sport', null, "escale"]
 ]
 
-info = null
-
 function hideAndShow(item){
     if (document.getElementById("info-match") == item){console.log("É IGUAL")}
     if (document.getElementById("info-match") && document.getElementById("info-match") != item){
@@ -139,7 +137,7 @@ function createGames(){
         newCabine.appendChild(span)
         span.classList.add("palpite-span")
         let confronto = `${jogos[i][0]}x${jogos[i][1]}`
-        if (info[confronto]){
+        if (info && info[confronto]){
             setProperties(info[confronto], span)
         }
         
