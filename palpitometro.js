@@ -7,40 +7,15 @@ function escudos(time){
 }
 
 jogos = [
-    ['sport', 'ceara', null, 'escale'],
-    ['bahia', 'fortaleza', null, 'escale'],
-    ['vitoria', 'confiança', [1,0, true]],
-    ['csa', 'ferroviario', true]
+    ['flamengo','saopaulo']
+    ['inter', 'vitoria'],
+    ['vasco','botafogo'],
+    ['bahia', 'atletico'],
+    ['corinthians','bragantino'],
+    ['cruzeiro','gremio'],
+    ['fortaleza','ceara', null, "escale"],
+    ['juventude','sport', null, "escale"]
 ]
-
-info = {
-    'sportxceara': {
-        'title': ['SPORT X CEARÁ'],
-        'transm': ['sbt', 'premiere'],
-        'arbitro': [],
-        'data': '21:30, 9 de Julho - Quarta-feira',
-        'local': 'Ilha do Retiro, Recife-PE'
-    },
-    'bahiaxfortaleza': {
-        'title': ['BAHIA X FORTALEZA'],
-        'transm': ['espn', 'sbt', 'premiere'],
-        'arbitro': [],
-        'data': '21:30, 9 de Julho - Quarta-feira',
-        'local': 'Arena Fonte Nova - Salvador-BA'
-    },
-    'vitoriaxconfiança':{
-        'title': ['VITÓRIA X CONFIANÇA'],
-        'data': '21:30, 8 de Julho - Terça-feira',
-        'local': 'Barradão - Salvador-BA',
-        'transm': ['premiere']
-    },
-    'csaxferroviario':{
-        'title': ['CSA X FERROVIÁRIO'],
-        'data': '19:00, 8 de Julho - Quarta-feira',
-        'local': 'Estádio Rei Pelé, Maceió-AL',
-        'transm': ['premiere', 'espn']
-    }
-}
 
 function hideAndShow(item){
     if (document.getElementById("info-match") == item){console.log("É IGUAL")}
