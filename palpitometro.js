@@ -108,6 +108,7 @@ mirassol = srcConjunto("mirassol", ['walter', 'lucas-ramon', 'joao-victor', 'jem
 atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
 cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
 palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "bruno-fuchs", "micael", "vanderlan", "martinez", "richard-rios", "estevao", "allan", "facundo-torres", "vitor-roque"])
+sport = srcConjunto("sport", ["gabriel","igor-carius","rafael-thyere","chico","kevyson","christian-rivera","ze-lucas","sergio-oliveira","lucas-lima","barletta","paciencia")
 let chelsea = srcConjunto("chelsea", ["sanchez", "gusto", "chalobah", "colwill", "cucurella", "andrey-santos", "enzo-fernandez", "nkunku", "pedro-neto", "cole-palmer", "delap"])
 timesFut = setTimesFut()
 timesFut['Chelsea'] = chelsea
