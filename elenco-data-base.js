@@ -25,12 +25,12 @@ function elConjunto(position, clube, players){
 
 var golSport = elConjunto('gol', 'sport', ['gabriel', 'caique-frança', 'davi'])
 var ldSport = elConjunto('ld', 'sport', ['hereda', 'matheus-alexandre', 'kayan'])
-var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'rafael-thyere'])
-var leSport = elConjunto('le', 'sport', ['igor-carius'])
+var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'ramon', 'rafael-thyere'])
+var leSport = elConjunto('le', 'sport', ['igor-carius', 'kevyson'])
 var volSport = elConjunto('avol', 'sport', ['christian-rivera', 'ze-lucas', 'pedro-augusto', 'dominguez', 'adriel'])
 var meiSport = elConjunto('mei', 'sport', ['lucas-lima', 'sergio-oliveira', 'hyoran'])
-var ponSport = elConjunto('pon', 'sport', ['barletta', 'chino-atencio', 'romarinho', 'carlos-alberto'])
-var caSport = elConjunto('ca', 'sport', ['paciencia', 'pablo', 'ze-roberto'])
+var ponSport = elConjunto('pon', 'sport', ['barletta', 'chino-atencio', 'derik-lacerda', 'matheusinho', 'romarinho'])
+var caSport = elConjunto('ca', 'sport', ['ignacio-ramirez', 'paciencia', 'pablo', 'ze-roberto'])
 
 var golBahia = elConjunto('gol', 'bahia', ['marcos-felipe', 'danilo-fernandes', 'ronaldo'])
 var ldBahia = elConjunto('ld', 'bahia', ['gilberto', 'santi-arias'])
@@ -50,17 +50,17 @@ var meiFortaleza = elConjunto('mei', 'fortaleza', ['pochettino', 'calebe', 'kerv
 var ponFortaleza = elConjunto('pon', 'fortaleza', ['marinho', 'breno-lopes', 'lucca-prior', 'moises', 'pikachu'])
 var caFortaleza = elConjunto('ca', 'fortaleza', ['deyverson', 'lucero'])
 
-var golVitoria = ["Goleiro", "gol-esc", "imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/gabriel.png", "imagens/vitoria/fintelman.png"]
+var golVitoria = ["Goleiro", "gol-esc", "imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/fintelman.png"]
 var ldVitoria = ["Lateral Direito", "ld-esc", "imagens/vitoria/claudinho.png", "imagens/vitoria/raul-caceres.png"]
-var leVitoria = ["Lateral Esquerdo", "le-esc", "imagens/vitoria/jamerson.png", "imagens/vitoria/hugo.png", "imagens/vitoria/ze-marcos.png"]
+var leVitoria = ["Lateral Esquerdo", "le-esc", "imagens/vitoria/jamerson.png", "imagens/vitoria/ze-marcos.png"]
 var zdVitoria = ["Zagueiro Direito", "zd-esc", "imagens/vitoria/neris.png", "imagens/vitoria/lucas-halter.png", "imagens/vitoria/camutanga.png", "imagens/vitoria/edu.png"]
 var zeVitoria = ["Zaguerio Esquerdo", "ze-esc", "imagens/vitoria/lucas-halter.png", "imagens/vitoria/ze-marcos.png", "imagens/vitoria/neris.png"]
 var volVitoria = ["1º Volante", "vol-esc", "imagens/vitoria/baralhas.png", "imagens/vitoria/dionisio.png", "imagens/vitoria/ricardo-ryller.png", "imagens/vitoria/val-soares.png", "imagens/vitoria/william-oliveira.png", "imagens/vitoria/thiago-conti.png"]
-var mcVitoria = ["2º Volante", "mc-esc", "imagens/vitoria/pepê.png", "imagens/vitoria/ronald.png", "imagens/vitoria/dionisio.png", "imagens/vitoria/val-soares.png", "imagens/vitoria/william-oliveira.png", "imagens/vitoria/thiago-conti.png"]
-var meiVitoria = ["Meia", "mei-esc", "imagens/vitoria/matheusinho.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/pablo.png", "imagens/vitoria/pepê.png"]
-var pdVitoria = ["Ponta direita", "pd-esc", "imagens/vitoria/gustavo-mosquito.png", "imagens/vitoria/lucas-braga.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/matheusinho.png", "imagens/vitoria/janderson.png"]
-var peVitoria = ["Ponta esquerda", "pe-esc", "imagens/vitoria/lucas-braga.png", "imagens/vitoria/wellington-rato.png", "imagens/vitoria/carlos-eduardo.png", "imagens/vitoria/bruno-xavier.png"]
-var caVitoria = ["Centroavante", "ca-esc", "imagens/vitoria/janderson.png", "imagens/vitoria/fabri.png", "imagens/vitoria/carlinhos.png"]
+var mcVitoria = ["2º Volante", "mc-esc", "imagens/vitoria/pepê.png", "imagens/vitoria/ronald.png", "imagens/vitoria/dionisio.png", "imagens/vitoria/val-soares.png", "imagens/vitoria/william-oliveira.png"]
+var meiVitoria = ["Meia", "mei-esc", "imagens/vitoria/matheusinho.png", "imagens/vitoria/pepê.png"]
+var pdVitoria = ["Ponta direita", "pd-esc", "imagens/vitoria/lucas-braga.png", "imagens/vitoria/matheusinho.png"]
+var peVitoria = ["Ponta esquerda", "pe-esc", "imagens/vitoria/lucas-braga.png"]
+var caVitoria = ["Centroavante", "ca-esc", "imagens/vitoria/fabri.png", "imagens/vitoria/renato-kayzer.png"]
 
 var golCeara = elConjunto('gol', 'ceara', ['bruno-ferreira', 'fernando-miguel', 'keiller', 'richard'])
 var ldCeara = elConjunto('ld', 'ceara', ['fabiano-souza', 'rafael-ramos', 'dieguinho'])
