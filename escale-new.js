@@ -125,6 +125,7 @@ function criarE(tag, ide, classe, source, onclick){
 }
 
 function putElenco(team,isNotBody){
+    console.log(team, 'TIME EM QUESTÃO')
     if (document.body.querySelector("#elenco")){
         if (!isNotBody){
         document.body.querySelector("#elenco").remove()}

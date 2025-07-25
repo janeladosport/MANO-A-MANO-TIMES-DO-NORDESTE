@@ -7,13 +7,17 @@ function escudos(time){
 }
 
 jogos = [
-    ['fluminense','palmeiras'],
-    ['ceara', 'mirassol'],
-    ['corinthians','cruzeiro'],
-    ['santos', 'inter'],
-    ['bragantino','flamengo'],
-    ['vitoria','sport', null, "escale"],
-    ['juventude', 'saopaulo']
+    ['botafogo','corinthians'],
+    ['mirassol', 'vitoria'],
+    ['fortaleza', 'bragantino'],
+    ['sport', 'santos', null, 'escale'],
+    ['santos', 'sport', null, 'escale'],
+    ['palmeiras','gremio'],
+    ['saopaulo','fluminense'],
+    ['cruzeiro', 'ceara'],
+    ['inter', 'vasco'], 
+    ['bahia', 'juventude'],
+    ['flamengo', 'atletico']
 ]
 
 info = null
@@ -101,14 +105,15 @@ gremio = srcConjunto("gremio", ["tiago-volpi", "ronald", "wagner-leonardo", "kan
 bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "vinicinho", "pitta", "sasha"])
 fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "hercules", "martinelli", "nonato", "kevin-serna", "soteldo", 'cano'])
 saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "sabino", "wendell", "pablo-maia", "bobadilla", "luciano", "lucas-ferreira", "enzo-diaz", "ryan-francisco"])
-santos = srcConjunto("santos", ['gabriel-brazao', 'escobar', 'joao-basso', 'ze-ivaldo', 'souza', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'guilherme', 'barreal'])
+santos = srcConjunto("santos", ['gabriel-brazao', 'escobar', 'joao-basso', 'luan-peres', 'souza', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'barreal', 'deivid-washington'])
 flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira', 'alex-sandro', 'evertton-araujo', 'gerson', 'arrascaeta', 'luiz-araujo', 'cebolinha', 'bruno-henrique'])
 mirassol = srcConjunto("mirassol", ['walter', 'daniel-borges', 'gabriel-knesowitsch', 'jemmes', 'reinaldo', 'neto-moura', 'danielzinho', 'gabriel', 'carlos-eduardo', 'edson-carioca', 'chico-da-costa'])
 atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
 cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
 palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "gustavo-gomez", "micael", "piquerez", "anibal-moreno", "lucas-evangelista", "mauricio", "facundo-torres", "felipe-anderson", "vitor-roque"])
-sport = srcConjunto("sport", ["caique-frança","matheus-alexandre","rafael-thyere","ramon","igor-carius","christian-rivera","ze-lucas","lucas-lima","barletta","derik-lacerda","ignacio-ramirez"])
+sport = srcConjunto("sport", ["gabriel","matheus-alexandre","rafael-thyere","ramon","igor-carius","christian-rivera","ze-lucas","matheusinho","barletta","derik-lacerda","ignacio-ramirez"])
 ceara = srcConjunto("ceara", ['bruno-ferreira','fabiano-souza', 'marllon','william-machado','nicolas','dieguinho','fernando-sobral','lucas-mugni','galeano', 'pedro-henrique','pedro-raul'])
+
 let chelsea = srcConjunto("chelsea", ["sanchez", "gusto", "chalobah", "colwill", "cucurella", "andrey-santos", "enzo-fernandez", "nkunku", "pedro-neto", "cole-palmer", "delap"])
 timesFut = setTimesFut()
 timesFut['Chelsea'] = chelsea
@@ -314,21 +319,24 @@ function createMAM(element, escUm, escDois){
         teamTwo = element.getAttribute("datainfo-dois")
         if (correspondencia[teamTwo]){newTeamTwo = firstLetterUpercase(correspondencia[teamTwo])} else {newTeamTwo = teamTwo}
         nsExist.innerHTML = `${newTeamOne} X ${newTeamTwo}`
-        if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+        
+        if (dados[firstLetterUpercase(teamOne)] || dados[firstLetterUpercase(teamTwo)]){
             if (document.getElementById("personalizar")){
         document.getElementById("personalizar").remove()
-        console.log("REMOVIDO", teamOne, teamTwo)
     }
-    console.log(dados[firstLetterUpercase(teamOne)])
     let newPerson = document.createElement("img")
     newPerson.classList.add("maximizar")
     newPerson.id = 'personalizar'
     newPerson.src = "imagens/personalizar.png"
-    newPerson.setAttribute("onclick", 'personalizar(this), limpar()')
     titleExisted.appendChild(newPerson)
-    } else if (document.getElementById("personalizar")){
+    if (dados[firstLetterUpercase(teamOne)] && !dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this, "one"), limpar()')
+    } else if (!dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this, "two"), limpar()')
+    } else if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this), limpar()')
+    }} else if (document.getElementById("personalizar")){
         document.getElementById("personalizar").remove()
-        console.log("REMOVIDO", teamOne, teamTwo)
     }
         return
     }
@@ -369,17 +377,22 @@ function createMAM(element, escUm, escDois){
     newMax.setAttribute("onclick",'maximizar(this)')
     newMax.src = 'imagens/maximizar.png'
     titulo.appendChild(newMax)
-    if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
-    console.log(dados[firstLetterUpercase(teamOne)])
+    if (dados[firstLetterUpercase(teamOne)] || dados[firstLetterUpercase(teamTwo)]){
     let newPerson = document.createElement("img")
     newPerson.classList.add("maximizar")
     newPerson.id = 'personalizar'
     newPerson.src = "imagens/personalizar.png"
-    newPerson.setAttribute("onclick", 'personalizar(this), limpar()')
+    if (dados[firstLetterUpercase(teamOne)] && !dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this, "one"), limpar()')
+    } else if (!dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this, "two"), limpar()')
+    } else if (dados[firstLetterUpercase(teamOne)] && dados[firstLetterUpercase(teamTwo)]){
+        newPerson.setAttribute("onclick", 'personalizar(this), limpar()')
+    }
+    
     titulo.appendChild(newPerson)
     } else if (document.getElementById("personalizar")){
         document.getElementById("personalizar").remove()
-        console.log("REMOVIDO", teamOne, teamTwo)
     }
     for (i=0; i < 11; i++){
         let row = document.createElement("div")
@@ -582,7 +595,7 @@ function firstLetterUpercase(string){
    return String(string)[0].toUpperCase() +  String(string).substring(1)
 }
 
-function personalizar(element){
+function personalizar(element, onlyone){
     let isSelected=false
     let mam = document.getElementsByClassName("mam")[0]
     
@@ -595,8 +608,16 @@ function personalizar(element){
         let newDiv = document.createElement("div")
         newDiv.id = 'person-div'
         document.body.appendChild(newDiv)
+        if (onlyone !='two'){
         putElenco(firstLetterUpercase(teamOne), newDiv)
+        }
+        if (onlyone != "one"){
         putElenco(firstLetterUpercase(teamTwo), newDiv)
+        } 
+        if (onlyone == "one" || onlyone == "two"){
+            document.getElementById("elenco").style.left = '0'
+            document.getElementById("elenco").style.width = '100vw'
+        }
         setAllOnclick('item', 'changeSource(this)')
         document.getElementsByClassName("mam")[0].style.marginBottom = "52vh"
     } else if (isSelected == true){
