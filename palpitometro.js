@@ -14,7 +14,7 @@ jogos = [
     ['corinthians','fortaleza'],
     ['atletico','bragantino'],
     ['ceara', 'flamengo'],
-    ['vitoria', 'palmeiras']
+    ['vitoria', 'palmeiras'],
     ['inter', 'saopaulo'], 
     ['santos', 'juventude']
 ]
