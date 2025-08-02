@@ -87,13 +87,33 @@ var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim'])
 var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'fabricio-daniel'])
 var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
 
+var golRBB = elConjunto("gol", 'bragantino', ['cleiton', 'lucao', 'fernando-costa', 'fabricio'])
+var latRBB = elConjunto("lat", 'bragantino', ['andres-hurtado', 'santanna', 'nathan-mendes', 'juninho-capixaba', 'guilherme-lopes'])
+var zagRBB = elConjunto("zag", "bragantino", ['pedro-henrique', 'guzman', 'eduardo-santos', 'gustavo-marques'])
+var volRBB = elConjunto("avol", "bragantino", ['gabriel', 'eric-ramires', 'fabinho', 'matheus-fernandes'])
+var meiRBB = elConjunto("mei", "bragantino", ['jhon-jhon', 'gustavo-neves', 'joao-neto'])
+var ponRBB = elConjunto("pon", 'bragantino', ['lucas-barbosa', 'mosquera', 'vinicinho', 'laquintana', 'marcelinho-braz', 'athyrson'])
+var caRBB = elConjunto("ca", 'bragantino', ['pitta', 'sasha', 'thiago-borbas', 'fernando'])
+
+let pos = ['gol','lat','zag','vol','mei','pon','ca']
+
 var dados = {
     Sport: [golSport, ldSport, zagSport, leSport, volSport, meiSport, ponSport, caSport],
     Bahia: [golBahia, ldBahia, zagBahia, leBahia, volBahia, meiBahia, ponBahia, caBahia],
     Fortaleza: [golFortaleza, ldFortaleza, zagFortaleza, leFortaleza, volFortaleza, meiFortaleza, ponFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
-    Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara]
+    Ceara: allConjunto("Ceara"),
+    Bragantino: allConjunto("RBB")
 };
+
+
+function allConjunto(team){
+    let conjunto = []
+    for (i=0; i< pos.length; i++){
+        conjunto.push(window[pos[i]+team])
+    }
+    return conjunto
+}
 
 function createElement(tag, properties){
     let newElement = document.createElement(tag)

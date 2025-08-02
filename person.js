@@ -1,6 +1,6 @@
 let fortaleza = srcConjunto("fortaleza", ['joao-ricardo', 'eros-mancuso', 'kuscevic', 'gustavo-mancha', 'bruno-pacheco', 'rosseto', 'lucas-sasha','pochettino', 'marinho', 'moises','lucero'])
 let sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "sergio-oliveira", "lucas-lima", "chino-atencio", "barletta", "pablo"])
-let bahia = srcConjunto("bahia", ['marcos-felipe', 'gilberto', 'david-duarte', 'ramos-mingo', 'luciano-juba', 'caio-alexandre','jean-lucas','everton-ribeiro','ademir','erick-pulga','william-jose'])
+let bahia = srcConjunto("bahia", ['marcos-felipe', 'gilberto', 'david-duarte', 'ramos-mingo', 'luciano-juba', 'caio-alexandre','jean-lucas','everton-ribeiro','ademir','cauly','william-jose'])
 let ceara = srcConjunto("ceara", ['fernando-miguel','fabiano-souza', 'marllon','william-machado','matheus-bahia','dieguinho','fernando-sobral','lucas-mugni','pedro-henrique','fernandinho','pedro-raul'])
 let vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "neris", "lucas-halter", "jamerson", "baralhas", "pepê", "matheusinho", "gustavo-mosquito", "wellington-rato", "janderson"])
 flu = "imagens/fluminense/"

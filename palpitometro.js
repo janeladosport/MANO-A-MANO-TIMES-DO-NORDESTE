@@ -7,17 +7,16 @@ function escudos(time){
 }
 
 jogos = [
-    ['botafogo','corinthians'],
-    ['mirassol', 'vitoria'],
-    ['fortaleza', 'bragantino'],
-    ['sport', 'santos', null, 'escale'],
-    ['santos', 'sport', null, 'escale'],
-    ['palmeiras','gremio'],
-    ['saopaulo','fluminense'],
-    ['cruzeiro', 'ceara'],
-    ['inter', 'vasco'], 
-    ['bahia', 'juventude'],
-    ['flamengo', 'atletico']
+    ['sport','bahia', null, "escale"],
+    ['mirassol', 'vasco'],
+    ['fluminense', 'gremio'],
+    ['botafogo', 'cruzeiro'],
+    ['corinthians','fortaleza'],
+    ['atletico','bragantino'],
+    ['ceara', 'flamengo'],
+    ['vitoria', 'palmeiras']
+    ['inter', 'saopaulo'], 
+    ['santos', 'juventude']
 ]
 
 info = null
@@ -111,7 +110,7 @@ mirassol = srcConjunto("mirassol", ['walter', 'daniel-borges', 'gabriel-knesowit
 atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
 cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
 palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "gustavo-gomez", "micael", "piquerez", "anibal-moreno", "lucas-evangelista", "mauricio", "facundo-torres", "felipe-anderson", "vitor-roque"])
-sport = srcConjunto("sport", ["gabriel","matheus-alexandre","rafael-thyere","ramon","igor-carius","christian-rivera","ze-lucas","matheusinho","barletta","derik-lacerda","ignacio-ramirez"])
+sport = srcConjunto("sport", ["gabriel","matheus-alexandre","rafael-thyere","ramon","igor-carius","christian-rivera","pedro-augusto","matheusinho","barletta","derik-lacerda","ignacio-ramirez"])
 ceara = srcConjunto("ceara", ['bruno-ferreira','fabiano-souza', 'marllon','william-machado','nicolas','dieguinho','fernando-sobral','lucas-mugni','galeano', 'pedro-henrique','pedro-raul'])
 
 let chelsea = srcConjunto("chelsea", ["sanchez", "gusto", "chalobah", "colwill", "cucurella", "andrey-santos", "enzo-fernandez", "nkunku", "pedro-neto", "cole-palmer", "delap"])

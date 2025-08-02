@@ -9,7 +9,8 @@ var dados = {
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara],
     Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
-    Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir]
+    Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir],
+    Bragantino: allConjunto("RBB")
 };
 
 let esquemas = {
