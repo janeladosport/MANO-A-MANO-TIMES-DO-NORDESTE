@@ -24,9 +24,12 @@ const url = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo
 const url1 = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo2veQByBGYWYztqzo/gviz/tq?tqx=out:csv&gid=0";
 const url2 = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo2veQByBGYWYztqzo/gviz/tq?tqx=out:csv&gid=1696284055";
 
+
+
+function createJogos(){
 jogos = [];
 
-fetch(url)
+return fetch(url)
     .then(res => res.text())
     .then(csv => {
         const linhas = csv.split("\n").map(l => l.split(","));
@@ -42,6 +45,7 @@ fetch(url)
         // Aqui você pode chamar sua função que monta o site
         mostrarJogos();
     });
+}
 
 function mostrarJogos() {
     jogos.forEach(jogo => {
@@ -75,12 +79,6 @@ function criarTimes(url) {
             });
         });
 }
-
-// Carregar primeira aba
-criarTimes(url2).then(() => {
-        createGames()
-    });
-;
 
 
 
@@ -171,6 +169,7 @@ function srcConjunto(time, jogadores){
 }
 
 function createGames(){
+    console.log('CRIANDO OS TIMES')
     let palpites = document.getElementById("palpites")
     for (i=0; i < jogos.length; i++){
         let newCabine = document.createElement("div")
