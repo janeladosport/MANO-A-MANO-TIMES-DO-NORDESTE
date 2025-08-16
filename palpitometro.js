@@ -7,22 +7,86 @@ function escudos(time){
 }
 
 jogos = [
-    ['flamengo','mirassol'],
-    ['saopaulo', 'vitoria'],
-    ['bragantino', 'inter'],
+    ['vitoria','juventude'],
+    ['fluminense', 'fortaleza'],
+    ['sport', 'saopaulo'],
     ['fortaleza', 'botafogo'],
     ['bahia', 'fluminense'],
     ['vasco', 'atletico'],
     ['palmeiras', 'ceara'],
     ['cruzeiro', 'santos'],
-    ['gremio', 'sport', null, 'escale'], 
+    ['gremio', 'sport'], 
     ['juventude', 'corinthians']
 ]
+
+
+const url = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo2veQByBGYWYztqzo/gviz/tq?tqx=out:csv";
+const url1 = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo2veQByBGYWYztqzo/gviz/tq?tqx=out:csv&gid=0";
+const url2 = "https://docs.google.com/spreadsheets/d/1j0YRWVYj3xneFnya4i3XG9QfqUo2veQByBGYWYztqzo/gviz/tq?tqx=out:csv&gid=1696284055";
+
+jogos = [];
+
+fetch(url)
+    .then(res => res.text())
+    .then(csv => {
+        const linhas = csv.split("\n").map(l => l.split(","));
+
+        // pula o cabeçalho e monta o array já limpando as aspas
+        jogos = linhas.slice(1).map(linha => [
+            linha[0].replace(/"/g, '').trim(),
+            linha[1].replace(/"/g, '').trim()
+        ]);
+
+        console.log("Jogos carregados:", jogos);
+
+        // Aqui você pode chamar sua função que monta o site
+        mostrarJogos();
+    });
+
+function mostrarJogos() {
+    jogos.forEach(jogo => {
+        console.log(`${jogo[0]} x ${jogo[1]}`);
+    });
+}
+
+hasSame = {
+    'saopaulo': 'sao paulo'
+}
+
+function criarTimes(url) {
+    return fetch(url)
+        .then(res => res.text())
+        .then(csv => {
+            const linhas = csv.split("\n").map(l => l.split(",").map(v => v.replace(/"/g,'').trim()));
+            linhas.forEach(linha => {
+                const nomeTime = linha[0].toLowerCase().replace(/\s/g,'-'); // padroniza o nome
+                const jogadores = linha.slice(1);
+
+                // Monta a string do array de jogadores
+                const arrayJogadores = jogadores.map(j => `'${j}'`).join(', ');
+
+                // Cria a linha de código completa
+                if(hasSame[nomeTime]){
+                    timesFut[firstLetterUpercase(nomeTime)] = srcConjunto(hasSame[nomeTime], jogadores);
+                } else{
+                    timesFut[firstLetterUpercase(nomeTime)] = srcConjunto(nomeTime, jogadores);
+                }
+                
+            });
+        });
+}
+
+// Carregar primeira aba
+criarTimes(url2).then(() => {
+        createGames()
+    });
+;
+
+
 
 info = null
 
 function hideAndShow(item){
-    if (document.getElementById("info-match") == item){console.log("É IGUAL")}
     if (document.getElementById("info-match") && document.getElementById("info-match") != item){
         console.log("2")
         document.getElementById("info-match").id = 'hide'
@@ -94,28 +158,10 @@ correspondencia = {
     'ceara': "Ceará", 'vitoria': "Vitória", 'gremio': "Grêmio", 'atletico': "Atlético-MG", "saopaulo": "São Paulo", "bragantino": "RB Bragantino", 'inter': 'Internacional'
 }
 
-internacional = srcConjunto("inter", ['anthoni', 'aguirre', 'vitao', 'juninho', 'ramon', 'fernando', 'bruno-henrique', 'alan-patrick', 'vitinho', 'wesley', 'borre'])
-juventude = srcConjunto("juventude", ["marcao", "ewerthon", "rodrigo-sam", "marcos-paulo", "alan-ruschel", "caique", "daniel-peixoto", "mandaca", "batalla", "giovany", "gilberto"])
-vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "raul-caceres", "lucas-halter", "ze-marcos", "maykon-jesus" ,"baralhas", "ronald", "matheusinho", "lucas-braga" ,"fabri", "renato-kayzer"])
-botafogo = srcConjunto("botafogo", ["john", "vitinho", "jair", "david-ricardo", "alex-telles", "gregore", "marlon-freitas", "allan", "artur", "savarino", "rwan-cruz"])
-vasco = srcConjunto("vasco", ["leo-jardim", "paulo-henrique", "joao-victor", "lucas-freitas", "lucas-piton", "jair", "tche-tche", "coutinho", "nuno-moreira","rayan", "vegetti"])
-corinthians = srcConjunto("corinthians", ["hugo-souza", "matheuzinho", "andre-ramalho", "caca", "matheus-bidu", "maycon", "raniele", "breno-bidon", "depay", "talles-magno", "hector-hernandez"])
-gremio = srcConjunto("gremio", ["tiago-volpi", "camilo", "balbuena", "wagner-leonardo", "marlon", "dodi", "villasanti", "riquelme", "alysson","cristian-oliveira", "braithwaite"])
-bragantino = srcConjunto("bragantino", ["cleiton", "andres-hurtado", "pedro-henrique", "eduardo", "juninho-capixaba", "gabriel", "eric-ramires", "jhon-jhon", "vinicinho", "pitta", "sasha"])
-fluminense = srcConjunto("fluminense", ["fabio", "samuel-xavier", "thiago-silva", "freytes", "fuentes", "hercules", "martinelli", "nonato", "kevin-serna", "soteldo", 'cano'])
-saopaulo = srcConjunto("sao paulo", ["rafael", "cedric", "arboleda", "sabino", "wendell", "pablo-maia", "bobadilla", "luciano", "lucas-ferreira", "enzo-diaz", "ryan-francisco"])
-santos = srcConjunto("santos", ['gabriel-brazao', 'escobar', 'joao-basso', 'luan-peres', 'souza', 'rincon', 'ze-rafael', 'neymar', 'rollheiser', 'barreal', 'deivid-washington'])
-flamengo = srcConjunto("flamengo", ['rossi', 'wesley', 'leo-ortiz', 'leo-pereira', 'alex-sandro', 'evertton-araujo', 'gerson', 'arrascaeta', 'luiz-araujo', 'cebolinha', 'bruno-henrique'])
-mirassol = srcConjunto("mirassol", ['walter', 'daniel-borges', 'gabriel-knesowitsch', 'jemmes', 'reinaldo', 'neto-moura', 'danielzinho', 'gabriel', 'carlos-eduardo', 'edson-carioca', 'chico-da-costa'])
-atletico = srcConjunto("atletico", ['everson', 'natanael', 'lyanco', 'vitor-hugo', 'alonso', 'alan-franco', 'patrick', 'scarpa', 'igor-gomes', 'rubens', 'rony'])
-cruzeiro = srcConjunto("cruzeiro", ['cassio', 'william', 'fabricio-bruno', 'jonathan-jesus', 'kaiki', 'lucas-romero', 'lucas-silva', 'matheus-pereira', 'christian', 'wanderson', 'kaio-jorge'])
-palmeiras = srcConjunto("palmeiras", ["weverton", "giay", "gustavo-gomez", "micael", "piquerez", "anibal-moreno", "lucas-evangelista", "mauricio", "facundo-torres", "felipe-anderson", "vitor-roque"])
-sport = srcConjunto("sport", ["gabriel","matheus-alexandre","rafael-thyere","ramon","igor-carius","christian-rivera","ze-lucas", 'lucas-lima',"matheusinho","leo-pereira","derik-lacerda"])
-ceara = srcConjunto("ceara", ['bruno-ferreira','fabiano-souza', 'marllon','william-machado','nicolas','dieguinho','fernando-sobral','lucas-mugni','galeano', 'pedro-henrique','pedro-raul'])
 
-let chelsea = srcConjunto("chelsea", ["sanchez", "gusto", "chalobah", "colwill", "cucurella", "andrey-santos", "enzo-fernandez", "nkunku", "pedro-neto", "cole-palmer", "delap"])
-timesFut = setTimesFut()
-timesFut['Chelsea'] = chelsea
+
+
+
 
 
 function srcConjunto(time, jogadores){
@@ -126,7 +172,6 @@ function srcConjunto(time, jogadores){
 
 function createGames(){
     let palpites = document.getElementById("palpites")
-    
     for (i=0; i < jogos.length; i++){
         let newCabine = document.createElement("div")
         newCabine.classList.add("jogo-palpite")
@@ -268,7 +313,6 @@ function mam(element){
     let palpites = element.parentElement
     let timeUm = palpites.getAttribute("datainfo-um")
     let timeDois = palpites.getAttribute("datainfo-dois")
-    
     selecionarUm({value:timeUm}, element.parentElement, escudos(timeUm), escudos(timeDois))
     document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
     selecionarDois({value:timeDois})
@@ -438,7 +482,6 @@ let containerall = document.getElementById("container-all")
         if (mam){mam.remove()}
 }
     function notes(timeUm, timeDois){
-        console.log(timesFut, timeUm, timesFut[timeUm])
         teamOne = timesFut[timeUm]
         teamTwo = timesFut[timeDois]
         console.log(teamOne)
