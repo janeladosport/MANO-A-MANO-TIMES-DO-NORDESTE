@@ -89,7 +89,7 @@ var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
 
 var golRBB = elConjunto("gol", 'bragantino', ['cleiton', 'lucao', 'fernando-costa', 'fabricio'])
 var latRBB = elConjunto("lat", 'bragantino', ['andres-hurtado', 'santanna', 'nathan-mendes', 'juninho-capixaba', 'guilherme-lopes'])
-var zagRBB = elConjunto("zag", "bragantino", ['pedro-henrique', 'guzman', 'eduardo-santos', 'gustavo-marques'])
+var zagRBB = elConjunto("zag", "bragantino", ['pedro-henrique', 'guzman', 'eduardo', 'gustavo-marques'])
 var volRBB = elConjunto("avol", "bragantino", ['gabriel', 'eric-ramires', 'fabinho', 'matheus-fernandes'])
 var meiRBB = elConjunto("mei", "bragantino", ['jhon-jhon', 'gustavo-neves', 'joao-neto'])
 var ponRBB = elConjunto("pon", 'bragantino', ['lucas-barbosa', 'mosquera', 'vinicinho', 'laquintana', 'marcelinho-braz', 'athyrson'])
