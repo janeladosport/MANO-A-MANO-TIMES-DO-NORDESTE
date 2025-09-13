@@ -165,15 +165,21 @@ ctx.lineWidth = sizeBorda;
 // Debug
 console.log("Time:", team, "SizeBorda:", sizeBorda, "Estilo:", estilo);
 
+let drawWidth
+let drawHeight
 
-  let drawWidth, drawHeight;
-  if (imgRatio > canvasRatio) {
-    drawWidth = maxW;
-    drawHeight = maxW / imgRatio;
-  } else {
-    drawHeight = maxH;
-    drawWidth = maxH * imgRatio;
-  }
+if (image.height > image.width){
+  drawWidth = maxW; // sempre ocupa 100% da largura
+drawHeight = image.height * (maxW / image.width); // ajusta proporcionalmente
+} else if (image.width > image.height){
+drawHeight = maxH; // sempre ocupa 100% da altura
+drawWidth = image.width * (maxH / image.height); // ajusta proporcionalmente
+} else{
+drawWidth = maxW; // sempre ocupa 100% da largura
+drawHeight = image.height * (maxW / image.width); // ajusta proporcionalmente
+
+}
+
 
   const offsetX = (canvas.width - drawWidth) / 2;
   const offsetY = (canvas.height - drawHeight) / 2;
