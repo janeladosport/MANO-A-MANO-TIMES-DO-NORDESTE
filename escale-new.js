@@ -13,7 +13,8 @@ var dados = {
     Bragantino: allConjunto("RBB"),
     Vasco: allConjunto("VAS"),
     Gremio: allConjunto("GRE"),
-    Cruzeiro: allConjunto("CRU")
+    Cruzeiro: allConjunto("CRU"),
+     Palmeiras: allConjunto("PAL")
 };
 
 let esquemas = {
