@@ -147,7 +147,7 @@
   const rawName = document.getElementById("playerName").value.trim();
   const minuscula = rawName.toLowerCase();
   let newMinuscula = minuscula.replaceAll(" ", "-")
-  alert(newMinuscula)
+  document.getElementById('archiveName').value = newMinuscula
   const name = rawName.toUpperCase();
   const team = document.getElementById("teamSelect").value;
 
