@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Foto do Jogador</title>
+
+  <!-- Fonte Roboto Condensed Bold -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      text-align: center;
+      margin: 30px;
+    }
+
+    #drop-area {
+      border: 3px dashed #666;
+      padding: 30px;
+      width: 300px;
+      margin: 0 auto 20px;
+    }
+
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+      width: 700px;
+      height: 700px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 250px;
+      font-size: 16px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Montagem do Jogador</h1>
+
+  <div id="drop-area">
+    <p>Arraste uma imagem aqui</p>
+    <input type="file" id="fileElem" accept="image/*">
+  </div>
+<select id="teamSelect">
+  <option value="flamengo">Flamengo</option>
+  <option value="palmeiras">Palmeiras</option>
+  <option value="vasco">Vasco</option>
+</select>
+  <input type="text" id="playerName" placeholder="Digite o nome do jogador">
+  <button onclick="selected()" style="display: inline;">Pesquisar imagem</button><br>
+  <button onclick="gerarImagem()">Gerar imagem</button><br>
+
+  <canvas id="previewCanvas" width="700" height="700"></canvas><br>
+  <input type="text" id="archiveName" placeholder="Nome do arquivo">
+  <button onclick="baixarImagem()">Baixar imagem</button>
+
+  <script>
+    function selected () {
+        let nome = document.getElementById("playerName").value
+        let team = document.getElementById("teamSelect").value
+        let jogador = nome + " " + team
+        window.open(`https://www.google.com/search?as_st=y&as_q=${jogador}&as_epq=&as_oq=&as_eq=&imgsz=l&imgar=s&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=&tbs=&udm=2`)
+    }
+    const estiloPorTime = {
+  'flamengo': {
+    fill: 'red',
+    stroke: ['black']
+  },
+  'palmeiras': {
+    fill: 'white',
+    stroke: ['rgb(0,100,55)']
+  },
+  'vasco': {
+    fill: 'white',
+    stroke: ['black']
+  }
+  // Adicione outros times aqui
+};
+    const dropArea = document.getElementById("drop-area");
+    const fileElem = document.getElementById("fileElem");
+    const canvas = document.getElementById("previewCanvas");
+    const ctx = canvas.getContext("2d");
+    let image = null;
+
+    dropArea.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropArea.style.borderColor = "#333";
+    });
+
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.style.borderColor = "#666";
+    });
+
+    dropArea.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropArea.style.borderColor = "#666";
+      const file = e.dataTransfer.files[0];
+      carregarImagem(file);
+    });
+
+    fileElem.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      carregarImagem(file);
+    });
+
+    function carregarImagem(file) {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        image = new Image();
+        image.onload = () => desenharCanvas();
+        image.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function desenharCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Redimensiona a imagem para caber no canvas 700x700
+  const maxW = canvas.width;
+  const maxH = canvas.height;
+  const imgRatio = image.width / image.height;
+  const canvasRatio = maxW / maxH;
+
+  let drawWidth, drawHeight;
+  if (imgRatio > canvasRatio) {
+    drawWidth = maxW;
+    drawHeight = maxW / imgRatio;
+  } else {
+    drawHeight = maxH;
+    drawWidth = maxH * imgRatio;
+  }
+
+  const offsetX = (canvas.width - drawWidth) / 2;
+  const offsetY = (canvas.height - drawHeight) / 2;
+  ctx.drawImage(image, offsetX, offsetY, drawWidth, drawHeight);
+
+  // Pegando nome e time
+  const rawName = document.getElementById("playerName").value.trim();
+  const minuscula = rawName.toLowerCase();
+  let newMinuscula = minuscula.replaceAll(" ", "-")
+  alert(newMinuscula)
+  const name = rawName.toUpperCase();
+  const team = document.getElementById("teamSelect").value;
+
+  const estilo = estiloPorTime[team] || {
+    fill: "white",
+    stroke: ["black"]
+  };
+
+  // Configurações comuns
+  ctx.font = "bold 79.76px 'Roboto Condensed'";
+  ctx.fillStyle = estilo.fill;
+  ctx.lineWidth = 12.5;
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.textAlign = "center";
+  ctx.textBaseline = "bottom";
+
+  // Sombra
+  ctx.shadowColor = "rgba(0, 0, 0, 0.6)";
+  ctx.shadowBlur = 6;
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+
+  const textY = canvas.height - 30;
+
+  // 🟥 MULTICOLOR POR LETRA
+  if (estilo.multicolorPorLetra) {
+    const letras = name.split("");
+    const totalWidth = ctx.measureText(name).width;
+    let startX = canvas.width / 2 - totalWidth / 2;
+
+    for (let i = 0; i < letras.length; i++) {
+      const letra = letras[i];
+      const corBorda = estilo.stroke[i % estilo.stroke.length];
+      const largura = ctx.measureText(letra).width;
+
+      ctx.strokeStyle = corBorda;
+      ctx.strokeText(letra, startX + largura / 2, textY);
+      ctx.fillText(letra, startX + largura / 2, textY);
+
+      startX += largura;
+    }
+    return;
+  }
+
+  // 🟦 MULTICOLOR POR PALAVRA (ex: "JOÃO PEDRO")
+  const palavras = name.split(" ");
+  const totalText = palavras.map(p => ctx.measureText(p).width).reduce((a, b) => a + b, 0);
+  const espaco = ctx.measureText(" ").width;
+  let startX = canvas.width / 2 - (totalText + espaco * (palavras.length - 1)) / 2;
+
+  if (palavras.length == 1){
+    console.log('PALAVRA ÚNICA')
+    for (let i = 0; i < palavras.length; i++) {
+    const palavra = palavras[i];
+    const letras = palavra.split('')
+    console.log(letras)
+    if ((letras.length % 2) == 0){
+        let tamanho = (letras.length / 2) - 1
+        for (f=0; f < letras.length; f++){
+            console.log(estilo.stroke[0], estilo.stroke[1])
+            if (f <= tamanho){
+                const corAtualBorda = estilo.stroke[0]
+                const largura = ctx.measureText(letras[f]).width;
+                ctx.strokeStyle = corAtualBorda;
+                ctx.strokeText(letras[f], startX + largura / 2, textY);
+                ctx.fillText(letras[f], startX + largura / 2, textY);
+                startX += largura + 5;
+            } else{
+                const corAtualBorda = estilo.stroke[1]
+                const largura = ctx.measureText(letras[f]).width;
+                ctx.strokeStyle = corAtualBorda;
+                ctx.strokeText(letras[f], startX + largura / 2, textY);
+                ctx.fillText(letras[f], startX + largura / 2, textY);
+                startX += largura + 5;
+            }
+        }
+    } else{
+        let tamanho = (letras.length / 2) - 1.5
+        for (f=0; f < letras.length; f++){
+            console.log(estilo.stroke[0], estilo.stroke[1])
+            if (f <= tamanho){
+                const corAtualBorda = estilo.stroke[0]
+                const largura = ctx.measureText(letras[f]).width;
+                ctx.strokeStyle = corAtualBorda;
+                ctx.strokeText(letras[f], startX + largura / 2, textY);
+                ctx.fillText(letras[f], startX + largura / 2, textY);
+                startX += largura + 5;
+            } else{
+                const corAtualBorda = estilo.stroke[1]
+                const largura = ctx.measureText(letras[f]).width;
+                ctx.strokeStyle = corAtualBorda;
+                ctx.strokeText(letras[f], startX + largura / 2, textY);
+                ctx.fillText(letras[f], startX + largura / 2, textY);
+                startX += largura + 5;
+            }
+        }
+    }
+  }
+  } else {
+  for (let i = 0; i < palavras.length; i++) {
+    const palavra = palavras[i];
+    const corBorda = estilo.stroke[i % estilo.stroke.length];
+    const largura = ctx.measureText(palavra).width;
+
+    ctx.strokeStyle = corBorda;
+    ctx.strokeText(palavra, startX + largura / 2, textY);
+    ctx.fillText(palavra, startX + largura / 2, textY);
+
+    startX += largura + espaco;
+  }
+}
+}
+
+
+
+    function gerarImagem() {
+      if (!image) {
+        alert("Por favor, carregue uma imagem.");
+        return;
+      }
+      desenharCanvas();
+    }
+
+    function baixarImagem() {
+      const link = document.createElement("a");
+      link.download = `${document.getElementById("archiveName").value}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    }
+  </script>
+</body>
+</html>
