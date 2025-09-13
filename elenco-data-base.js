@@ -111,6 +111,23 @@ var meiGRE = elConjunto("mei", "gremio", ['arthur', 'cristaldo', 'monsalve', 'ri
 var ponGRE = elConjunto("pon", 'gremio', ['aravena', 'cristian-oliveira', 'pavon', 'alysson'])
 var caGRE = elConjunto("ca", 'gremio', ['braithwaite', 'carlos-vinicius', 'andre-henrique'])
 
+var golCRU = elConjunto("gol", 'cruzeiro', ['cassio', 'leo-aragao', 'otavio'])
+var latCRU = elConjunto("lat", 'cruzeiro', ['william', 'kaiki', 'fagner', 'kaua-moraes', 'kaua-prates'])
+var zagCRU = elConjunto("zag", "cruzeiro", ['fabricio-bruno', 'villalba', 'joao-marcelo', 'jonathan-jesus', 'gamarra'])
+var volCRU = elConjunto("avol", "cruzeiro", ['lucas-romero', 'walace', 'lucas-silva', 'matheus-henrique', 'murilo-rhikman'])
+var meiCRU = elConjunto("mei", "cruzeiro", ['matheus-pereira', 'eduardo', 'japa', 'ryan-guilherme'])
+var ponCRU = elConjunto("pon", 'cruzeiro', ['christian', 'wanderson', 'bolasie', 'sinisterra', 'marquinhos', 'keny-arroyo'])
+var caCRU = elConjunto("ca", 'cruzeiro', ['kaio-jorge', 'gabigol', 'kaique-kenji'])
+
+// var gol = elConjunto("gol", 'team', [])
+// var lat = elConjunto("lat", 'team', [])
+// var zag = elConjunto("zag", "team", [])
+// var vol = elConjunto("avol", "team", [])
+// var mei = elConjunto("mei", "team", [])
+// var pon = elConjunto("pon", 'team', [])
+// var ca = elConjunto("ca", 'team', [])
+
+
 let pos = ['gol','lat','zag','vol','mei','pon','ca']
 
 var dados = {
@@ -121,7 +138,8 @@ var dados = {
     Ceara: allConjunto("Ceara"),
     Bragantino: allConjunto("RBB"),
     Vasco: allConjunto("VAS"),
-     Gremio: allConjunto("GRE")
+     Gremio: allConjunto("GRE"),
+     Cruzeiro: allConjunto("CRU")
 };
 
 

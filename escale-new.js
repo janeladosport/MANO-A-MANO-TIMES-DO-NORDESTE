@@ -12,7 +12,8 @@ var dados = {
     Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir],
     Bragantino: allConjunto("RBB"),
     Vasco: allConjunto("VAS"),
-    Gremio: allConjunto("GRE")
+    Gremio: allConjunto("GRE"),
+    Cruzeiro: allConjunto("CRU")
 };
 
 let esquemas = {
