@@ -10,7 +10,8 @@ var dados = {
     Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara],
     Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
     Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir],
-    Bragantino: allConjunto("RBB")
+    Bragantino: allConjunto("RBB"),
+    Vasco: allConjunto("VAS")
 };
 
 let esquemas = {

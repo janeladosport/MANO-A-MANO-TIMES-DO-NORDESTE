@@ -44,15 +44,31 @@
 </head>
 <body>
   <h1>Montagem do Jogador</h1>
-
   <div id="drop-area">
     <p>Arraste uma imagem aqui</p>
     <input type="file" id="fileElem" accept="image/*">
   </div>
 <select id="teamSelect">
+  <option value="atletico-mg">Atlético-MG</option>
+  <option value="bahia">Bahia</option>
+  <option value="botafogo">Botafogo</option>
+  <option value="bragantino">Bragantino</option>
+  <option value="ceara">Ceará</option>
+  <option value="corinthians">Corinthians</option>
+  <option value="cruzeiro">Cruzeiro</option>
   <option value="flamengo">Flamengo</option>
+  <option value="fluminense">Fluminense</option>
+  <option value="fortaleza">Fortaleza</option>
+  <option value="gremio">Grêmio</option>
+  <option value="internacional">Internacional</option>
+  <option value="juventude">Juventude</option>
+  <option value="mirassol">Mirassol</option>
   <option value="palmeiras">Palmeiras</option>
+  <option value="santos">Santos</option>
+  <option value="sao-paulo">São Paulo</option>
+  <option value="sport">Sport</option>
   <option value="vasco">Vasco</option>
+  <option value="vitoria">Vitória</option>
 </select>
   <input type="text" id="playerName" placeholder="Digite o nome do jogador">
   <button onclick="selected()" style="display: inline;">Pesquisar imagem</button><br>
@@ -70,18 +86,26 @@
         window.open(`https://www.google.com/search?as_st=y&as_q=${jogador}&as_epq=&as_oq=&as_eq=&imgsz=l&imgar=s&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=&tbs=&udm=2`)
     }
     const estiloPorTime = {
-  'flamengo': {
-    fill: 'red',
-    stroke: ['black']
-  },
-  'palmeiras': {
-    fill: 'white',
-    stroke: ['rgb(0,100,55)']
-  },
-  'vasco': {
-    fill: 'white',
-    stroke: ['black']
-  }
+  'palmeiras': {fill: 'white', stroke: ['rgb(0,100,55)']},
+  "atletico-mg": { fill: "white", stroke: ["black"] },
+  "bahia": { fill: "white", stroke: ["rgb(255,1,1)", "rgb(0,0,254)"], size: 10},
+  "botafogo": { fill: "white", stroke: ["black"] },
+  "bragantino": { fill: "rgb(253,204,9)", stroke: ["rgb(214,30,63)"], size: 9},
+  "ceara": { fill: "white", stroke: ["black"] },
+  "corinthians": { fill: "white", stroke: ["black"] },
+  "cruzeiro": { fill: "white", stroke: ["rgb(55,94,180)"], size: 10},
+  "flamengo": { fill: "red", stroke: ["black"] },
+  "fluminense": { fill: "white", stroke: ["rgb(146,6,42)", "rgb(0,96,57)"], size: 10},
+  "fortaleza": { fill: "white", stroke: ["rgb(255,1,1)", "rgb(0,0,254)"], size:10},
+  "gremio": { fill: "white", stroke: ["rgb(13,128,191)"], size: 10},
+  "internacional": { fill: "white", stroke: ["rgb(229,5,15)"], size: 9.5},
+  "juventude": { fill: "white", stroke: ["rgb(2,132,29)"] },
+  "mirassol": { fill: "yellow", stroke: ["green"], size: 7.5},
+  "santos": { fill: "white", stroke: ["black"] },
+  "sao-paulo": { fill: "white", stroke: ["red", "black"], size: 9},
+  "sport": { fill: "red", stroke: ["black"] },
+  "vasco": { fill: "white", stroke: ["black"] },
+  "vitoria": { fill: "red", stroke: ["black"] }
   // Adicione outros times aqui
 };
     const dropArea = document.getElementById("drop-area");
@@ -129,6 +153,18 @@
   const maxH = canvas.height;
   const imgRatio = image.width / image.height;
   const canvasRatio = maxW / maxH;
+ const team = document.getElementById("teamSelect").value;
+
+// Pega o estilo do time ou usa padrão
+const estilo = estiloPorTime[team] || { fill: "white", stroke: ["black"], size: 11 };
+
+// Define tamanho da borda dinamicamente
+const sizeBorda = estilo.size ?? 11; // operador nullish evita undefined
+ctx.lineWidth = sizeBorda;
+
+// Debug
+console.log("Time:", team, "SizeBorda:", sizeBorda, "Estilo:", estilo);
+
 
   let drawWidth, drawHeight;
   if (imgRatio > canvasRatio) {
@@ -149,17 +185,11 @@
   let newMinuscula = minuscula.replaceAll(" ", "-")
   document.getElementById('archiveName').value = newMinuscula
   const name = rawName.toUpperCase();
-  const team = document.getElementById("teamSelect").value;
 
-  const estilo = estiloPorTime[team] || {
-    fill: "white",
-    stroke: ["black"]
-  };
 
   // Configurações comuns
   ctx.font = "bold 79.76px 'Roboto Condensed'";
   ctx.fillStyle = estilo.fill;
-  ctx.lineWidth = 12.5;
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   ctx.textAlign = "center";

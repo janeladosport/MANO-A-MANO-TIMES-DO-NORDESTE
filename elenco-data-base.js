@@ -95,6 +95,14 @@ var meiRBB = elConjunto("mei", "bragantino", ['jhon-jhon', 'gustavo-neves', 'joa
 var ponRBB = elConjunto("pon", 'bragantino', ['lucas-barbosa', 'mosquera', 'vinicinho', 'laquintana', 'marcelinho-braz', 'athyrson'])
 var caRBB = elConjunto("ca", 'bragantino', ['pitta', 'sasha', 'thiago-borbas', 'fernando'])
 
+var golVAS = elConjunto("gol", 'vasco', ['leo-jardim', 'daniel-fuzato', 'pablo'])
+var latVAS = elConjunto("lat", 'vasco', ['puma-rodriguez', 'paulo-henrique', 'lucas-piton', 'victor-luis', 'paulo-ricardo', 'riquelme'])
+var zagVAS = elConjunto("zag", "vasco", ['cuesta', 'robert-renan', 'lucas-freitas', 'lucas-oliveira'])
+var volVAS = elConjunto("avol", "vasco", ['cauan-barros', 'jair', 'tche-tche', 'thiago-mendes', 'hugo-moura', 'paulinho', 'matheus-carvalho'])
+var meiVAS = elConjunto("mei", "vasco", ['coutinho', 'estrella'])
+var ponVAS = elConjunto("pon", 'vasco', ['rayan', 'nuno-moreira','garre', 'loide-augusto', 'andres-gomez', 'jean-david', 'adson'])
+var caVAS = elConjunto("ca", 'vasco', ['vegetti', 'david', 'matheus-frança'])
+
 let pos = ['gol','lat','zag','vol','mei','pon','ca']
 
 var dados = {
@@ -103,7 +111,8 @@ var dados = {
     Fortaleza: [golFortaleza, ldFortaleza, zagFortaleza, leFortaleza, volFortaleza, meiFortaleza, ponFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: allConjunto("Ceara"),
-    Bragantino: allConjunto("RBB")
+    Bragantino: allConjunto("RBB"),
+    Vasco: allConjunto("VAS")
 };
 
 
