@@ -11,7 +11,8 @@ var dados = {
     Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
     Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir],
     Bragantino: allConjunto("RBB"),
-    Vasco: allConjunto("VAS")
+    Vasco: allConjunto("VAS"),
+    Gremio: allConjunto("GRE")
 };
 
 let esquemas = {

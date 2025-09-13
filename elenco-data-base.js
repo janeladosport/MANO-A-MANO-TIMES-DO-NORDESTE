@@ -103,6 +103,14 @@ var meiVAS = elConjunto("mei", "vasco", ['coutinho', 'estrella'])
 var ponVAS = elConjunto("pon", 'vasco', ['rayan', 'nuno-moreira','garre', 'loide-augusto', 'andres-gomez', 'jean-david', 'adson'])
 var caVAS = elConjunto("ca", 'vasco', ['vegetti', 'david', 'matheus-frança'])
 
+var golGRE = elConjunto("gol", 'gremio', ['tiago-volpi', 'gabriel-grando', 'thiago-beltrame', 'jorge'])
+var latGRE = elConjunto("lat", 'gremio', ['marlon', 'marcos-rocha', 'lucas-esteves', 'enzo', 'joao-lucas', 'joao-pedro'])
+var zagGRE = elConjunto("zag", "gremio", ['kannemann', 'balbuena', 'wagner-leonardo', 'gustavo-martins', 'jemerson', 'rodrigo-ely', 'viery'])
+var volGRE = elConjunto("avol", "gremio", ['dodi', 'edenilson', 'erick-noriega', 'villasanti', 'willian', 'alex-santana', 'camilo', 'cuellar'])
+var meiGRE = elConjunto("mei", "gremio", ['arthur', 'cristaldo', 'monsalve', 'riquelme'])
+var ponGRE = elConjunto("pon", 'gremio', ['aravena', 'cristian-oliveira', 'pavon', 'alysson'])
+var caGRE = elConjunto("ca", 'gremio', ['braithwaite', 'carlos-vinicius', 'andre-henrique'])
+
 let pos = ['gol','lat','zag','vol','mei','pon','ca']
 
 var dados = {
@@ -112,7 +120,8 @@ var dados = {
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: allConjunto("Ceara"),
     Bragantino: allConjunto("RBB"),
-    Vasco: allConjunto("VAS")
+    Vasco: allConjunto("VAS"),
+     Gremio: allConjunto("GRE")
 };
 
 
