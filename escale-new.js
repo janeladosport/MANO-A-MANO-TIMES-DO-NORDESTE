@@ -14,7 +14,8 @@ var dados = {
     Vasco: allConjunto("VAS"),
     Gremio: allConjunto("GRE"),
     Cruzeiro: allConjunto("CRU"),
-     Palmeiras: allConjunto("PAL")
+     Palmeiras: allConjunto("PAL"),
+    Inter: allConjunto("INT")
 };
 
 let esquemas = {
