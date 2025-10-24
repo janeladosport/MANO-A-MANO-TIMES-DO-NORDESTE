@@ -80,12 +80,12 @@ var ponSp = elConjunto("pon", 'sao paulo', ['ferreirinha', 'lucas-ferreira', 'lu
 var caSp = elConjunto("ca", 'sao paulo', ['andre-silva', 'calleri', 'ryan-francisco'])
 
 var golMir = elConjunto("gol", 'mirassol', ['walter', 'alex-muralha'])
-var latMir = elConjunto("lat", 'mirassol', ['lucas-ramon', 'reinaldo', 'daniel-borges'])
-var zagMir = elConjunto("zag", 'mirassol', ['joao-victor', 'jemmes', 'luiz-otavio', 'david-braz'])
-var avolMir = elConjunto("avol", 'mirassol', ['neto-moura', 'danielzinho', 'yago-felipe', 'jose-aldo', 'roni'])
-var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim'])
-var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'fabricio-daniel'])
-var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
+var latMir = elConjunto("lat", 'mirassol', ['lucas-ramon', 'reinaldo', 'daniel-borges', 'felipe-jonatan'])
+var zagMir = elConjunto("zag", 'mirassol', ['joao-victor', 'jemmes', 'luiz-otavio', 'gabriel-knesowitsch'])
+var avolMir = elConjunto("avol", 'mirassol', ['neto-moura', 'danielzinho', 'yago-felipe', 'jose-aldo', 'roni', 'matheus-bianqui', 'sales'])
+var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim', 'gabriel', 'shaylon'])
+var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'alesson', 'carlos-eduardo', 'edson-carioca'])
+var caMir = elConjunto("ca", "mirassol", ['chico-da-costa', 'cristian-renato', 'renato-marques'])
 
 var golRBB = elConjunto("gol", 'bragantino', ['cleiton', 'lucao', 'fernando-costa', 'fabricio'])
 var latRBB = elConjunto("lat", 'bragantino', ['andres-hurtado', 'santanna', 'nathan-mendes', 'juninho-capixaba', 'guilherme-lopes'])
