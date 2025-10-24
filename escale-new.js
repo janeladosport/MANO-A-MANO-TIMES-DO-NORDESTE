@@ -15,7 +15,8 @@ var dados = {
     Gremio: allConjunto("GRE"),
     Cruzeiro: allConjunto("CRU"),
      Palmeiras: allConjunto("PAL"),
-    Inter: allConjunto("INT")
+    Inter: allConjunto("INT"),
+    Atletico: allConjunto("CAM")
 };
 
 let esquemas = {

@@ -140,8 +140,8 @@ var latCAM = elConjunto("lat", 'atletico', ['natanael', 'arana', 'saravia','caio
 var zagCAM = elConjunto("zag", "atletico", ['ruan-tressoldi', 'lyanco', 'alonso', 'vitor-hugo', 'ivan-roman'])
 var volCAM = elConjunto("avol", "atletico", ['reinier', 'alexsander', 'fausto-vera', 'patrick', 'alan-franco', 'iseppe'])
 var meiCAM = elConjunto("mei", "atletico", ['scarpa', 'bernard', 'igor-gomes', 'gabriel-menino'])
-var ponCAM = elConjunto("pon", 'atletico', [])
-var caCAM = elConjunto("ca", 'atletico', [])
+var ponCAM = elConjunto("pon", 'atletico', ['cuello', 'isaac', 'rony', 'junior-santos', 'biel', 'dudu'])
+var caCAM = elConjunto("ca", 'atletico', ['hulk', 'cadu', 'caio-maia', 'joao-marcelo'])
 
 // var gol = elConjunto("gol", 'team', [])
 // var lat = elConjunto("lat", 'team', [])
@@ -165,7 +165,8 @@ var dados = {
      Gremio: allConjunto("GRE"),
      Cruzeiro: allConjunto("CRU"),
      Palmeiras: allConjunto("PAL"),
-    Inter: allConjunto("INT")
+    Inter: allConjunto("INT"),
+    Atletico: allConjunto("CAM")
 };
 
 
