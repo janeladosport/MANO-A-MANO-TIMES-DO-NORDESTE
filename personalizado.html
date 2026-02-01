@@ -79,7 +79,8 @@
                 if (document.getElementsByClassName("mam")[0]){
                     document.getElementsByClassName("mam")[0].remove()
                 }
-                selecionarUm({value:timeUm}, document.body, escudos(timeUm), escudos(timeDois))
+
+                selecionarUm({value:timeUm}, document.body, escudos(timeUm.toDownCase()), escudos(timeDois))
                 document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
                 selecionarDois({value:timeDois})
                 cleanItemResultado()
@@ -102,7 +103,7 @@
                 if (document.getElementsByClassName("mam")[0]){
                     document.getElementsByClassName("mam")[0].remove()
                 }
-                selecionarUm({value:timeUm}, document.body, escudos(timeUm), escudos(timeDois))
+                selecionarUm({value:timeUm}, document.body, escudos(timeUm.toLowerCase()), escudos(timeDois.toLowerCase()))
                 document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
                 selecionarDois({value:timeDois})
                 cleanItemResultado()
