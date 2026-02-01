@@ -1,7 +1,8 @@
-let fortaleza = srcConjunto("fortaleza", ['joao-ricardo', 'eros-mancuso', 'kuscevic', 'gustavo-mancha', 'bruno-pacheco', 'rosseto', 'lucas-sasha','pochettino', 'marinho', 'moises','lucero'])
-let sport = srcConjunto("sport", ["caique-frança", "hereda", "joao-silva", "chico", "igor-carius", "christian-rivera", "sergio-oliveira", "lucas-lima", "chino-atencio", "barletta", "pablo"])
+let fortaleza = srcConjunto("fortaleza", ['brenno', 'mailton', 'britez', 'kuscevic', 'diogo-barbosa', 'pierre', 'lucas-sasha','lucas-crispim', 'pochettino', 'moises','adam-bareiro'])
+let sport = srcConjunto("sport", ["thiago-couto", "augusto-pucci", "marcelo-ajul", "ramon", "felipinho", "ze-lucas", "yago-felipe", "de-pena", "barletta", "gustavo-maia", "coutinho"])
 let bahia = srcConjunto("bahia", ['marcos-felipe', 'gilberto', 'david-duarte', 'ramos-mingo', 'luciano-juba', 'caio-alexandre','jean-lucas','everton-ribeiro','ademir','cauly','william-jose'])
-let ceara = srcConjunto("ceara", ['fernando-miguel','fabiano-souza', 'marllon','william-machado','matheus-bahia','dieguinho','fernando-sobral','lucas-mugni','pedro-henrique','fernandinho','pedro-raul'])
+let ceara = srcConjunto("ceara", ['bruno-ferreira','alex-silva', 'pedro-gilmar','eder','fernando','dieguinho','zanocelo','vina','matheusinho','fernandinho','lucca'])
+let nautico = srcConjunto("nautico", ['muriel','reginaldo', 'mateus-silva','igor-fernandes','yuri','ramon','wenderson','dodo','todinho','vinicius','paulo-sergio'])
 let vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "neris", "lucas-halter", "jamerson", "baralhas", "pepê", "matheusinho", "gustavo-mosquito", "wellington-rato", "janderson"])
 flu = "imagens/fluminense/"
 let fluminense = [flu + "fabio.png", flu + "guga.png", flu + "ignacio.png", flu + "freytes.png", flu + "fuentes.png", flu + "martinelli.png", flu + "nonato.png", flu + "ganso.png", flu + "arias.png", flu + "keno.png", flu + "everaldo.png"]
@@ -66,7 +67,8 @@ let timesFut = {
     Cruzeiro: cruzeiro,
     Atletico: atletico,
     Gremio: gremio,
-    Santos: santos
+    Santos: santos,
+    Nautico: nautico
 }
 return timesFut
 }
@@ -76,7 +78,8 @@ fotosTimes = {
     Sport: ["imagens/escudos/sport.svg", "Sport"],
     Bahia: ["imagens/escudos/bahia.png", "Bahia"],
     Ceara: ["imagens/escudos/ceara.png", "Ceará"],
-    Vitoria: ["imagens/escudos/vitoria.png", "Vitória"]
+    Vitoria: ["imagens/escudos/vitoria.png", "Vitória"],
+    Nautico: ["imagens/escudos/nautico.png", "Náutico"]
 }
 let corBahia = "linear-gradient(90deg, rgb(7, 99, 171), rgb(255,255,255), rgb(238, 49, 38))"
 let corSport = "linear-gradient(90deg, rgb(227, 26, 33), rgb(35,31,32))"

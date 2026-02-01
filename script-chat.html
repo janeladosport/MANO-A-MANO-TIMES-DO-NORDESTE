@@ -69,9 +69,11 @@
   <option value="sport">Sport</option>
   <option value="vasco">Vasco</option>
   <option value="vitoria">Vitória</option>
+  <option value="nautico">Náutico</option>
 </select>
   <input type="text" id="playerName" placeholder="Digite o nome do jogador">
-  <button onclick="selected()" style="display: inline;">Pesquisar imagem</button><br>
+  <button onclick="selected()" style="display: inline;">Pesquisar imagem</button>
+  <button onclick="selectedNorm()" style="display: inline;">Pesquisar normal</button><br>
   <button onclick="gerarImagem()">Gerar imagem</button><br>
 
   <canvas id="previewCanvas" width="700" height="700"></canvas><br>
@@ -79,11 +81,18 @@
   <button onclick="baixarImagem()">Baixar imagem</button>
 
   <script>
-    function selected () {
+    function selected() {
         let nome = document.getElementById("playerName").value
         let team = document.getElementById("teamSelect").value
         let jogador = nome + " " + team
         window.open(`https://www.google.com/search?as_st=y&as_q=${jogador}&as_epq=&as_oq=&as_eq=&imgsz=l&imgar=s&imgcolor=&imgtype=&cr=&as_sitesearch=&as_filetype=&tbs=&udm=2`)
+    }
+    function selectedNorm() {
+        let nome = document.getElementById("playerName").value
+        let team = document.getElementById("teamSelect").value
+        let jogador = nome + " " + team
+        window.open(`https://www.google.com/search?sca_esv=5518e78f4d5485f4&as_st=y&udm=2&fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB053XGJ8j52MAaeNcXRIAnvVdv2hS-xutuztQCtwyJHLDxbLDw-MJwqMgNpw82MEaIIcBZ-iztTPlmkWNFdRk4qM0sWrGD5XjafzxSxxKXyJS2pkQZKeH_w461lXFaniM1nY8BNQMr0qqrxaesDIoyTZIweMwISHCDFwU9a8-h05tl-6E53w&q=${jogador}&sa=X&ved=2ahUKEwi07MjrnreSAxUTA7kGHREyHAkQtKgLegQIFhAB&biw=1528&bih=732&dpr=1.25&aic=0`)
+        
     }
     const estiloPorTime = {
   'palmeiras': {fill: 'white', stroke: ['rgb(0,100,55)']},
@@ -105,7 +114,8 @@
   "sao-paulo": { fill: "white", stroke: ["red", "black"], size: 9},
   "sport": { fill: "red", stroke: ["black"] },
   "vasco": { fill: "white", stroke: ["black"] },
-  "vitoria": { fill: "red", stroke: ["black"] }
+  "vitoria": { fill: "red", stroke: ["black"] },
+  "nautico": { fill: "white", stroke: ["rgb(229,5,15)"], size: 9.5}
   // Adicione outros times aqui
 };
     const dropArea = document.getElementById("drop-area");

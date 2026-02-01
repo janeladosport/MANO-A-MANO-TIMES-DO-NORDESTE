@@ -24,16 +24,72 @@
             position: static;
         }
         #titulo{
-            margin-top: 35px;
+            margin-top:35px;
         }
         #mam-lista{
             margin-top: 50px;
         }
+        #timesImg{
+            margin-top: 40px;
+            width: 95vw;
+            display: flex;
+            justify-content: center;
+        }
+        #timesImg img{
+            cursor: pointer;
+            width: 70px;
+            margin: 9px 20px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 50%;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition-duration: 0.3s;
+        }
+        #timesImg img:not(#firstTeam):not(#secondTeam):hover{
+            background-color: rgba(189, 0, 0, 0.747);
+        }
+        #firstTeam{
+            background-color: rgba(73, 45, 255, 0.747);
+        }
+        #firstTeam:hover{
+            background-color: rgba(56, 35, 194, 0.747);
+        }
+        #secondTeam{
+            background-color: rgba(248, 193, 65, 0.747);
+        }
+        #secondTeam:hover{
+            background-color: rgba(202, 157, 53, 0.747);
+        }
+        
+
     </style>
     <script>
         function teamSelect(){
             let timeUm = document.getElementById('timeUm').value
             let timeDois = document.getElementById('timeDois').value
+            document.body.setAttribute("datainfo-um", timeUm)
+            document.body.setAttribute("datainfo-dois", timeDois)
+            console.log(timeUm, timeDois)
+            if (timeUm == timeDois){
+                if (document.getElementsByClassName("mam")[0]){
+                    document.getElementsByClassName("mam")[0].remove()
+                }
+                alert("TIMES IGUAIS")
+            } else if (timeUm != "Time 1" && timeDois != "Time 2" ){
+                if (document.getElementsByClassName("mam")[0]){
+                    document.getElementsByClassName("mam")[0].remove()
+                }
+                selecionarUm({value:timeUm}, document.body, escudos(timeUm), escudos(timeDois))
+                document.getElementById("titulo").scrollIntoView({ behavior: 'smooth' })
+                selecionarDois({value:timeDois})
+                cleanItemResultado()
+                if (document.getElementById("person-div")){
+                    document.getElementById("person-div").remove()
+                    document.getElementsByClassName("selected")[0].classList.remove("selected")
+                }
+            }
+        }
+        function selectSkip(timeUm, timeDois){
             document.body.setAttribute("datainfo-um", timeUm)
             document.body.setAttribute("datainfo-dois", timeDois)
             console.log(timeUm, timeDois)
@@ -64,7 +120,15 @@
         MANO A MANO - PERSONALIZADO
     </div>
     <div id="titulo">PERSONALIZADO</div>
-    <div id="mam-lista">
+    <div id="timesImg">
+        <img src="imagens/escudos/sport.png" alt="" data-="Sport">
+        <img src="imagens/escudos/nautico.png" alt="" data-="Nautico">
+        <img src="imagens/escudos/vitoria.png" alt="" data-="Vitoria">
+        <img src="imagens/escudos/bahia.png" alt="" data-="Bahia">
+        <img src="imagens/escudos/fortaleza.png" alt="" data-="Fortaleza">
+        <img src="imagens/escudos/ceara.png" alt="" data-="Ceara">
+    </div>
+    <!-- <div id="mam-lista">
         <div id="lista">
             <div class="box-lista">
                 <div class="select-box">
@@ -84,6 +148,9 @@
                         </option>
                         <option value="Vitoria">
                             Vitória
+                        </option>
+                        <option value="Nautico">
+                            Náutico
                         </option>
                     </select>
                 </div>
@@ -108,16 +175,21 @@
                         <option value="Vitoria">
                             Vitória
                         </option>
+                        <option value="Nautico">
+                            Náutico
+                        </option>
                     </select>
                 </div>
             </div>
             <span></span>
             <div class="simulacao-lista"></div>
         </div>
-    </div>
+    </div> -->
 </div>
     <span id="aviso" style="display: none;">Os times selecionados são os mesmos. Selecione times diferentes</span>
+
 </body>
     <a href="index.html" id="back">VOLTAR</a>
     <a onclick="limpar()" id="back" style="left: 15%;">LIMPAR</a>
 </html>
+<script src="selectTeam.js"></script>

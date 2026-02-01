@@ -23,14 +23,14 @@ function elConjunto(position, clube, players){
     return newConjunto
 }
 
-var golSport = elConjunto('gol', 'sport', ['gabriel', 'caique-frança', 'davi'])
-var ldSport = elConjunto('ld', 'sport', ['hereda', 'matheus-alexandre', 'aderlan'])
-var zagSport = elConjunto('zag', 'sport', ['joao-silva', 'chico', 'ramon', 'rafael-thyere'])
-var leSport = elConjunto('le', 'sport', ['igor-carius', 'kevyson', 'luan-candido', 'victor-hugo'])
-var volSport = elConjunto('avol', 'sport', ['christian-rivera', 'ze-lucas', 'pedro-augusto', 'lucas-kal', 'adriel'])
-var meiSport = elConjunto('mei', 'sport', ['lucas-lima', 'sergio-oliveira', 'hyoran'])
-var ponSport = elConjunto('pon', 'sport', ['barletta', 'chino-atencio', 'derik-lacerda', 'matheusinho', 'romarinho'])
-var caSport = elConjunto('ca', 'sport', ['ignacio-ramirez', 'paciencia', 'pablo', 'ze-roberto'])
+var golSport = elConjunto('gol', 'sport', ['thiago-couto', 'halls', 'adriano', 'davi'])
+var ldSport = elConjunto('ld', 'sport', ['augusto-pucci', 'matheus-alexandre'])
+var zagSport = elConjunto('zag', 'sport', ['marcelo-ajul', 'ramon', 'benevenuto'])
+var leSport = elConjunto('le', 'sport', ['felipinho', 'davi-gabriel', 'rafinha'])
+var volSport = elConjunto('avol', 'sport', ['ze-lucas', 'adriel', 'ze-gabriel','yago-felipe','pedro-martins', 'dede'])
+var meiSport = elConjunto('mei', 'sport', ['max', 'de-pena'])
+var ponSport = elConjunto('pon', 'sport', ['barletta','gustavo-maia','clayson','iury-castilho','marlon','micael'])
+var caSport = elConjunto('ca', 'sport', ['coutinho', 'ze-roberto'])
 
 var golBahia = elConjunto('gol', 'bahia', ['marcos-felipe', 'danilo-fernandes', 'ronaldo'])
 var ldBahia = elConjunto('ld', 'bahia', ['gilberto', 'santi-arias'])
@@ -42,13 +42,13 @@ var ponBahia = elConjunto('pon', 'bahia', ['erick-pulga','ademir', 'michel-arauj
 var caBahia = elConjunto('ca', 'bahia', ['william-jose', 'lucho-rodriguez'])
 
 var golFortaleza = elConjunto('gol', 'fortaleza', ['joao-ricardo', 'brenno', 'magrao'])
-var ldFortaleza = elConjunto('ld', 'fortaleza', ['eros-mancuso', 'tinga'])
-var leFortaleza = elConjunto('le', 'fortaleza', ['bruno-pacheco', 'diogo-barbosa'])
-var zagFortaleza = elConjunto('zag', 'fortaleza', ['david-luiz', 'gustavo-mancha', 'britez', 'kuscevic', 'gaston-avila', 'lucas-gazal', 'benevenuto'])
-var volFortaleza = elConjunto('avol', 'fortaleza', ['ze-welisson', 'lucas-sasha', 'martinez', 'rosseto', 'rodrigo-santos', 'pierre', 'pablo-roberto'])
-var meiFortaleza = elConjunto('mei', 'fortaleza', ['pochettino', 'calebe', 'kervin-andrade', 'matheus-pereira'])
-var ponFortaleza = elConjunto('pon', 'fortaleza', ['marinho', 'breno-lopes', 'lucca-prior', 'moises', 'pikachu'])
-var caFortaleza = elConjunto('ca', 'fortaleza', ['deyverson', 'lucero'])
+var ldFortaleza = elConjunto('ld', 'fortaleza', ['mailton'])
+var leFortaleza = elConjunto('le', 'fortaleza', ['diogo-barbosa'])
+var zagFortaleza = elConjunto('zag', 'fortaleza', ['britez', 'kuscevic', 'lucas-gazal', 'luan-freitas', 'cardona'])
+var volFortaleza = elConjunto('avol', 'fortaleza', ['ronald', 'lucas-sasha', 'ryan', 'rosseto', 'rodrigo-santos', 'pierre'])
+var meiFortaleza = elConjunto('mei', 'fortaleza', ['pochettino', 'lucas-crispim', 'lucca-prior'])
+var ponFortaleza = elConjunto('pon', 'fortaleza', ['moises'])
+var caFortaleza = elConjunto('ca', 'fortaleza', ['adam-bareiro'])
 
 var golVitoria = ["Goleiro", "gol-esc", "imagens/vitoria/lucas-arcanjo.png", "imagens/vitoria/fintelman.png"]
 var ldVitoria = ["Lateral Direito", "ld-esc", "imagens/vitoria/claudinho.png", "imagens/vitoria/raul-caceres.png"]
@@ -62,14 +62,22 @@ var pdVitoria = ["Ponta direita", "pd-esc", "imagens/vitoria/lucas-braga.png", "
 var peVitoria = ["Ponta esquerda", "pe-esc", "imagens/vitoria/lucas-braga.png"]
 var caVitoria = ["Centroavante", "ca-esc", "imagens/vitoria/fabri.png", "imagens/vitoria/renato-kayzer.png"]
 
-var golCeara = elConjunto('gol', 'ceara', ['bruno-ferreira', 'fernando-miguel', 'keiller', 'richard'])
-var ldCeara = elConjunto('ld', 'ceara', ['fabiano-souza', 'rafael-ramos', 'dieguinho'])
-var zagCeara = elConjunto('zag', 'ceara', ['marllon', 'william-machado', 'eder', 'ramon-menezes', 'gabriel-lacerda', 'luiz-otavio', 'marcos-vitor'])
-var leCeara = elConjunto('le', 'ceara', ['matheus-bahia', 'nicolas', 'william-machado'])
-var volCeara = elConjunto("avol", 'ceara', ['dieguinho', 'fernando-sobral', 'lourenço', 'richardson'])
-var meiCeara = elConjunto("mei", 'ceara', ['lucas-mugni', 'matheus-araujo', 'romulo', 'recalde'])
-var ponCeara = elConjunto("pon", 'ceara', ['pedro-henrique', 'fernandinho', 'galeano', 'bruno-tubarao', 'joao-victor', 'alejandro-martinez'])
-var caCeara = elConjunto("ca", 'ceara', ['pedro-raul', 'aylon', 'guilherme'])
+var golCeara = elConjunto('gol', 'ceara', ['bruno-ferreira', 'jorge', 'richard'])
+var ldCeara = elConjunto('ld', 'ceara', ['alex-silva', 'rafael-ramos'])
+var zagCeara = elConjunto('zag', 'ceara', ['eder', 'pedro-gilmar', 'boateng', 'luiz-otavio', 'julio-cesar'])
+var leCeara = elConjunto('le', 'ceara', ['fernando', 'eric'])
+var volCeara = elConjunto("avol", 'ceara', ['dieguinho', 'zanocelo', 'lucas-lima', 'richardson'])
+var meiCeara = elConjunto("mei", 'ceara', ['vina', 'matheus-araujo'])
+var ponCeara = elConjunto("pon", 'ceara', ['pedro-henrique', 'fernandinho', 'matheusinho', 'juan-alano'])
+var caCeara = elConjunto("ca", 'ceara', ['lucca'])
+
+var golNautico = elConjunto('gol', 'nautico', ['muriel', 'gaston'])
+var latNautico = elConjunto('lat', 'nautico', ['reginaldo', 'arnaldo', 'yuri', 'leo-jance', 'luiz-paulo'])
+var zagNautico = elConjunto('zag', 'nautico', ['mateus-silva', 'igor-fernandes', 'wanderson', 'alemao'])
+var volNautico = elConjunto("avol", 'nautico', ['samuel', 'ramon', 'wenderson', 'auremir'])
+var meiNautico = elConjunto("mei", 'nautico', ['dodo', 'juninho'])
+var ponNautico = elConjunto("pon", 'nautico', ['vinicius', 'todinho', 'jonas-toro', 'felipe-saraiva'])
+var caNautico = elConjunto("ca", 'nautico', ['paulo-sergio', 'samuel-otusanya'])
 
 var golSp = elConjunto('gol', 'sao paulo', ['rafael', 'jandrei'])
 var latSp = elConjunto('lat', 'sao paulo', ['enzo-diaz', 'wendell', 'igor-vinicius', 'cedric'])
@@ -160,6 +168,7 @@ var dados = {
     Fortaleza: [golFortaleza, ldFortaleza, zagFortaleza, leFortaleza, volFortaleza, meiFortaleza, ponFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: allConjunto("Ceara"),
+    Nautico: allConjunto("Nautico"),
     Bragantino: allConjunto("RBB"),
     Vasco: allConjunto("VAS"),
      Gremio: allConjunto("GRE"),

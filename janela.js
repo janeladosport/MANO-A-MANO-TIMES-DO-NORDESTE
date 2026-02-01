@@ -13,6 +13,9 @@ timesNE = {
     },
     'Vitoria': {
         'link': 'imagens/escudos/vitoria.png'
+    },
+    'Nautico': {
+        'link': 'imagens/escudos/nautico.png'
     }
 }
 
@@ -84,6 +87,32 @@ function putJanela(){
     }
 }
 
+function putEmprest(){
+    let span = document.createElement("span")
+    span.innerHTML = 'EMPRÉSTIMOS'
+    let bigBox = document.getElementById("bigbox")
+    let emprestimos = document.createElement("div")
+    let emprestBox = document.createElement("div")
+    emprestimos.appendChild(span)
+    emprestBox.id = "emprestimos"
+    emprestimos.appendChild(emprestBox)
+    emprestimos.id = "emprestBox"
+    bigBox.appendChild(emprestimos)
+}
+
+function putVenda(){
+    let span = document.createElement("span")
+    span.innerHTML = 'VENDE/RESCINDE'
+    let bigBox = document.getElementById("bigbox")
+    let venda = document.createElement("div")
+    let vendaBox = document.createElement("div")
+    venda.appendChild(span)
+    vendaBox.id = "venda"
+    venda.appendChild(vendaBox)
+    venda.id = "vendaBox"
+    bigBox.appendChild(venda)
+}
+
 function selectTeam(object){
     elemento = object.target
     time = elemento.getAttribute("data")
@@ -96,6 +125,8 @@ function selectTeam(object){
     document.body.appendChild(image)
     putTime(time)
     putJanela()
+    putEmprest()
+    putVenda()
 }
 
 function putChoiceBox(){

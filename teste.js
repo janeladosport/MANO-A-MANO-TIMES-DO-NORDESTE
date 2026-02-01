@@ -17,15 +17,26 @@ document.addEventListener("dragend", e => {
 });
 
 document.addEventListener("dragover", e => {
+  
   var container = e.target.closest(".posicao");
   if (!container || !dragged) {
     const newContainer = e.target.closest(".position-box")
-    if (!newContainer){
-        return;
-    } else{
+    if (newContainer){
       container = newContainer
     }
+    if (e.target.id == "emprestimos"){
+      container = e.target
+    } else{
+      if (e.target.id == "venda"){
+        container = e.target
+      } else if (!newContainer){
+        return
+    
+      }
+  
+    }
   }
+  
   e.preventDefault();
 
   const after = getAfterElement(container, e.clientX);

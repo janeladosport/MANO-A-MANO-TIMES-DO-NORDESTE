@@ -64,7 +64,6 @@
     border: 1.5px dashed white;
     padding: 8px;
     margin: 4px;
-    margin-left: 2vw;
     border-radius: 10px;
     position: relative;
 }
@@ -116,7 +115,7 @@
     margin: 4px;
 }
 
-#janelaideal{
+#janelaideal, #emprestBox, #vendaBox{
     width: 50vw;
     height: 50vh;
     border: 1.5px dashed white;
@@ -127,9 +126,25 @@
     padding: 8px;
 }
 
+#emprestBox{
+    width: 40vw;
+}
+#emprestBox, #vendaBox{
+    height: 30vh;
+}
+
+#emprestimos, #venda{
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 90%;
+    min-height: 90%;
+}
+
 #bigbox{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 2vw;
 }
 
 .jogador-choice{

@@ -17,17 +17,14 @@
     </div>
 <div id="flex">
         <div class="emmet-esp">
-            <div class="tool" onclick="goto('palpitometro-rodada.html')">
-                <a href="palpitometro-rodada.html" id="especial">
-                    <button>PALPITOMETRO + MANO A MANO - SÉRIE A</button>
-                </a>
-                <div class="desc">
-        Faça seus palpites e o mano a mano dessa rodada da série A
-                </div>
+            <div class="tool" onclick="goto('personalizado.html')">
+                <a id="especial"><button>Mano a Mano Personalizado</button></a>
+                <div class="desc">Quer fazer Bahia X Vitória, Sport X Fortaleza, Ceará X Fortaleza? Faça o mano a mano entre quaisquer times do nordeste</div>
             </div>
         </div>
+        
         <div class="emmet-esp">
-            <div class="tool" onclick="goto('janela.html')">
+            <div class="tool" onclick="goto('vaivem.html')">
                 <a href="janela.html" id="especial">
                     <button>FICA E SAI: JANELA DE TRANSFERÊNCIAS</button>
                 </a>
@@ -36,23 +33,26 @@
                 </div>
             </div>
         </div>
-        <div class="tool" onclick="goto('nordeste.html')">
-            <a><button>Mano a Mano: NORDESTE + Escalação do nordeste</button></a>
-            <div class="desc"> Quais os melhores jogadores dos 5 times da Série A do nordeste? Monte sua seleção</div>
-        </div>
-        <div class="tool" onclick="goto('personalizado.html')">
-            <a><button>Mano a Mano Personalizado</button></a>
-            <div class="desc">Quer fazer Bahia X Vitória, Sport X Fortaleza, Ceará X Fortaleza? Faça o mano a mano entre quaisquer times do nordeste</div>
-        </div>
-        <div class="tool" onclick="goto('escale-new.html')">
-            <a><button>Escale seu time</button></a>
-            <div class="desc">Escale seu time ideal para o próximo jogo</div>
-        </div>
+            <div class="tool" onclick="goto('escale-new.html')">
+                <a><button>Escale seu time</button></a>
+                <div class="desc">Escale seu time ideal para o próximo jogo</div>
+            </div>
         <div class="tool" onclick="goto('tier.html')"> 
             <a><button>Tier List</button> </a>
             <div class="desc"> Faça o ranking das notas dos jogadores no jogo do seu time! </div>
         </div>
-        <!-- <div class="tool" onclick="goto('nordeste.html')">
+         <div class="tool" onclick="goto('nordeste.html')">
+            <a><button>Mano a Mano: NORDESTE + Escalação do nordeste</button></a>
+            <div class="desc"> Quais os melhores jogadores dos 5 times da Série A do nordeste? Monte sua seleção</div>
+        </div>
+        <div class="tool block" onclick="goto('palpitometro-rodada.html')">
+            <a href="palpitometro-rodada.html" id="especial">
+                <button>PALPITOMETRO + MANO A MANO - SÉRIE A</button>
+            </a>
+            <div class="desc">
+    Faça seus palpites e o mano a mano dessa rodada da série A
+            </div>
+        </div>        <!-- <div class="tool" onclick="goto('nordeste.html')">
             <a href="nordeste.html">
                 <button>Mano a Mano: NORDESTE + Escalação do nordeste</button>
             </a>
@@ -107,8 +107,8 @@
     .block, .block a, .block a button{
         cursor: not-allowed;
     }
-    .block a{
-        background-color: rgb(69, 68, 68);
+    .block a, .block a button{
+        background-color: rgb(69, 68, 68) !important;
     }
     .block .desc{
         background-color: rgb(1, 1, 1);

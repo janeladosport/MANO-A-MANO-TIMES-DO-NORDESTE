@@ -17,7 +17,8 @@ var dados = {
     Cruzeiro: allConjunto("CRU"),
      Palmeiras: allConjunto("PAL"),
     Inter: allConjunto("INT"),
-    Atletico: allConjunto("CAM")
+    Atletico: allConjunto("CAM"),
+    Nautico: allConjunto('Nautico')
 };
 
 let esquemas = {
@@ -144,6 +145,7 @@ function putElenco(team,isNotBody){
     } else{
     document.body.appendChild(elenco)}
     let teamConjunto = dados[team]
+    console.log(teamConjunto)
     console.log(team)
     for (i=0; i < teamConjunto.length; i++){
         let newClass = teamConjunto[i]
