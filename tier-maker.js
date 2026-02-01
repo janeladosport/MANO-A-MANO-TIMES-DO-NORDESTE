@@ -22,11 +22,12 @@ let escudos = [
 ]
 
 let tecnicos = {
-    Fortaleza: "imagens/fortaleza/vojvoda.png",
-    Sport: "imagens/sport/daniel-paulista.png",
+    Fortaleza: "imagens/fortaleza/thiago-carpini.png",
+    Sport: "imagens/sport/roger-silva.png",
     Bahia: "imagens/bahia/rogerio-ceni.png",
-    Ceara: "imagens/ceara/leo-conde.png",
-    Vitoria: "imagens/vitoria/thiago-carpini.png"
+    Ceara: "imagens/ceara/mozart.png",
+    Vitoria: "imagens/vitoria/jair-ventura.png",
+    Nautico: "imagens/nautico/helio-dos-anjos.png"
 }
 function selectTimeTierList(selection){
     var drag = document.createElement("div")
@@ -268,7 +269,6 @@ function changePlayerTier(element){
         colocar(source, element)
     } else{
         let players = document.getElementsByClassName("player")
-        for (i=0; i < players.length; i++){players[i].removeEventListener('click', false)}
         document.getElementsByClassName("selecionado")[0].classList.remove("selecionado")
         element.classList.add("selecionado")
         alreadySelected = true

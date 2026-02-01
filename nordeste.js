@@ -1,19 +1,20 @@
-let teams = [sport, bahia, vitoria, fortaleza, ceara]
+let teams = [sport, bahia, vitoria, fortaleza, ceara, nautico]
 let teamNumber = {
     0: 'sport',
     1: 'bahia',
     2: 'vitoria',
     3: 'fortaleza',
-    4: 'ceara'
+    4: 'ceara',
+    5: 'nautico'
 }
         let mam = document.getElementsByClassName("mam")[0]
         for (i=0; i < 11; i++){
             let newRow = createElement('div', [['class', 'row']])
             mam.appendChild(newRow)
-            for (h=0; h < 4; h++){
+            for (h=0; h < 5; h++){
                 playerSpan(newRow, h, i, 'X')
             }
-            playerSpan(newRow, 4, i, '=')
+            playerSpan(newRow, 5, i, '=')
             let item = createElement("div", [['class', 'item-resultado']])
             let itemResult = createElement("img")
             itemResult.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
