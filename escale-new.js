@@ -8,14 +8,16 @@ var dados = {
     Fortaleza: [golFortaleza, ldFortaleza, zagFortaleza, leFortaleza, volFortaleza, meiFortaleza, ponFortaleza, caFortaleza],
     Vitoria:[golVitoria, ldVitoria, zdVitoria, zeVitoria, leVitoria, volVitoria, mcVitoria, meiVitoria, pdVitoria, peVitoria, caVitoria],
     Ceara: [golCeara, ldCeara,zagCeara, leCeara, volCeara, meiCeara, ponCeara, caCeara],
-    Saopaulo: [golSp, latSp, zagSp, volSp, meiSp, ponSp, caSp],
-    Mirassol: [golMir, latMir, zagMir, avolMir, meiMir, ponMir, caMir],
+     Saopaulo: allConjunto("Sp"),
+    Mirassol: allConjunto("Mir"),
+    Mirassol: allConjunto("Mir"),
     Bragantino: allConjunto("RBB"),
     Vasco: allConjunto("VAS"),
     Gremio: allConjunto("GRE"),
     Cruzeiro: allConjunto("CRU"),
      Palmeiras: allConjunto("PAL"),
-    Inter: allConjunto("INT")
+    Inter: allConjunto("INT"),
+    Atletico: allConjunto("CAM")
 };
 
 let esquemas = {

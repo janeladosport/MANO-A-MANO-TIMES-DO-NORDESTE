@@ -80,12 +80,12 @@ var ponSp = elConjunto("pon", 'sao paulo', ['ferreirinha', 'lucas-ferreira', 'lu
 var caSp = elConjunto("ca", 'sao paulo', ['andre-silva', 'calleri', 'ryan-francisco'])
 
 var golMir = elConjunto("gol", 'mirassol', ['walter', 'alex-muralha'])
-var latMir = elConjunto("lat", 'mirassol', ['lucas-ramon', 'reinaldo', 'daniel-borges'])
-var zagMir = elConjunto("zag", 'mirassol', ['joao-victor', 'jemmes', 'luiz-otavio', 'david-braz'])
-var avolMir = elConjunto("avol", 'mirassol', ['neto-moura', 'danielzinho', 'yago-felipe', 'jose-aldo', 'roni'])
-var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim'])
-var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'fabricio-daniel'])
-var caMir = elConjunto("ca", "mirassol", ['edson-carioca', 'leo-gamalho'])
+var latMir = elConjunto("lat", 'mirassol', ['lucas-ramon', 'reinaldo', 'daniel-borges', 'felipe-jonatan'])
+var zagMir = elConjunto("zag", 'mirassol', ['joao-victor', 'jemmes', 'luiz-otavio', 'gabriel-knesowitsch'])
+var avolMir = elConjunto("avol", 'mirassol', ['neto-moura', 'danielzinho', 'yago-felipe', 'jose-aldo', 'roni', 'matheus-bianqui', 'sales'])
+var meiMir = elConjunto("mei", 'mirassol', ['gabriel', 'chico-kim', 'gabriel', 'shaylon'])
+var ponMir = elConjunto("pon", 'mirassol', ['negueba', 'alesson', 'carlos-eduardo', 'edson-carioca'])
+var caMir = elConjunto("ca", "mirassol", ['chico-da-costa', 'cristian-renato', 'renato-marques'])
 
 var golRBB = elConjunto("gol", 'bragantino', ['cleiton', 'lucao', 'fernando-costa', 'fabricio'])
 var latRBB = elConjunto("lat", 'bragantino', ['andres-hurtado', 'santanna', 'nathan-mendes', 'juninho-capixaba', 'guilherme-lopes'])
@@ -135,6 +135,14 @@ var meiINT = elConjunto("mei", "inter", ['alan-patrick', 'oscar-romero'])
 var ponINT = elConjunto("pon", 'inter', ['carbonero', 'bruno-tabata', 'gustavo-prado', 'vitinho'])
 var caINT = elConjunto("ca", 'inter', ['borre', 'ricardo-mathias', 'enner-valencia'])
 
+var golCAM = elConjunto("gol", 'atletico', ['everson','gabriel-delfim', 'robert'])
+var latCAM = elConjunto("lat", 'atletico', ['natanael', 'arana', 'saravia','caio-paulista'])
+var zagCAM = elConjunto("zag", "atletico", ['ruan-tressoldi', 'lyanco', 'alonso', 'vitor-hugo', 'ivan-roman'])
+var volCAM = elConjunto("avol", "atletico", ['reinier', 'alexsander', 'fausto-vera', 'patrick', 'alan-franco', 'iseppe'])
+var meiCAM = elConjunto("mei", "atletico", ['scarpa', 'bernard', 'igor-gomes', 'gabriel-menino'])
+var ponCAM = elConjunto("pon", 'atletico', ['cuello', 'isaac', 'rony', 'junior-santos', 'biel', 'dudu'])
+var caCAM = elConjunto("ca", 'atletico', ['hulk', 'cadu', 'caio-maia', 'joao-marcelo'])
+
 // var gol = elConjunto("gol", 'team', [])
 // var lat = elConjunto("lat", 'team', [])
 // var zag = elConjunto("zag", "team", [])
@@ -157,7 +165,8 @@ var dados = {
      Gremio: allConjunto("GRE"),
      Cruzeiro: allConjunto("CRU"),
      Palmeiras: allConjunto("PAL"),
-    Inter: allConjunto("INT")
+    Inter: allConjunto("INT"),
+    Atletico: allConjunto("CAM")
 };
 
 
