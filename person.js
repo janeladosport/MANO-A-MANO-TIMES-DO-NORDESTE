@@ -1,7 +1,7 @@
 let fortaleza = srcConjunto("fortaleza", ['brenno', 'mailton', 'britez', 'kuscevic', 'diogo-barbosa', 'pierre', 'lucas-sasha','lucas-crispim', 'pochettino', 'moises','adam-bareiro'])
-let sport = srcConjunto("sport", ["thiago-couto", "augusto-pucci", "marcelo-ajul", "ramon", "felipinho", "ze-lucas", "yago-felipe", "de-pena", "barletta", "gustavo-maia", "coutinho"])
+let sport = srcConjunto("sport", ["thiago-couto", "madson", "marcelo-ajul", "benevenuto", "felipinho", "ze-lucas", "biel-fonseca", "de-pena", "barletta", "clayson", "perotti"])
 let bahia = srcConjunto("bahia", ['marcos-felipe', 'gilberto', 'david-duarte', 'ramos-mingo', 'luciano-juba', 'caio-alexandre','jean-lucas','everton-ribeiro','ademir','cauly','william-jose'])
-let ceara = srcConjunto("ceara", ['bruno-ferreira','alex-silva', 'pedro-gilmar','eder','fernando','dieguinho','zanocelo','vina','matheusinho','fernandinho','lucca'])
+let ceara = srcConjunto("ceara", ['bruno-ferreira','rafael-ramos', 'eder','luizao','fernando','zanocelo','lucas-lima','matheus-araujo','melk','fernandinho','lucca'])
 let nautico = srcConjunto("nautico", ['muriel','reginaldo', 'mateus-silva','igor-fernandes','yuri','ramon','wenderson','dodo','todinho','vinicius','paulo-sergio'])
 let vitoria = srcConjunto("vitoria", ["lucas-arcanjo", "claudinho", "neris", "lucas-halter", "jamerson", "baralhas", "pepê", "matheusinho", "gustavo-mosquito", "wellington-rato", "janderson"])
 flu = "imagens/fluminense/"

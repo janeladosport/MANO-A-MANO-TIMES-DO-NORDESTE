@@ -30,55 +30,9 @@
     <footer></footer>
 </body>
 <script>
-  jogos = [
-    ['palmeiras', 'chelsea', null, 'notas']
-]
-info = {
-  'palmeirasxchelsea': {
-        'title': ['PALMEIRAS X CHELSEA'],
-        'transm': ['globo', 'sportv', 'dazn', 'cazetv'],
-        'arbitro': ['Árbitro: Alireza Faghani (IRÃ) <br> Auxiliares: Anton Shchetinin e Ashley Beecham (AUST)'],
-        'data': '21:30, 9 de Julho - Quarta-feira',
-        'local': 'Ilha do Retiro, Recife-PE',
-        'escalação': 'imagens/palxchea.png'
-    }
-  }
+document.body.setAttribute("datainfo-um", "sport")
+document.body.setAttribute("datainfo-dois", "ceara")
+selecionarUm({value:'sport'}, document.body, escudos('sport'), escudos('ceara'))
+selecionarDois({value:'ceara'})
 </script>
-    <script src="createTheGame.js"></script>
-<!-- <script>
-  function notes(timeUm, timeDois){
-        console.log(timesFut, timeUm, timesFut[timeUm])
-        teamOne = timesFut[timeUm]
-        let containerAll = document.createElement("div")
-        containerAll.id = 'container-all'
-        let containerTeamOne = document.createElement("div")
-        containerTeamOne.id = 'team-one-container'
-        let titleOne = document.createElement("div")
-       titleOne.id ='titulo'
-        containerTeamOne.appendChild(titleOne)
-        let spanTO = document.createElement("span")
-        if (corresp[timeUm]){
-        spanTO.innerHTML = corresp[timeUm]}
-        else {
-            spanTO.innerHTML = timeUm
-        }
-        spanTO.classList.add("span-team")
-        let newMax = document.createElement("img")
-        newMax.id = "maximizar"
-        newMax.src = "imagens/maximizar.png"
-        newMax.setAttribute("onclick",'maximizar(this)')
-        newMax.style.left = '70%'
-        titleOne.appendChild(newMax)
-        titleOne.appendChild(spanTO)
-        containerTeamOne.id = 'team-one-container'
-        let newMaxT = document.createElement("img")
-        newMaxT.id = "maximizar"
-        newMaxT.src = "imagens/maximizar.png"
-        newMaxT.setAttribute("onclick",'maximizar(this)')
-        document.body.appendChild(containerAll)
-        containerAll.appendChild(containerTeamOne)
-        constructNotes(teamOne, containerTeamOne)
-        document.getElementById("titulo").scrollIntoView({behavior: 'smooth'})
-    }
-</script> -->
 </html>
